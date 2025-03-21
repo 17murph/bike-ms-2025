@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bike-ms-2025.vercel.app/sitemap.xml
+
