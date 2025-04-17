@@ -1,12 +1,5 @@
-let userConfig = undefined
-try {
-  userConfig = await import('./v0-user-next.config')
-} catch (e) {
-  // ignore error
-}
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const baseConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -23,26 +16,26 @@ const nextConfig = {
   },
 }
 
-mergeConfig(nextConfig, userConfig)
-
-function mergeConfig(nextConfig, userConfig) {
-  if (!userConfig) {
-    return
-  }
-
-  for (const key in userConfig) {
-    if (
-      typeof nextConfig[key] === 'object' &&
-      !Array.isArray(nextConfig[key])
-    ) {
-      nextConfig[key] = {
-        ...nextConfig[key],
-        ...userConfig[key],
-      }
-    } else {
-      nextConfig[key] = userConfig[key]
-    }
-  }
+let userConfig = {}
+try {
+  // Use `require()` instead of `await import()` to keep it synchronous
+  userConfig = require('./v0-user-next.config')
+} catch (e) {
+  // ignore error
 }
 
-export default nextConfig
+const mergedConfig = {
+  ...baseConfig,
+  ...userConfig,
+  // If either config has nested objects (like `images`), merge those too
+  images: {
+    ...baseConfig.images,
+    ...userConfig.images,
+  },
+  experimental: {
+    ...baseConfig.experimental,
+    ...userConfig.experimental,
+  },
+}
+
+module.exports = mergedConfig
