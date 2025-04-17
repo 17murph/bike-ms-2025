@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const baseConfig = {
+const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -14,28 +14,31 @@ const baseConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-}
+};
 
-let userConfig = {}
-try {
-  // Use `require()` instead of `await import()` to keep it synchronous
-  userConfig = require('./v0-user-next.config')
-} catch (e) {
-  // ignore error
-}
+export default (async () => {
+  let userConfig;
+  try {
+    userConfig = (await import('./v0-user-next.config')).default;
+  } catch (e) {
+    // No user config found; proceed with default config
+  }
 
-const mergedConfig = {
-  ...baseConfig,
-  ...userConfig,
-  // If either config has nested objects (like `images`), merge those too
-  images: {
-    ...baseConfig.images,
-    ...userConfig.images,
-  },
-  experimental: {
-    ...baseConfig.experimental,
-    ...userConfig.experimental,
-  },
-}
+  if (userConfig) {
+    for (const key in userConfig) {
+      if (
+        typeof nextConfig[key] === 'object' &&
+        !Array.isArray(nextConfig[key])
+      ) {
+        nextConfig[key] = {
+          ...nextConfig[key],
+          ...userConfig[key],
+        };
+      } else {
+        nextConfig[key] = userConfig[key];
+      }
+    }
+  }
 
-module.exports = mergedConfig
+  return nextConfig;
+})();
