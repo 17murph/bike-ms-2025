@@ -94,13 +94,13 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold">Fundraising Totals</h3>
               </div>
               <div className="p-6 text-center">
-                <div className="text-4xl font-bold text-[#1e40af]">$1,950</div>
+                <div className="text-4xl font-bold text-[#1e40af]">$2,360</div>
                 <div className="text-gray-600 mb-2">raised</div>
                 <div className="mb-2">Goal: $25,000</div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "7.8%" }}></div>
+                  <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "9.44%" }}></div>
                 </div>
-                <div className="text-right text-sm text-gray-600 mt-1">7.8%</div>
+                <div className="text-right text-sm text-gray-600 mt-1">9.44%</div>
                 <div className="mt-4 p-3 bg-blue-50 text-sm rounded-lg">
                   $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                 </div>
