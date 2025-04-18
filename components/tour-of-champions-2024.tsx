@@ -37,4 +37,3 @@ export function TourOfChampions2024() {
     </div>
   )
 }
-

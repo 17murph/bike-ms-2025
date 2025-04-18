@@ -34,10 +34,7 @@ export function PodcastSeason({ season, isComingSoon = false }: PodcastSeasonPro
   const hasMoreEpisodes = season.episodes.length > 5
 
   return (
-    <div
-      className="rounded-xl border bg-white shadow-sm hover:shadow-md transition-all duration-300"
-      style={{ display: "block", width: "100%" }}
-    >
+    <div className="rounded-xl border bg-white shadow-sm hover:shadow-md transition-all duration-300">
       <div className="bg-primary text-white p-3 sm:p-4 rounded-t-xl">
         <div className="text-lg sm:text-xl font-semibold leading-none tracking-tight text-center">
           Season {season.number}
@@ -54,7 +51,7 @@ export function PodcastSeason({ season, isComingSoon = false }: PodcastSeasonPro
         ) : (
           <>
             <Select onValueChange={handleEpisodeSelect} value={selectedEpisode || undefined}>
-              <SelectTrigger className="h-auto w-full">
+              <SelectTrigger className="h-auto">
                 <SelectValue placeholder="Select an episode to play" />
               </SelectTrigger>
               <SelectContent className="max-h-[300px]">
@@ -79,10 +76,9 @@ export function PodcastSeason({ season, isComingSoon = false }: PodcastSeasonPro
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                  style={{ display: "flex", width: "100%" }}
                 >
                   <Play className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                  <div style={{ width: "calc(100% - 24px)" }}>
+                  <div>
                     <div className="font-medium text-sm line-clamp-2">{episode.title}</div>
                     <div className="text-xs text-gray-500 line-clamp-1">Guest: {episode.guest}</div>
                   </div>
@@ -114,4 +110,3 @@ export function PodcastSeason({ season, isComingSoon = false }: PodcastSeasonPro
     </div>
   )
 }
-

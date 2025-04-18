@@ -20,4 +20,3 @@ export function OptimizedImage({ src, alt, fallbackSrc = "/placeholder.svg", ...
 
   return <Image {...props} src={imgSrc || "/placeholder.svg"} alt={alt} onError={handleError} unoptimized />
 }
-

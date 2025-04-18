@@ -37,4 +37,3 @@ export function BikeMSSarasota2024() {
     </div>
   )
 }
-

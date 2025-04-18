@@ -20,4 +20,3 @@ export function GlobalImage({ src, alt, fallbackSrc = "/placeholder.svg", ...pro
 
   return <Image {...props} src={imgSrc || "/placeholder.svg"} alt={alt} onError={handleError} unoptimized />
 }
-

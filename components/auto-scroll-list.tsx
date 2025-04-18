@@ -117,4 +117,3 @@ export function AutoScrollList({
     </div>
   )
 }
-

@@ -69,4 +69,3 @@ export function CountdownTimer({ eventDate, eventName }: CountdownTimerProps) {
     </div>
   )
 }
-

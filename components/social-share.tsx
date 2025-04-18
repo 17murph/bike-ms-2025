@@ -4,4 +4,3 @@
 export function SocialShare({ title, description, compact = false }) {
   return null // Return null to effectively remove this component from all pages
 }
-

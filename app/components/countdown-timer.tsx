@@ -63,4 +63,3 @@ export function CountdownTimer({ eventDate, eventName }: CountdownTimerProps) {
 }
 
 export default CountdownTimer
-

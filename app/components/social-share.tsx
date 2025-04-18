@@ -92,4 +92,3 @@ export function SocialShare({ compact = false }: SocialShareProps) {
 }
 
 export default SocialShare
-

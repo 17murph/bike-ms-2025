@@ -37,4 +37,3 @@ export function BikeMSPGATour2024() {
     </div>
   )
 }
-

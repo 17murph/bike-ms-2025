@@ -37,4 +37,3 @@ export function BikeMSGeorgia2024() {
     </div>
   )
 }
-

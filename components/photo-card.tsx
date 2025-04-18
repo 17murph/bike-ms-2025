@@ -21,4 +21,3 @@ export function PhotoCard({ id, title, src, alt, description }: PhotoCardProps) 
     </div>
   )
 }
-

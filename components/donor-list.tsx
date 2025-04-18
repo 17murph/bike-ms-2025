@@ -73,4 +73,3 @@ export function DonorList({ donors }: DonorListProps) {
     </div>
   )
 }
-

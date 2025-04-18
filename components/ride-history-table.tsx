@@ -90,4 +90,3 @@ export function RideHistoryTable({ rides }: RideHistoryTableProps) {
     </div>
   )
 }
-

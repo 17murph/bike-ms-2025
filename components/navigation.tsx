@@ -33,8 +33,9 @@ export function Navigation() {
     { href: "/about-bike-ms", label: "About Bike MS" },
     { href: "/podcast", label: "Podcast" },
     { href: "/events", label: "Events" },
+    { href: "/sponsors", label: "Sponsors" },
     { href: "/pictures", label: "Photos" },
-    { href: "/contact", label: "Contact" },
+    { href: "/contact", label: "About / Contact" },
   ]
 
   return (
@@ -137,4 +138,3 @@ export function Navigation() {
     </header>
   )
 }
-

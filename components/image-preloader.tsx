@@ -24,4 +24,3 @@ export function ImagePreloader() {
 
   return null // This component doesn't render anything
 }
-

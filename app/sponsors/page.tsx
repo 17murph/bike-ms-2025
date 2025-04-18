@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -6,10 +8,7 @@ import { Globe, Phone, Mail, Home } from "lucide-react"
 import { ReliableImage } from "@/components/reliable-image"
 import { SocialMediaLinks } from "@/components/social-media-links"
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-}
+// Remove the viewport export since it's not compatible with client components
 
 export default function SponsorsPage() {
   return (
@@ -134,4 +133,3 @@ export default function SponsorsPage() {
     </div>
   )
 }
-

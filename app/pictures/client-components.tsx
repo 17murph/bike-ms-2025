@@ -123,28 +123,37 @@ function BikeMSVirginia2024() {
 }
 
 function BikeMSGeorgia2024() {
-  // Updated with direct URLs that are known to work
+  // Updated with the new provided images
   const photos = [
     {
       id: "ga-1",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202024%20-%20Group%20Photo.jpg-LznTItVGXC64kGQ29mVEzAWohOa9LN.jpeg",
-      alt: "Bike MS Georgia 2024 - Group Photo",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georiga%20-%20Slow%20Riders%20Sloth.jpg-tVU3syMxFPAU16PX0BX3vl6mgRC8X1.jpeg",
+      alt: "Bike MS Georgia - Slow Riders Sloth bike decoration with race number 24",
     },
     {
       id: "ga-2",
-      // Replace the problematic URL with a placeholder
-      src: "/placeholder.svg?height=300&width=400&text=Bike%20MS%20Georgia%202024%20-%20Casey%20and%20Karyn",
-      alt: "Bike MS Georgia 2024 - Casey and Karyn",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202024%20-%20Karyn.jpg-d6PaizeF9CuuNi9M7QjRVzOUbIgkQG.jpeg",
+      alt: "Bike MS Georgia 2024 - Karyn in Georgia cycling jersey with Atlanta skyline",
     },
     {
       id: "ga-3",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202024%20-%20Start%20Line.jpg-g7G56BclILVRK1HAcFGg3KmyyjAqpt.jpeg",
-      alt: "Bike MS Georgia 2024 - Start Line",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georigia%202024%20Team%20Slow%20Riders.jpg-1WDYfe1dlNa5Ba4gewAVa7GN1j6SNY.jpeg",
+      alt: "Bike MS Georgia 2024 - Team Slow Riders group photo in blue jerseys",
     },
     {
       id: "ga-4",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202024%20-%20Rest%20Stop.jpg-lqEIBC9T5aJHrkoB5cL8tSNrC88W3o.jpeg",
-      alt: "Bike MS Georgia 2024 - Rest Stop",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202024%20-%20Team%20Slow%20Riders%20Tent.jpg-4kBjQFXZ6KJHfeFnvh69kmZNfvmeoq.jpeg",
+      alt: "Bike MS Georgia 2024 - Team Slow Riders tent with sloth banner",
+    },
+    {
+      id: "ga-5",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202025%20-%20Mike%2C%20fellow%20TOC%20member.jpg-fmTegb2QjtrykFGXnyKCVkEEYgPQCc.jpeg",
+      alt: "Bike MS Georgia 2025 - Mike, fellow TOC member cycling in Slow Riders jersey",
+    },
+    {
+      id: "ga-6",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Georgia%202025%20Start.jpg-PG3x0DiHemH9j2IjNCxGI0VLqY74JB.jpeg",
+      alt: "Bike MS Georgia 2025 Start - Cyclists lined up at the starting line",
     },
   ]
 
@@ -152,27 +161,22 @@ function BikeMSGeorgia2024() {
 }
 
 function BikeMSSarasota2024() {
-  // Using placeholder images as fallbacks for any that might not load
+  // Updated with the new provided images
   const photos = [
     {
       id: "sarasota-1",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Sarasota%202024%20-%20Team%20Spanish%20Beer.jpg-vp4Po2gtCKuQRr77tV5rNb6mgjAxRf.jpeg",
-      alt: "Bike MS Sarasota 2024 - Team Spanish Beer",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Sarasota%202024%20-%20Team%20Spanish%20Beer%20cycling.jpg-uxOWEzhuTBOBjexaT4tJorKDbevkrG.jpeg",
+      alt: "Bike MS Sarasota 2024 - Team Spanish Beer cycling on palm-lined road",
     },
     {
       id: "sarasota-2",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Sarasota%202024%20-%20Start%20Line.jpg-n673CF2DeSUtMUFJNxgbWmPG4KXu0y.jpeg",
-      alt: "Bike MS Sarasota 2024 - Start Line",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BIKE%20MS%20SARASOTA%202024%20-%20TEAM%20SPANISH%20BEER%202.jpg-tdXF0L8eG98ark6GMkyZe7pi7Q8lVk.jpeg",
+      alt: "Bike MS Sarasota 2024 - Team Spanish Beer members with Hawaiian leis and beach balls",
     },
     {
       id: "sarasota-3",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Sarasota%202024%20-%20Casey.jpg-niud2u1uXquhZlKTce62xBRKa5529B.jpeg",
-      alt: "Bike MS Sarasota 2024 - Casey",
-    },
-    {
-      id: "sarasota-4",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Sarasota%202024%20-%20Finish%20Line.jpg-U5J9tglUkoEEBnPD483QbKvhpUJDij.jpeg",
-      alt: "Bike MS Sarasota 2024 - Finish Line",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Sarasota%202024%20-%20Team%20Spanish%20Beer.jpg-E7MdWRZRSVY8NpkQ4QsFz8Zvqc2Nbj.jpeg",
+      alt: "Bike MS Sarasota 2024 - Start line with Team Spanish Beer jersey visible",
     },
   ]
 
@@ -180,31 +184,71 @@ function BikeMSSarasota2024() {
 }
 
 function BikeMSColorado2024() {
-  // Using known working URLs from other components
+  // Updated with the new provided images
+  const [selectedPhoto, setSelectedPhoto] = useState(null)
   const photos = [
     {
       id: "colorado-1",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Mountain%20View.jpg-FA6nCfY0gbvfgrkEK7MdeGbuYmbIfi.jpeg",
-      alt: "Bike MS Colorado 2024 - Mountain View",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Team%20Left%20Hand%20at%20the%20top%20of%20Horsetooth%20Resevoir.jpg-ycGEhA7ftD1dkwj4pM5e7dcPqfJfJk.jpeg",
+      alt: "Bike MS Colorado 2024 - Team Left Hand cyclist at the top of Horsetooth Reservoir",
     },
     {
       id: "colorado-2",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Team%20Photo.jpg-pLKw2DEwD8Xd9QAJ2dhdEcx0k7kije.jpeg",
-      alt: "Bike MS Colorado 2024 - Team Photo",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Team%20Left%20Hand%20with%20Bobby%20Small%20of%20Team%20Coneheads.jpg-VsQv8e3d7zT76mGGDC3fHwux8H6pw8.jpeg",
+      alt: "Bike MS Colorado 2024 - Team Left Hand with Bobby Small of Team Coneheads",
     },
     {
       id: "colorado-3",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Casey.jpg-t9SL29zqUH51Ne430Vi0viw5mhIRoL.jpeg",
-      alt: "Bike MS Colorado 2024 - Casey",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Team%20Left%20Hand%20with%20Ilene%20Belinsky%20Kramer%20.jpg-gLdg7QtG0Dju1KB5iktnBWotD9iOb1.jpeg",
+      alt: "Bike MS Colorado 2024 - Team Left Hand with Ilene Belinsky Kramer",
     },
     {
       id: "colorado-4",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Group%20Ride.jpg-4d3gtkh4cnGBdUL3uTO4Za2C1JR80C.jpeg",
-      alt: "Bike MS Colorado 2024 - Group Ride",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20MS%20Colorado%202024%20-%20Start%20with%20Team%20Left%20Hand.jpg-vLc30v2hHo15nl2YdI9lIi5Wkarafk.jpeg",
+      alt: "Bike MS Colorado 2024 - Start line with Team Left Hand cyclists",
     },
   ]
 
-  return <PhotoGallerySection title="Bike MS Colorado 2024" photos={photos} />
+  return (
+    <div>
+      <h2 className="text-2xl font-bold text-center mb-6">Bike MS Colorado 2024</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {photos.map((photo) => (
+          <div
+            key={photo.id}
+            className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-all duration-300"
+            onClick={() => setSelectedPhoto(photo)}
+          >
+            <FallbackGalleryImage
+              src={photo.src || "/placeholder.svg"}
+              alt={photo.alt}
+              fill
+              className="object-contain object-center"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-20 transition-opacity duration-300"></div>
+          </div>
+        ))}
+      </div>
+
+      {/* Lightbox for viewing full images */}
+      <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
+        <DialogContent className="max-w-4xl p-1 sm:p-2 md:p-4">
+          <div className="relative w-full aspect-[4/3] md:aspect-[16/9]">
+            {selectedPhoto && (
+              <FallbackGalleryImage
+                src={selectedPhoto.src || "/placeholder.svg"}
+                alt={selectedPhoto.alt}
+                fill
+                className="object-contain"
+                priority
+              />
+            )}
+          </div>
+          {selectedPhoto && <p className="text-center text-sm text-gray-700 mt-2">{selectedPhoto.alt}</p>}
+        </DialogContent>
+      </Dialog>
+    </div>
+  )
 }
 
 function BikeMSPGATour2024() {
@@ -266,4 +310,3 @@ function TeamSpanishBeer2024() {
 export function ClientMobileTextButton() {
   return <MobileTextButton />
 }
-

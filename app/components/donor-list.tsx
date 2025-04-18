@@ -53,4 +53,3 @@ export function DonorList({ donors }: DonorListProps) {
 }
 
 export default DonorList
-

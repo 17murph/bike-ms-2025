@@ -44,4 +44,3 @@ const SocialShare: React.FC<SocialShareProps> = ({ url, title }) => {
 }
 
 export default SocialShare
-

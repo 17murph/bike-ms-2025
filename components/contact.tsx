@@ -7,11 +7,10 @@ export default function Contact() {
     <div>
       <p>
         Contact me at:
-        <a href="mailto:cmurphy@sjmalaw.com" className="text-blue-500 underline">
-          cmurphy@sjmalaw.com
+        <a href="mailto:CMURPHY@SJMALAW.COM" className="text-blue-500 underline">
+          CMURPHY@SJMALAW.COM
         </a>
       </p>
     </div>
   )
 }
-

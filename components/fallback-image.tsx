@@ -23,4 +23,3 @@ export function FallbackImage({ src, alt, fallback = "/placeholder.svg", ...prop
     <Image {...props} src={imgSrc || "/placeholder.svg"} alt={alt} onError={handleError} unoptimized loading="eager" />
   )
 }
-

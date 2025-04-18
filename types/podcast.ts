@@ -8,4 +8,3 @@ export interface Season {
   number: number
   episodes: Episode[]
 }
-

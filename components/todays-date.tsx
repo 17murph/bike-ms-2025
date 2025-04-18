@@ -18,4 +18,3 @@ export function TodaysDate() {
 
   return <div className="w-full bg-gray-100 py-2 text-center text-gray-600 text-sm">Today's Date: {date}</div>
 }
-

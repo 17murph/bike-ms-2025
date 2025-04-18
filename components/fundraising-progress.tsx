@@ -9,4 +9,3 @@ export function FundraisingProgress({ current, goal }: { current: number; goal: 
     </div>
   )
 }
-

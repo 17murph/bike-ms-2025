@@ -16,4 +16,3 @@ The error "Cannot destructure property 'auth' of 'e' as it is undefined"
 was caused by a component trying to access Firebase authentication
 during server-side rendering.
 */
-

@@ -47,4 +47,3 @@ export function DigitalCountdownTimer({ eventDate }: CountdownTimerProps) {
     </div>
   )
 }
-

@@ -271,4 +271,3 @@ export const season2: Season = {
     },
   ],
 }
-

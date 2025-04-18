@@ -42,4 +42,3 @@ export function HeicImage({ src, alt, width, height, className }: HeicImageProps
     </>
   )
 }
-

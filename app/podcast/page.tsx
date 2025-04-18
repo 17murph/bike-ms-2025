@@ -1,462 +1,914 @@
 "use client"
 
-import Link from "next/link"
+import { useState, useEffect } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { PodcastSeason } from "@/components/podcast-season"
-import { Phone, Mail, Heart, ExternalLink } from "lucide-react"
-import { RelatedBikeMSLinks } from "@/components/related-bike-ms-links"
-import { SpotifyBadge } from "@/components/spotify-badge"
-import { IHeartBadge } from "@/components/iheart-badge"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { useEffect } from "react"
-import { SocialMediaLinks } from "@/components/social-media-links"
+import { season1, season2, season3 } from "@/data/episodes-update"
+import Image from "next/image"
 
 export default function PodcastPage() {
-  // Set metadata via useEffect to avoid server-side rendering issues
+  const [openSeason, setOpenSeason] = useState<number | null>(null)
+  const [activeQuote, setActiveQuote] = useState(0)
+
+  const toggleSeason = (seasonNumber: number) => {
+    if (openSeason === seasonNumber) {
+      setOpenSeason(null)
+    } else {
+      setOpenSeason(seasonNumber)
+    }
+  }
+
+  // Quotes that will rotate - updated with authentic quotes from the podcast
+  const impactfulQuotes = [
+    {
+      text: "MS is like having a roommate that you never invited to live with you, and they're always messing with your stuff.",
+      author: "Becca Fuqua - Becca's Unfiltered Journey with MS",
+    },
+    {
+      text: "The hardest part isn't the physical symptoms, it's having to constantly explain to people why you can't do what you used to do.",
+      author: "Amber Cunningham - Finding Strength Beyond the Diagnosis",
+    },
+    {
+      text: "Sometimes people just don't need a silver lining. They need empathy. They need someone just to sit with them in that moment and say, 'Hey, I hear you.'",
+      author: "Jessica - The Other Side of MS",
+    },
+    {
+      text: "Where was the second half of this story — where we have these amazing medical breakthroughs and innovative research to prevent that from happening?",
+      author: "Delaney - The Other Side of MS",
+    },
+    {
+      text: "MS is isolating. But you're not alone. You have to be proactively not alone.",
+      author: "Karyn - The Other Side of MS",
+    },
+    {
+      text: "I'm not gonna let this… be the decision maker for anything in my life. I'm not gonna sit on the sidelines and miss out on incredible opportunities because I have MS… it's been the reason I've done most of the things in my life since I was diagnosed.",
+      author: "Maddie - The Other Side of MS",
+    },
+    {
+      text: "We need to go from awareness to action to impact… And that means changing the conversation from something daunting or taboo to something we celebrate—recovery, support, and the courage to ask for help.",
+      author: "Dr. Sally Spencer-Thomas - The Suicide Episode",
+    },
+  ]
+
+  // Rotate quotes every 8 seconds
   useEffect(() => {
-    document.title = "The Other Side of MS Podcast | Bike MS 2025"
-  }, [])
-
-  const season1 = {
-    number: 1,
-    episodes: [
-      {
-        title: 'My "Why" to Supporting those affected by MS',
-        guest: "Casey Murphy",
-        link: "https://theothersideofms.podbean.com/e/my-why-to-supporting-those-affected-by-ms/",
-      },
-      {
-        title: "Walking the Path to Change",
-        guest: "Jim and Carol Montgomery",
-        link: "https://theothersideofms.podbean.com/e/walking-the-path-to-change-jim-and-carol-s-ms-advocacy/",
-      },
-      {
-        title: "Sipping with Spanish Beer",
-        guest: "Matt Thompson",
-        link: "https://theothersideofms.podbean.com/e/sipping-with-spanish-beer-and-matt-thompson/",
-      },
-      {
-        title: "Pedaling Hope, Inside the Bike MS Journey",
-        guest: "Brian Collie",
-        link: "https://theothersideofms.podbean.com/e/pedaling-hope-inside-the-bike-ms-journey-with-brian-collie/",
-      },
-      {
-        title: "Unleashing Compassion",
-        guest: "Mike McNamara",
-        link: "https://theothersideofms.podbean.com/e/unleashing-compassion-mike-mcnamara-s-ms-fundraising-odyssey/",
-      },
-      {
-        title: "Inspiring Journey of a Patient-Scientist in MS",
-        guest: "Delaney Liskey",
-        link: "https://theothersideofms.podbean.com/e/delaney-s-inspiring-journey-of-a-patient-scientist-in-ms/",
-      },
-      {
-        title: "Beers, Bikes, and a Passion to Make a Difference",
-        guest: "Carolyn Graham",
-        link: "https://theothersideofms.podbean.com/e/beers-bikes-and-a-passion-to-make-a-difference/",
-      },
-      {
-        title: "Changing the Narrative",
-        guest: "Heidi Katz",
-        link: "https://theothersideofms.podbean.com/e/changing-the-narrative-heidi-katz-on-ms-stories-and-hope/",
-      },
-      {
-        title: "Resilient Heart",
-        guest: "Lauren Conant",
-        link: "https://theothersideofms.podbean.com/e/resilient-heart-lauren-conant-s-path-from-ms-caregiver-to-nurse-practitioner/",
-      },
-      {
-        title: "Spokes of Strength, A Bike MS Panel Conversation",
-        guest: "Erik Henderson, Cher Herman-Darville, Bobby Small",
-        link: "https://theothersideofms.podbean.com/e/spokes-of-strength-bike-ms-panel-conversations/",
-      },
-      {
-        title: "In My Mother's Footsteps",
-        guest: "Christopher Trigger",
-        link: "https://theothersideofms.podbean.com/e/in-my-mother-s-footsteps-christopher-trigger-s-story/",
-      },
-      {
-        title: "40 Years of Love, Adventure, and Giving",
-        guest: "Ilene and Steve Kramer",
-        link: "https://theothersideofms.podbean.com/e/40-years-of-love-adventure-and-giving-the-journey-of-team-seb/",
-      },
-      {
-        title: "The Other Side of MS, A Mother's Story",
-        guest: "Wendy Bertagnole",
-        link: "https://theothersideofms.podbean.com/e/the-other-side-of-ms-a-mother-s-story/",
-      },
-      {
-        title: "MS, Suicide, and Mental Health",
-        guest: "Dr. Sally Spencer-Thomas, Dr. Marin Collazo, and Heidi Katz",
-        link: "https://theothersideofms.podbean.com/e/ms-suicide-and-mental-health-exploring-the-other-side-of-ms/",
-      },
-      {
-        title: "COO Left Hand Brewing - Bike MS",
-        guest: "Chris Lennert",
-        link: "https://theothersideofms.podbean.com/e/chris-lennert-coo-at-left-hand-brewing-company/",
-      },
-      {
-        title: "I am the Storm",
-        guest: "Michael Cavicchia",
-        link: "https://theothersideofms.podbean.com/e/i-am-the-storm-michael-cavicchia-s-ms-journey/",
-      },
-      {
-        title: "PGA Tour, Bike MS Major Sponsor",
-        guest: "Marianne Novac Davis",
-        link: "https://theothersideofms.podbean.com/e/marianne-novac-davis-with-pga-tour-bike-ms-major-sponsor/",
-      },
-      {
-        title: "Pushing Boundaries in Ultra Cycling",
-        guest: "Phil Fox",
-        link: "https://theothersideofms.podbean.com/e/phil-fox-pushing-boundaries-in-ultra-cycling-and-ms-advocacy/",
-      },
-      {
-        title: "I am Unstoppable",
-        guest: "Christine Boothe",
-        link: "https://theothersideofms.podbean.com/e/christine-boothe-i-am-unstoppable/",
-      },
-      {
-        title: "Meat, Bikes, and MS",
-        guest: "Angela Brandt",
-        link: "https://theothersideofms.podbean.com/e/meat-bikes-and-multiple-sclerosis-the-inspiring-story-of-angela-brandt/",
-      },
-      {
-        title: "Embrace the Challenge",
-        guest: "Ken Strecker",
-        link: "https://theothersideofms.podbean.com/e/embrace-the-challenge-embarking-on-a-mission-with-ken-strecker/",
-      },
-      {
-        title: "Becoming a Voice for the MS Community",
-        guest: "Walter Steele",
-        link: "https://theothersideofms.podbean.com/e/becoming-a-voice-for-the-ms-community-the-inspiring-journey-of-walter-steele/",
-      },
-      {
-        title: "Love Conquers All",
-        guest: "Jason DeRoo",
-        link: "https://theothersideofms.podbean.com/e/how-love-conquers-all-the-story-of-a-husband-s-journey-as-a-caregiver-for-his-wife-with-ms/",
-      },
-      {
-        title: "I Ride with MS",
-        guest: "Sara DeRoo",
-        link: "https://theothersideofms.podbean.com/e/sarah-deroo-i-ride-with-ms/",
-      },
-      {
-        title: "Inaugural Episode",
-        guest: "Dr. Vanessa Marin Collazo",
-        link: "https://theothersideofms.podbean.com/e/s1_e1-lost-episode-with-dr_vanessa_marin_collazo/",
-      },
-    ],
-  }
-
-  const season2 = {
-    number: 2,
-    episodes: [
-      {
-        title: "Culinary Mastery and the Fight Against MS",
-        guest: "Carmen Lucia Gonzalez",
-        link: "https://theothersideofms.podbean.com/e/s2_e27/",
-      },
-      {
-        title: "Why We Ride: A Tribute to Karyn Laterza",
-        guest: "Multiple Bike MS - Georgia Peach Ride",
-        link: "https://theothersideofms.podbean.com/e/s2-e26/",
-      },
-      {
-        title: "High Risk, High Reward",
-        guest: "Joanne & Eric Passon",
-        link: "https://theothersideofms.podbean.com/e/s2_e25/",
-      },
-      {
-        title: "Pedaling with a Purpose: My Inspiration",
-        guest: "Kim Imus Schaefer",
-        link: "https://theothersideofms.podbean.com/e/s2_e24/",
-      },
-      {
-        title: "Resilience and Hope: Childhood MS",
-        guest: "Daisy Clemmons",
-        link: "https://theothersideofms.podbean.com/e/s2_e23/",
-      },
-      {
-        title: "Life, Services, and MS",
-        guest: "Leo Kreisel",
-        link: "https://theothersideofms.podbean.com/e/s2_e22/",
-      },
-      {
-        title: "From Diagnosis to Advocacy",
-        guest: "Shannon Abney",
-        link: "https://theothersideofms.podbean.com/e/s2_e21/",
-      },
-      {
-        title: "Life, Love, and MS",
-        guest: "Maddie Alder",
-        link: "https://theothersideofms.podbean.com/e/s2_e20/",
-      },
-      {
-        title: "The Quiet Force Behind the Big Bananas",
-        guest: "Linda Bushong-Reid",
-        link: "https://theothersideofms.podbean.com/e/s2e19/",
-      },
-      {
-        title: "Fearless Leaders of Bike MS",
-        guest: "Ashley (VA), Sydney (FL), and Erika (CO)",
-        link: "https://theothersideofms.podbean.com/e/s2-e18/",
-      },
-      {
-        title: "Bike MS Colorado",
-        guest: "Various Bike MS Colorado participants",
-        link: "https://theothersideofms.podbean.com/e/s2-e17-bonus-bike-ms-colorado/",
-      },
-      {
-        title: "Finding Strength in Struggle",
-        guest: "Deanna Weiler",
-        link: "https://theothersideofms.podbean.com/e/s2_e16/",
-      },
-      {
-        title: "Navigating Life's Challenges",
-        guest: "Schone Rubio",
-        link: "https://theothersideofms.podbean.com/e/s2_e15/",
-      },
-      {
-        title: "A Wisconsin Connection",
-        guest: "Curtis Sauser",
-        link: "https://theothersideofms.podbean.com/e/s2_e14/",
-      },
-      {
-        title: "Weaving a Tapestry of Strength and Connection",
-        guest: "Debbie Hamm",
-        link: "https://theothersideofms.podbean.com/e/s2_e13/",
-      },
-      {
-        title: "Bridging Eastern and Western Medicine for MS Care",
-        guest: "Megan Weigel",
-        link: "https://theothersideofms.podbean.com/e/s2_e12/",
-      },
-      {
-        title: "Bike US for MS",
-        guest: "Duncan",
-        link: "https://theothersideofms.podbean.com/e/s2-e11-bike-us-for-ms-duncan/",
-      },
-      {
-        title: "The Power of Friendship and Resilience",
-        guest: "Mike Tomlin & Jill Eisenberg",
-        link: "https://theothersideofms.podbean.com/e/the-power-of-friendship-and-resilience-in-the-fight-against-ms/",
-      },
-      {
-        title: "A Grassroots Fundraiser and Advocate",
-        guest: "Rob Farthing",
-        link: "https://theothersideofms.podbean.com/e/s2-e9-rob-robert-farthing-a-grassroots-fundraiser-and-advocate/",
-      },
-      {
-        title: "Anchoring Hope: A News Anchor's Story",
-        guest: "Bill Fitzgerald",
-        link: "https://theothersideofms.podbean.com/e/s2-e8-bill-fitzgerald-anchoring-hope-a-news-anchor-s-ride-against-ms/",
-      },
-      {
-        title: "Voices of Resilience, Living and Leading with MS",
-        guest: "Karyn Laterza",
-        link: "https://theothersideofms.podbean.com/e/s2-e7-karyn-laterza-voices-of-resilience-living-and-leading-with-ms/",
-      },
-      {
-        title: "Navigating Hope and Leadership",
-        guest: "Jennifer Lee",
-        link: "https://theothersideofms.podbean.com/e/s2-e6-jennifer-lee-navigating-hope-and-leadership-in-the-battle-against-ms/",
-      },
-      {
-        title: "Beyond Limits - From Diagnosis to Community Leader",
-        guest: "Natasha Acoff",
-        link: "https://theothersideofms.podbean.com/e/s2-e5-beyond-limits-natasha-s-odyssey-%e2%80%93-from-ms-diagnosis-to-community-leadership/",
-      },
-      {
-        title: "Saddle Up for MS: Andy's Ride Remembered",
-        guest: "Dawn (for Andy)",
-        link: "https://theothersideofms.podbean.com/e/s2-e4-saddle-up-for-ms-andy-s-ride-remembered/",
-      },
-      {
-        title: "The Spiritual Odyssey",
-        guest: "Ted Corby",
-        link: "https://theothersideofms.podbean.com/e/s2-e3-the-spiritual-odyssey-navigating-life-and-ms-with-ted-corby/",
-      },
-      {
-        title: "Redefining Roots in MS Advocacy",
-        guest: "Barbara Ungerman",
-        link: "https://theothersideofms.podbean.com/e/s2-e2-barbara-ungerman-redefining-roots-in-ms-advocacy/",
-      },
-      {
-        title: "A Never Ending Bike Ride",
-        guest: "Jessica Nevens",
-        link: "https://theothersideofms.podbean.com/e/s2-e1-jessica-s-ms-journey-a-never-ending-bike-ride/",
-      },
-    ],
-  }
-
-  const season3 = {
-    number: 3,
-    episodes: [
-      {
-        title: "Season 3 Premiere with Jasmine Hanna",
-        guest: "Jasmine Hanna",
-        link: "https://open.spotify.com/episode/2mgTM4aV6BRTA1mWFfd2FD?si=7sAb2qGYSB26ahSVLHmyHQ",
-      },
-    ],
-  }
+    const interval = setInterval(() => {
+      setActiveQuote((prev) => (prev + 1) % impactfulQuotes.length)
+    }, 8000)
+    return () => clearInterval(interval)
+  }, [impactfulQuotes.length])
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-gray-50 relative">
       <Navigation />
 
       {/* Add padding to account for fixed navigation */}
       <div className="pt-16 md:pt-20"></div>
 
-      {/* Full-width banner image with chairs and microphone at the top */}
-      <div className="w-full relative h-[220px] md:h-[280px]">
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Podcast%20Seats.jpg-yOo7VS19f1tz8dRnPrHJ7Six3I1iW6.jpeg"
-            alt="The Other Side of MS Podcast Studio - Bike MS Stories and Interviews"
-            className="w-full h-full object-cover"
-            style={{ display: "block" }}
+      <main className="relative">
+        {/* Hero Banner Section */}
+        <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+          <Image
+            src="/images/podcast-banner.jpg"
+            alt="The Other Side of MS Podcast"
+            fill
+            className="object-cover brightness-[0.6]"
+            priority
           />
-        </div>
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-white text-center">The Other Side of MS</h1>
-        </div>
-      </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30 flex flex-col items-center justify-center text-white p-4">
+            <div className="container mx-auto max-w-5xl px-4">
+              <div className="flex flex-col items-center text-center">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">The Other Side of MS</h1>
+                <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light">
+                  Unfiltered voices. Uncomfortable truths. Deep humanity.
+                </p>
 
-      <main className="container mx-auto px-4 py-8">
-        {/* Podcast description and listening options */}
-        <section className="mb-10">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-center">
-              Welcome to our podcast dedicated to amplifying the voices and stories of those whose lives are deeply
-              affected by Multiple Sclerosis (MS). Through honest conversations and heartfelt stories, we shed light on
-              the strength, resilience, and challenges of the MS community.
-            </p>
-
-            <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h2 className="text-xl font-bold mb-4 text-center">Latest Episode</h2>
-              <p className="text-lg font-medium mb-4 text-center">
-                Tune in to our newest episode featuring special guest Jasmine Hanna
-              </p>
-
-              <div className="flex flex-wrap gap-4 items-center justify-center">
-                <Link
-                  href="https://open.spotify.com/episode/2mgTM4aV6BRTA1mWFfd2FD?si=7sAb2qGYSB26ahSVLHmyHQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
-                >
-                  <SpotifyBadge />
-                </Link>
-                <Link
-                  href="https://iheart.com/podcast/185724874"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
-                >
-                  <IHeartBadge />
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex justify-center mb-6">
-              <Link
-                href="https://mssociety.donordrive.com/participant/casey-murphy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-              >
-                <Heart className="w-5 h-5" />
-                Donate to Bike MS Supporting the National MS Society
-                <ExternalLink className="w-3 h-3 ml-1 opacity-70" />
-              </Link>
-            </div>
-
-            {/* Contact info */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 items-center bg-blue-50 p-4 rounded-lg">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-gray-600" />
-                <span>904-504-1500</span>
-              </div>
-              <a
-                href="mailto:cmurphy@sjmalaw.com"
-                className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                <span>cmurphy@sjmalaw.com</span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Episode listings with simplified header */}
-        <section className="mb-10">
-          <div className="flex items-center justify-center mb-6">
-            <h2 className="text-2xl font-bold text-center">All Episodes</h2>
-          </div>
-
-          {/* Mobile-only centered logo */}
-          {/* Mobile-only centered logo - with explicit styling for cross-browser compatibility */}
-          <div className="flex justify-center mb-6 md:hidden">
-            <div className="w-[180px] h-[180px] relative">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20Logo.JPEG-LznTItVGXC64kGQ29mVEzAWohOa9LN.jpeg"
-                alt="The Other Side of MS Podcast Logo"
-                className="w-full h-auto object-contain shadow-sm"
-                style={{
-                  display: "block",
-                  maxWidth: "100%",
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <PodcastSeason season={season1} />
-            <PodcastSeason season={season2} />
-            <div className="flex flex-col">
-              <PodcastSeason season={season3} />
-              {/* Season 3 Logo */}
-              {/* Season 3 Logo - with explicit styling for cross-browser compatibility */}
-              <div className="flex justify-center mt-6">
-                <div className="w-[200px] h-[200px] relative">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20Logo.JPEG-LznTItVGXC64kGQ29mVEzAWohOa9LN.jpeg"
-                    alt="The Other Side of MS Podcast Logo"
-                    className="w-full h-auto object-contain shadow-md"
-                    style={{
-                      display: "block",
-                      maxWidth: "100%",
-                    }}
-                  />
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  <a
+                    href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-transform hover:scale-105"
+                  >
+                    <img src="/images/spotify-podcast-badge.png" alt="Listen on Spotify" className="h-10 w-auto" />
+                  </a>
+                  <a
+                    href="https://podcasts.apple.com/us/podcast/the-other-side-of-ms/id1682272920"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M18.7 10.7c-.1-3.1-2.6-5.6-5.7-5.6-3.1 0-5.6 2.5-5.7 5.6-.1 1.3.3 2.6 1.1 3.6.8 1 1.9 1.7 3.2 1.8 0 0 0 0 .1 0 .1 0 .2 0 .3 0 .1 0 .2 0 .3 0 .1 0 .1 0 .1 0 1.3-.2 2.4-.8 3.2-1.8.8-1 1.2-2.3 1.1-3.6zm-5.6 5.4c-.1 0-.2 0-.3 0-.1 0-.2 0-.3 0-1.1-.1-2.1-.7-2.8-1.5-.7-.9-1-2-1-3.1.1-2.7 2.3-4.9 5-4.9 2.7 0 4.9 2.2 5-4.9.1 1.1-.3 2.2-1 3.1-.7.8-1.7 1.4-2.8 1.5h-.8z" />
+                      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" />
+                      <path d="M12.3 14.2c0 .1-.1.2-.3.2s-.3-.1-.3-.2v-4.5c0-.1.1-.2.3-.2s.3.1.3.2v4.5z" />
+                    </svg>
+                    <span>Apple</span>
+                  </a>
+                  <a
+                    href="https://music.amazon.com/podcasts/343490f1-fe67-4b30-9049-500c3baf378d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M18.42 14.29c-.22-.12-.43-.23-.63-.35-.56-.35-1.26-.79-1.26-1.47 0-.65.39-1.15 1.16-1.15.35 0 .64.11.89.34.25.23.37.55.37.98h1.96c0-1.16-.46-2.04-1.14-2.64-.68-.6-1.62-.91-2.71-.91-1.17 0-2.14.3-2.87.91-.73.6-1.1 1.45-1.1 2.54 0 1.58.95 2.54 2.19 3.32.41.26.83.5 1.24.74.63.36 1.07.89 1.07 1.47 0 .7-.43 1.14-1.28 1.14-.35 0-.68-.12-.93-.35-.25-.23-.38-.55-.38-.98h-1.96c0 1.16.47 2.04 1.15 2.64.68.6 1.63.91 2.72.91 1.17 0 2.15-.3 2.88-.91.73-.6 1.1-1.45 1.1-2.54 0-1.58-.95-2.54-2.19-3.32-.07-.04-.14-.09-.22-.13-.01-.01-.03-.02-.04-.03-.01-.01-.02-.01-.02-.01z" />
+                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.9 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.2.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34-1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.9-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.2-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.4.76.27 1.4.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.4-.76-.27-1.4-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35 1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
+                    </svg>
+                    <span>Amazon</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="my-12 bg-white p-6 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold text-center mb-6 text-primary">Contact Us</h2>
-          <div className="max-w-md mx-auto text-center">
-            <p className="mb-6 text-gray-700">
-              Have a story to share or just want to share your comments? Reach out to me directly:
-            </p>
-            <div className="flex justify-center">
+        {/* Rotating Quote Section */}
+        <section className="bg-primary text-white py-8 relative overflow-hidden">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="relative h-[120px] md:h-[100px]">
+              {impactfulQuotes.map((quote, index) => (
+                <blockquote
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 flex flex-col items-center justify-center text-center ${
+                    index === activeQuote ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <p className="text-xl md:text-2xl font-light italic mb-2">"{quote.text}"</p>
+                  <footer className="text-sm opacity-75">— {quote.author}</footer>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* About the Podcast / Why These Stories Matter */}
+        <section className="pt-12 pb-4 bg-white">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+              <div className="md:w-1/3 flex-shrink-0">
+                <div className="sticky top-24">
+                  <Image
+                    src="/images/podcast-logo.png"
+                    alt="The Other Side of MS Podcast Logo"
+                    width={280}
+                    height={280}
+                    className="rounded-lg shadow-lg mx-auto"
+                  />
+
+                  <div className="mt-6 text-center">
+                    <a
+                      href="https://mssociety.donordrive.com/participant/casey-murphy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                      </svg>
+                      Donate to Bike MS
+                    </a>
+                    <p className="text-sm text-gray-600 mt-3 px-4">
+                      Every story is a voice. Every voice deserves to be heard. Donations help us keep sharing them.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:w-2/3">
+                <div className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6 text-gray-800">Why these stories matter</h2>
+                  <div className="space-y-4 text-gray-700">
+                    <p>
+                      The Other Side of MS isn't here to inspire you. It's here to show you what it really means to live
+                      with MS—the chaos behind the smiles, the invisible symptoms, the quiet grief, the complicated
+                      resilience.
+                    </p>
+                    <p>
+                      This podcast creates a space where people with MS can tell their stories without performance,
+                      without toxic positivity, and without being reduced to a diagnosis.
+                    </p>
+                    <p>
+                      These aren't highlight reels or polished success stories. They're raw conversations—sometimes
+                      uncomfortable, always honest.
+                    </p>
+                    <p>
+                      Here, we don't ask guests to be brave. We ask them to be real. Because MS isn't just a
+                      disease—it's a life that keeps unfolding in ways most people never see. We explore the parts most
+                      people avoid: the rage, the fear, the mourning of who you used to be, and the strength that
+                      doesn't come with a cape—but with survival.
+                    </p>
+                    <p>
+                      This podcast isn't about the host. It's about the people who live with MS—who deserve to be seen,
+                      heard, and understood not as heroes or fighters, but as complex humans trying to make it through
+                      another day.
+                    </p>
+                    <p>
+                      Inspiration might happen too. This podcast creates the space—so if their honesty happens to
+                      inspire you, let it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Voices Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto max-w-5xl px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
+
+            {/* Zohra - Featured Guest */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[300px] md:h-full relative">
+                      <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Zohra.jpg-h2Q9IKwrA81Dq415VIIiHnBzCDKX1g.jpeg"
+                        alt="Zohra - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Zohra</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Zohra</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "There's the MS that people see, and then there's the MS day no one sees—the invisible battle
+                          that happens behind closed doors."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          In this powerful episode, Zohra shares her raw, unfiltered experience of living with MS,
+                          including the invisible symptoms and daily challenges that most people never witness. Her
+                          story highlights the importance of understanding the full reality of MS beyond what's visible
+                          on the surface.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 5</span>
+                      <a
+                        href="https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=f24d0e3b1cc840bd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pam Grimes - Featured Guest */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[300px] md:h-full relative">
+                      <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pam.jpg-Hr20T3xi1qB6ZEtbiyKCfogoG6NW6S.jpeg"
+                        alt="Pam Grimes - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Pam Grimes</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Pam Grimes</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "MS doesn't define me, but it has shaped how I navigate the world. I've learned to adapt, to
+                          find new ways to live fully despite the challenges."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          In this powerful episode, Pam shares her journey of resilience and adaptation living with MS.
+                          From the initial diagnosis to finding new ways to embrace life, her story highlights the
+                          importance of support systems and maintaining a positive outlook while acknowledging the very
+                          real challenges of MS.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 4</span>
+                      <a
+                        href="https://open.spotify.com/episode/6yqxdnVWODQ26hUdbwn348?si=2e4b4d71940842c3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-8 bg-white border-t border-gray-100">
+          <div className="container mx-auto max-w-3xl px-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 items-center bg-blue-50 p-6 rounded-lg">
+              <div className="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5 text-gray-600"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>904-504-1500</span>
+              </div>
               <a
-                href="mailto:cmurphy@sjmalaw.com"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                href="mailto:CMURPHY@SJMALAW.COM"
+                className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
               >
-                <Mail className="w-5 h-5" />
-                <span>cmurphy@sjmalaw.com</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>CMURPHY@SJMALAW.COM</span>
               </a>
             </div>
           </div>
         </section>
 
-        <RelatedBikeMSLinks />
+        {/* Episode Archives */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto max-w-4xl px-4">
+            <h2 className="text-3xl font-bold text-center mb-10 text-primary">Episode Archives</h2>
 
-        {/* Social Media Links */}
-        <SocialMediaLinks />
+            {/* Season 3 */}
+            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
+              <button
+                onClick={() => toggleSeason(3)}
+                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
+              >
+                <span className="text-xl">Season 3</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 3 ? "rotate-180" : ""}`}
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  openSeason === 3 ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="p-5">
+                  <div className="space-y-6">
+                    {/* Add Zohra to Season 3 episodes */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">S3_E5: Zohra - The MS Day No One Sees</h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Zohra</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Zohra shares her raw, unfiltered experience of living with MS, including the invisible
+                          symptoms and daily challenges that most people never witness.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=f24d0e3b1cc840bd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Add Pam to Season 3 episodes */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">S3_E4: Pam Grimes - Navigating Life with MS</h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Pam Grimes</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Pam shares her journey of resilience and adaptation living with MS, highlighting the
+                          importance of support systems and maintaining a positive outlook while acknowledging the
+                          challenges.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/6yqxdnVWODQ26hUdbwn348?si=2e4b4d71940842c3"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Existing Season 3 episodes (excluding Becca) */}
+                    {season3.episodes.map((episode, index) => (
+                      <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
+                        <div className="flex flex-col">
+                          <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
+                          <p className="text-gray-600 italic text-sm my-2">
+                            Guest: {episode.guest === "Amber" ? "Amber Cunningham" : episode.guest}
+                          </p>
+                          <p className="text-gray-700 my-2 text-sm">
+                            {episode.guest === "Amber"
+                              ? "Amber discusses the daily challenges of MS, the misconceptions others have, and how she's learned to advocate for herself."
+                              : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
+                          </p>
+                          <div className="flex justify-between items-center mt-2">
+                            <span className="text-xs text-gray-500">Season 3</span>
+                            <a
+                              className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                              href={episode.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                              </svg>
+                              Listen Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Season 2 */}
+            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
+              <button
+                onClick={() => toggleSeason(2)}
+                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
+              >
+                <span className="text-xl">Season 2</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 2 ? "rotate-180" : ""}`}
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  openSeason === 2 ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="p-5">
+                  <div className="space-y-6">
+                    {season2.episodes.map((episode, index) => (
+                      <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
+                        <div className="flex flex-col">
+                          <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
+                          <p className="text-gray-600 text-sm my-2">Guest: {episode.guest}</p>
+                          <div className="flex justify-between items-center mt-2">
+                            <span className="text-xs text-gray-500">Season 2</span>
+                            <a
+                              className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                              href={
+                                episode.link.replace("podbean.com", "open.spotify.com").includes("open.spotify.com")
+                                  ? episode.link
+                                  : `https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f80883c052d4c2f`
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                              </svg>
+                              Listen Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Season 1 */}
+            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
+              <button
+                onClick={() => toggleSeason(1)}
+                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
+              >
+                <span className="text-xl">Season 1</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 1 ? "rotate-180" : ""}`}
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  openSeason === 1 ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="p-5">
+                  <div className="space-y-6">
+                    {season1.episodes.map((episode, index) => (
+                      <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
+                        <div className="flex flex-col">
+                          <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
+                          <p className="text-gray-600 text-sm my-2">Guest: {episode.guest}</p>
+                          <div className="flex justify-between items-center mt-2">
+                            <span className="text-xs text-gray-500">Season 1</span>
+                            <a
+                              className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                              href={
+                                episode.link.replace("podbean.com", "open.spotify.com").includes("open.spotify.com")
+                                  ? episode.link
+                                  : `https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f80883c052d4c2f`
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                              </svg>
+                              Listen Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Legacy of Leaders Video Section */}
+        <section className="py-12 bg-white border-t border-gray-100">
+          <div className="container mx-auto max-w-4xl px-4">
+            <h2 className="text-3xl font-bold text-center mb-6 text-primary">Latest Episodes</h2>
+
+            <div className="space-y-6">
+              {/* Zohra's Episode */}
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-3">S3 _ E5: Zohra - The MS Day No One Sees</h3>
+                <iframe
+                  style={{ borderRadius: "12px" }}
+                  src="https://open.spotify.com/embed/episode/6H2g63vG8skxID554TFDkB?utm_source=generator&t=0"
+                  width="100%"
+                  height="152"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
+
+              {/* Pam's Episode */}
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-3">S3_E4: Pam Grimes: Strength, Stencils, and Showing Up Anyway</h3>
+                <iframe
+                  style={{ borderRadius: "12px" }}
+                  src="https://open.spotify.com/embed/episode/6yqxdnVWODQ26hUdbwn348?utm_source=generator&t=0"
+                  width="100%"
+                  height="152"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-2xl font-bold text-center mb-6 text-primary">As Featured on Legacy of Leaders</h3>
+              <div className="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-md">
+                <iframe
+                  title="vimeo-player"
+                  src="https://player.vimeo.com/video/1071910885?h=1d25836381"
+                  className="absolute top-0 left-0 w-full h-full"
+                  frameBorder="0"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto max-w-3xl px-4">
+            <h2 className="text-2xl font-bold text-center mb-6 text-primary">Contact Us</h2>
+            <div className="max-w-md mx-auto text-center">
+              <p className="mb-6 text-gray-700">
+                Have a story to share or just want to share your comments? Reach out to me directly:
+              </p>
+              <div className="flex justify-center">
+                <a
+                  href="mailto:CMURPHY@SJMALAW.COM"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <span>CMURPHY@SJMALAW.COM</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Connect With Us Section */}
+        <section className="py-8 border-t border-gray-200 bg-gray-50">
+          <div className="container mx-auto max-w-3xl px-4">
+            <h2 className="text-xl font-bold text-center mb-6">Connect With Us</h2>
+            <div className="flex justify-center space-x-6">
+              <a
+                href="https://www.facebook.com/OtherSideOfMS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all transform hover:scale-110"
+                aria-label="Facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/caseymurphy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-all transform hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a
+                href="https://x.com/theothersidems?s=11&t=tlzOgmkXwzTvVden5dn58A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all transform hover:scale-110"
+                aria-label="X (formerly Twitter)"
+              >
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a
+                href="mailto:CMURPHY@SJMALAW.COM"
+                className="p-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition-all transform hover:scale-110"
+                aria-label="Email"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+              <a
+                href="https://theothersideofms.podbean.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all transform hover:scale-110"
+                aria-label="Podcast"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
@@ -464,4 +916,3 @@ export default function PodcastPage() {
     </div>
   )
 }
-

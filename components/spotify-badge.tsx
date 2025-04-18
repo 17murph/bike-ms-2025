@@ -22,4 +22,3 @@ export function SpotifyBadge({ width = 165, height = 40 }: SpotifyBadgeProps) {
     </div>
   )
 }
-

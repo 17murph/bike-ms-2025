@@ -1,4 +1,6 @@
 "use client"
+
+import Image from "next/image"
 import { useState } from "react"
 
 interface FallbackGalleryImageProps {
@@ -25,7 +27,7 @@ export function FallbackGalleryImage({
   const getPlaceholder = () => {
     const w = width || 400
     const h = height || 300
-    return `/placeholder.svg?height=${h}&width=${w}&text=${encodeURIComponent(alt.substring(0, 30))}`
+    return `/placeholder.svg?height=${h}&width=${w}&text=${encodeURIComponent(alt)}`
   }
 
   const handleError = () => {
@@ -37,28 +39,17 @@ export function FallbackGalleryImage({
   }
 
   return (
-    <div
-      className={`relative ${className}`}
-      style={{
-        width: fill ? "100%" : width ? `${width}px` : "100%",
-        height: fill ? "100%" : height ? `${height}px` : "auto",
-        overflow: "hidden",
-      }}
-    >
-      {/* Show a loading placeholder */}
-      {!hasError && <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />}
-
-      <img
-        src={imgSrc || "/placeholder.svg"}
-        alt={alt}
-        onError={handleError}
-        className={`${hasError ? "opacity-80" : ""} w-full h-full object-cover`}
-        style={{
-          display: "block",
-          maxWidth: "100%",
-        }}
-      />
-    </div>
+    <Image
+      src={imgSrc || "/placeholder.svg"}
+      alt={alt}
+      fill={fill}
+      width={!fill ? width : undefined}
+      height={!fill ? height : undefined}
+      className={`${className} ${hasError ? "opacity-80" : ""}`}
+      onError={handleError}
+      unoptimized
+      loading="eager"
+      priority
+    />
   )
 }
-

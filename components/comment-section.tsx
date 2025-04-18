@@ -88,4 +88,3 @@ export function CommentSection({ type }: CommentSectionProps) {
     </div>
   )
 }
-

@@ -66,4 +66,3 @@ export function AddBlogPost({ onAddPost }: AddBlogPostProps) {
     </form>
   )
 }
-

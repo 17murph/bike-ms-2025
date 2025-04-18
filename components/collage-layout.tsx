@@ -69,4 +69,3 @@ export function CollageLayout({ photos }: CollageLayoutProps) {
     </div>
   )
 }
-

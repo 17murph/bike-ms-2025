@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Phone, Mail, Bike } from "lucide-react"
 import { season1, season2 } from "./data/episodes"
 import { PodcastSeason } from "./components/podcast-season"
+import { LegacyOfLeadersBadge } from "./components/legacy-of-leaders-badge"
 
 const scrollAnimation = `
 @keyframes scroll {
@@ -202,6 +203,11 @@ export default function Page() {
             className="mx-auto"
           />
 
+          {/* Add Legacy of Leaders badge here */}
+          <div className="flex justify-center mt-4">
+            <LegacyOfLeadersBadge />
+          </div>
+
           {/* Contact Information */}
           <div className="flex justify-center gap-6 items-center">
             <div className="flex items-center gap-2">
@@ -235,4 +241,3 @@ export default function Page() {
     </div>
   )
 }
-

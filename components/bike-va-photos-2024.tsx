@@ -72,4 +72,3 @@ export function BikeVAPhotos2024() {
     </div>
   )
 }
-

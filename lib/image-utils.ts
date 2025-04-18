@@ -20,4 +20,3 @@ export function getVercelBlobUrl(path: string): string {
 export function getFallbackImageUrl(width = 400, height = 300): string {
   return `/placeholder.svg?height=${height}&width=${width}`
 }
-

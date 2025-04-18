@@ -37,4 +37,3 @@ export function TeamSpanishBeer2024() {
     </div>
   )
 }
-

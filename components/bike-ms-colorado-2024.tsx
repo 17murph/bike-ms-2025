@@ -37,4 +37,3 @@ export function BikeMSColorado2024() {
     </div>
   )
 }
-

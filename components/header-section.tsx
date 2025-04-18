@@ -22,4 +22,3 @@ export function HeaderSection({ title, subtitle }: HeaderSectionProps) {
     </div>
   )
 }
-
