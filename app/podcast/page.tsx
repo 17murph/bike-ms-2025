@@ -126,7 +126,7 @@ export default function PodcastPage() {
                       fill="currentColor"
                     >
                       <path d="M18.42 14.29c-.22-.12-.43-.23-.63-.35-.56-.35-1.26-.79-1.26-1.47 0-.65.39-1.15 1.16-1.15.35 0 .64.11.89.34.25.23.37.55.37.98h1.96c0-1.16-.46-2.04-1.14-2.64-.68-.6-1.62-.91-2.71-.91-1.17 0-2.14.3-2.87.91-.73.6-1.1 1.45-1.1 2.54 0 1.58.95 2.54 2.19 3.32.41.26.83.5 1.24.74.63.36 1.07.89 1.07 1.47 0 .7-.43 1.14-1.28 1.14-.35 0-.68-.12-.93-.35-.25-.23-.38-.55-.38-.98h-1.96c0 1.16.47 2.04 1.15 2.64.68.6 1.63.91 2.72.91 1.17 0 2.15-.3 2.88-.91.73-.6 1.1-1.45 1.1-2.54 0-1.58-.95-2.54-2.19-3.32-.07-.04-.14-.09-.22-.13-.01-.01-.03-.02-.04-.03-.01-.01-.02-.01-.02-.01z" />
-                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.9 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.2.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34-1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.9-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.2-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.4.76.27 1.4.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.4-.76-.27-1.4-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35 1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
+                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.9 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.2.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34-1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.9-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.2-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.4.76.27 1.4.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.4-.76-.27-1.4-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35-1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
                     </svg>
                     <span>Amazon</span>
                   </a>
@@ -242,10 +242,74 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Zohra - Featured Guest */}
+            {/* Cori - Featured Guest (replacing Pam Grimes) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[300px] md:h-full relative">
+                      <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corijpg.jpg-8OdkBMZr0xWyjnczEd1qRHo6TRwVR3.jpeg"
+                        alt="Cori - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Cori</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Cori</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "MS has taught me that strength isn't about never falling; it's about how you rise each time
+                          you do."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          In this powerful episode, Cori shares her journey with MS and how she's learned to navigate
+                          life's challenges with resilience and determination. Her story offers a raw and honest look at
+                          the realities of living with MS while finding purpose and meaning along the way.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 6</span>
+                      <a
+                        href="https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=bd2833a728124a04"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Zohra - Featured Guest (moved down) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative">
                       <img
@@ -253,7 +317,7 @@ export default function PodcastPage() {
                         alt="Zohra - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Zohra</h3>
                       </div>
@@ -281,71 +345,6 @@ export default function PodcastPage() {
                       <span className="text-sm text-gray-500">Season 3, Episode 5</span>
                       <a
                         href="https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=f24d0e3b1cc840bd"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Pam Grimes - Featured Guest */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[300px] md:h-full relative">
-                      <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pam.jpg-Hr20T3xi1qB6ZEtbiyKCfogoG6NW6S.jpeg"
-                        alt="Pam Grimes - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Pam Grimes</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Pam Grimes</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS doesn't define me, but it has shaped how I navigate the world. I've learned to adapt, to
-                          find new ways to live fully despite the challenges."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          In this powerful episode, Pam shares her journey of resilience and adaptation living with MS.
-                          From the initial diagnosis to finding new ways to embrace life, her story highlights the
-                          importance of support systems and maintaining a positive outlook while acknowledging the very
-                          real challenges of MS.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 4</span>
-                      <a
-                        href="https://open.spotify.com/episode/6yqxdnVWODQ26hUdbwn348?si=2e4b4d71940842c3"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -449,96 +448,32 @@ export default function PodcastPage() {
               </button>
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openSeason === 3 ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                  openSeason === 3 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="p-5">
                   <div className="space-y-6">
-                    {/* Add Zohra to Season 3 episodes */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">S3_E5: Zohra - The MS Day No One Sees</h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Zohra</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Zohra shares her raw, unfiltered experience of living with MS, including the invisible
-                          symptoms and daily challenges that most people never witness.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=f24d0e3b1cc840bd"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Add Pam to Season 3 episodes */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">S3_E4: Pam Grimes - Navigating Life with MS</h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Pam Grimes</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Pam shares her journey of resilience and adaptation living with MS, highlighting the
-                          importance of support systems and maintaining a positive outlook while acknowledging the
-                          challenges.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/6yqxdnVWODQ26hUdbwn348?si=2e4b4d71940842c3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Existing Season 3 episodes (excluding Becca) */}
                     {season3.episodes.map((episode, index) => (
                       <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
                         <div className="flex flex-col">
-                          <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
-                          <p className="text-gray-600 italic text-sm my-2">
-                            Guest: {episode.guest === "Amber" ? "Amber Cunningham" : episode.guest}
-                          </p>
+                          <h4 className="font-bold text-gray-800 text-lg">
+                            S3_E{season3.episodes.length - index}: {episode.title}
+                          </h4>
+                          <p className="text-gray-600 italic text-sm my-2">Guest: {episode.guest}</p>
                           <p className="text-gray-700 my-2 text-sm">
-                            {episode.guest === "Amber"
+                            {episode.guest === "Amber Cunningham"
                               ? "Amber discusses the daily challenges of MS, the misconceptions others have, and how she's learned to advocate for herself."
-                              : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
+                              : episode.guest === "Cori"
+                                ? "Cori shares her journey with MS and how she's learned to navigate life's challenges with resilience and determination, offering a raw and honest look at the realities of living with MS."
+                                : episode.guest === "Zohra"
+                                  ? "Zohra shares her raw, unfiltered experience of living with MS, including the invisible symptoms and daily challenges that most people never witness."
+                                  : episode.guest === "Becca"
+                                    ? "Becca offers an unfiltered look at her journey with MS, discussing the daily challenges and unexpected moments of strength she's discovered along the way."
+                                    : episode.guest === "Pam Grimes"
+                                      ? "Pam shares her experience navigating MS with grace and humor, offering insights into how she's adapted to life's challenges."
+                                      : episode.guest === "Jasmine Hanna"
+                                        ? "Jasmine discusses her approach to embracing life's journey with MS, sharing wisdom and practical advice for others facing similar challenges."
+                                        : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
                           </p>
                           <div className="flex justify-between items-center mt-2">
                             <span className="text-xs text-gray-500">Season 3</span>
@@ -720,12 +655,12 @@ export default function PodcastPage() {
             <h2 className="text-3xl font-bold text-center mb-6 text-primary">Latest Episodes</h2>
 
             <div className="space-y-6">
-              {/* Zohra's Episode */}
+              {/* Cori's Episode (replacing Pam's) */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold mb-3">S3 _ E5: Zohra - The MS Day No One Sees</h3>
+                <h3 className="text-xl font-bold mb-3">S3_E6: Cori - Finding Strength in Vulnerability</h3>
                 <iframe
                   style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/episode/6H2g63vG8skxID554TFDkB?utm_source=generator&t=0"
+                  src="https://open.spotify.com/embed/episode/4KMiRhcr8PNR6D8eXEIfZ2?utm_source=generator&t=0"
                   width="100%"
                   height="152"
                   frameBorder="0"
@@ -735,12 +670,12 @@ export default function PodcastPage() {
                 ></iframe>
               </div>
 
-              {/* Pam's Episode */}
+              {/* Zohra's Episode */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold mb-3">S3_E4: Pam Grimes: Strength, Stencils, and Showing Up Anyway</h3>
+                <h3 className="text-xl font-bold mb-3">S3_E5: Zohra - The MS Day No One Sees</h3>
                 <iframe
                   style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/episode/6yqxdnVWODQ26hUdbwn348?utm_source=generator&t=0"
+                  src="https://open.spotify.com/embed/episode/6H2g63vG8skxID554TFDkB?utm_source=generator&t=0"
                   width="100%"
                   height="152"
                   frameBorder="0"
