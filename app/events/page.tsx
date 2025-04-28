@@ -191,7 +191,7 @@ export default function EventsPage() {
 
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Next Bike MS Ride</h2>
-            <div className="max-w3xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               <div className="bg-blue-50 rounded-xl shadow-lg overflow-hidden">
                 <div className="bg-yellow-400 text-black p-3 md:p-4 text-center">
                   <h3 className="text-xl md:text-2xl font-bold">Kentucky Bourbon Country Ride</h3>
@@ -326,7 +326,7 @@ export default function EventsPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-gray-600 text-base md:text-lg">Distance</p>
-                  <p className="text-2xl md:text-4xl font-bold">507.54 miles</p>
+                  <p className="text-2xl md:text-4xl font-bold">411.44 miles</p>
                 </div>
                 <div>
                   <p className="text-gray-600 text-base md:text-lg">Time In Saddle</p>
@@ -336,15 +336,15 @@ export default function EventsPage() {
                       <p className="text-xs md:text-sm text-gray-600">Days</p>
                     </div>
                     <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">33</p>
+                      <p className="text-xl md:text-2xl font-bold">03</p>
                       <p className="text-xs md:text-sm text-gray-600">Hours</p>
                     </div>
                     <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">47</p>
+                      <p className="text-xl md:text-2xl font-bold">44</p>
                       <p className="text-xs md:text-sm text-gray-600">Minutes</p>
                     </div>
                     <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">27</p>
+                      <p className="text-xl md:text-2xl font-bold">22</p>
                       <p className="text-xs md:text-sm text-gray-600">Seconds</p>
                     </div>
                   </div>
@@ -370,8 +370,8 @@ export default function EventsPage() {
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-2 md:py-3 text-sm md:text-base">Quarter 2</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">140.8 miles</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">8:59:39</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">44.70 miles</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">02:56:34</td>
                     </tr>
                   </tbody>
                 </table>

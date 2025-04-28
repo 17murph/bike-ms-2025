@@ -75,7 +75,7 @@ export default function ContactPage() {
                     <p>
                       I don't live with MS myself — but I've been showing up for this cause for over 30 years. I'm proud
                       to serve as a Trustee for the North Florida Chapter of the National MS Society and as a Tour of
-                      Champions fundraiser multiple years (raising $10,000 or more annually).
+                      Champions fundraiser, raising over $10,000 annually.
                     </p>
                     <p>
                       I also host the podcast The Other Side of MS, where we hold space for the voices of people living

@@ -14,11 +14,6 @@ export function PodcastSection() {
             an open heart. This podcast is not just a platform for stories—it's a movement fueled by everyone who
             believes in a brighter future. Together, let's make a difference—one conversation, one story at a time.
           </p>
-          <a
-            href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
         </div>
         <div className="flex justify-center">
           <EnhancedImage

@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import type React from "react"
 import "./globals.css"
 import { Inter } from "next/font/google"
@@ -45,9 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <Suspense fallback={null}>
-          <GoogleAnalytics />
-        </Suspense>
+        <GoogleAnalytics />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <div className="flex-grow">{children}</div>
@@ -142,9 +139,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </div>
-        <Suspense fallback={<div className="text-center p-2 text-sm text-gray-500">Loading date...</div>}>
-          <TodaysDate />
-        </Suspense>
+        <TodaysDate />
       </body>
     </html>
   )

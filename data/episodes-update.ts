@@ -7,34 +7,14 @@ export const season3: Season = {
   number: 3,
   episodes: [
     {
-      title: "Finding Strength in Vulnerability",
-      guest: "Cori",
-      link: "https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=ac313ab7d2bf418c",
-    },
-    {
-      title: "The MS Day No One Sees",
-      guest: "Zohra",
-      link: "https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=c2f57ca06b964b4e",
-    },
-    {
-      title: "Navigating MS with Grace and Humor",
-      guest: "Pam Grimes",
-      link: "https://open.spotify.com/episode/6yqxdnVWODQ26hUdbwn348?si=58f2821846ef4fb6",
-    },
-    {
-      title: "Becca's Unfiltered Journey with MS",
-      guest: "Becca",
-      link: "https://open.spotify.com/episode/4UKicNgDubGAfj9EIKhUJL?si=0c64b5cc0deb4c36",
-    },
-    {
-      title: "Finding Strength Beyond the Diagnosis",
+      title: "Amber Cunningham",
       guest: "Amber Cunningham",
-      link: "https://open.spotify.com/episode/1EgzEQ0LgKmKS1ftw8zrr9?si=84e1d9aaadbf4efa",
+      link: "https://open.spotify.com/episode/1EgzEQ0LgKmKS1ftw8zrr9",
     },
     {
-      title: "Embracing Life's Journey with MS",
+      title: "Jasmine Hanna",
       guest: "Jasmine Hanna",
-      link: "https://open.spotify.com/episode/2mgTM4aV6BRTA1mWFfd2FD?si=06d4eb3b7052495c",
+      link: "https://open.spotify.com/episode/2mgTM4aV6BRTA1mWFfd2FD",
     },
   ],
 }
