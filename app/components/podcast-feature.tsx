@@ -28,7 +28,7 @@ export function PodcastFeature() {
                     maintaining her passion for life.
                   </p>
                   <a
-                    href="https://open.spotify.com/episode/4UKicNgDubGAfj9EIKhUJL?si=3d6f33be8de244a5"
+                    href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-orange-600 hover:text-orange-700 mt-3 font-medium"

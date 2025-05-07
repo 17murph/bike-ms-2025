@@ -16,6 +16,95 @@ export default function EventsPage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               <div className="p-4 md:p-8">
                 <div className="flex flex-col items-center text-center">
+                  {/* Jax Bourbon Social section with improved responsive design */}
+                  <div className="relative w-full mb-6">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jax%20BS.jpg-kAlLdQLw3wGq52XlZm7zEF9ikQcyiz.jpeg"
+                      alt="Jax Bourbon Social - July 19, 2025 4PM-9PM at 3130 Parental Home Road"
+                      className="w-full rounded-lg"
+                    />
+
+                    {/* Mobile buttons - stacked below image on small screens */}
+                    <div className="md:hidden flex flex-col gap-3 mt-4">
+                      <a
+                        href="https://www.jaxbourbonsocial.com/event-details"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-amber-700 text-white font-medium rounded shadow hover:bg-amber-800 transition-all"
+                      >
+                        Purchase Tickets Online
+                      </a>
+                      <a
+                        href="https://www.jaxbourbonsocial.com/event-details"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 transition-all"
+                      >
+                        View Event Details
+                      </a>
+                    </div>
+
+                    {/* Desktop buttons - positioned on the right side of the image on larger screens */}
+                    <div className="absolute top-0 right-0 h-full hidden md:flex flex-col justify-center gap-3 pr-4">
+                      <a
+                        href="https://www.jaxbourbonsocial.com/event-details"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-amber-700 bg-opacity-80 text-white font-medium rounded backdrop-blur-sm border border-white border-opacity-20 hover:bg-opacity-100 transition-all whitespace-nowrap"
+                      >
+                        Purchase Tickets Online
+                      </a>
+                      <a
+                        href="https://www.jaxbourbonsocial.com/event-details"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-blue-600 bg-opacity-80 text-white font-medium rounded backdrop-blur-sm border border-white border-opacity-20 hover:bg-opacity-100 transition-all whitespace-nowrap"
+                      >
+                        View Event Details
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Responsive grid for event details */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full mb-6">
+                    <div className="bg-blue-50 p-4 rounded-md">
+                      <p className="font-semibold text-gray-700">Date</p>
+                      <p>July 19, 2025</p>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-md">
+                      <p className="font-semibold text-gray-700">Location</p>
+                      <p>3130 Parental Home Road, Jacksonville, FL</p>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-md sm:col-span-2 md:col-span-1">
+                      <p className="font-semibold text-gray-700">Time</p>
+                      <p>4:00 PM - 9:00 PM</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-6 text-gray-700 text-left sm:text-center">
+                    <h4 className="font-bold text-xl mb-2">Jacksonville's Premiere Bourbon & Whiskey Tasting Event</h4>
+                    <p className="mb-4 text-sm md:text-base">
+                      Jax Bourbon Social is a registered 501(C)3 organization dedicated to bringing bourbon enthusiasts
+                      together for a cause. Founded in 2020, we host events to raise funds and awareness for the
+                      National Multiple Sclerosis (MS) Society.
+                    </p>
+                    <h4 className="font-bold text-xl mb-2">Join Us</h4>
+                    <p className="mb-4 text-sm md:text-base">
+                      Tickets are $100 per person. There will be raffle tickets and a live auction during the event. All
+                      proceeds benefit the National MS Society.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <div className="p-4 md:p-8">
+                <div className="flex flex-col items-center text-center">
                   {/* Dinner of Champions section with improved responsive design */}
                   <div className="relative w-full mb-6">
                     <img
@@ -191,7 +280,7 @@ export default function EventsPage() {
 
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Next Bike MS Ride</h2>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w3xl mx-auto">
               <div className="bg-blue-50 rounded-xl shadow-lg overflow-hidden">
                 <div className="bg-yellow-400 text-black p-3 md:p-4 text-center">
                   <h3 className="text-xl md:text-2xl font-bold">Kentucky Bourbon Country Ride</h3>
@@ -326,7 +415,7 @@ export default function EventsPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-gray-600 text-base md:text-lg">Distance</p>
-                  <p className="text-2xl md:text-4xl font-bold">411.44 miles</p>
+                  <p className="text-2xl md:text-4xl font-bold">507.54 miles</p>
                 </div>
                 <div>
                   <p className="text-gray-600 text-base md:text-lg">Time In Saddle</p>
@@ -336,15 +425,15 @@ export default function EventsPage() {
                       <p className="text-xs md:text-sm text-gray-600">Days</p>
                     </div>
                     <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">03</p>
+                      <p className="text-xl md:text-2xl font-bold">33</p>
                       <p className="text-xs md:text-sm text-gray-600">Hours</p>
                     </div>
                     <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">44</p>
+                      <p className="text-xl md:text-2xl font-bold">47</p>
                       <p className="text-xs md:text-sm text-gray-600">Minutes</p>
                     </div>
                     <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">22</p>
+                      <p className="text-xl md:text-2xl font-bold">27</p>
                       <p className="text-xs md:text-sm text-gray-600">Seconds</p>
                     </div>
                   </div>
@@ -370,8 +459,8 @@ export default function EventsPage() {
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-2 md:py-3 text-sm md:text-base">Quarter 2</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">44.70 miles</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">02:56:34</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">140.8 miles</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">8:59:39</td>
                     </tr>
                   </tbody>
                 </table>
@@ -381,7 +470,7 @@ export default function EventsPage() {
 
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Fundraisers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="max-w-3xl mx-auto">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <div className="bg-black text-white p-3 md:p-4 text-center">
                   <h3 className="text-xl md:text-2xl font-bold">Jax Bourbon Social</h3>
@@ -442,95 +531,6 @@ export default function EventsPage() {
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       </svg>
                       View Event Details and Purchase Tickets
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="bg-red-600 text-white p-3 md:p-4 text-center">
-                  <h3 className="text-xl md:text-2xl font-bold">13th Annual Silent Auction</h3>
-                  <p className="text-xs md:text-sm">Powered by The Big Bananas Cycling Team</p>
-                </div>
-                <div className="p-4 md:p-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="grid grid-cols-2 gap-2">
-                      <img
-                        alt="Big Bananas Silent Auction Flyer"
-                        width="200"
-                        height="300"
-                        className="rounded max-w-full h-auto"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Big%20Banana%201-NV485Gw3L0N1rjDFg4WutPSfThBjM9.jpeg"
-                      />
-                      <img
-                        alt="Big Bananas Silent Auction QR Code"
-                        width="200"
-                        height="300"
-                        className="rounded max-w-full h-auto"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Big%20Banana%202.jpg-6IoYJUVREFFfX6Kc4ZYas5Md179jT5.jpeg"
-                      />
-                    </div>
-                  </div>
-                  <p className="mb-2 text-sm md:text-base">
-                    <strong>Date:</strong> Monday, May 5, 2025
-                  </p>
-                  <p className="mb-2 text-sm md:text-base">
-                    <strong>Time:</strong> 5:30 p.m. until 8:30 p.m.
-                  </p>
-                  <p className="mb-2 text-sm md:text-base">
-                    <strong>Location:</strong> Mr. Chubby's Wings, 150 Valley Circle, Ponte Vedra Beach, Florida
-                  </p>
-                  <p className="mb-4 text-sm md:text-base">
-                    More than 250 items from local merchants, restaurants, artists, and service providers! Silent
-                    Auction PLUS a 50-50 Drawing!
-                  </p>
-                  <p className="mb-4 font-semibold text-sm md:text-base">
-                    100% of the proceeds benefit the National Multiple Sclerosis Society, North Florida Chapter
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <a
-                      href="https://silentmsauction.weebly.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition text-sm md:text-base"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="w-4 h-4 md:w-5 md:h-5"
-                      >
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14 21 3"></path>
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      </svg>
-                      Preview Auction Items
-                    </a>
-                    <a
-                      href="mailto:CMURPHY@SJMALAW.COM"
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition text-sm md:text-base"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="w-4 h-4 md:w-5 md:h-5"
-                      >
-                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                      </svg>
-                      Contact Bruce Reid
                     </a>
                   </div>
                 </div>
