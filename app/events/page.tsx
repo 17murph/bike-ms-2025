@@ -278,9 +278,69 @@ export default function EventsPage() {
             </div>
           </div>
 
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Ride Totals</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+            <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">2025 Cycling Totals</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-gray-600 text-base md:text-lg">Distance</p>
+                  <p className="text-2xl md:text-4xl font-bold">537.84 miles</p>
+                </div>
+                <div>
+                  <p className="text-gray-600 text-base md:text-lg">Time In Saddle</p>
+                  <div className="grid grid-cols-2 gap-2 mt-2">
+                    <div className="bg-blue-50 p-2 rounded-md text-center">
+                      <p className="text-xl md:text-2xl font-bold">01</p>
+                      <p className="text-xs md:text-sm text-gray-600">Days</p>
+                    </div>
+                    <div className="bg-blue-50 p-2 rounded-md text-center">
+                      <p className="text-xl md:text-2xl font-bold">35</p>
+                      <p className="text-xs md:text-sm text-gray-600">Hours</p>
+                    </div>
+                    <div className="bg-blue-50 p-2 rounded-md text-center">
+                      <p className="text-xl md:text-2xl font-bold">54</p>
+                      <p className="text-xs md:text-sm text-gray-600">Minutes</p>
+                    </div>
+                    <div className="bg-blue-50 p-2 rounded-md text-center">
+                      <p className="text-xl md:text-2xl font-bold">38</p>
+                      <p className="text-xs md:text-sm text-gray-600">Seconds</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">2025 Cycling Breakdown by Quarter</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-2 font-semibold text-base md:text-lg">Quarter</th>
+                      <th className="text-left py-2 font-semibold text-base md:text-lg">Distance</th>
+                      <th className="text-left py-2 font-semibold text-base md:text-lg">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200">
+                      <td className="py-2 md:py-3 text-sm md:text-base">Quarter 1</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">366.74 miles</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">24:47:48</td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="py-2 md:py-3 text-sm md:text-base">Quarter 2</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">171.1 miles</td>
+                      <td className="py-2 md:py-3 text-sm md:text-base">11:06:50</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
           <section className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Next Bike MS Ride</h2>
-            <div className="max-w3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Upcoming Rides</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-blue-50 rounded-xl shadow-lg overflow-hidden">
                 <div className="bg-yellow-400 text-black p-3 md:p-4 text-center">
                   <h3 className="text-xl md:text-2xl font-bold">Kentucky Bourbon Country Ride</h3>
@@ -307,7 +367,7 @@ export default function EventsPage() {
                       </svg>
                       <div>
                         <p className="font-semibold text-base md:text-lg">Date &amp; Time</p>
-                        <p className="text-gray-700 text-sm md:text-base">June 7, 2025 at 7:30 AM ET</p>
+                        <p className="text-gray-700 text-sm md:text-base">June 14-15, 2025</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -405,115 +465,14 @@ export default function EventsPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
 
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Ride Totals</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">2025 Cycling Totals</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-gray-600 text-base md:text-lg">Distance</p>
-                  <p className="text-2xl md:text-4xl font-bold">507.54 miles</p>
-                </div>
-                <div>
-                  <p className="text-gray-600 text-base md:text-lg">Time In Saddle</p>
-                  <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">01</p>
-                      <p className="text-xs md:text-sm text-gray-600">Days</p>
-                    </div>
-                    <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">33</p>
-                      <p className="text-xs md:text-sm text-gray-600">Hours</p>
-                    </div>
-                    <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">47</p>
-                      <p className="text-xs md:text-sm text-gray-600">Minutes</p>
-                    </div>
-                    <div className="bg-blue-50 p-2 rounded-md text-center">
-                      <p className="text-xl md:text-2xl font-bold">27</p>
-                      <p className="text-xs md:text-sm text-gray-600">Seconds</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">2025 Cycling Breakdown by Quarter</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-2 font-semibold text-base md:text-lg">Quarter</th>
-                      <th className="text-left py-2 font-semibold text-base md:text-lg">Distance</th>
-                      <th className="text-left py-2 font-semibold text-base md:text-lg">Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-2 md:py-3 text-sm md:text-base">Quarter 1</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">366.74 miles</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">24:47:48</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-2 md:py-3 text-sm md:text-base">Quarter 2</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">140.8 miles</td>
-                      <td className="py-2 md:py-3 text-sm md:text-base">8:59:39</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <section className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Fundraisers</h2>
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="bg-black text-white p-3 md:p-4 text-center">
-                  <h3 className="text-xl md:text-2xl font-bold">Jax Bourbon Social</h3>
-                  <p className="text-xs md:text-sm">Est. 2020</p>
+              <div className="bg-blue-50 rounded-xl shadow-lg overflow-hidden">
+                <div className="bg-green-600 text-white p-3 md:p-4 text-center">
+                  <h3 className="text-xl md:text-2xl font-bold">Colorado Bike MS Ride</h3>
                 </div>
                 <div className="p-4 md:p-6">
-                  <div className="flex justify-center mb-4">
-                    <img
-                      alt="Jax Bourbon Social Logo"
-                      width="300"
-                      height="150"
-                      className="rounded max-w-full h-auto"
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jax%20BS.jpg-kAlLdQLw3wGq52XlZm7zEF9ikQcyiz.jpeg"
-                    />
-                  </div>
-                  <h4 className="text-lg md:text-xl font-bold text-center mb-1 md:mb-2">Jacksonville's Premiere</h4>
-                  <h4 className="text-base md:text-lg font-bold text-center mb-3 md:mb-4">
-                    BOURBON &amp; WHISKEY TASTING EVENT
-                  </h4>
-                  <p className="text-center font-semibold mb-4 text-sm md:text-base">July 19, 2025 4PM-9PM</p>
-                  <div className="bg-gray-50 p-3 md:p-4 rounded-lg mb-4">
-                    <p className="font-semibold mb-2 text-sm md:text-base">Event Location:</p>
-                    <p className="mb-1 text-sm md:text-base">3130 Parental Home Road</p>
-                    <p className="mb-4 text-sm md:text-base">Jacksonville, FL 32216</p>
-                    <p className="mb-2 text-sm md:text-base">
-                      <strong>Tickets:</strong> $100 per person
-                    </p>
-                    <p className="mb-2 text-sm md:text-base">
-                      There will be raffle tickets and a live auction during the event.
-                    </p>
-                  </div>
-                  <p className="mb-4 text-sm md:text-base">
-                    Jax Bourbon Social is a registered 501(C)3 organization dedicated to bringing bourbon enthusiasts
-                    together for a cause. Founded in 2020, we host events to raise funds and awareness for the National
-                    Multiple Sclerosis (MS) Society.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <a
-                      href="https://www.jaxbourbonsocial.com/event-details"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800 transition w-full text-sm md:text-base"
-                    >
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -524,14 +483,110 @@ export default function EventsPage() {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="w-4 h-4 md:w-5 md:h-5"
+                        className="w-5 h-5 md:w-6 md:h-6 text-blue-600 flex-shrink-0"
                       >
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14 21 3"></path>
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
                       </svg>
-                      View Event Details and Purchase Tickets
-                    </a>
+                      <div>
+                        <p className="font-semibold text-base md:text-lg">Date &amp; Time</p>
+                        <p className="text-gray-700 text-sm md:text-base">June 28-29, 2025</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5 md:w-6 md:h-6 text-blue-600 flex-shrink-0"
+                      >
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <div>
+                        <p className="font-semibold text-base md:text-lg">Location</p>
+                        <p className="text-gray-700 text-sm md:text-base">Boulder, Colorado</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5 md:w-6 md:h-6 text-blue-600 flex-shrink-0"
+                      >
+                        <circle cx="18.5" cy="17.5" r="3.5"></circle>
+                        <circle cx="5.5" cy="17.5" r="3.5"></circle>
+                        <circle cx="15" cy="5" r="1"></circle>
+                        <path d="M12 17.5V14l-3-3 4-3 2 3h2"></path>
+                      </svg>
+                      <div>
+                        <p className="font-semibold text-base md:text-lg">Distance</p>
+                        <p className="text-gray-700 text-sm md:text-base">30, 68, or 100 Miles</p>
+                      </div>
+                    </div>
+                    <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2 md:py-3 bg-red-600 text-white rounded-md hover:bg-red-700 text-sm md:text-base font-medium"
+                        href="https://mssociety.donordrive.com/participant/casey-murphy"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-4 h-4 md:w-5 md:h-5"
+                        >
+                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                        </svg>
+                        Donate to Bike MS
+                      </a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2 md:py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm md:text-base font-medium"
+                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2099"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-4 h-4 md:w-5 md:h-5"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M12 16v-4"></path>
+                          <path d="M12 8h.01"></path>
+                        </svg>
+                        About this Ride
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
