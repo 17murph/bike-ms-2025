@@ -242,44 +242,46 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Cori - Featured Guest (replacing Pam Grimes) */}
+            {/* Dr. Dee - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corijpg.jpg-8OdkBMZr0xWyjnczEd1qRHo6TRwVR3.jpeg"
-                        alt="Cori - The Other Side of MS Podcast Guest"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Dee.jpg-loM3KT09JZILe6s5zRD9Oq84DL7zZn.jpeg"
+                        alt="Dr. Dee - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Cori</h3>
+                        <h3 className="text-2xl font-bold text-white">Dr. Dee</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Cori</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Dr. Dee</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS has taught me that strength isn't about never falling; it's about how you rise each time
-                          you do."
+                          "Compassion doesn't have to come from shared diagnosis. Sometimes, it's a choice."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          In this powerful episode, Cori shares her journey with MS and how she's learned to navigate
-                          life's challenges with resilience and determination. Her story offers a raw and honest look at
-                          the realities of living with MS while finding purpose and meaning along the way.
+                          Most people wouldn't expect a veterinarian to be deeply involved in the MS community—but
+                          that's exactly what makes Dr. Deanna "Dee" Greer's story worth hearing. As owner and Medical
+                          Director of Birch Island Veterinary Center in Jacksonville, Florida, she has spent her career
+                          listening to those who can't speak—animals in pain, suffering in silence. But it's her
+                          personal connection through her husband's former spouse, who lives with MS, that led her to
+                          become an annual donor to the National Multiple Sclerosis Society.
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 6</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 7</span>
                       <a
-                        href="https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=bd2833a728124a04"
+                        href="https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=S1RnupaaQNuc470EmktlxQ"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -306,45 +308,44 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Zohra - Featured Guest (moved down) */}
+            {/* Cori - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Zohra.jpg-h2Q9IKwrA81Dq415VIIiHnBzCDKX1g.jpeg"
-                        alt="Zohra - The Other Side of MS Podcast Guest"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corijpg.jpg-8OdkBMZr0xWyjnczEd1qRHo6TRwVR3.jpeg"
+                        alt="Cori - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Zohra</h3>
+                        <h3 className="text-2xl font-bold text-white">Cori</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Zohra</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Cori</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "There's the MS that people see, and then there's the MS day no one sees—the invisible battle
-                          that happens behind closed doors."
+                          "MS has taught me that strength isn't about never falling; it's about how you rise each time
+                          you do."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          In this powerful episode, Zohra shares her raw, unfiltered experience of living with MS,
-                          including the invisible symptoms and daily challenges that most people never witness. Her
-                          story highlights the importance of understanding the full reality of MS beyond what's visible
-                          on the surface.
+                          In this powerful episode, Cori shares her journey with MS and how she's learned to navigate
+                          life's challenges with resilience and determination. Her story offers a raw and honest look at
+                          the realities of living with MS while finding purpose and meaning along the way.
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 5</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 6</span>
                       <a
-                        href="https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=f24d0e3b1cc840bd"
+                        href="https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=bd2833a728124a04"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -473,7 +474,9 @@ export default function PodcastPage() {
                                       ? "Pam shares her experience navigating MS with grace and humor, offering insights into how she's adapted to life's challenges."
                                       : episode.guest === "Jasmine Hanna"
                                         ? "Jasmine discusses her approach to embracing life's journey with MS, sharing wisdom and practical advice for others facing similar challenges."
-                                        : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
+                                        : episode.guest === "Dr. Dee"
+                                          ? "Dr. Dee, a veterinarian and owner of Birch Island Veterinary Center, shares her personal connection to MS through her husband's former spouse and why she became an annual donor to the National MS Society."
+                                          : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
                           </p>
                           <div className="flex justify-between items-center mt-2">
                             <span className="text-xs text-gray-500">Season 3</span>
@@ -655,12 +658,12 @@ export default function PodcastPage() {
             <h2 className="text-3xl font-bold text-center mb-6 text-primary">Latest Episodes</h2>
 
             <div className="space-y-6">
-              {/* Cori's Episode (replacing Pam's) */}
+              {/* Dr. Dee's Episode */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold mb-3">S3_E6: Cori - Finding Strength in Vulnerability</h3>
+                <h3 className="text-xl font-bold mb-3">S3_E7: Dr. Dee - Compassion Beyond Diagnosis</h3>
                 <iframe
                   style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/episode/4KMiRhcr8PNR6D8eXEIfZ2?utm_source=generator&t=0"
+                  src="https://open.spotify.com/embed/episode/1CUllXzZEtFltncOxjPAdS?utm_source=generator&t=0"
                   width="100%"
                   height="152"
                   frameBorder="0"
@@ -670,12 +673,12 @@ export default function PodcastPage() {
                 ></iframe>
               </div>
 
-              {/* Zohra's Episode */}
+              {/* Cori's Episode */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold mb-3">S3_E5: Zohra - The MS Day No One Sees</h3>
+                <h3 className="text-xl font-bold mb-3">S3_E6: Cori - Finding Strength in Vulnerability</h3>
                 <iframe
                   style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/episode/6H2g63vG8skxID554TFDkB?utm_source=generator&t=0"
+                  src="https://open.spotify.com/embed/episode/4KMiRhcr8PNR6D8eXEIfZ2?utm_source=generator&t=0"
                   width="100%"
                   height="152"
                   frameBorder="0"

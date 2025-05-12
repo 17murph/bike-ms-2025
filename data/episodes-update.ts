@@ -36,6 +36,11 @@ export const season3: Season = {
       guest: "Jasmine Hanna",
       link: "https://open.spotify.com/episode/2mgTM4aV6BRTA1mWFfd2FD?si=06d4eb3b7052495c",
     },
+    {
+      title: "Compassion Beyond Diagnosis",
+      guest: "Dr. Dee",
+      link: "https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=S1RnupaaQNuc470EmktlxQ",
+    },
   ],
 }
 
