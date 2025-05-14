@@ -2,7 +2,6 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
@@ -52,12 +51,15 @@ export default function EventsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Jax Bourbon Social */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative h-56 w-full">
-                  <Image
+                <div className="relative h-56 w-full bg-amber-50">
+                  <img
                     src="/images/Jax BS.jpg.jpeg"
                     alt="Jax Bourbon Social - Fundraising event for MS"
-                    fill
-                    className="object-cover"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg?key=69rch"
+                      e.currentTarget.onerror = null
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white">
@@ -122,12 +124,14 @@ export default function EventsPage() {
                 <div className="relative h-56 w-full bg-blue-50">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-3/4 h-auto">
-                      <Image
+                      <img
                         src="/images/dinner-of-champions.png"
                         alt="Dinner of Champions - MS Society Fundraising Gala"
-                        width={400}
-                        height={200}
-                        className="object-contain"
+                        className="object-contain max-h-40"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=5omfl"
+                          e.currentTarget.onerror = null
+                        }}
                       />
                     </div>
                   </div>

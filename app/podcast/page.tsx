@@ -5,7 +5,6 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 import { season1, season2, season3 } from "@/data/episodes-update"
-import Image from "next/image"
 
 export default function PodcastPage() {
   const [openSeason, setOpenSeason] = useState<number | null>(null)
@@ -69,13 +68,13 @@ export default function PodcastPage() {
       <main className="relative">
         {/* Hero Banner Section */}
         <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
-          <Image
-            src="/images/podcast-banner.jpg"
-            alt="The Other Side of MS Podcast"
-            fill
-            className="object-cover brightness-[0.6]"
-            priority
-          />
+          <div className="absolute inset-0 bg-gray-800">
+            <img
+              src="/images/podcast-banner.jpg"
+              alt="The Other Side of MS Podcast"
+              className="w-full h-full object-cover brightness-[0.6]"
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30 flex flex-col items-center justify-center text-white p-4">
             <div className="container mx-auto max-w-5xl px-4">
               <div className="flex flex-col items-center text-center">
@@ -161,13 +160,13 @@ export default function PodcastPage() {
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               <div className="md:w-1/3 flex-shrink-0">
                 <div className="sticky top-24">
-                  <Image
-                    src="/images/podcast-logo.png"
-                    alt="The Other Side of MS Podcast Logo"
-                    width={280}
-                    height={280}
-                    className="rounded-lg shadow-lg mx-auto"
-                  />
+                  <div className="relative w-[280px] h-[280px] mx-auto">
+                    <img
+                      src="/images/podcast-logo.png"
+                      alt="The Other Side of MS Podcast Logo"
+                      className="w-full h-full object-contain rounded-lg shadow-lg"
+                    />
+                  </div>
 
                   <div className="mt-6 text-center">
                     <a
@@ -247,11 +246,14 @@ export default function PodcastPage() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
-                    <div className="h-[300px] md:h-full relative">
+                    <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Dee.jpg-loM3KT09JZILe6s5zRD9Oq84DL7zZn.jpeg"
                         alt="Dr. Dee - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
@@ -313,11 +315,14 @@ export default function PodcastPage() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
-                    <div className="h-[300px] md:h-full relative">
+                    <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corijpg.jpg-8OdkBMZr0xWyjnczEd1qRHo6TRwVR3.jpeg"
                         alt="Cori - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=le35y"
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
@@ -652,7 +657,7 @@ export default function PodcastPage() {
           </div>
         </section>
 
-        {/* Legacy of Leaders Video Section */}
+        {/* Latest Episodes Section */}
         <section className="py-12 bg-white border-t border-gray-100">
           <div className="container mx-auto max-w-4xl px-4">
             <h2 className="text-3xl font-bold text-center mb-6 text-primary">Latest Episodes</h2>
