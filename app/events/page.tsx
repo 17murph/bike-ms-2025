@@ -63,15 +63,15 @@ export default function EventsPage() {
                   <div className="flex flex-wrap gap-3 my-3">
                     <div className="flex items-center gap-1 text-gray-600">
                       <Calendar className="w-4 h-4" />
-                      <span>February 22, 2025</span>
+                      <span>July 19, 2025</span>
                     </div>
                     <div className="flex items-center gap-1 text-gray-600">
                       <MapPin className="w-4 h-4" />
-                      <span>Jacksonville, FL</span>
+                      <span>3130 Parental Home Road, Jacksonville, FL 32216</span>
                     </div>
                     <div className="flex items-center gap-1 text-gray-600">
                       <Clock className="w-4 h-4" />
-                      <span>6:00 PM - 9:00 PM</span>
+                      <span>4:00 PM - 9:00 PM</span>
                     </div>
                   </div>
                   <p className="mb-3">
@@ -81,7 +81,7 @@ export default function EventsPage() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.event&eventID=1199"
+                      href="https://www.jaxbourbonsocial.com/event-details"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors text-sm"
@@ -117,15 +117,15 @@ export default function EventsPage() {
                   <div className="flex flex-wrap gap-3 my-3">
                     <div className="flex items-center gap-1 text-gray-600">
                       <Calendar className="w-4 h-4" />
-                      <span>March 15, 2025</span>
+                      <span>June 5, 2025</span>
                     </div>
                     <div className="flex items-center gap-1 text-gray-600">
                       <MapPin className="w-4 h-4" />
-                      <span>Tampa, FL</span>
+                      <span>Florida Blue Conference Center, 4800 Deerwood Park, Jacksonville, FL 32246</span>
                     </div>
                     <div className="flex items-center gap-1 text-gray-600">
                       <Clock className="w-4 h-4" />
-                      <span>6:30 PM - 10:00 PM</span>
+                      <span>6:00 PM - 9:30 PM</span>
                     </div>
                   </div>
                   <p className="mb-3">
@@ -135,7 +135,7 @@ export default function EventsPage() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://www.nationalmssociety.org/Chapters/FLS/Fundraising-Events/Dinner-of-Champions"
+                      href="https://my.onecause.com/event/organizations/92771a7b-c025-4a2e-a533-fe6e8a011f5e/events/vevt:be06f33b-5f5e-47b5-a80a-2c2493ed533d/home/story"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors text-sm"
