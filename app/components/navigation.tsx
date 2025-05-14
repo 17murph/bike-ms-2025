@@ -47,7 +47,7 @@ export function Navigation() {
               Sponsors
             </Link>
             <Link
-              href="https://mssociety.donordrive.com/participant/casey-murphy"
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -123,7 +123,7 @@ export function Navigation() {
               Sponsors
             </Link>
             <Link
-              href="https://mssociety.donordrive.com/participant/casey-murphy"
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}

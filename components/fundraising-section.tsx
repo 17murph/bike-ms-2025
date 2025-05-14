@@ -8,7 +8,7 @@ export function FundraisingSection() {
       <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
         <div className="p-4">
           <Link
-            href="https://mssociety.donordrive.com/participant/casey-murphy"
+            href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -100,7 +100,7 @@ export function FundraisingSection() {
                 </div>
               </div>
               <Link
-                href="https://mssociety.donordrive.com/participant/casey-murphy"
+                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full mt-4 md:mt-0"

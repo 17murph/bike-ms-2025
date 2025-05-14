@@ -95,7 +95,7 @@ export function MainNavigation() {
             })}
 
             <Link
-              href="https://mssociety.donordrive.com/participant/casey-murphy"
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
@@ -162,7 +162,7 @@ export function MainNavigation() {
             })}
 
             <Link
-              href="https://mssociety.donordrive.com/participant/casey-murphy"
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"

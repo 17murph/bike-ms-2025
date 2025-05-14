@@ -1,203 +1,215 @@
 "use client"
 
+import type React from "react"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Phone, Mail, MessageSquare } from "lucide-react"
+import { MobileTextButton } from "@/components/mobile-text-button"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { useEffect } from "react"
+import { ReliableImage } from "@/components/reliable-image"
+import { Heart, Mail, Send, Bike, ExternalLink } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import { SocialMediaLinks } from "@/components/social-media-links"
-import Image from "next/image"
 
 export default function ContactPage() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
+
   // Set metadata via useEffect to avoid server-side rendering issues
   useEffect(() => {
-    document.title = "About / Contact | Bike MS 2025"
+    document.title = "About & Contact | Cycling to End Multiple Sclerosis"
   }, [])
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setError("")
+
+    try {
+      // Simulate form submission
+      await new Promise((resolve) => setTimeout(resolve, 1500))
+
+      // Reset form
+      setName("")
+      setEmail("")
+      setMessage("")
+      setIsSubmitted(true)
+
+      // Reset submission status after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 5000)
+    } catch (err) {
+      setError("There was an error submitting your message. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Add padding to account for fixed navigation */}
       <div className="pt-16 md:pt-20"></div>
 
-      <main>
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
-            {/* Full-width Medals Hero Image */}
-            <section className="relative w-full h-[500px] md:h-[600px] -mx-4 -mt-12 mb-12">
-              <div className="absolute inset-0 bg-black/50 z-10"></div>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Medals-ReTFucpnIp1aiNBsVWpyrZAkHX26fg.jpeg"
-                alt="Bike MS Medals Collection"
+      <main className="container mx-auto py-6 px-4">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <section className="space-y-4">
+            <h1 className="text-4xl font-bold text-center">About & Contact</h1>
+            <p className="text-lg text-center text-gray-700">Learn more about our mission and get in touch</p>
+
+            <div className="flex justify-center gap-4 my-6">
+              <Link
+                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+              >
+                <Heart className="w-5 h-5" />
+                <span>Donate to Bike MS</span>
+              </Link>
+            </div>
+          </section>
+
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl font-bold mb-4">About Me</h2>
+              <p className="mb-4">
+                I'm Casey Murphy, a passionate cyclist and MS advocate. My journey with Bike MS began in 2018, and since
+                then, I've been dedicated to raising awareness and funds for multiple sclerosis research and support
+                services.
+              </p>
+              <p className="mb-4">
+                As a member of Team Spanish Beer, I participate in multiple Bike MS events each year across the country.
+                My goal is to help create a world free of MS while building a community of support for those affected by
+                this disease.
+              </p>
+              <p>
+                Through cycling, podcasting, and community events, I'm committed to making a difference in the lives of
+                people living with MS. Join me in this important mission!
+              </p>
+
+              <div className="mt-6 space-y-3">
+                <div className="flex items-start gap-3">
+                  <Bike className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-medium">Bike MS Passport Rider</h3>
+                    <p className="text-gray-600">Participating in multiple Bike MS events nationwide</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <ExternalLink className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-medium">Team Spanish Beer Member</h3>
+                    <p className="text-gray-600">Proud member of an amazing fundraising team</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-medium">Get in Touch</h3>
+                    <p className="text-gray-600">Have questions or want to collaborate? Reach out below!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative h-[350px] rounded-lg overflow-hidden">
+              <ReliableImage
+                src="/placeholder.svg?key=dbytf"
+                alt="Casey Murphy - Bike MS cyclist and advocate"
                 fill
                 className="object-cover"
-                priority
               />
-              <div className="absolute inset-0 z-20 flex items-center justify-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white text-center drop-shadow-md">
-                  About / Contact
-                </h1>
-              </div>
-            </section>
-
-            {/* Centered Headline */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                Why I Ride. Why I Listen. Why I Won't Stop.
-              </h2>
             </div>
+          </section>
 
-            {/* New About Section with Two-Column Layout */}
-            <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                {/* Left Column - Image */}
-                <div className="md:w-1/3">
-                  <div className="relative overflow-hidden rounded-lg shadow-md">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Casey%20April%202025-DU0svdb81P0mzO2CgEgfYgEE3Ugv3m.jpeg"
-                      alt="Casey Murphy"
-                      width={400}
-                      height={400}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                </div>
+          <section className="bg-gray-50 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-6">Contact Me</h2>
 
-                {/* Right Column - Text */}
-                <div className="md:w-2/3">
-                  <div className="prose max-w-none">
-                    <p className="text-lg">
-                      My name is Casey Murphy. I ride for the ones who can't. I fundraise for the people living with MS
-                      every single day.
-                    </p>
-                    <p>
-                      I don't live with MS myself — but I've been showing up for this cause for over 30 years. I'm proud
-                      to serve as a Trustee for the North Florida Chapter of the National MS Society and as a Tour of
-                      Champions fundraiser multiple years (raising $10,000 or more annually).
-                    </p>
-                    <p>
-                      I also host the podcast The Other Side of MS, where we hold space for the voices of people living
-                      with this disease — their grief, humor, truth, and resilience — without trying to tidy it up for
-                      inspiration.
-                    </p>
-                    <p>
-                      Whether you're here to ride, donate, listen, or just learn something real — I'm grateful you're
-                      here. Let's keep moving forward.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Original Contact Section - Preserved */}
-            <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  Have questions about Bike MS, the podcast, or want to get involved? Reach out to Casey Murphy directly
-                  using the contact information below.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-blue-50 p-6 rounded-lg flex flex-col items-center text-center">
-                  <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
-                    <Phone className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                  <p className="text-gray-700 mb-4">Call or text Casey directly</p>
-                  <a
-                    href="tel:9045041500"
-                    className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    904-504-1500
-                  </a>
-                </div>
-
-                <div className="bg-blue-50 p-6 rounded-lg flex flex-col items-center text-center">
-                  <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
-                    <Mail className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Email</h3>
-                  <p className="text-gray-700 mb-4">Send an email anytime</p>
-                  <a
-                    href="mailto:CMURPHY@SJMALAW.COM"
-                    className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
-                  >
-                    CMURPHY@SJMALAW.COM
-                  </a>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-lg flex flex-col items-center text-center mb-8">
-                <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
-                  <MessageSquare className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Podcast Guest Inquiries</h3>
-                <p className="text-gray-700 mb-4">
-                  Interested in sharing your MS story on The Other Side of MS podcast? We'd love to hear from you!
-                </p>
-                <a
-                  href="mailto:CMURPHY@SJMALAW.COM?subject=Podcast%20Guest%20Inquiry"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Email Casey</span>
-                </a>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
-                <p className="text-gray-700 mb-6">
-                  Follow Casey and The Other Side of MS on social media for updates, stories, and more.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold text-center mb-6">Quick Links</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link
-                  href="https://mssociety.donordrive.com/participant/casey-murphy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-600 text-white p-4 rounded-lg text-center hover:bg-red-700 transition-colors"
-                >
-                  Donate to Bike MS
-                </Link>
-                <Link
-                  href="https://open.spotify.com/episode/2mgTM4aV6BRTA1mWFfd2FD?si=7sAb2qGYSB26ahSVLHmyHQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-600 text-white p-4 rounded-lg text-center hover:bg-green-700 transition-colors"
-                >
-                  Listen to the Latest Podcast
-                </Link>
-                <Link
-                  href="/podcast"
-                  className="bg-blue-600 text-white p-4 rounded-lg text-center hover:bg-blue-700 transition-colors"
-                >
-                  Browse All Episodes
-                </Link>
-                <Link
-                  href="/events"
-                  className="bg-yellow-600 text-white p-4 rounded-lg text-center hover:bg-yellow-700 transition-colors"
-                >
-                  View Upcoming Events
-                </Link>
+                <div className="space-y-2">
+                  <label htmlFor="name" className="block text-sm font-medium">
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    placeholder="Your name"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="email" className="block text-sm font-medium">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    placeholder="Your email address"
+                  />
+                </div>
               </div>
-            </div>
+              <div className="space-y-2">
+                <label htmlFor="message" className="block text-sm font-medium">
+                  Message
+                </label>
+                <Textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                  placeholder="Your message"
+                  rows={5}
+                />
+              </div>
 
-            {/* Social Media Links */}
-            <SocialMediaLinks />
-          </div>
+              <div className="flex justify-end">
+                <Button type="submit" disabled={isSubmitting} className="bg-primary hover:bg-primary/90 text-white">
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </div>
+
+              {isSubmitted && (
+                <div className="p-3 bg-green-50 text-green-700 rounded-md">
+                  Thank you for your message! I'll get back to you soon.
+                </div>
+              )}
+
+              {error && <div className="p-3 bg-red-50 text-red-700 rounded-md">{error}</div>}
+            </form>
+          </section>
+
+          {/* Add Social Media Links */}
+          <SocialMediaLinks />
         </div>
       </main>
 
       <Footer />
       <BackToTopButton />
+      <MobileTextButton />
     </div>
   )
 }

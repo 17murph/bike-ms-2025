@@ -10,7 +10,7 @@ import {
   Users,
   Home,
   Info,
-  Image,
+  ImageIcon,
   Headphones,
 } from "lucide-react"
 
@@ -73,7 +73,7 @@ export function Footer() {
                   href="/pictures"
                   className="flex items-center justify-center gap-2 text-gray-600 hover:text-primary transition-colors"
                 >
-                  <Image className="w-4 h-4" />
+                  <ImageIcon className="w-4 h-4" />
                   <span>Photo Gallery</span>
                 </Link>
               </li>
@@ -97,7 +97,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://mssociety.donordrive.com/participant/casey-murphy"
+                  href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 text-gray-600 hover:text-primary transition-colors"

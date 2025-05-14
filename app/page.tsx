@@ -112,7 +112,7 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-6">
                   <a
-                    href="https://mssociety.donordrive.com/participant/casey-murphy"
+                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
