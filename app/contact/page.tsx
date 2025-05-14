@@ -1,58 +1,19 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { ReliableImage } from "@/components/reliable-image"
-import { Heart, Mail, Send, Bike, ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { Heart, Mail, Phone, MessageSquare, ExternalLink } from "lucide-react"
 import { SocialMediaLinks } from "@/components/social-media-links"
 
 export default function ContactPage() {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState("")
-
   // Set metadata via useEffect to avoid server-side rendering issues
   useEffect(() => {
     document.title = "About & Contact | Cycling to End Multiple Sclerosis"
   }, [])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setError("")
-
-    try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-
-      // Reset form
-      setName("")
-      setEmail("")
-      setMessage("")
-      setIsSubmitted(true)
-
-      // Reset submission status after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
-    } catch (err) {
-      setError("There was an error submitting your message. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -80,7 +41,26 @@ export default function ContactPage() {
             </div>
           </section>
 
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Full-width Medals Hero Image */}
+          <section className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden mb-8">
+            <div className="absolute inset-0 bg-black/40 z-10"></div>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Medals-ReTFucpnIp1aiNBsVWpyrZAkHX26fg.jpeg"
+              alt="Bike MS Medals Collection"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg?key=lbuyq"
+                e.currentTarget.onerror = null
+              }}
+            />
+            <div className="absolute inset-0 z-20 flex items-center justify-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center drop-shadow-md">
+                Why I Ride. Why I Listen. Why I Won't Stop.
+              </h2>
+            </div>
+          </section>
+
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-lg shadow-md p-6">
             <div>
               <h2 className="text-2xl font-bold mb-4">About Me</h2>
               <p className="mb-4">
@@ -100,13 +80,6 @@ export default function ContactPage() {
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-start gap-3">
-                  <Bike className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-medium">Bike MS Passport Rider</h3>
-                    <p className="text-gray-600">Participating in multiple Bike MS events nationwide</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
                   <ExternalLink className="w-5 h-5 text-primary mt-1" />
                   <div>
                     <h3 className="font-medium">Team Spanish Beer Member</h3>
@@ -114,95 +87,107 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-primary mt-1" />
+                  <MessageSquare className="w-5 h-5 text-primary mt-1" />
                   <div>
-                    <h3 className="font-medium">Get in Touch</h3>
-                    <p className="text-gray-600">Have questions or want to collaborate? Reach out below!</p>
+                    <h3 className="font-medium">Podcast Host</h3>
+                    <p className="text-gray-600">Host of "The Other Side of MS" podcast</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative h-[350px] rounded-lg overflow-hidden">
-              <ReliableImage
-                src="/placeholder.svg?key=dbytf"
+            <div className="relative h-[350px] rounded-lg overflow-hidden shadow-md">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Casey%20April%202025-DU0svdb81P0mzO2CgEgfYgEE3Ugv3m.jpeg"
                 alt="Casey Murphy - Bike MS cyclist and advocate"
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg?key=9ze9l"
+                  e.currentTarget.onerror = null
+                }}
               />
             </div>
           </section>
 
-          <section className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-6">Contact Me</h2>
+          <section className="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-6 text-center">Contact Me</h2>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    placeholder="Your name"
-                  />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-blue-50 p-6 rounded-lg flex flex-col items-center text-center">
+                <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
+                  <Phone className="w-8 h-8" />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    placeholder="Your email address"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-medium">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                  placeholder="Your message"
-                  rows={5}
-                />
+                <h3 className="text-xl font-semibold mb-2">Phone</h3>
+                <p className="text-gray-700 mb-4">Call or text Casey directly</p>
+                <a
+                  href="tel:9045041500"
+                  className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  904-504-1500
+                </a>
               </div>
 
-              <div className="flex justify-end">
-                <Button type="submit" disabled={isSubmitting} className="bg-primary hover:bg-primary/90 text-white">
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-              </div>
-
-              {isSubmitted && (
-                <div className="p-3 bg-green-50 text-green-700 rounded-md">
-                  Thank you for your message! I'll get back to you soon.
+              <div className="bg-blue-50 p-6 rounded-lg flex flex-col items-center text-center">
+                <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
+                  <Mail className="w-8 h-8" />
                 </div>
-              )}
+                <h3 className="text-xl font-semibold mb-2">Email</h3>
+                <p className="text-gray-700 mb-4">Send an email anytime</p>
+                <a
+                  href="mailto:CMURPHY@SJMALAW.COM"
+                  className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  CMURPHY@SJMALAW.COM
+                </a>
+              </div>
+            </div>
 
-              {error && <div className="p-3 bg-red-50 text-red-700 rounded-md">{error}</div>}
-            </form>
+            <div className="flex justify-center mt-8">
+              <a
+                href="mailto:CMURPHY@SJMALAW.COM?subject=Bike%20MS%20Contact%20Inquiry"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+              >
+                <Mail className="w-5 h-5" />
+                <span>Send Message</span>
+              </a>
+            </div>
           </section>
 
-          {/* Add Social Media Links */}
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-bold text-center mb-6">Quick Links</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link
+                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 text-white p-4 rounded-lg text-center hover:bg-red-700 transition-colors"
+              >
+                Donate to Bike MS
+              </Link>
+              <Link
+                href="https://open.spotify.com/show/3t5Nt9jtmDpPXLGiTHOCr2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 text-white p-4 rounded-lg text-center hover:bg-green-700 transition-colors"
+              >
+                Listen to the Podcast
+              </Link>
+              <Link
+                href="/podcast"
+                className="bg-blue-600 text-white p-4 rounded-lg text-center hover:bg-blue-700 transition-colors"
+              >
+                Browse All Episodes
+              </Link>
+              <Link
+                href="/events"
+                className="bg-yellow-600 text-white p-4 rounded-lg text-center hover:bg-yellow-700 transition-colors"
+              >
+                View Upcoming Events
+              </Link>
+            </div>
+          </div>
+
+          {/* Social Media Links */}
           <SocialMediaLinks />
         </div>
       </main>

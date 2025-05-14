@@ -8,20 +8,19 @@ import { Globe, Phone, Mail, Home } from "lucide-react"
 import { ReliableImage } from "@/components/reliable-image"
 import { SocialMediaLinks } from "@/components/social-media-links"
 
-// Remove the viewport export since it's not compatible with client components
-
 export default function SponsorsPage() {
   return (
     <div className="min-h-screen bg-white relative">
-      <Link href="/" className="absolute top-4 left-4">
-        <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
-          <Home className="h-4 w-4" />
-        </button>
-      </Link>
-
       <Navigation />
 
-      <main className="container mx-auto py-12 px-4">
+      {/* Add padding-top to account for the fixed navigation bar */}
+      <main className="container mx-auto pt-24 md:pt-28 pb-12 px-4">
+        <Link href="/" className="absolute top-24 md:top-28 left-4">
+          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+            <Home className="h-4 w-4" />
+          </button>
+        </Link>
+
         <div className="max-w-4xl mx-auto space-y-12">
           <section className="space-y-8">
             <h1 className="text-4xl font-bold text-center">Sponsor Spotlight</h1>
