@@ -5,8 +5,41 @@ export default function AboutPage() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">About Bike MS 2025</h1>
 
+      {/* Personal Introduction Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-4 text-orange-600">Meet Casey Murphy</h2>
+        <div className="prose max-w-none">
+          <p className="mb-4">
+            I'm Casey Murphy, a passionate cyclist and MS advocate. My journey with Bike MS began in 2018, and since
+            then, I've been dedicated to raising awareness and funds for multiple sclerosis research and support
+            services.
+          </p>
+          <p className="mb-4">
+            As a member of Team Spanish Beer, I participate in multiple Bike MS events each year across the country. My
+            goal is to help create a world free of MS while building a community of support for those affected by this
+            disease.
+          </p>
+          <p className="mb-4">
+            Through cycling, podcasting, and community events, I'm committed to making a difference in the lives of
+            people living with MS. Join me in this important mission!
+          </p>
+        </div>
+
+        {/* Achievements and Experience Box */}
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r mb-6">
+          <h3 className="font-bold text-lg mb-2">Experience & Achievements</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Cycling for Bike MS since 1995</li>
+            <li>Completed over 35 Bike MS events</li>
+            <li>Top fundraiser in the Southeast Region</li>
+            <li>Board of Trustees member for the National MS Society in North Florida (Jacksonville)</li>
+          </ul>
+        </div>
+      </section>
+
       {/* Hero/Intro Section */}
       <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-4 text-orange-600">About Bike MS</h2>
         <div className="prose max-w-none">
           <p className="mb-4">
             Bike MS is a fundraising cycling series organized by the National Multiple Sclerosis Society with a mission

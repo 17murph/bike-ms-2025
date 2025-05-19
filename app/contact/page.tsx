@@ -6,7 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { Heart, Mail, Phone, MessageSquare, ExternalLink } from "lucide-react"
+import { Heart, Mail, Phone, MessageSquare, ExternalLink, CheckCircle } from "lucide-react"
 import { SocialMediaLinks } from "@/components/social-media-links"
 
 export default function ContactPage() {
@@ -60,52 +60,80 @@ export default function ContactPage() {
             </div>
           </section>
 
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-lg shadow-md p-6">
-            <div>
-              <h2 className="text-2xl font-bold mb-4">About Me</h2>
-              <p className="mb-4">
-                I'm Casey Murphy, a passionate cyclist and MS advocate. My journey with Bike MS began in 2018, and since
-                then, I've been dedicated to raising awareness and funds for multiple sclerosis research and support
-                services.
-              </p>
-              <p className="mb-4">
-                As a member of Team Spanish Beer, I participate in multiple Bike MS events each year across the country.
-                My goal is to help create a world free of MS while building a community of support for those affected by
-                this disease.
-              </p>
-              <p>
-                Through cycling, podcasting, and community events, I'm committed to making a difference in the lives of
-                people living with MS. Join me in this important mission!
-              </p>
+          {/* Redesigned About Me Section */}
+          <section className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="md:flex">
+              {/* Image Column - Full height on desktop */}
+              <div className="md:w-2/5 relative">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Casey%20April%202025-DU0svdb81P0mzO2CgEgfYgEE3Ugv3m.jpeg"
+                  alt="Casey Murphy - Bike MS cyclist and advocate"
+                  className="w-full h-full object-cover object-center"
+                  style={{ minHeight: "300px", maxHeight: "600px" }}
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg?key=9ze9l"
+                    e.currentTarget.onerror = null
+                  }}
+                />
+              </div>
 
-              <div className="mt-6 space-y-3">
-                <div className="flex items-start gap-3">
-                  <ExternalLink className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-medium">Team Spanish Beer Member</h3>
-                    <p className="text-gray-600">Proud member of an amazing fundraising team</p>
+              {/* Content Column */}
+              <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">Casey Murphy</h2>
+                  <div className="prose max-w-none text-gray-700">
+                    <p className="mb-4 leading-relaxed">
+                      I'm a passionate cyclist and MS advocate. My journey with Bike MS began in 1995, and since then,
+                      I've been dedicated to raising awareness and funds for multiple sclerosis research and support
+                      services.
+                    </p>
+                    <p className="mb-4 leading-relaxed">
+                      As a member of Team Spanish Beer, I participate in multiple Bike MS events each year across the
+                      country. My goal is to help create a world free of MS while building a community of support for
+                      those affected by this disease.
+                    </p>
+                    <p className="leading-relaxed">
+                      Through cycling, podcasting, and community events, I'm committed to making a difference in the
+                      lives of people living with MS. Join me in this important mission!
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <MessageSquare className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-medium">Podcast Host</h3>
-                    <p className="text-gray-600">Host of "The Other Side of MS" podcast</p>
+
+                {/* Achievements Section */}
+                <div className="mt-6 bg-gradient-to-r from-blue-50 to-white rounded-lg border border-blue-100 p-5">
+                  <h3 className="font-bold text-lg mb-3 text-blue-800">Experience & Achievements</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <p className="text-gray-700">Cycling for Bike MS since 1995</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <p className="text-gray-700">Completed over 35 Bike MS events</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <p className="text-gray-700">Top fundraiser in the Southeast Region</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <p className="text-gray-700">Board of Trustees member, National MS Society (North Florida)</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Roles Section */}
+                <div className="mt-6 flex flex-wrap gap-4">
+                  <div className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-full">
+                    <ExternalLink className="w-4 h-4 text-blue-600" />
+                    <span className="text-sm font-medium text-blue-800">Team Spanish Beer Member</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-full">
+                    <MessageSquare className="w-4 h-4 text-blue-600" />
+                    <span className="text-sm font-medium text-blue-800">Podcast Host</span>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="relative h-[350px] rounded-lg overflow-hidden shadow-md">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Casey%20April%202025-DU0svdb81P0mzO2CgEgfYgEE3Ugv3m.jpeg"
-                alt="Casey Murphy - Bike MS cyclist and advocate"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "/placeholder.svg?key=9ze9l"
-                  e.currentTarget.onerror = null
-                }}
-              />
             </div>
           </section>
 
