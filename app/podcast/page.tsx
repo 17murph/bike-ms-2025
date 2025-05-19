@@ -241,10 +241,76 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Dr. Dee - Featured Guest */}
+            {/* Katie Heckert - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[300px] md:h-full relative bg-gray-200">
+                      <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Katie_H-1.jpg-rEikKGXYcLsXoCufrfkoJeqw3K9R6C.jpeg"
+                        alt="Katie Heckert - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Katie Heckert</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Katie Heckert</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "I didn't leave law because I lost passion. I left because my body gave me no choice."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Katie was a litigator with a sharp mind and a powerful voice. But MS forced a different
+                          path—one filled with uncertainty, resilience, and new meaning. This episode isn't just about
+                          what MS takes—it's about what it reveals.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 8</span>
+                      <a
+                        href="https://open.spotify.com/episode/7qMHUN7cD54dPQYrwLZWW8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Dr. Dee - Featured Guest (moved down) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
@@ -255,7 +321,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Dr. Dee</h3>
                       </div>
@@ -283,74 +349,7 @@ export default function PodcastPage() {
                     <div className="mt-4 flex justify-between items-center">
                       <span className="text-sm text-gray-500">Season 3, Episode 7</span>
                       <a
-                        href="https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=S1RnupaaQNuc470EmktlxQ"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cori - Featured Guest */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[300px] md:h-full relative bg-gray-200">
-                      <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corijpg.jpg-8OdkBMZr0xWyjnczEd1qRHo6TRwVR3.jpeg"
-                        alt="Cori - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=le35y"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Cori</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Cori</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS has taught me that strength isn't about never falling; it's about how you rise each time
-                          you do."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          In this powerful episode, Cori shares her journey with MS and how she's learned to navigate
-                          life's challenges with resilience and determination. Her story offers a raw and honest look at
-                          the realities of living with MS while finding purpose and meaning along the way.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 6</span>
-                      <a
-                        href="https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=bd2833a728124a04"
+                        href="https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=OIwc2_YBQXusedlhs51LFQ"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -463,9 +462,11 @@ export default function PodcastPage() {
                       <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
                         <div className="flex flex-col">
                           <h4 className="font-bold text-gray-800 text-lg">
-                            S3_E{season3.episodes.length - index}: {episode.title}
+                            {episode.id}: {episode.title}
                           </h4>
-                          <p className="text-gray-600 italic text-sm my-2">Guest: {episode.guest}</p>
+                          <p className="text-gray-600 italic text-sm my-2">
+                            Guest: {episode.guest} {episode.date && `• ${episode.date}`}
+                          </p>
                           <p className="text-gray-700 my-2 text-sm">
                             {episode.guest === "Amber Cunningham"
                               ? "Amber discusses the daily challenges of MS, the misconceptions others have, and how she's learned to advocate for herself."
@@ -481,7 +482,9 @@ export default function PodcastPage() {
                                         ? "Jasmine discusses her approach to embracing life's journey with MS, sharing wisdom and practical advice for others facing similar challenges."
                                         : episode.guest === "Dr. Dee"
                                           ? "Dr. Dee, a veterinarian and owner of Birch Island Veterinary Center, shares her personal connection to MS through her husband's former spouse and why she became an annual donor to the National MS Society."
-                                          : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
+                                          : episode.guest === "Katie Heckert"
+                                            ? "Katie was a litigator with a sharp mind and a powerful voice. But MS forced a different path—one filled with uncertainty, resilience, and new meaning. This episode isn't just about what MS takes—it's about what it reveals."
+                                            : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
                           </p>
                           <div className="flex justify-between items-center mt-2">
                             <span className="text-xs text-gray-500">Season 3</span>
@@ -652,58 +655,6 @@ export default function PodcastPage() {
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Episodes Section */}
-        <section className="py-12 bg-white border-t border-gray-100">
-          <div className="container mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-bold text-center mb-6 text-primary">Latest Episodes</h2>
-
-            <div className="space-y-6">
-              {/* Dr. Dee's Episode */}
-              <div className="mb-4">
-                <h3 className="text-xl font-bold mb-3">S3_E7: Dr. Dee - Compassion Beyond Diagnosis</h3>
-                <iframe
-                  style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/episode/1CUllXzZEtFltncOxjPAdS?utm_source=generator&t=0"
-                  width="100%"
-                  height="152"
-                  frameBorder="0"
-                  allowFullScreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              </div>
-
-              {/* Cori's Episode */}
-              <div className="mb-4">
-                <h3 className="text-xl font-bold mb-3">S3_E6: Cori - Finding Strength in Vulnerability</h3>
-                <iframe
-                  style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/episode/4KMiRhcr8PNR6D8eXEIfZ2?utm_source=generator&t=0"
-                  width="100%"
-                  height="152"
-                  frameBorder="0"
-                  allowFullScreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-center mb-6 text-primary">As Featured on Legacy of Leaders</h3>
-              <div className="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-md">
-                <iframe
-                  title="vimeo-player"
-                  src="https://player.vimeo.com/video/1071910885?h=1d25836381"
-                  className="absolute top-0 left-0 w-full h-full"
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
               </div>
             </div>
           </div>
