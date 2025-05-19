@@ -108,7 +108,7 @@ export default function AboutBikeMS() {
 
                     <div className="mt-3">
                       <a
-                        href="https://mssociety.donordrive.com/index.cfm?fuseaction=donorDrive.team&teamID=44193"
+                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=registrationUpdate.team&participantID=632965&success=donordrive.event"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
