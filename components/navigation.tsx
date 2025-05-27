@@ -131,62 +131,75 @@ export function Navigation() {
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-lg bg-primary/10 text-primary"
+            className="p-3 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed top-[57px] left-0 right-0 bottom-0 bg-white/98 backdrop-blur-sm z-50 overflow-y-auto animate-in slide-in-from-top duration-300">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-2">
-            {navItems.map((item) => {
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+        <div className="md:hidden fixed top-[57px] left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto animate-in slide-in-from-top duration-300 shadow-lg">
+          <div className="container mx-auto px-4 py-4 flex flex-col">
+            <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
+              <span className="text-lg font-semibold text-gray-900">Menu</span>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "flex items-center px-4 py-4 rounded-lg transition-colors",
-                    "hover:bg-primary/10 hover:text-primary",
-                    isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
-                  )}
-                >
-                  <item.icon className="w-6 h-6 mr-3" />
-                  <span className="text-lg">{item.name}</span>
-                </Link>
-              )
-            })}
+            <div className="space-y-1">
+              {navItems.map((item) => {
+                const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
 
-            <Link
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
-            >
-              <Heart className="w-6 h-6 mr-3" />
-              <span className="text-lg">Donate</span>
-            </Link>
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "flex items-center px-4 py-4 rounded-lg transition-colors border-b border-gray-100",
+                      "hover:bg-primary/10 hover:text-primary",
+                      isActive ? "bg-primary/10 text-primary font-semibold" : "text-gray-900 font-medium",
+                    )}
+                  >
+                    <item.icon className="w-6 h-6 mr-3" />
+                    <span className="text-lg">{item.name}</span>
+                  </Link>
+                )
+              })}
 
-            <button
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
-                    url: window.location.href,
-                  })
-                }
-                setIsOpen(false)
-              }}
-              className="flex items-center px-4 py-4 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
-            >
-              <Share2 className="w-6 h-6 mr-3" />
-              <span className="text-lg">Share</span>
-            </button>
+              <Link
+                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors font-semibold border-b border-gray-100"
+              >
+                <Heart className="w-6 h-6 mr-3" />
+                <span className="text-lg">Donate</span>
+              </Link>
+
+              <button
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
+                      url: window.location.href,
+                    })
+                  }
+                  setIsOpen(false)
+                }}
+                className="flex items-center px-4 py-4 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-900 font-medium"
+              >
+                <Share2 className="w-6 h-6 mr-3" />
+                <span className="text-lg">Share</span>
+              </button>
+            </div>
           </div>
         </div>
       )}
