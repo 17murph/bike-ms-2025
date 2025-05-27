@@ -37,9 +37,11 @@ export default function Navigation() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+          className="md:hidden bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md touch-manipulation"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onTouchStart={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          style={{ WebkitTapHighlightColor: "transparent" }}
         >
           {isMobileMenuOpen ? (
             <svg
@@ -79,15 +81,27 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/50 z-50">
-            <div className="bg-white w-full shadow-xl">
+          <div
+            className="md:hidden fixed inset-0 bg-black/50 z-[9999] touch-manipulation"
+            style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0 }}
+            onClick={() => setIsMobileMenuOpen(false)}
+            onTouchStart={() => setIsMobileMenuOpen(false)}
+          >
+            <div
+              className="bg-white w-full shadow-xl touch-manipulation"
+              onClick={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
+              style={{ WebkitTapHighlightColor: "transparent" }}
+            >
               <div className="px-6 py-4">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-xl font-bold text-gray-900">Menu</span>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="bg-gray-100 p-2 rounded-full hover:bg-gray-200"
+                    onTouchStart={() => setIsMobileMenuOpen(false)}
+                    className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 touch-manipulation"
                     aria-label="Close menu"
+                    style={{ WebkitTapHighlightColor: "transparent" }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -107,39 +121,47 @@ export default function Navigation() {
                   </button>
                 </div>
 
-                <div className="space-y-2">
-                  <Link
+                <div className="space-y-3">
+                  <a
                     href="/#events-section"
-                    className="block py-4 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="block py-5 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors touch-manipulation"
                     onClick={() => setIsMobileMenuOpen(false)}
+                    onTouchStart={() => setIsMobileMenuOpen(false)}
+                    style={{ WebkitTapHighlightColor: "transparent" }}
                   >
                     Events
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/#podcast-section"
-                    className="block py-4 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="block py-5 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors touch-manipulation"
                     onClick={() => setIsMobileMenuOpen(false)}
+                    onTouchStart={() => setIsMobileMenuOpen(false)}
+                    style={{ WebkitTapHighlightColor: "transparent" }}
                   >
                     Podcast
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/#sponsors-section"
-                    className="block py-4 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="block py-5 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors touch-manipulation"
                     onClick={() => setIsMobileMenuOpen(false)}
+                    onTouchStart={() => setIsMobileMenuOpen(false)}
+                    style={{ WebkitTapHighlightColor: "transparent" }}
                   >
                     Sponsors
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block mt-6"
+                    onTouchStart={() => setIsMobileMenuOpen(false)}
+                    className="block mt-6 touch-manipulation"
+                    style={{ WebkitTapHighlightColor: "transparent" }}
                   >
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-4 text-lg font-semibold rounded-lg">
+                    <div className="w-full bg-red-600 hover:bg-red-700 text-white py-5 text-lg font-semibold rounded-lg text-center">
                       💖 Donate Now
-                    </Button>
-                  </Link>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
