@@ -6,7 +6,6 @@ import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
 import { Bike, Heart, Users, ExternalLink, MapPin, Info, DollarSign, Award, Calendar } from "lucide-react"
 import { ReliableImage } from "@/components/reliable-image"
-import { VeteransMSSection } from "@/components/veterans-ms-section"
 import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
 import { SocialMediaLinks } from "@/components/social-media-links"
@@ -199,8 +198,6 @@ export default function AboutBikeMS() {
                   </div>
                 </div>
               </section>
-
-              <VeteransMSSection />
 
               <h2 className="mt-4 mb-2">Unlock More Rides, More Impact – The Bike MS Passport Program</h2>
               <p className="my-2">

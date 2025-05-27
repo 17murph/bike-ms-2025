@@ -119,26 +119,24 @@ export default function EventsPage() {
                 </div>
               </div>
 
-              {/* Dinner of Champions */}
+              {/* Jacksonville Jumbo Shrimp */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="relative h-56 w-full bg-blue-50">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-3/4 h-auto">
-                      <img
-                        src="/images/dinner-of-champions.png"
-                        alt="Dinner of Champions - MS Society Fundraising Gala"
-                        className="object-contain max-h-40"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=5omfl"
-                          e.currentTarget.onerror = null
-                        }}
-                      />
-                    </div>
+                    <img
+                      src="/images/JumboShrimp.jpg"
+                      alt="Jacksonville Jumbo Shrimp Logo"
+                      className="w-48 h-48 object-contain max-w-full max-h-full"
+                      onError={(e) => {
+                        e.currentTarget.src = "/placeholder.svg?key=jumbo-shrimp"
+                        e.currentTarget.onerror = null
+                      }}
+                    />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <h3 className="text-2xl font-bold">Dinner of Champions</h3>
-                    <p className="text-sm opacity-90">Prestigious MS Society gala</p>
+                    <h3 className="text-2xl font-bold">Jacksonville Jumbo Shrimp</h3>
+                    <p className="text-sm opacity-90">Get to Know Your Neighbor Night</p>
                   </div>
                 </div>
                 <div className="p-5">
@@ -147,14 +145,14 @@ export default function EventsPage() {
                       <Calendar className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-gray-500">Date</p>
-                        <p className="font-medium">June 5, 2025</p>
+                        <p className="font-medium">July 29, 2025</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-gray-500">Time</p>
-                        <p className="font-medium">6:00 PM - 9:30 PM</p>
+                        <p className="font-medium">7:05 PM EDT</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2 sm:col-span-2">
@@ -162,25 +160,28 @@ export default function EventsPage() {
                       <div>
                         <p className="text-sm text-gray-500">Location</p>
                         <p className="font-medium">
-                          Florida Blue Conference Center, 4800 Deerwood Park, Jacksonville, FL 32246
+                          VyStar Ballpark, 301 A Philip Randolph Blvd, Jacksonville, FL 32202
                         </p>
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-5">
-                    The Dinner of Champions is a prestigious gala honoring individuals who have made significant
-                    contributions to the MS community. Join us for an elegant evening featuring a gourmet dinner, awards
-                    ceremony, and fundraising activities.
+                  <p className="text-gray-700 mb-3">
+                    Join us for Get to Know Your Neighbor Night as the Jacksonville Jumbo Shrimp take on the Columbus
+                    Clippers. This special event supports the National Multiple Sclerosis Society while enjoying
+                    America's favorite pastime.
+                  </p>
+                  <p className="text-sm text-gray-600 mb-5">
+                    <strong>Purchase Deadline:</strong> July 29, 2025 at 5:05 PM EDT
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://my.onecause.com/event/organizations/92771a7b-c025-4a2e-a533-fe6e8a011f5e/events/vevt:be06f33b-5f5e-47b5-a80a-2c2493ed533d/home/story"
+                      href="https://www.gofevo.com/event/Nationalmultiple6"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors text-sm font-medium"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
                     >
                       <Info className="w-4 h-4" />
-                      <span>Event Details</span>
+                      <span>Get Tickets</span>
                     </Link>
                     <Link
                       href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
@@ -342,19 +343,19 @@ export default function EventsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-gray-50 rounded-lg p-5 text-center">
                   <h3 className="text-lg font-semibold text-gray-700 mb-2">Q1 (Jan-Mar)</h3>
-                  <div className="text-3xl font-bold mb-1">366.74 miles</div>
+                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">366.74 miles</div>
                   <p className="text-gray-500 text-sm">Time: 24:47:48</p>
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-5 text-center">
                   <h3 className="text-lg font-semibold text-gray-700 mb-2">Q2 (Apr-Jun)</h3>
-                  <div className="text-3xl font-bold mb-1">171.1 miles</div>
+                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">250.2 miles</div>
                   <p className="text-gray-500 text-sm">Time: 11:06:50</p>
                 </div>
 
                 <div className="bg-red-50 rounded-lg p-5 text-center">
                   <h3 className="text-lg font-semibold text-red-700 mb-2">Total 2025</h3>
-                  <div className="text-3xl font-bold mb-1">537.84 miles</div>
+                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">616.94 miles</div>
                   <p className="text-gray-500 text-sm">Time: 35:54:38</p>
                 </div>
               </div>
