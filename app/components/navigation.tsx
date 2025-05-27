@@ -37,7 +37,7 @@ export default function Navigation() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden bg-primary text-white p-2 rounded-md hover:bg-primary/90 transition-colors"
+          className="md:hidden bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -79,65 +79,70 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-40">
-            <nav className="py-4 px-4 space-y-4">
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-lg font-semibold text-gray-900">Menu</span>
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                  aria-label="Close menu"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+          <div className="md:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/50 z-50">
+            <div className="bg-white w-full shadow-xl">
+              <div className="px-6 py-4">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-xl font-bold text-gray-900">Menu</span>
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="bg-gray-100 p-2 rounded-full hover:bg-gray-200"
+                    aria-label="Close menu"
                   >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
-                </button>
-              </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6 text-gray-700"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </button>
+                </div>
 
-              <div className="border-t border-gray-100 pt-4 space-y-4">
-                <Link
-                  href="/#events-section"
-                  className="block py-3 text-gray-900 hover:text-primary transition-colors font-medium border-b border-gray-100"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Events
-                </Link>
-                <Link
-                  href="/#podcast-section"
-                  className="block py-3 text-gray-900 hover:text-primary transition-colors font-medium border-b border-gray-100"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Podcast
-                </Link>
-                <Link
-                  href="/#sponsors-section"
-                  className="block py-3 text-gray-900 hover:text-primary transition-colors font-medium border-b border-gray-100"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Sponsors
-                </Link>
-                <Link
-                  href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block mt-4"
-                >
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-white py-3 text-lg">Donate</Button>
-                </Link>
+                <div className="space-y-2">
+                  <Link
+                    href="/#events-section"
+                    className="block py-4 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Events
+                  </Link>
+                  <Link
+                    href="/#podcast-section"
+                    className="block py-4 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Podcast
+                  </Link>
+                  <Link
+                    href="/#sponsors-section"
+                    className="block py-4 px-4 text-lg font-semibold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Sponsors
+                  </Link>
+                  <Link
+                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block mt-6"
+                  >
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-4 text-lg font-semibold rounded-lg">
+                      💖 Donate Now
+                    </Button>
+                  </Link>
+                </div>
               </div>
-            </nav>
+            </div>
           </div>
         )}
       </div>
