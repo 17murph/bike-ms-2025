@@ -212,10 +212,7 @@ export default function Home() {
                     <div className="text-gray-600">Goal: $20,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div
-                      className="absolute top-0 left-0 h-full bg-primary rounded-full"
-                      style={{ width: "16.05%" }}
-                    ></div>
+                    <div className="bg-primary rounded-full" style={{ width: "16.05%" }}></div>
                   </div>
                   <div className="text-right text-sm text-gray-600 mt-1">16.05%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
@@ -1242,20 +1239,41 @@ export default function Home() {
         <SocialMediaLinks />
       </main>
 
-      {/* Legacy of Leaders Section */}
+      {/* As Featured Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-primary">
-            As Featured on Legacy of Leaders
-          </h2>
-          <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md">
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1071910885?h=1d25836381"
-              className="absolute top-0 left-0 w-full h-full"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary">As Featured on</h2>
+
+          {/* YouTube Sub-section */}
+          <div className="mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 text-primary">
+              YouTube - Will Anthony Talk MS
+            </h3>
+            <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/W9ByLBLhg1Q?si=13GfEXRiGqxkJwHU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Legacy of Leaders Sub-section */}
+          <div className="mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 text-primary">Legacy of Leaders</h3>
+            <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md">
+              <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/1071910885?h=1d25836381"
+                className="absolute top-0 left-0 w-full h-full"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>

@@ -263,46 +263,45 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Katie Heckert - Featured Guest */}
+            {/* Will Anthony - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
-                    <div className="h-[300px] md:h-full relative bg-gray-200">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Katie_H-1.jpg-rEikKGXYcLsXoCufrfkoJeqw3K9R6C.jpeg"
-                        alt="Katie Heckert - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover"
+                        src="/images/will-anthony.jpg"
+                        alt="Will Anthony - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Katie Heckert</h3>
+                        <h3 className="text-2xl font-bold text-white">Will Anthony</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Katie Heckert</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Will Anthony</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "I didn't leave law because I lost passion. I left because my body gave me no choice."
+                          "MS doesn't define who I am, but it has shaped how I see the world."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Katie was a litigator with a sharp mind and a powerful voice. But MS forced a different
-                          path—one filled with uncertainty, resilience, and new meaning. This episode isn't just about
-                          what MS takes—it's about what it reveals.
+                          Will Anthony shares his powerful journey with MS, discussing the challenges, triumphs, and
+                          unexpected lessons learned along the way. His story is one of resilience and determination in
+                          the face of an unpredictable condition.
                         </p>
                       </div>
                     </div>
-
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 8</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 9</span>
                       <a
-                        href="https://open.spotify.com/episode/7qMHUN7cD54dPQYrwLZWW8"
+                        href="https://open.spotify.com/episode/1F0c1u8Z0nHXS3l36JfB8x?si=OCIq0GAjTFG4xS2Jp5y-9g"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -329,15 +328,15 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Dr. Dee - Featured Guest (moved down) */}
+            {/* Katie Heckert - Featured Guest (moved down) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr.%20Dee.jpg-loM3KT09JZILe6s5zRD9Oq84DL7zZn.jpeg"
-                        alt="Dr. Dee - The Other Side of MS Podcast Guest"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Katie_H-1.jpg-rEikKGXYcLsXoCufrfkoJeqw3K9R6C.jpeg"
+                        alt="Katie Heckert - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -345,33 +344,30 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Dr. Dee</h3>
+                        <h3 className="text-2xl font-bold text-white">Katie Heckert</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Dr. Dee</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Katie Heckert</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "Compassion doesn't have to come from shared diagnosis. Sometimes, it's a choice."
+                          "I didn't leave law because I lost passion. I left because my body gave me no choice."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Most people wouldn't expect a veterinarian to be deeply involved in the MS community—but
-                          that's exactly what makes Dr. Deanna "Dee" Greer's story worth hearing. As owner and Medical
-                          Director of Birch Island Veterinary Center in Jacksonville, Florida, she has spent her career
-                          listening to those who can't speak—animals in pain, suffering in silence. But it's her
-                          personal connection through her husband's former spouse, who lives with MS, that led her to
-                          become an annual donor to the National Multiple Sclerosis Society.
+                          Katie was a litigator with a sharp mind and a powerful voice. But MS forced a different
+                          path—one filled with uncertainty, resilience, and new meaning. This episode isn't just about
+                          what MS takes—it's about what it reveals.
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 7</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 8</span>
                       <a
-                        href="https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=OIwc2_YBQXusedlhs51LFQ"
+                        href="https://open.spotify.com/episode/7qMHUN7cD54dPQYrwLZWW8"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
