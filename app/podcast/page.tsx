@@ -182,39 +182,41 @@ export default function PodcastPage() {
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               <div className="md:w-1/3 flex-shrink-0">
                 <div className="sticky top-24">
-                  <div className="relative w-[280px] h-[280px] mx-auto">
-                    <img
-                      src="/images/podcast-logo.png"
-                      alt="The Other Side of MS Podcast Logo"
-                      className="w-full h-full object-contain rounded-lg shadow-lg"
-                    />
-                  </div>
+                  <div className="text-center mb-8">
+                    <div className="relative w-[280px] h-[200px] mx-auto mb-4">
+                      <img
+                        src="/images/podcast-logo-new.png"
+                        alt="The Other Side of MS Podcast Logo"
+                        className="w-full h-full object-contain rounded-lg shadow-lg"
+                      />
+                    </div>
 
-                  <div className="mt-6 text-center">
-                    <a
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    <div className="mt-6">
+                      <a
+                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
                       >
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                      </svg>
-                      Donate to Bike MS
-                    </a>
-                    <p className="text-sm text-gray-600 mt-3 px-4">
-                      Every story is a voice. Every voice deserves to be heard. Donations help us keep sharing them.
-                    </p>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                        </svg>
+                        Donate to Bike MS
+                      </a>
+                      <p className="text-sm text-gray-600 mt-3 px-4">
+                        Every story is a voice. Every voice deserves to be heard. Donations help us keep sharing them.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
