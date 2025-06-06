@@ -5,4 +5,10 @@ export const donors = [
     message: "Thanks for all the support!",
     isRepeatDonor: true,
   },
+  {
+    name: "Majrian Bredenboketter 🧡",
+    amount: "",
+    message: "",
+    isRepeatDonor: true,
+  },
 ]

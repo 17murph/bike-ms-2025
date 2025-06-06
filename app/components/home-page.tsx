@@ -82,10 +82,10 @@ export default function HomePage() {
             <div className="space-y-6">
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-lg font-medium">Goal: $5,000</span>
-                  <span className="text-lg font-medium">$2,460 Raised (49.2%)</span>
+                  <span className="text-lg font-medium">Goal: $20,000</span>
+                  <span className="text-lg font-medium">$5,460 Raised (27.3%)</span>
                 </div>
-                <Progress value={49.2} className="h-4" />
+                <Progress value={109.2} className="h-4" />
               </div>
               <p className="text-center text-lg">
                 Your support helps fund critical MS research and programs. Every dollar brings us closer to a world free

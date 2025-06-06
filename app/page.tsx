@@ -15,32 +15,26 @@ import { Heart } from "lucide-react"
 export default function Home() {
   // Donor data from the original website
   const donors = [
-    { name: "Karyn Laterza", tags: ["🚴 Bike MS Rider", "💪 Living with MS", "✨ My inspiration"] },
-    { name: "Dan Sweeney", tags: ["❤️ Frequent Donor", "📝 Go CSU Rams!"] },
-    { name: "Michael Cavicchia", tags: ["🚴 I Ride with MS", "💰 Donor"] },
-    { name: "Rob & Lisa Farthing", tags: ["❤️ Frequent Donor", "🏆 High Fundraiser"] },
-    { name: "Genese Sweeney", tags: ["❤️ Frequent Donor"] },
-    { name: "Susan Levin", tags: [] },
-    { name: "Mark & Dawn Windley", tags: ["🎁 Wedding Gift"] },
-    { name: "Terry & April Walter", tags: ["❤️ Frequent Donor", "❤️❤️ Lots of love"] },
-    { name: "Jan Mobley", tags: ["👪 Mother-in-law"] },
-    { name: "Heidi Katz", tags: ["🎁 Wedding Gift"] },
-    {
-      name: "Erik Henderson & Lyn Yarbrough",
-      tags: ["🚴 Bike MS Rider", "🎁 Wedding Gift", "👪 MS Society Board of Trustees"],
-    },
-    { name: "Mike Hull", tags: ["❤️ Frequent Donor", "🏆 High Fundraiser"] },
-    { name: "Elaine Wuerstlin", tags: ["❤️ Frequent Donor", "❤️❤️ Lots of love"] },
-    { name: "Jennifer Long", tags: ["🐕 Birch Island Vet"] },
-    { name: "Debbie & Brian Hamm", tags: ["🚴 I Ride with MS", "🏆 Top Fundraiser"] },
-    { name: "Mary Dallman", tags: ["❤️ Frequent Donor", "👪 Aunt"] },
-    { name: "Tom & Mary Beth Cook", tags: ["🎁 Wedding Gift", "📝 Excited to see you at Bike MS in Wisconsin"] },
-    { name: "Michele Katz", tags: ["🚴 Bike MS Rider"] },
-    { name: "Ronnie McFarland", tags: ["🏢 Coggin BMW in Treasure Coast, FL"] },
-    { name: "Dennis & JoAnn Cook", tags: ["🎁 Wedding Gift", "📝 Excited to see you at Bike MS in Wisconsin"] },
-    { name: "Ken Bailey", tags: ["💼 Company Matched his donation"] },
-    { name: "Richard Schoen", tags: ["❤️ Frequent Donor", "🙏 Thanks for all the support!"] },
-    { name: "Wendy Bertagnole", tags: ["❤️ Frequent Donor", "👪 Kim's Mom!"] },
+    // Platinum Donors
+    { name: "M&M Farms", tags: ["🥇 Platinum Donor"] },
+    { name: "Marian Bredenkoetter", tags: ["🥇 Platinum Donor"] },
+
+    // Gold Donors
+    { name: "Margaret & Joe", tags: ["🥈 Gold Donor"] },
+    { name: "Danny Murphy", tags: ["🥈 Gold Donor"] },
+    { name: "Michael Cavicchia", tags: ["🥈 Gold Donor"] },
+
+    // Silver Donors
+    { name: "Rob & Lisa Farthing", tags: ["🥉 Silver Donor"] },
+    { name: "Susan Levin", tags: ["🥉 Silver Donor"] },
+    { name: "Mark & Dawn Windley", tags: ["🥉 Silver Donor"] },
+    { name: "Erik Henderson", tags: ["🥉 Silver Donor"] },
+    { name: "Elaine Wuerstlin", tags: ["🥉 Silver Donor"] },
+    { name: "Jennifer Long", tags: ["🥉 Silver Donor"] },
+    { name: "Debbie & Brian Hamm", tags: ["🥉 Silver Donor"] },
+    { name: "Mary Dallman", tags: ["🥉 Silver Donor"] },
+    { name: "Dennis & JoAnn Cook", tags: ["🥉 Silver Donor"] },
+    { name: "Wendy Bertagnole", tags: ["🥉 Silver Donor"] },
   ]
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
@@ -174,7 +168,7 @@ export default function Home() {
             <div className="flex items-center">
               <Link href="/podcast" className="transition-transform hover:scale-105">
                 <ReliableImage
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20Logo.JPEG-LznTItVGXC64kGQ29mVEzAWohOa9LN.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20LOGO-h0RSu6vloZsMjIlxVlqVb3HlRPxxMW.png"
                   alt="The Other Side of MS podcast logo"
                   width={220}
                   height={110}
@@ -206,15 +200,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$3,210</span>
+                      <span className="font-bold text-3xl">$5,460</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $20,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full" style={{ width: "16.05%" }}></div>
+                    <div className="bg-primary rounded-full" style={{ width: "27.3%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">16.05%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">27.3%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                   </p>
