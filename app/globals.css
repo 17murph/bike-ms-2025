@@ -435,3 +435,54 @@
   opacity: 0;
   transition: opacity 500ms ease-in-out;
 }
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Improve touch targets for mobile */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent zoom on input focus */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Improve mobile menu animation */
+  .mobile-menu-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .mobile-menu-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 300ms ease-out, opacity 300ms ease-out;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+}

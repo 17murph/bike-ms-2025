@@ -131,62 +131,115 @@ export function Navigation() {
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-lg bg-primary/10 text-primary"
+            onTouchEnd={(e) => {
+              e.preventDefault()
+              setIsOpen(!isOpen)
+            }}
+            className="p-3 rounded-lg bg-primary/10 text-primary touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center"
             aria-label="Toggle menu"
+            style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed top-[57px] left-0 right-0 bottom-0 bg-white/98 backdrop-blur-sm z-50 overflow-y-auto animate-in slide-in-from-top duration-300">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-2">
-            {navItems.map((item) => {
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
-
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "flex items-center px-4 py-4 rounded-lg transition-colors",
-                    "hover:bg-primary/10 hover:text-primary",
-                    isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
-                  )}
+        <div
+          className="md:hidden fixed inset-0 bg-black/50 z-[9999] touch-manipulation"
+          onClick={() => setIsOpen(false)}
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            setIsOpen(false)
+          }}
+          style={{ WebkitTapHighlightColor: "transparent" }}
+        >
+          <div
+            className="bg-white w-full max-w-sm shadow-xl touch-manipulation"
+            onClick={(e) => e.stopPropagation()}
+            onTouchEnd={(e) => e.stopPropagation()}
+            style={{ WebkitTapHighlightColor: "transparent" }}
+          >
+            <div className="container mx-auto px-4 py-6 flex flex-col space-y-3">
+              {/* Close button */}
+              <div className="flex justify-between items-center mb-4">
+                <span className="font-bold text-primary text-xl">Menu</span>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  onTouchEnd={(e) => {
+                    e.preventDefault()
+                    setIsOpen(false)
+                  }}
+                  className="p-2 rounded-lg bg-gray-100 text-gray-600 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  aria-label="Close menu"
+                  style={{ WebkitTapHighlightColor: "transparent" }}
                 >
-                  <item.icon className="w-6 h-6 mr-3" />
-                  <span className="text-lg">{item.name}</span>
-                </Link>
-              )
-            })}
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
 
-            <Link
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
-            >
-              <Heart className="w-6 h-6 mr-3" />
-              <span className="text-lg">Donate</span>
-            </Link>
+              {navItems.map((item) => {
+                const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
 
-            <button
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
-                    url: window.location.href,
-                  })
-                }
-                setIsOpen(false)
-              }}
-              className="flex items-center px-4 py-4 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
-            >
-              <Share2 className="w-6 h-6 mr-3" />
-              <span className="text-lg">Share</span>
-            </button>
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    onTouchEnd={() => setIsOpen(false)}
+                    className={cn(
+                      "flex items-center px-4 py-4 rounded-lg transition-colors touch-manipulation min-h-[48px]",
+                      "hover:bg-primary/10 hover:text-primary",
+                      isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
+                    )}
+                    style={{ WebkitTapHighlightColor: "transparent" }}
+                  >
+                    <item.icon className="w-6 h-6 mr-3" />
+                    <span className="text-lg">{item.name}</span>
+                  </Link>
+                )
+              })}
+
+              <Link
+                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                onTouchEnd={() => setIsOpen(false)}
+                className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors touch-manipulation min-h-[48px]"
+                style={{ WebkitTapHighlightColor: "transparent" }}
+              >
+                <Heart className="w-6 h-6 mr-3" />
+                <span className="text-lg">Donate</span>
+              </Link>
+
+              <button
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
+                      url: window.location.href,
+                    })
+                  }
+                  setIsOpen(false)
+                }}
+                onTouchEnd={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
+                      url: window.location.href,
+                    })
+                  }
+                  setIsOpen(false)
+                }}
+                className="flex items-center px-4 py-4 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700 touch-manipulation min-h-[48px]"
+                style={{ WebkitTapHighlightColor: "transparent" }}
+              >
+                <Share2 className="w-6 h-6 mr-3" />
+                <span className="text-lg">Share</span>
+              </button>
+            </div>
           </div>
         </div>
       )}
