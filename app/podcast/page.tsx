@@ -144,10 +144,15 @@ export default function PodcastPage() {
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      fill="currentColor"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mr-2"
                     >
                       <path d="M18.42 14.29c-.22-.12-.43-.23-.63-.35-.56-.35-1.26-.79-1.26-1.47 0-.65.39-1.15 1.16-1.15.35 0 .64.11.89.34.25.23.37.55.37.98h1.96c0-1.16-.46-2.04-1.14-2.64-.68-.6-1.62-.91-2.71-.91-1.17 0-2.14.3-2.87.91-.73.6-1.1 1.45-1.1 2.54 0 1.58.95 2.54 2.19 3.32.41.26.83.5 1.24.74.63.36 1.07.89 1.07 1.47 0 .7-.43 1.14-1.28 1.14-.35 0-.68-.12-.93-.35-.25-.23-.38-.55-.38-.98h-1.96c0 1.16.47 2.04 1.15 2.64.68.6 1.63.91 2.72.91 1.17 0 2.15-.3 2.88-.91.73-.6 1.1-1.45 1.1-2.54 0-1.58-.95-2.54-2.19-3.32-.07-.04-.14-.09-.22-.13-.01-.01-.03-.02-.04-.03-.01-.01-.02-.01-.02-.01z" />
-                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.9 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.2.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34-1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.9-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.2-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.4.76.27 1.4.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.4-.76-.27-1.4-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35-1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
+                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.9 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.2.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34 1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.9-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.2-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.4.76.27 1.4.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.4-.76-.27-1.4-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35-1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
                     </svg>
                     <span>Amazon</span>
                   </a>
@@ -208,6 +213,7 @@ export default function PodcastPage() {
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
+                          className="w-5 h-5"
                         >
                           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                         </svg>
@@ -272,8 +278,8 @@ export default function PodcastPage() {
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
-                        src="/images/will-anthony.jpg"
-                        alt="Will Anthony - The Other Side of MS Podcast Guest"
+                        src="/images/susie-wyss.jpg"
+                        alt="Susie Wyss - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover object-center"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -281,29 +287,30 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Will Anthony</h3>
+                        <h3 className="text-2xl font-bold text-white">Susie Wyss</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Will Anthony</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Susie Wyss</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS doesn't define who I am, but it has shaped how I see the world."
+                          "Living with MS has taught me that strength isn't about never falling down—it's about getting
+                          back up every single time."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Will Anthony shares his powerful journey with MS, discussing the challenges, triumphs, and
-                          unexpected lessons learned along the way. His story is one of resilience and determination in
-                          the face of an unpredictable condition.
+                          Susie shares her powerful journey with MS, discussing how she's learned to navigate the
+                          challenges while maintaining her sense of humor and determination. Her story offers hope and
+                          practical wisdom for others facing similar struggles.
                         </p>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 10</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 11</span>
                       <a
-                        href="https://open.spotify.com/episode/1F0c1u8Z0nHXS3l36JfB8x?si=OCIq0GAjTFG4xS2Jp5y-9g"
+                        href="https://open.spotify.com/episode/33KXYLjXx7LMXDjmnrw4dE?si=119fa69c9c624451"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -337,8 +344,8 @@ export default function PodcastPage() {
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
-                        src="/images/troy-mitchell.jpg"
-                        alt="Troy Mitchell - The Other Side of MS Podcast Guest"
+                        src="/images/will-anthony.jpg"
+                        alt="Will Anthony - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -346,30 +353,30 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Troy Mitchell</h3>
+                        <h3 className="text-2xl font-bold text-white">Will Anthony</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Troy Mitchell</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Will Anthony</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "It's okay to not be okay. It's okay to ask for help."
+                          "MS doesn't define who I am, but it has shaped how I see the world."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Troy shares his experiences with mental health and MS, emphasizing the importance of seeking
-                          help and building a support system. His story highlights the often-overlooked emotional
-                          challenges of living with a chronic illness.
+                          Will Anthony shares his powerful journey with MS, discussing the challenges, triumphs, and
+                          unexpected lessons learned along the way. His story is one of resilience and determination in
+                          the face of an unpredictable condition.
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 9</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 10</span>
                       <a
-                        href="https://open.spotify.com/episode/1NSC5Hc1Ax45PEAGzuaOP3?si=03fecdfe01b64060"
+                        href="https://open.spotify.com/episode/1F0c1u8Z0nHXS3l36JfB8x?si=OCIq0GAjTFG4xS2Jp5y-9g"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -478,6 +485,122 @@ export default function PodcastPage() {
               >
                 <div className="p-5">
                   <div className="space-y-6">
+                    {/* Manually add the missing episodes */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S3_E11: The Journey with MS - Finding Strength in Vulnerability
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Susie Wyss</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Susie shares her powerful journey with MS, discussing how she's learned to navigate the
+                          challenges while maintaining her sense of humor and determination. Her story offers hope and
+                          practical wisdom for others facing similar struggles.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 11</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/33KXYLjXx7LMXDjmnrw4dE?si=119fa69c9c624451"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S3_E10: Resilience and Determination - Living with MS
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Will Anthony</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Will Anthony shares his powerful journey with MS, discussing the challenges, triumphs, and
+                          unexpected lessons learned along the way. His story is one of resilience and determination in
+                          the face of an unpredictable condition.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 10</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/1F0c1u8Z0nHXS3l36JfB8x?si=OCIq0GAjTFG4xS2Jp5y-9g"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S3_E9: Navigating Life with MS - Troy's Story
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Troy Mitchell</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Troy Mitchell shares his personal journey with MS, offering insights into the daily challenges
+                          and unexpected moments of strength he's discovered along the way. His perspective brings a
+                          unique voice to the conversation about living with MS.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 9</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/1NSC5Hc1Ax45PEAGzuaOP3?si=6e56cb45e7d24dd8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Now continue with the existing episodes from season3.episodes */}
                     {season3.episodes.map((episode, index) => (
                       <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
                         <div className="flex flex-col">
@@ -507,7 +630,9 @@ export default function PodcastPage() {
                                             : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
                           </p>
                           <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">Season 3</span>
+                            <span className="text-xs text-gray-500">
+                              Season 3, Episode {season3.episodes.length - index}
+                            </span>
                             <a
                               className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
                               href={episode.link}
@@ -573,7 +698,9 @@ export default function PodcastPage() {
                           <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
                           <p className="text-gray-600 text-sm my-2">Guest: {episode.guest}</p>
                           <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">Season 2</span>
+                            <span className="text-xs text-gray-500">
+                              Season 2, Episode {season2.episodes.length - index}
+                            </span>
                             <a
                               className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
                               href={
@@ -643,7 +770,9 @@ export default function PodcastPage() {
                           <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
                           <p className="text-gray-600 text-sm my-2">Guest: {episode.guest}</p>
                           <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">Season 1</span>
+                            <span className="text-xs text-gray-500">
+                              Season 1, Episode {season1.episodes.length - index}
+                            </span>
                             <a
                               className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
                               href={
@@ -664,6 +793,7 @@ export default function PodcastPage() {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
+                                className="mr-2"
                               >
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                               </svg>
@@ -676,150 +806,6 @@ export default function PodcastPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto max-w-3xl px-4">
-            <h2 className="text-2xl font-bold text-center mb-6 text-primary">Contact Us</h2>
-            <div className="max-w-md mx-auto text-center">
-              <p className="mb-6 text-gray-700">
-                Have a story to share or just want to share your comments? Reach out to me directly:
-              </p>
-              <div className="flex justify-center">
-                <a
-                  href="mailto:CMURPHY@SJMALAW.COM"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                  </svg>
-                  <span>CMURPHY@SJMALAW.COM</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Connect With Us Section */}
-        <section className="py-8 border-t border-gray-200 bg-gray-50">
-          <div className="container mx-auto max-w-3xl px-4">
-            <h2 className="text-xl font-bold text-center mb-6">Connect With Us</h2>
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://www.facebook.com/OtherSideOfMS"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all transform hover:scale-110"
-                aria-label="Facebook"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-6 h-6"
-                >
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/caseymurphy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-all transform hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-6 h-6"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect width="4" height="12" x="2" y="9"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </a>
-              <a
-                href="https://x.com/theothersidems?s=11&t=tlzOgmkXwzTvVden5dn58A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all transform hover:scale-110"
-                aria-label="X (formerly Twitter)"
-              >
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                href="mailto:CMURPHY@SJMALAW.COM"
-                className="p-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition-all transform hover:scale-110"
-                aria-label="Email"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-6 h-6"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </svg>
-              </a>
-              <a
-                href="https://theothersideofms.podbean.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all transform hover:scale-110"
-                aria-label="Podcast"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-6 h-6"
-                >
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
-              </a>
             </div>
           </div>
         </section>
