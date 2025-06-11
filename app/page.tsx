@@ -1255,20 +1255,6 @@ export default function Home() {
               ></iframe>
             </div>
           </div>
-
-          {/* Legacy of Leaders Sub-section */}
-          <div className="mb-8">
-            <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 text-primary">Legacy of Leaders</h3>
-            <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md">
-              <iframe
-                title="vimeo-player"
-                src="https://player.vimeo.com/video/1071910885?h=1d25836381"
-                className="absolute top-0 left-0 w-full h-full"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
         </div>
       </section>
 
