@@ -196,6 +196,30 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* As Featured On Section */}
+          <section className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 className="text-3xl font-bold text-center mb-6">As Featured On</h2>
+            <div className="space-y-8">
+              {/* On a Mission with Casey Murphy */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center">
+                  On a Mission with Casey Murphy of The Other Side of MS
+                </h3>
+                <div className="aspect-video w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-md">
+                  <iframe
+                    title="vimeo-player"
+                    src="https://player.vimeo.com/video/1092530487?h=fc93edee8a"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Social Media Links */}
           <SocialMediaLinks />
         </div>
