@@ -66,7 +66,7 @@ export default function ContactPage() {
               {/* Image Column - Full height on desktop */}
               <div className="md:w-2/5 relative">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Casey%20April%202025-DU0svdb81P0mzO2CgEgfYgEE3Ugv3m.jpeg"
+                  src="/images/casey-murphy-professional.jpg"
                   alt="Casey Murphy - Bike MS cyclist and advocate"
                   className="w-full h-full object-cover object-center"
                   style={{ minHeight: "300px", maxHeight: "600px" }}
