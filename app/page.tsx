@@ -86,6 +86,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+          {/* Florida vs Wisconsin CTA Box - Brightened Up */}
         </div>
       </section>
 
@@ -105,44 +106,56 @@ export default function Home() {
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-6">
-                  <a
-                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-5 h-5"
+                  <div className="text-center space-y-4">
+                    <div className="flex items-center justify-center gap-4 text-sm font-medium text-gray-700 mb-2">
+                      <span className="flex items-center gap-1">
+                        🐊 <span>Florida: $4,960</span>
+                      </span>
+                      <span className="text-gray-400">|</span>
+                      <span className="flex items-center gap-1">
+                        🦡 <span>Wisconsin: $3,000</span>
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-3">
+                      Florida vs Wisconsin Fundraising Challenge - Which team are you on?
+                    </p>
+                    <a
+                      href="/about-bike-ms"
+                      className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
                     >
-                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                    </svg>
-                    Donate to Bike MS Supporting the National MS Society
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-3 h-3 ml-1 opacity-70"
-                    >
-                      <path d="M15 3h6v6"></path>
-                      <path d="M10 14 21 3"></path>
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    </svg>
-                  </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5"
+                      >
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                      </svg>
+                      Florida vs Wisconsin Challenge - Learn More
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-3 h-3 ml-1 opacity-70"
+                      >
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14 21 3"></path>
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
                 <p className="text-center text-sm text-gray-600 mb-5 font-medium max-w-md mx-auto">
                   Every single dollar you donate goes directly to the National Multiple Sclerosis Society — funding

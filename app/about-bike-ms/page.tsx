@@ -52,6 +52,15 @@ export default function AboutBikeMS() {
             <div className="bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl p-6 my-8 text-white">
               <h3 className="text-3xl font-bold text-center mb-6">Florida vs Wisconsin Fundraising Challenge</h3>
 
+              <div className="text-center mb-6">
+                <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mx-auto">
+                  This year, I'm riding in six Bike MS events, but two of them have sparked a unique head-to-head
+                  challenge. These rides are more than a physical test, they're fundraising battlegrounds. Florida is my
+                  home ride and Wisconsin is where a lot of my family lives.{" "}
+                  <span className="font-bold text-white">Which team are you on?</span>
+                </p>
+              </div>
+
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 {/* Image on the left */}
                 <div className="flex-shrink-0">
