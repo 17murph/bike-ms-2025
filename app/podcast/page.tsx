@@ -271,15 +271,15 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Allie Schmidl - Featured Guest */}
+            {/* Chris Brown - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
-                        src="/images/allie-schmidl.jpg"
-                        alt="Allie Schmidl - The Other Side of MS Podcast Guest"
+                        src="/images/chris-brown.jpeg"
+                        alt="Chris Brown - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover object-center"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -287,30 +287,29 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Allie Schmidl</h3>
+                        <h3 className="text-2xl font-bold text-white">Chris Brown</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Allie Schmidl</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Chris Brown</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS has taught me that vulnerability isn't weakness—it's the birthplace of courage and
-                          connection."
+                          "MS doesn't define my limits—it just changes how I approach my goals."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Allie opens up about her journey with MS, sharing the raw realities of living with an
-                          invisible illness and how she's learned to find strength in vulnerability. Her story offers
-                          profound insights into resilience and the power of authentic connection.
+                          Chris shares his inspiring journey of living with MS while maintaining an active lifestyle.
+                          From running marathons to navigating daily challenges, his story demonstrates that MS doesn't
+                          have to stop you from pursuing your passions and achieving your dreams.
                         </p>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 12</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 13</span>
                       <a
-                        href="https://open.spotify.com/episode/3LseCgCUxQlj2TvKUfg5wq?si=706fe0e131ef494c"
+                        href="https://open.spotify.com/episode/4Z72oyqGrLjPSKlGrOpCiz?si=sRVx5IeTRTCSnhGWlm2khQ"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -337,15 +336,15 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Susie Wyss - Featured Guest (moved to right side) */}
+            {/* Allie Schmidl - Featured Guest (moved to right side) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
-                        src="/images/susie-wyss.jpg"
-                        alt="Susie Wyss - The Other Side of MS Podcast Guest"
+                        src="/images/allie-schmidl.jpg"
+                        alt="Allie Schmidl - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -353,31 +352,31 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Susie Wyss</h3>
+                        <h3 className="text-2xl font-bold text-white">Allie Schmidl</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Susie Wyss</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Allie Schmidl</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "Living with MS has taught me that strength isn't about never falling down—it's about getting
-                          back up every single time."
+                          "MS has taught me that vulnerability isn't weakness—it's the birthplace of courage and
+                          connection."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Susie shares her powerful journey with MS, discussing how she's learned to navigate the
-                          challenges while maintaining her sense of humor and determination. Her story offers hope and
-                          practical wisdom for others facing similar struggles.
+                          Allie opens up about her journey with MS, sharing the raw realities of living with an
+                          invisible illness and how she's learned to find strength in vulnerability. Her story offers
+                          profound insights into resilience and the power of authentic connection.
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 11</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 12</span>
                       <a
-                        href="https://open.spotify.com/episode/33KXYLjXx7LMXDjmnrw4dE?si=119fa69c9c624451"
+                        href="https://open.spotify.com/episode/3LseCgCUxQlj2TvKUfg5wq?si=706fe0e131ef494c"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -487,6 +486,44 @@ export default function PodcastPage() {
                 <div className="p-5">
                   <div className="space-y-6">
                     {/* Manually add the missing episodes */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S3_E13: Running Through MS - Chris's Journey
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Chris Brown</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Chris shares his inspiring journey of living with MS while maintaining an active lifestyle.
+                          From running marathons to navigating daily challenges, his story demonstrates that MS doesn't
+                          have to stop you from pursuing your passions and achieving your dreams.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 13</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/4Z72oyqGrLjPSKlGrOpCiz?si=sRVx5IeTRTCSnhGWlm2khQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
                         <h4 className="font-bold text-gray-800 text-lg">
