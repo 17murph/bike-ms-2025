@@ -83,7 +83,7 @@ export default function AboutBikeMS() {
                       <h4 className="text-xl font-bold text-orange-600 mb-2">FLORIDA</h4>
                       <div className="bg-orange-100 rounded-lg p-2 mb-3">
                         <p className="text-xs text-orange-700 font-medium">CURRENT TOTAL</p>
-                        <p className="text-2xl font-bold text-orange-800">$4,960</p>
+                        <p className="text-2xl font-bold text-orange-800">$5,060</p>
                       </div>
                       <Link
                         href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
