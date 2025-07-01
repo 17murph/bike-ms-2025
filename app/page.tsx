@@ -424,117 +424,27 @@ export default function Home() {
 
             {/* Upcoming Ride - Bike MS Colorado */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
-              <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
                 <div className="flex items-center justify-between">
                   <h3 className="font-bold text-xl">Bike MS Colorado</h3>
-                  <span className="bg-white text-yellow-600 text-xs font-bold px-2 py-1 rounded-full">UPCOMING</span>
+                  <span className="bg-white text-orange-600 text-xs font-bold px-2 py-1 rounded-full">COMPLETED</span>
                 </div>
               </div>
               <div className="p-5">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    <span className="font-medium">Boulder, CO</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M8 2v4" />
-                      <path d="M16 2v4" />
-                      <rect width="18" height="18" x="3" y="4" rx="2" />
-                      <path d="M3 10h18" />
-                    </svg>
-                    <span className="font-medium">June 28, 2025</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                    <span className="font-medium">7:00 AM ET</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="18.5" cy="17.5" r="3.5" />
-                      <circle cx="5.5" cy="17.5" r="3.5" />
-                      <circle cx="15" cy="5" r="1" />
-                      <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
-                    </svg>
-                    <span className="font-medium">150 Miles</span>
+                <div className="flex flex-col items-center mb-4">
+                  <div className="relative w-full h-32 my-2">
+                    <Image
+                      src="/images/bike-ms-complete-badge.png"
+                      alt="Bike MS Complete Badge"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
-                <div className="mt-5">
-                  <CountdownTimer eventDate="2025-06-28T07:00:00-04:00" eventName="Bike MS Colorado" />
-                  <div className="mt-3 text-center">
-                    <a
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2099"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      About this Ride
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="ml-1"
-                      >
-                        <path d="M7 7h10v10" />
-                        <path d="M7 17 17 7" />
-                      </svg>
-                    </a>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-4">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800">June 28, 2025</p>
+                    <p className="text-gray-600 mt-1">145.7 miles / 10hrs 36min 46sec</p>
                   </div>
                 </div>
               </div>
