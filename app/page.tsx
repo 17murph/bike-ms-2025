@@ -6,11 +6,11 @@ import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { CountdownTimer } from "@/components/countdown-timer"
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { BackToTopButton } from "@/components/back-to-top-button"
 import { SocialMediaLinks } from "@/components/social-media-links"
 import { useRef, useState, useEffect } from "react"
 import { Heart } from "lucide-react"
+import { Footer } from "@/components/footer"
+import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
   // Donor data from the original website
@@ -203,55 +203,44 @@ export default function Home() {
       </section>
 
       {/* NPR First Coast Connect Section */}
-      <section className="container mx-auto px-4 py-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-gray-100">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-blue-600"
-                >
-                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                  <circle cx="12" cy="19" r="3" />
-                </svg>
+      <section className="container mx-auto px-4 py-8 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
+            {/* Header with Logos */}
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center">
+                <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
-                As Featured on NPR's "First Coast Connect"
-              </h2>
-              <p className="text-base text-gray-700 mb-6 leading-relaxed">
+              <div className="text-center flex-1 mx-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary">
+                  As Featured on NPR's "First Coast Connect"
+                </h2>
+              </div>
+              <div className="flex items-center">
+                <Image src="/images/wjct-logo.png" alt="WJCT Logo" width={80} height={48} className="object-contain" />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="text-center">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
                 In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
                 conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the raw
                 storytelling that drives The Other Side of MS podcast.
               </p>
-              <p className="text-sm text-gray-600 mb-6">🎧 The segment begins around the 36:45 mark.</p>
-              <Link
-                href="https://www.youtube.com/watch?v=X-jIJEhzLgg&list=PL5u5JdpaC8zy4jaXXw1O9qqk0IkRG_jU4&index=1&t=8s"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 text-base font-medium"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-                Listen on YouTube
-              </Link>
+
+              {/* Embedded YouTube Video */}
+              <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -591,6 +580,9 @@ export default function Home() {
                     </svg>
                     <span className="font-medium">150 Miles</span>
                   </div>
+                </div>
+                <div className="mt-5">
+                  <CountdownTimer eventDate="2025-08-02T07:00:00-04:00" eventName="Best Dam Bike Tour WI" />
                 </div>
                 <div className="mt-5">
                   <CountdownTimer eventDate="2025-08-02T07:00:00-04:00" eventName="Best Dam Bike Tour WI" />
@@ -1162,6 +1154,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Footer and utility components */}
       <Footer />
       <BackToTopButton />
     </div>
