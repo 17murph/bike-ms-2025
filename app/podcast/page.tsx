@@ -215,7 +215,7 @@ export default function PodcastPage() {
                           strokeLinejoin="round"
                           className="w-5 h-5"
                         >
-                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                         </svg>
                         Donate to Bike MS
                       </a>
@@ -271,15 +271,15 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Chris Brown - Featured Guest */}
+            {/* Emma Archuletta - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
-                        src="/images/chris-brown.jpeg"
-                        alt="Chris Brown - The Other Side of MS Podcast Guest"
+                        src="/images/emma.jpg"
+                        alt="Emma Archuletta - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover object-center"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -287,29 +287,30 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Chris Brown</h3>
+                        <h3 className="text-2xl font-bold text-white">Emma Archuletta</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Chris Brown</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Emma Archuletta</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS doesn't define my limits—it just changes how I approach my goals."
+                          "Every single day I'm fatigued. I feel like I'm running on 40% battery and I can't ever get it
+                          higher than that, no matter how much rest or sleep I have."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Chris shares his inspiring journey of living with MS while maintaining an active lifestyle.
-                          From running marathons to navigating daily challenges, his story demonstrates that MS doesn't
-                          have to stop you from pursuing your passions and achieving your dreams.
+                          Emma shares her candid journey with MS, discussing the challenges of navigating life with an
+                          invisible illness while maintaining hope and determination. Her story offers insights into
+                          resilience, self-advocacy, and finding joy despite uncertainty.
                         </p>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 13</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 15</span>
                       <a
-                        href="https://open.spotify.com/episode/4Z72oyqGrLjPSKlGrOpCiz?si=sRVx5IeTRTCSnhGWlm2khQ"
+                        href="https://open.spotify.com/episode/76jUgivzgzX4A7nCEUODuV?si=facfced7c15c4a64"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -336,15 +337,15 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Allie Schmidl - Featured Guest (moved to right side) */}
+            {/* Hanna Garrison - Featured Guest (moved to right side) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[300px] md:h-full relative bg-gray-200">
                       <img
-                        src="/images/allie-schmidl.jpg"
-                        alt="Allie Schmidl - The Other Side of MS Podcast Guest"
+                        src="/images/hanna.jpeg"
+                        alt="Hanna Garrison - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
@@ -352,31 +353,31 @@ export default function PodcastPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Allie Schmidl</h3>
+                        <h3 className="text-2xl font-bold text-white">Hanna Garrison</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Allie Schmidl</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Hanna Garrison</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "MS has taught me that vulnerability isn't weakness—it's the birthplace of courage and
-                          connection."
+                          "MS really made me come out of my shell and realize that I am worth more than this and I have
+                          a lot to say—and what I have to say does matter."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Allie opens up about her journey with MS, sharing the raw realities of living with an
-                          invisible illness and how she's learned to find strength in vulnerability. Her story offers
-                          profound insights into resilience and the power of authentic connection.
+                          Hanna opens up about her experience with MS, sharing the raw realities of living with an
+                          unpredictable condition. Her story explores themes of identity, acceptance, and the power of
+                          authentic connection in the face of life's unexpected challenges.
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 12</span>
+                      <span className="text-sm text-gray-500">Season 3, Episode 14</span>
                       <a
-                        href="https://open.spotify.com/episode/3LseCgCUxQlj2TvKUfg5wq?si=706fe0e131ef494c"
+                        href="https://open.spotify.com/episode/5YmIhlADk9SOtHDn1Gt2TG?si=f7271f8864fd4c8d"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -480,12 +481,88 @@ export default function PodcastPage() {
               </button>
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openSeason === 3 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+                  openSeason === 3 ? "max-h-[4000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="p-5">
                   <div className="space-y-6">
                     {/* Manually add the missing episodes */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S3_E15: Finding Strength in Vulnerability - Emma's Story
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Emma Archuletta</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Emma shares her candid journey with MS, discussing the challenges of navigating life with an
+                          invisible illness while maintaining hope and determination. Her story offers insights into
+                          resilience, self-advocacy, and finding joy despite uncertainty.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 15</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/76jUgivzgzX4A7nCEUODuV?si=facfced7c15c4a64"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S3_E14: Coming Out of My Shell - Hanna's Journey
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Hanna Garrison</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Hanna opens up about her experience with MS, sharing the raw realities of living with an
+                          unpredictable condition. Her story explores themes of identity, acceptance, and the power of
+                          authentic connection in the face of life's unexpected challenges.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 14</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/5YmIhlADk9SOtHDn1Gt2TG?si=f7271f8864fd4c8d"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
                         <h4 className="font-bold text-gray-800 text-lg">
@@ -797,6 +874,7 @@ export default function PodcastPage() {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
+                                className="mr-2"
                               >
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                               </svg>

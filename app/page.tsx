@@ -213,15 +213,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$7,610</span>
+                      <span className="font-bold text-3xl">$8,610</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $20,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full" style={{ width: "38.1%" }}></div>
+                    <div className="bg-primary rounded-full" style={{ width: "43.1%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">38.1%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">43.1%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                   </p>
