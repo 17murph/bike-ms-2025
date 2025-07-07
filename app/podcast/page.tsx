@@ -266,6 +266,63 @@ export default function PodcastPage() {
           </div>
         </section>
 
+        {/* NPR First Coast Connect Section */}
+        <section className="py-8 bg-blue-50 border-t border-gray-100">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-white"
+                    >
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                      <line x1="12" x2="12" y1="19" y2="22"></line>
+                      <line x1="8" x2="16" y1="22" y2="22"></line>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">As Featured on NPR's 'First Coast Connect'</h3>
+                  <p className="text-gray-600 mb-4">
+                    In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
+                    conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the
+                    raw storytelling that drives The Other Side of MS podcast.
+                  </p>
+                  <a
+                    href="https://www.youtube.com/watch?v=X-jIJEhzLgg&list=PL5u5JdpaC8zy4jaXXw1O9qqk0IkRG_jU4&index=1&t=8s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium shadow-sm hover:shadow-md"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="text-white"
+                    >
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    Listen on YouTube
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Voices Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto max-w-5xl px-4">
