@@ -6,7 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { Heart, Calendar, MapPin, Clock, Bike, Info } from "lucide-react"
+import { Heart, Calendar, MapPin, Bike, Info, Trophy } from "lucide-react"
 import { SocialMediaLinks } from "@/components/social-media-links"
 
 export default function EventsPage() {
@@ -46,151 +46,64 @@ export default function EventsPage() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Featured Events</h2>
+            <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Featured Event</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Jax Bourbon Social */}
+            <div className="grid grid-cols-1 gap-8">
+              {/* Wisconsin vs Florida Fight */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative h-56 w-full bg-amber-50">
+                <div className="relative h-96 w-full">
                   <img
-                    src="/images/Jax BS.jpg.jpeg"
-                    alt="Jax Bourbon Social - Fundraising event for MS"
+                    src="/images/florida-vs-wisconsin.jpg"
+                    alt="Wisconsin vs Florida Fundraising Competition - Wisconsin Takes a Swing"
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.currentTarget.src = "/placeholder.svg?key=69rch"
+                      e.currentTarget.src = "/placeholder.svg?height=400&width=800&text=Wisconsin+vs+Florida+Fight"
                       e.currentTarget.onerror = null
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <h3 className="text-2xl font-bold">Jax Bourbon Social</h3>
-                    <p className="text-sm opacity-90">Premium bourbon tasting & fundraising</p>
+                  <div className="absolute bottom-0 left-0 p-6 text-white">
+                    <h3 className="text-3xl font-bold mb-2">Wisconsin vs. Florida Fight</h3>
+                    <p className="text-lg opacity-90">Fundraising Competition for MS Society</p>
                   </div>
                 </div>
-                <div className="p-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-gray-500">Date</p>
-                        <p className="font-medium">July 19, 2025</p>
-                      </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div className="bg-blue-50 rounded-lg p-4 text-center">
+                      <h4 className="text-lg font-bold text-blue-800 mb-2">Wisconsin</h4>
+                      <div className="text-3xl font-bold text-blue-600">$5,100</div>
+                      <p className="text-sm text-blue-700 mt-1">Current Total</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-gray-500">Time</p>
-                        <p className="font-medium">4:00 PM - 9:00 PM</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2 sm:col-span-2">
-                      <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-sm text-gray-500">Location</p>
-                        <p className="font-medium">3130 Parental Home Road, Jacksonville, FL 32216</p>
-                      </div>
+                    <div className="bg-orange-50 rounded-lg p-4 text-center">
+                      <h4 className="text-lg font-bold text-orange-800 mb-2">Florida</h4>
+                      <div className="text-3xl font-bold text-orange-600">$5,060</div>
+                      <p className="text-sm text-orange-700 mt-1">Current Total</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-5">
-                    Join us for an evening of bourbon tasting, delicious food, and fundraising for the National MS
-                    Society. This event features premium bourbon selections, silent auctions, and opportunities to
-                    connect with the MS community.
+                  <p className="text-gray-700 mb-6 text-lg">
+                    An epic fundraising battle between Wisconsin and Florida! Both states are competing to raise the
+                    most funds for the National Multiple Sclerosis Society. Wisconsin has taken the lead, but Florida is
+                    close behind. Every donation counts in this friendly competition to support MS research and
+                    programs.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 justify-center">
                     <Link
-                      href="https://www.jaxbourbonsocial.com/event-details"
+                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donate.participant&participantID=617194"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800 transition-colors text-sm font-medium"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
                     >
-                      <Info className="w-4 h-4" />
-                      <span>Event Details</span>
+                      <Trophy className="w-5 h-5" />
+                      <span>Support Wisconsin</span>
                     </Link>
                     <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                      href="https://events.nationalmssociety.org/participants/Casey-Murphy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors text-sm font-medium"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors font-medium"
                     >
-                      <Heart className="w-4 h-4" />
-                      <span>Donate</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Jacksonville Jumbo Shrimp */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative h-56 w-full bg-blue-50">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <img
-                      src="/images/JumboShrimp.jpg"
-                      alt="Jacksonville Jumbo Shrimp Logo"
-                      className="w-48 h-48 object-contain max-w-full max-h-full"
-                      onError={(e) => {
-                        e.currentTarget.src = "/placeholder.svg?key=jumbo-shrimp"
-                        e.currentTarget.onerror = null
-                      }}
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <h3 className="text-2xl font-bold">Jacksonville Jumbo Shrimp</h3>
-                    <p className="text-sm opacity-90">Get to Know Your Neighbor Night</p>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-gray-500">Date</p>
-                        <p className="font-medium">July 29, 2025</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-gray-500">Time</p>
-                        <p className="font-medium">7:05 PM EDT</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2 sm:col-span-2">
-                      <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-sm text-gray-500">Location</p>
-                        <p className="font-medium">
-                          VyStar Ballpark, 301 A Philip Randolph Blvd, Jacksonville, FL 32202
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 mb-3">
-                    Join us for Get to Know Your Neighbor Night as the Jacksonville Jumbo Shrimp take on the Columbus
-                    Clippers. This special event supports the National Multiple Sclerosis Society while enjoying
-                    America's favorite pastime.
-                  </p>
-                  <p className="text-sm text-gray-600 mb-5">
-                    <strong>Purchase Deadline:</strong> July 29, 2025 at 5:05 PM EDT
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Link
-                      href="https://www.gofevo.com/event/Nationalmultiple6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
-                    >
-                      <Info className="w-4 h-4" />
-                      <span>Get Tickets</span>
-                    </Link>
-                    <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors text-sm font-medium"
-                    >
-                      <Heart className="w-4 h-4" />
-                      <span>Donate</span>
+                      <Trophy className="w-5 h-5" />
+                      <span>Support Florida</span>
                     </Link>
                   </div>
                 </div>
@@ -202,52 +115,51 @@ export default function EventsPage() {
             <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">Upcoming Bike MS Rides</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Bike MS: Kentucky Bourbon Country Ride */}
+              {/* Bike MS: Wisconsin Best Dam Bike Tour */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative h-48 w-full bg-amber-50">
+                <div className="relative h-48 w-full bg-blue-50">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-amber-800 text-center">
+                    <div className="text-blue-800 text-center">
                       <Bike className="w-16 h-16 mx-auto mb-2" />
-                      <h3 className="text-xl font-bold">Bluegrass Bourbon Ride</h3>
+                      <h3 className="text-xl font-bold">Best Dam Bike Tour</h3>
                     </div>
                   </div>
-                  <div className="absolute top-0 right-0 bg-amber-600 text-white px-3 py-1 m-3 rounded-full text-sm font-medium">
-                    Kentucky
+                  <div className="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 m-3 rounded-full text-sm font-medium">
+                    Wisconsin
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-bold mb-3">Bike MS: Bluegrass Bourbon Ride</h3>
+                  <h3 className="text-xl font-bold mb-3">Bike MS: Best Dam Bike Tour</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-gray-500">Date</p>
-                        <p className="font-medium">June 14-15, 2025</p>
+                        <p className="font-medium">August 2-3, 2025</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-gray-500">Location</p>
-                        <p className="font-medium">Bardstown, KY</p>
+                        <p className="font-medium">Baraboo, WI</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 sm:col-span-2">
                       <Bike className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
-                        <p className="text-sm text-gray-500">Distance Options</p>
-                        <p className="font-medium">30, 50, 75, or 100 miles</p>
+                        <p className="text-sm text-gray-500">Estimated Mileage</p>
+                        <p className="font-medium">150 miles</p>
                       </div>
                     </div>
                   </div>
                   <p className="text-gray-700 mb-5">
-                    Experience the rolling hills and scenic beauty of Kentucky's bourbon country in this two-day cycling
-                    event. Ride through historic distillery routes and enjoy the camaraderie of fellow cyclists
-                    supporting the MS cause.
+                    Experience the scenic beauty of Wisconsin's countryside in this two-day cycling event. Ride through
+                    rolling hills and picturesque landscapes while supporting the MS community and research efforts.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2094"
+                      href="https://events.nationalmssociety.org/events/2263"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
@@ -256,7 +168,7 @@ export default function EventsPage() {
                       <span>Event Details</span>
                     </Link>
                     <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donate.participant&participantID=617194"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors text-sm font-medium"
@@ -268,52 +180,51 @@ export default function EventsPage() {
                 </div>
               </div>
 
-              {/* Bike MS: Colorado Ride */}
+              {/* Bike MS: Georgia Peach Ride */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative h-48 w-full bg-green-50">
+                <div className="relative h-48 w-full bg-orange-50">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-green-800 text-center">
+                    <div className="text-orange-800 text-center">
                       <Bike className="w-16 h-16 mx-auto mb-2" />
-                      <h3 className="text-xl font-bold">Colorado Ride</h3>
+                      <h3 className="text-xl font-bold">Georgia Peach Ride</h3>
                     </div>
                   </div>
-                  <div className="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-3 rounded-full text-sm font-medium">
-                    Boulder
+                  <div className="absolute top-0 right-0 bg-orange-600 text-white px-3 py-1 m-3 rounded-full text-sm font-medium">
+                    Georgia
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-bold mb-3">Bike MS: Colorado Ride</h3>
+                  <h3 className="text-xl font-bold mb-3">Bike MS: Georgia Peach Ride</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-gray-500">Date</p>
-                        <p className="font-medium">June 28-29, 2025</p>
+                        <p className="font-medium">September 13, 2025</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-gray-500">Location</p>
-                        <p className="font-medium">Boulder, CO</p>
+                        <p className="font-medium">LaGrange, GA</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 sm:col-span-2">
                       <Bike className="w-5 h-5 text-red-600 flex-shrink-0" />
                       <div>
-                        <p className="text-sm text-gray-500">Distance Options</p>
-                        <p className="font-medium">30, 68, or 100 miles</p>
+                        <p className="text-sm text-gray-500">Estimated Mileage</p>
+                        <p className="font-medium">75 miles</p>
                       </div>
                     </div>
                   </div>
                   <p className="text-gray-700 mb-5">
-                    Challenge yourself with the breathtaking mountain views of Colorado in this two-day cycling event.
-                    Experience the majestic Rocky Mountain scenery while riding to support the MS community and
-                    research.
+                    Join us for a one-day cycling challenge through the beautiful Georgia countryside. Experience the
+                    charm of the Peach State while riding to support the MS community and advance research efforts.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2099"
+                      href="https://events.nationalmssociety.org/events/2379"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
@@ -322,7 +233,7 @@ export default function EventsPage() {
                       <span>Event Details</span>
                     </Link>
                     <Link
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                      href="https://events.nationalmssociety.org/participants/Casey-Murphy"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors text-sm font-medium"
@@ -340,7 +251,7 @@ export default function EventsPage() {
             <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">2025 Cycling Statistics</h2>
 
             <div className="bg-white rounded-xl shadow-md p-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div className="bg-gray-50 rounded-lg p-5 text-center">
                   <h3 className="text-lg font-semibold text-gray-700 mb-2">Q1 (Jan-Mar)</h3>
                   <div className="text-3xl font-bold mb-1 whitespace-nowrap">366.74 miles</div>
@@ -349,14 +260,20 @@ export default function EventsPage() {
 
                 <div className="bg-gray-50 rounded-lg p-5 text-center">
                   <h3 className="text-lg font-semibold text-gray-700 mb-2">Q2 (Apr-Jun)</h3>
-                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">250.2 miles</div>
-                  <p className="text-gray-500 text-sm">Time: 11:06:50</p>
+                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">539 miles</div>
+                  <p className="text-gray-500 text-sm">Time: 37:01:08</p>
+                </div>
+
+                <div className="bg-gray-50 rounded-lg p-5 text-center">
+                  <h3 className="text-lg font-semibold text-gray-700 mb-2">Q3 (Jul-Sep)</h3>
+                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">128 miles</div>
+                  <p className="text-gray-500 text-sm">Time: 08:17:42</p>
                 </div>
 
                 <div className="bg-red-50 rounded-lg p-5 text-center">
                   <h3 className="text-lg font-semibold text-red-700 mb-2">Total 2025</h3>
-                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">616.94 miles</div>
-                  <p className="text-gray-500 text-sm">Time: 35:54:38</p>
+                  <div className="text-3xl font-bold mb-1 whitespace-nowrap">1033.74 miles</div>
+                  <p className="text-gray-500 text-sm">Time: 70:06:38</p>
                 </div>
               </div>
             </div>
