@@ -104,7 +104,7 @@ export default function AboutBikeMS() {
                       <h4 className="text-xl font-bold text-red-600 mb-2">WISCONSIN</h4>
                       <div className="bg-red-100 rounded-lg p-2 mb-3">
                         <p className="text-xs text-red-700 font-medium">CURRENT TOTAL</p>
-                        <p className="text-2xl font-bold text-red-800">$3,000</p>
+                        <p className="text-2xl font-bold text-red-800">$5,100</p>
                       </div>
                       <Link
                         href="https://events.nationalmssociety.org/index.cfm?fuseaction=donate.participant&participantID=617194"

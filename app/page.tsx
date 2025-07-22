@@ -257,15 +257,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$8,610</span>
+                      <span className="font-bold text-3xl">$10,245</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $20,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full" style={{ width: "43.1%" }}></div>
+                    <div className="bg-primary rounded-full" style={{ width: "51.2%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">43.1%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">51.2%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                   </p>
@@ -583,9 +583,6 @@ export default function Home() {
                 </div>
                 <div className="mt-5">
                   <CountdownTimer eventDate="2025-08-02T07:00:00-04:00" eventName="Best Dam Bike Tour WI" />
-                </div>
-                <div className="mt-5">
-                  <CountdownTimer eventDate="2025-08-02T07:00:00-04:00" eventName="Best Dam Bike Tour WI" />
                   <div className="mt-3 text-center">
                     <a
                       href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2263"
@@ -737,7 +734,7 @@ export default function Home() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">Bike MS: PGA TOUR Cycle to the Shore</h3>
+                  <h3 className="font-bold text-xl">PGA Tour, Cycle to the Shore</h3>
                   <span className="bg-white text-yellow-600 text-xs font-bold px-2 py-1 rounded-full">UPCOMING</span>
                 </div>
               </div>
@@ -821,10 +818,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-5">
-                  <CountdownTimer
-                    eventDate="2025-10-04T07:00:00-04:00"
-                    eventName="Bike MS: PGA TOUR Cycle to the Shore"
-                  />
+                  <CountdownTimer eventDate="2025-10-04T07:00:00-04:00" eventName="PGA Tour, Cycle to the Shore" />
                   <div className="mt-3 text-center">
                     <a
                       href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2396"
