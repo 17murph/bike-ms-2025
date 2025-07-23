@@ -109,11 +109,11 @@ export default function Home() {
                   <div className="text-center space-y-4">
                     <div className="flex items-center justify-center gap-4 text-sm font-medium text-gray-700 mb-2">
                       <span className="flex items-center gap-1">
-                        🐊 <span>Florida: $4,960</span>
+                        🐊 <span>Florida: $5,060</span>
                       </span>
                       <span className="text-gray-400">|</span>
                       <span className="flex items-center gap-1">
-                        🦡 <span>Wisconsin: $3,000</span>
+                        🦡 <span>Wisconsin: $5,100</span>
                       </span>
                     </div>
                     <p className="text-sm text-gray-600 mb-3">
@@ -192,11 +192,11 @@ export default function Home() {
           </div>
           <div className="max-w-4xl mx-auto mt-8 text-center">
             <blockquote className="text-gray-700 italic text-sm md:text-base lg:text-lg bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-primary">
-              &quot;We ride alongside the stories too often left behind—the fatigue no one sees, the symptoms no one
-              talks about, the truth most don't understand. This isn't about speaking for people with MS—it's about
-              making space to hear them, fully. Every mile, every donation helps expand access to care, fuel research,
-              and make sure no one feels invisible in their fight. We're not just fundraising. We're listening—and
-              following their lead.&quot;
+              "We ride alongside the stories too often left behind, the fatigue no one sees, the symptoms no one talks
+              about, the truth most don't understand. This isn't about speaking for people with MS, it's about making
+              space to hear them, fully. Every mile, every donation helps expand access to care, fuel research, and make
+              sure no one feels invisible in their fight. We're not just fundraising. We're listening and following
+              their lead."
             </blockquote>
           </div>
         </div>
