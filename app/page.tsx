@@ -1107,47 +1107,6 @@ export default function Home() {
         <SocialMediaLinks />
       </main>
 
-      {/* As Featured Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary">As Featured on</h2>
-
-          {/* On a Mission with Jack Sears - ADD THIS FIRST */}
-          <div className="mb-8">
-            <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 text-primary">
-              On a Mission with Jack Sears
-            </h3>
-            <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md">
-              <iframe
-                title="vimeo-player"
-                src="https://player.vimeo.com/video/1092530487?h=fc93edee8a"
-                className="absolute top-0 left-0 w-full h-full"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-
-          {/* YouTube Sub-section - EXISTING VIDEO STAYS SECOND */}
-          <div className="mb-8">
-            <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 text-primary">
-              YouTube - Will Anthony Talk MS
-            </h3>
-            <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/W9ByLBLhg1Q?si=13GfEXRiGqxkJwHU"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer and utility components */}
       <Footer />
       <BackToTopButton />

@@ -185,7 +185,6 @@ function BikeMSSarasota2024() {
 
 function BikeMSColorado2024() {
   // Updated with the new provided images
-  const [selectedPhoto, setSelectedPhoto] = useState(null)
   const photos = [
     {
       id: "colorado-1",
@@ -209,46 +208,7 @@ function BikeMSColorado2024() {
     },
   ]
 
-  return (
-    <div>
-      <h2 className="text-2xl font-bold text-center mb-6">Bike MS Colorado 2024</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {photos.map((photo) => (
-          <div
-            key={photo.id}
-            className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-all duration-300"
-            onClick={() => setSelectedPhoto(photo)}
-          >
-            <FallbackGalleryImage
-              src={photo.src || "/placeholder.svg"}
-              alt={photo.alt}
-              fill
-              className="object-contain object-center"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-20 transition-opacity duration-300"></div>
-          </div>
-        ))}
-      </div>
-
-      {/* Lightbox for viewing full images */}
-      <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
-        <DialogContent className="max-w-4xl p-1 sm:p-2 md:p-4">
-          <div className="relative w-full aspect-[4/3] md:aspect-[16/9]">
-            {selectedPhoto && (
-              <FallbackGalleryImage
-                src={selectedPhoto.src || "/placeholder.svg"}
-                alt={selectedPhoto.alt}
-                fill
-                className="object-contain"
-                priority
-              />
-            )}
-          </div>
-          {selectedPhoto && <p className="text-center text-sm text-gray-700 mt-2">{selectedPhoto.alt}</p>}
-        </DialogContent>
-      </Dialog>
-    </div>
-  )
+  return <PhotoGallerySection title="Bike MS Colorado 2024" photos={photos} />
 }
 
 function BikeMSPGATour2024() {

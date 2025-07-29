@@ -12,7 +12,7 @@ const navItems = [
   { name: "Podcast", href: "/podcast", icon: Mic },
   { name: "Events", href: "/events", icon: Calendar },
   { name: "Sponsors", href: "/sponsors", icon: Users },
-  { name: "Photos", href: "/pictures", icon: Camera },
+  { name: "Media", href: "/media", icon: Camera }, // Updated Photos entry to Media
   { name: "About / Contact", href: "/contact", icon: Mail },
 ]
 
