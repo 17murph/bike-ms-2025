@@ -86,7 +86,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          {/* Florida vs Wisconsin CTA Box - Brightened Up */}
         </div>
       </section>
 
@@ -411,15 +410,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Completed Ride - Suncoast Challenge */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">Suncoast Challenge</h3>
-                  <span className="bg-white text-orange-600 text-xs font-bold px-2 py-1 rounded-full">COMPLETED</span>
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-xl text-center">Suncoast Challenge</h3>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex flex-col items-center mb-4">
+              <div className="p-5 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-4 flex-grow">
                   <div className="relative w-full h-32 my-2">
                     <Image
                       src="/images/bike-ms-complete-badge.png"
@@ -429,7 +427,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-4">
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
                     <p className="font-semibold text-gray-800">March 29, 2025</p>
                     <p className="text-gray-600 mt-1">65.68 miles / 4hrs 26 min</p>
@@ -438,16 +436,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Upcoming Ride - Bluegrass Bourbon Ride */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
+            {/* Completed Ride - Bluegrass Bourbon Ride */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">Bluegrass Bourbon - KY</h3>
-                  <span className="bg-white text-orange-600 text-xs font-bold px-2 py-1 rounded-full">COMPLETED</span>
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-xl text-center">Bluegrass Bourbon</h3>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex flex-col items-center mb-4">
+              <div className="p-5 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-4 flex-grow">
                   <div className="relative w-full h-32 my-2">
                     <Image
                       src="/images/bike-ms-complete-badge.png"
@@ -457,7 +454,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-4">
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
                     <p className="font-semibold text-gray-800">June 14/15th, 2025</p>
                     <p className="text-gray-600 mt-1">86.4 miles / 6hrs 55 min</p>
@@ -466,16 +463,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Upcoming Ride - Bike MS Colorado */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
+            {/* Completed Ride - Bike MS Colorado */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">Bike MS Colorado</h3>
-                  <span className="bg-white text-orange-600 text-xs font-bold px-2 py-1 rounded-full">COMPLETED</span>
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-xl text-center">Bike MS Colorado</h3>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex flex-col items-center mb-4">
+              <div className="p-5 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-4 flex-grow">
                   <div className="relative w-full h-32 my-2">
                     <Image
                       src="/images/bike-ms-complete-badge.png"
@@ -485,7 +481,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-4">
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
                     <p className="font-semibold text-gray-800">June 28, 2025</p>
                     <p className="text-gray-600 mt-1">145.7 miles / 10hrs 36min 46sec</p>
@@ -494,16 +490,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Upcoming Ride - Best Dam Bike Tour WI */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
+            {/* Upcoming Ride - Best Dam Bike Tour */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">Best Dam Bike Tour WI</h3>
-                  <span className="bg-white text-yellow-600 text-xs font-bold px-2 py-1 rounded-full">UPCOMING</span>
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-xl text-center">Best Dam Bike Tour</h3>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="space-y-4">
+              <div className="p-5 flex-grow flex flex-col">
+                <div className="space-y-3 flex-grow">
                   <div className="flex items-center gap-3 text-gray-700">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -581,8 +576,8 @@ export default function Home() {
                     <span className="font-medium">150 Miles</span>
                   </div>
                 </div>
-                <div className="mt-5">
-                  <CountdownTimer eventDate="2025-08-02T07:00:00-04:00" eventName="Best Dam Bike Tour WI" />
+                <div className="mt-auto">
+                  <CountdownTimer eventDate="2025-08-02T07:00:00-04:00" eventName="Best Dam Bike Tour" />
                   <div className="mt-3 text-center">
                     <a
                       href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2263"
@@ -613,15 +608,14 @@ export default function Home() {
             </div>
 
             {/* Upcoming Ride - Georgia Peach Ride */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">Georgia Peach Ride</h3>
-                  <span className="bg-white text-yellow-600 text-xs font-bold px-2 py-1 rounded-full">UPCOMING</span>
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-xl text-center">Georgia Peach Ride</h3>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="space-y-4">
+              <div className="p-5 flex-grow flex flex-col">
+                <div className="space-y-3 flex-grow">
                   <div className="flex items-center gap-3 text-gray-700">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -699,7 +693,7 @@ export default function Home() {
                     <span className="font-medium">75 Miles</span>
                   </div>
                 </div>
-                <div className="mt-5">
+                <div className="mt-auto">
                   <CountdownTimer eventDate="2025-09-13T07:00:00-04:00" eventName="Georgia Peach Ride" />
                   <div className="mt-3 text-center">
                     <a
@@ -731,15 +725,14 @@ export default function Home() {
             </div>
 
             {/* Upcoming Ride - PGA Tour, Bike to the Shore */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px]">
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-xl">PGA Tour, Cycle to the Shore</h3>
-                  <span className="bg-white text-yellow-600 text-xs font-bold px-2 py-1 rounded-full">UPCOMING</span>
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-xl text-center">PGA Tour, Cycle to the Shore</h3>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="space-y-4">
+              <div className="p-5 flex-grow flex flex-col">
+                <div className="space-y-3 flex-grow">
                   <div className="flex items-center gap-3 text-gray-700">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -817,7 +810,7 @@ export default function Home() {
                     <span className="font-medium">150 Miles</span>
                   </div>
                 </div>
-                <div className="mt-5">
+                <div className="mt-auto">
                   <CountdownTimer eventDate="2025-10-04T07:00:00-04:00" eventName="PGA Tour, Cycle to the Shore" />
                   <div className="mt-3 text-center">
                     <a
