@@ -3,7 +3,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { SocialMediaLinks } from "@/components/social-media-links"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -12,384 +11,264 @@ export default function MediaPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Header Section */}
-      <section className="relative bg-gradient-to-br from-primary to-primary/80 text-white pt-20 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Media Coverage</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover how The Other Side of MS podcast and Bike MS fundraising efforts are making headlines and
-              creating awareness about multiple sclerosis.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Add padding to account for fixed navigation */}
+      <div className="pt-16 md:pt-20"></div>
 
-      {/* NPR First Coast Connect Feature */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
-              {/* Header with Logos */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center">
-                  <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
-                </div>
-                <div className="text-center flex-1 mx-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary">
-                    As Featured on NPR's "First Coast Connect"
-                  </h2>
-                </div>
-                <div className="flex items-center">
-                  <Image
-                    src="/images/wjct-logo.png"
-                    alt="WJCT Logo"
-                    width={80}
-                    height={48}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
+      <main className="container mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary">Media & Press</h1>
+          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Discover how The Other Side of MS podcast and our Bike MS journey are making waves in the media, spreading
+            awareness about multiple sclerosis and the power of authentic storytelling.
+          </p>
 
-              {/* Content */}
-              <div className="text-center">
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-                  In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
-                  conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the
-                  raw storytelling that drives The Other Side of MS podcast.
+          {/* Featured Media Appearances */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-10 text-primary">Featured Media Appearances</h2>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* NPR First Coast Connect */}
+              <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/npr-logo.png"
+                      alt="NPR Logo"
+                      width={80}
+                      height={32}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/wjct-logo.png"
+                      alt="WJCT Logo"
+                      width={80}
+                      height={48}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-primary mb-4">NPR's "First Coast Connect"</h3>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful conversation about
+                  multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the raw storytelling
+                  that drives The Other Side of MS podcast.
                 </p>
 
-                {/* Embedded YouTube Video */}
-                <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                <div className="mt-6">
+                <div className="flex gap-4">
                   <Link
                     href="https://www.youtube.com/watch?v=5YiuhgqDCI8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                      <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                     Watch Now
                   </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Featured Media Appearances */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Featured Media Appearances</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Spreading awareness about MS through various media platforms and interviews
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* NPR Feature */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-center mb-4">
-                  <Image src="/images/npr-logo.png" alt="NPR Logo" width={60} height={24} className="object-contain" />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">NPR First Coast Connect</h3>
-                <p className="text-gray-600 mb-4">
-                  Featured discussion about MS awareness, fundraising efforts, and the impact of The Other Side of MS
-                  podcast.
+              {/* Jack Sears Show */}
+              <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold text-primary mb-4">The Jack Sears Show</h3>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Casey Murphy joins Jack Sears for an in-depth discussion about living with MS, the importance of
+                  authentic storytelling, and how cycling has become a powerful tool for advocacy and fundraising.
                 </p>
-                <div className="text-sm text-gray-500">
-                  <p>Host: Al Emerick</p>
-                  <p>Guests: Teresa Eichner, Casey Murphy</p>
-                </div>
-              </div>
-            </div>
 
-            {/* Jack Sears Show */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-primary"
+                <div className="flex gap-4">
+                  <Link
+                    href="https://player.vimeo.com/video/1092530487?h=fc93edee8a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
                   >
-                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                    <line x1="12" x2="12" y1="19" y2="22" />
-                    <line x1="8" x2="16" y1="22" y2="22" />
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                    Listen Now
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">The Jack Sears Show</h3>
-                <p className="text-gray-600 mb-4">
-                  In-depth conversation about living with MS, the importance of authentic storytelling, and community
-                  support.
-                </p>
-                <div className="text-sm text-gray-500">
-                  <p>Radio Interview</p>
-                  <p>Focus: MS Awareness & Support</p>
-                </div>
-                <Link
-                  href="https://player.vimeo.com/video/1092530487?h=fc93edee8a"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold mt-4"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polygon points="5,3 19,12 5,21" />
-                  </svg>
-                  Listen Now
-                </Link>
               </div>
             </div>
 
             {/* Will Anthony Interview */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-primary"
-                  >
-                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                    <line x1="12" x2="12" y1="19" y2="22" />
-                    <line x1="8" x2="16" y1="22" y2="22" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Will Anthony Interview</h3>
-                <p className="text-gray-600 mb-4">
-                  Discussing the mission behind Bike MS fundraising and the personal stories that drive advocacy
-                  efforts.
-                </p>
-                <div className="text-sm text-gray-500">
-                  <p>Podcast Interview</p>
-                  <p>Topic: Bike MS & Advocacy</p>
-                </div>
+            <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-semibold text-primary mb-4 text-center">Will Anthony Interview</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed text-center">
+                A candid conversation with Will Anthony about the personal journey behind The Other Side of MS podcast,
+                the challenges of living with multiple sclerosis, and the mission to amplify unheard voices in the MS
+                community.
+              </p>
+
+              <div className="flex justify-center">
                 <Link
                   href="https://www.youtube.com/watch?v=W9ByLBLhg1Q"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold mt-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-play"
                   >
-                    <polygon points="5 3 19 12 5 21" />
+                    <polygon points="5 3 19 12 5 21 5 3" />
                   </svg>
                   Watch Now
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* The Other Side of MS Podcast Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">The Other Side of MS Podcast</h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Raw, authentic conversations about living with multiple sclerosis. Real stories from real people
-              navigating the challenges and triumphs of MS.
-            </p>
+          {/* The Other Side of MS Podcast Section */}
+          <section className="mb-16">
+            <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-primary mb-4">🎙️ The Other Side of MS Podcast</h2>
+                <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  Real stories. Raw truth. Unfiltered conversations about living with multiple sclerosis.
+                </p>
+              </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <Image
-                    src="/images/podcast-logo-new.png"
-                    alt="The Other Side of MS Podcast Logo"
-                    width={200}
-                    height={200}
-                    className="object-contain rounded-lg"
-                  />
-                </div>
-                <div className="text-left">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Listen on Your Favorite Platform</h3>
-                  <p className="text-gray-700 mb-6">
-                    Available on Spotify, Apple Podcasts, and all major podcast platforms. New episodes released
-                    regularly featuring guests sharing their MS journey.
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-semibold text-primary mb-4">About the Podcast</h3>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    The Other Side of MS goes beyond the typical MS narrative to explore the stories that often go
+                    untold. We dive deep into the emotional, psychological, and social aspects of living with multiple
+                    sclerosis.
                   </p>
-                  <Link
-                    href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Each episode features authentic conversations with people affected by MS, healthcare professionals,
+                    researchers, and advocates who are making a difference in the MS community.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link
+                      href="/podcast"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-center"
                     >
-                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
-                    </svg>
-                    Listen on Spotify
-                  </Link>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" x2="12" y1="19" y2="22" />
+                        <line x1="8" x2="16" y1="22" y2="22" />
+                      </svg>
+                      Explore All Episodes
+                    </Link>
+
+                    <Link
+                      href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium text-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                      </svg>
+                      Listen on Spotify
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex justify-center">
+                  <div className="relative w-80 h-80">
+                    <Image
+                      src="/images/podcast-logo-new.png"
+                      alt="The Other Side of MS Podcast Logo"
+                      fill
+                      className="object-contain rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Photos Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Photos</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Photo gallery coming soon! Check back for images from Bike MS events, podcast recordings, and community
-              gatherings.
-            </p>
-          </div>
+          {/* Photos Section */}
+          <section className="mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-primary mb-4">📸 Photos & Moments</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Capturing the journey, the people, and the moments that make our mission meaningful.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="64"
+                  height="64"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-primary"
+                  className="mx-auto text-gray-400 mb-4"
                 >
-                  <circle cx="18.5" cy="17.5" r="3.5" />
-                  <circle cx="5.5" cy="17.5" r="3.5" />
-                  <circle cx="15" cy="5" r="1" />
-                  <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                  <circle cx="12" cy="13" r="4" />
                 </svg>
+                <h3 className="text-2xl font-semibold text-gray-700 mb-2">Photo Gallery Coming Soon</h3>
+                <p className="text-gray-600 mb-6">
+                  We're working on curating a collection of photos from our Bike MS rides, podcast recordings, and
+                  community events. Check back soon to see the faces and moments behind our mission.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Bike MS Events</h3>
-              <p className="text-gray-600">Photos from various Bike MS rides and fundraising events</p>
-            </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-primary"
-                >
-                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                  <line x1="12" x2="12" y1="19" y2="22" />
-                  <line x1="8" x2="16" y1="22" y2="22" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Podcast Sessions</h3>
-              <p className="text-gray-600">Behind-the-scenes photos from podcast recordings and interviews</p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-primary"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Community Events</h3>
-              <p className="text-gray-600">Images from MS awareness events and community gatherings</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Get Involved</h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Join us in spreading awareness about multiple sclerosis through cycling, storytelling, and community
-              support.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/podcast"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold"
+                href="/pictures"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
-                Listen to Podcast
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -401,36 +280,75 @@ export default function MediaPage() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
                 </svg>
-              </Link>
-              <Link
-                href="/about-bike-ms"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors text-lg font-semibold"
-              >
-                Learn About Bike MS
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
+                View Photo Gallery
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <SocialMediaLinks />
+          {/* Call to Action */}
+          <section className="text-center">
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-xl border border-primary/20">
+              <h2 className="text-3xl font-bold text-primary mb-4">Join Our Mission</h2>
+              <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Every story shared, every mile ridden, and every dollar raised brings us closer to a world free of MS.
+                Be part of the movement that's changing how we talk about multiple sclerosis.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-semibold text-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
+                  </svg>
+                  Support Our Cause
+                </Link>
+
+                <Link
+                  href="/podcast"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold text-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                    <line x1="12" x2="12" y1="19" y2="22" />
+                    <line x1="8" x2="16" y1="22" y2="22" />
+                  </svg>
+                  Listen to Our Podcast
+                </Link>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
       <Footer />
       <BackToTopButton />
     </div>

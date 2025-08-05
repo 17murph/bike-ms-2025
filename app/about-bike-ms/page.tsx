@@ -49,84 +49,6 @@ export default function AboutBikeMS() {
               </Link>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl p-6 my-8 text-white">
-              <h3 className="text-3xl font-bold text-center mb-6">Florida vs Wisconsin Fundraising Challenge</h3>
-
-              <div className="text-center mb-6">
-                <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mx-auto">
-                  This year, I'm riding in six Bike MS events, but two of them have sparked a unique head-to-head
-                  challenge. These rides are more than a physical test, they're fundraising battlegrounds. Florida is my
-                  home ride and Wisconsin is where a lot of my family lives.{" "}
-                  <span className="font-bold text-white">Which team are you on?</span>
-                </p>
-              </div>
-
-              <div className="flex flex-col lg:flex-row items-center gap-8">
-                {/* Image on the left */}
-                <div className="flex-shrink-0">
-                  <div className="relative w-96 h-72 rounded-lg overflow-hidden shadow-lg">
-                    <ReliableImage
-                      src="/images/florida-vs-wisconsin.jpg"
-                      alt="Florida vs Wisconsin Fundraising Challenge - Epic battle between alligator and badger"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Fundraiser cards on the right */}
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                  {/* Florida Card */}
-                  <div className="bg-white rounded-lg p-4 text-gray-800 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                    <div className="text-center">
-                      <div className="text-3xl mb-1">🐊</div>
-                      <h4 className="text-xl font-bold text-orange-600 mb-2">FLORIDA</h4>
-                      <div className="bg-orange-100 rounded-lg p-2 mb-3">
-                        <p className="text-xs text-orange-700 font-medium">CURRENT TOTAL</p>
-                        <p className="text-2xl font-bold text-orange-800">$5,060</p>
-                      </div>
-                      <Link
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-all duration-300 font-bold shadow-lg hover:shadow-xl text-sm"
-                      >
-                        <Heart className="w-4 h-4" />
-                        <span>SUPPORT FLORIDA</span>
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Wisconsin Card */}
-                  <div className="bg-white rounded-lg p-4 text-gray-800 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                    <div className="text-center">
-                      <div className="text-3xl mb-1">🦡</div>
-                      <h4 className="text-xl font-bold text-red-600 mb-2">WISCONSIN</h4>
-                      <div className="bg-red-100 rounded-lg p-2 mb-3">
-                        <p className="text-xs text-red-700 font-medium">CURRENT TOTAL</p>
-                        <p className="text-2xl font-bold text-red-800">$5,100</p>
-                      </div>
-                      <Link
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donate.participant&participantID=617194"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 font-bold shadow-lg hover:shadow-xl text-sm"
-                      >
-                        <Heart className="w-4 h-4" />
-                        <span>SUPPORT WISCONSIN</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Call to action */}
-              <div className="text-center mt-6 pt-4 border-t border-blue-600">
-                <p className="text-lg font-medium mb-2">🎯 Every dollar counts in the fight against MS!</p>
-                <p className="text-blue-200">100% of funds go directly to MS research, advocacy, and support</p>
-              </div>
-            </div>
-
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
               <ReliableImage
                 src="/images/TSB.jpg"
@@ -328,8 +250,6 @@ export default function AboutBikeMS() {
                 </div>
               </div>
 
-              {/* Removed the "Join Team Spanish Beer" link as requested */}
-
               <h2 className="mt-4 mb-2">Upcoming Bike MS Events</h2>
               <p className="mb-2">
                 Through the Bike MS Passport Program, I'll be participating in the following events in 2025,
@@ -347,7 +267,7 @@ export default function AboutBikeMS() {
                   <strong>Bike MS Colorado</strong> - Boulder, CO (June 28-29, 2025)
                 </li>
                 <li>
-                  <strong>Best Dam Bike Tour WI</strong> - Baraboo, WI (August 2-3, 2025)
+                  <strong>Best Dam Bike Tour</strong> - Baraboo, WI (August 2-3, 2025)
                 </li>
                 <li>
                   <strong>Georgia Peach Ride</strong> - LaGrange, GA (September 13, 2025)
