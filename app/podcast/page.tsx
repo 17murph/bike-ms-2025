@@ -389,7 +389,7 @@ export default function PodcastPage() {
                   </div>
                 </div>
               </div>
-            
+            </div>
 
             {/* Dan Kindel - Featured Guest (moved to right side) */}
             <div className="mb-16">
