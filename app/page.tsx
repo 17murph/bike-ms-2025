@@ -8,7 +8,7 @@ import { CountdownTimer } from "@/components/countdown-timer"
 import { Navigation } from "@/components/navigation"
 import { SocialMediaLinks } from "@/components/social-media-links"
 import { useRef, useState, useEffect } from "react"
-import { Heart } from "lucide-react"
+import { Heart } from 'lucide-react'
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
@@ -107,7 +107,9 @@ export default function Home() {
                 <div className="flex justify-center mb-6">
                   <div className="text-center space-y-4">
                     <a
-                      href="/about-bike-ms"
+                      href="https://events.nationalmssociety.org/participants/Casey-Murphy"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
                     >
                       <svg
@@ -124,7 +126,7 @@ export default function Home() {
                       >
                         <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                       </svg>
-                      Learn More About Bike MS
+                      Donate to Bike MS - 100% goes to MS Society
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
