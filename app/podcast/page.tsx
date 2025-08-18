@@ -328,10 +328,78 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Brad Romp - Featured Guest */}
+            {/* Steve - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/steve.jpg"
+                        alt="Steve - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Steve Clayton</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Steve Clayton</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "As a trauma nurse, I knew the language of medicine. But living it — living MS — is different.
+                          You don't just explain the fear, you carry it."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Steve Clayton brings a unique perspective to The Other Side of MS—one shaped by years of
+                          caring for others in their most vulnerable moments. As a trauma nurse, he understood illness
+                          from the outside. But when MS entered his own life, everything changed. In this honest
+                          conversation, Steve explores the gap between medical knowledge and lived experience, sharing
+                          how his professional background both helped and complicated his journey with the disease.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 20</span>
+                      <a
+                        href="https://open.spotify.com/episode/0x4iZFkMlFWdU5XwiYmUsw?si=fcee49a3752d4cb2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Brad Romp - Featured Guest */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -342,7 +410,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Brad Romp</h3>
                       </div>
@@ -354,10 +422,17 @@ export default function PodcastPage() {
                       <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Brad Romp</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "Who sees you when the cape comes off? Are you helping others because it heals you—or because you don't know how to stop?"
+                          "Who sees you when the cape comes off? Are you helping others because it heals you—or because
+                          you don't know how to stop?"
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Brad was diagnosed with MS at 45. Now 64, he's a speaker, a cyclist, and a face of strength for others living with the disease. But behind the workouts, the travel, and the public optimism is a more complex truth—one that doesn't always fit into a social media caption or a feel-good campaign. In this episode, Brad sits down for a different kind of conversation. One that doesn't ask him to inspire, perform, or push through. Instead, we talk about the days he can't move. The pressure to keep showing up. The identity that forms around always being the strong one—and what happens when that strength runs out.
+                          Brad was diagnosed with MS at 45. Now 64, he's a speaker, a cyclist, and a face of strength
+                          for others living with the disease. But behind the workouts, the travel, and the public
+                          optimism is a more complex truth—one that doesn't always fit into a social media caption or a
+                          feel-good campaign. In this episode, Brad sits down for a different kind of conversation. One
+                          that doesn't ask him to inspire, perform, or push through. Instead, we talk about the days he
+                          can't move. The pressure to keep showing up. The identity that forms around always being the
+                          strong one—and what happens when that strength runs out.
                         </p>
                       </div>
                     </div>
@@ -394,7 +469,7 @@ export default function PodcastPage() {
             {/* Dan Kindel - Featured Guest (moved to right side) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
+                <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -405,7 +480,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-gradient-to-l md:from-black/40 md:to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-gradient-to-r md:from-black/40 md:to-transparent"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Dan Kindel</h3>
                       </div>
@@ -420,7 +495,12 @@ export default function PodcastPage() {
                           "Being strong doesn't mean pretending you're fine. Sometimes it just means telling the truth."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          Dan has been a teacher for over 20 years, a school spirit leader, a cyclist, and a quiet force in his Florida community. His energy is infectious. His optimism is constant. But behind the vibrant classroom persona is a man living with relentless, invisible pain—and the pressure to never let it show. In this episode, Dan opens up about how MS has shaped every part of his identity, from the walking stick he once felt ashamed of to the pride that makes asking for help harder than it should be.
+                          Dan has been a teacher for over 20 years, a school spirit leader, a cyclist, and a quiet force
+                          in his Florida community. His energy is infectious. His optimism is constant. But behind the
+                          vibrant classroom persona is a man living with relentless, invisible pain—and the pressure to
+                          never let it show. In this episode, Dan opens up about how MS has shaped every part of his
+                          identity, from the walking stick he once felt ashamed of to the pride that makes asking for
+                          help harder than it should be.
                         </p>
                       </div>
                     </div>
@@ -536,6 +616,44 @@ export default function PodcastPage() {
               >
                 <div className="p-5">
                   <div className="space-y-6">
+                    {/* Steve Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">S3_E20: Steve's Story</h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Steve</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Steve joins The Other Side of MS to share his personal journey with multiple sclerosis. In
+                          this candid conversation, he opens up about the realities of living with MS, the challenges he
+                          faces, and the strength he's found along the way. His story adds another authentic voice to
+                          the podcast's mission of sharing unfiltered experiences from the MS community.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 3, Episode 20</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/0x4iZFkMlFWdU5XwiYmUsw?si=fcee49a3752d4cb2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Brad Romp Episode */}
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
@@ -544,7 +662,12 @@ export default function PodcastPage() {
                         </h4>
                         <p className="text-gray-600 italic text-sm my-2">Guest: Brad Romp</p>
                         <p className="text-gray-700 my-2 text-sm">
-                          Brad was diagnosed with MS at 45. Now 64, he's a speaker, a cyclist, and a face of strength for others living with the disease. But behind the workouts, the travel, and the public optimism is a more complex truth—one that doesn't always fit into a social media caption or a feel-good campaign. In this episode, Brad sits down for a different kind of conversation about the days he can't move, the pressure to keep showing up, and what happens when that strength runs out.
+                          Brad was diagnosed with MS at 45. Now 64, he's a speaker, a cyclist, and a face of strength
+                          for others living with the disease. But behind the workouts, the travel, and the public
+                          optimism is a more complex truth—one that doesn't always fit into a social media caption or a
+                          feel-good campaign. In this episode, Brad sits down for a different kind of conversation about
+                          the days he can't move, the pressure to keep showing up, and what happens when that strength
+                          runs out.
                         </p>
                         <div className="flex justify-between items-center mt-2">
                           <span className="text-xs text-gray-500">Season 3, Episode 19</span>
@@ -581,7 +704,11 @@ export default function PodcastPage() {
                         </h4>
                         <p className="text-gray-600 italic text-sm my-2">Guest: Dan Kindel</p>
                         <p className="text-gray-700 my-2 text-sm">
-                          Dan has been a teacher for over 20 years, a school spirit leader, a cyclist, and a quiet force in his Florida community. His energy is infectious. His optimism is constant. But behind the vibrant classroom persona is a man living with relentless, invisible pain—and the pressure to never let it show. He talks about the dual realities of living with a disease that makes him stronger while slowly wearing him down.
+                          Dan has been a teacher for over 20 years, a school spirit leader, a cyclist, and a quiet force
+                          in his Florida community. His energy is infectious. His optimism is constant. But behind the
+                          vibrant classroom persona is a man living with relentless, invisible pain—and the pressure to
+                          never let it show. He talks about the dual realities of living with a disease that makes him
+                          stronger while slowly wearing him down.
                         </p>
                         <div className="flex justify-between items-center mt-2">
                           <span className="text-xs text-gray-500">Season 3, Episode 18</span>
@@ -617,7 +744,11 @@ export default function PodcastPage() {
                         </h4>
                         <p className="text-gray-600 italic text-sm my-2">Guest: Teresa Eichner</p>
                         <p className="text-gray-700 my-2 text-sm">
-                          Diagnosed with MS in 2016, Teresa Eichner is the driving force behind Jax Bourbon Social, a fundraiser that's generated over $300,000 for the National MS Society. But behind the public accolades and polished events is a woman who naps every day just to function—and who quietly carries the invisible cost of looking "fine." In this episode, Teresa shares the truth behind the bourbon glass: the fatigue, the fear, and the fight most never see.
+                          Diagnosed with MS in 2016, Teresa Eichner is the driving force behind Jax Bourbon Social, a
+                          fundraiser that's generated over $300,000 for the National MS Society. But behind the public
+                          accolades and polished events is a woman who naps every day just to function—and who quietly
+                          carries the invisible cost of looking "fine." In this episode, Teresa shares the truth behind
+                          the bourbon glass: the fatigue, the fear, and the fight most never see.
                         </p>
                         <div className="flex justify-between items-center mt-2">
                           <span className="text-xs text-gray-500">Season 3, Episode 17</span>
