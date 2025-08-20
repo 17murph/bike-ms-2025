@@ -8,7 +8,7 @@ import { CountdownTimer } from "@/components/countdown-timer"
 import { Navigation } from "@/components/navigation"
 import { SocialMediaLinks } from "@/components/social-media-links"
 import { useRef, useState, useEffect } from "react"
-import { Heart } from 'lucide-react'
+import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
@@ -252,7 +252,7 @@ export default function Home() {
                     <div className="text-gray-600">Goal: $20,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full" style={{ width: "52.05%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "52.05%" }}></div>
                   </div>
                   <div className="text-right text-sm text-gray-600 mt-1">52.05%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
@@ -530,7 +530,9 @@ export default function Home() {
                       className="text-primary"
                     >
                       <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                      <circle cx="12" cy="10" r="3" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                     </svg>
                     <span className="font-medium">LaGrange, GA</span>
                   </div>
@@ -647,7 +649,9 @@ export default function Home() {
                       className="text-primary"
                     >
                       <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                      <circle cx="12" cy="10" r="3" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                     </svg>
                     <span className="font-medium">Daytona, FL</span>
                   </div>
