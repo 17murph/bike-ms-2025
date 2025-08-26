@@ -235,31 +235,31 @@ export default function PodcastPage() {
                   <div className="space-y-4 text-gray-700">
                     <p>
                       The Other Side of MS isn't here to inspire you. It's here to show you what it really means to live
-                      with MS—the chaos behind the smiles, the invisible symptoms, the quiet grief, the complicated
-                      resilience.
+                      with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet
+                      grief, and the complex resilience.
                     </p>
                     <p>
-                      This podcast creates a space where people with MS can tell their stories without performance,
+                      This podcast creates a space where people with MS can tell their stories without performing,
                       without toxic positivity, and without being reduced to a diagnosis.
                     </p>
                     <p>
-                      These aren't highlight reels or polished success stories. They're raw conversations—sometimes
+                      These aren't highlight reels or polished success stories. They're raw conversations: sometimes
                       uncomfortable, always honest.
                     </p>
                     <p>
-                      Here, we don't ask guests to be brave. We ask them to be real. Because MS isn't just a
-                      disease—it's a life that keeps unfolding in ways most people never see. We explore the parts most
-                      people avoid: the rage, the fear, the mourning of who you used to be, and the strength that
-                      doesn't come with a cape—but with survival.
+                      Here, we don't ask guests to be brave; we ask them to be real. MS isn't just a disease; it's a
+                      life that keeps unfolding in ways most people never see. We explore the parts most people avoid:
+                      the rage, the fear, the mourning of who you used to be, and the strength that doesn't come with a
+                      cape but with survival.
                     </p>
                     <p>
-                      This podcast isn't about the host. It's about the people who live with MS—who deserve to be seen,
-                      heard, and understood not as heroes or fighters, but as complex humans trying to make it through
+                      This podcast isn't about the host. It's about the people who live with MS, who deserve to be seen,
+                      heard, and understood, not as heroes or fighters but as complex humans trying to make it through
                       another day.
                     </p>
                     <p>
-                      Inspiration might happen too. This podcast creates the space—so if their honesty happens to
-                      inspire you, let it.
+                      Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let
+                      it.
                     </p>
                   </div>
                 </div>
