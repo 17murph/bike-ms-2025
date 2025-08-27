@@ -7,54 +7,56 @@ import { SpotifyBadge } from "@/components/spotify-badge"
 import { CountdownTimer } from "@/components/countdown-timer"
 import { Navigation } from "@/components/navigation"
 import { SocialMediaLinks } from "@/components/social-media-links"
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect, useCallback, useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
   // Donor data from the original website
-  const donors = [
-    // Platinum Donors
-    { name: "M&M Farms", tags: ["🥇 Platinum Donor"] },
-    { name: "Marian Bredenkoetter", tags: ["🥇 Platinum Donor"] },
+  const donors = useMemo(
+    () => [
+      // Platinum Donors
+      { name: "M&M Farms", tags: ["🥇 Platinum Donor"] },
+      { name: "Marian Bredenkoetter", tags: ["🥇 Platinum Donor"] },
 
-    // Gold Donors
-    { name: "Margaret & Joe", tags: ["🥈 Gold Donor"] },
-    { name: "Danny Murphy", tags: ["🥈 Gold Donor"] },
-    { name: "Michael Cavicchia", tags: ["🥈 Gold Donor"] },
+      // Gold Donors
+      { name: "Margaret & Joe", tags: ["🥈 Gold Donor"] },
+      { name: "Danny Murphy", tags: ["🥈 Gold Donor"] },
+      { name: "Michael Cavicchia", tags: ["🥈 Gold Donor"] },
 
-    // Silver Donors
-    { name: "Rob & Lisa Farthing", tags: ["🥉 Silver Donor"] },
-    { name: "Susan Levin", tags: ["🥉 Silver Donor"] },
-    { name: "Mark & Dawn Windley", tags: ["🥉 Silver Donor"] },
-    { name: "Erik Henderson", tags: ["🥉 Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["🥉 Silver Donor"] },
-    { name: "Jennifer Long", tags: ["🥉 Silver Donor"] },
-    { name: "Debbie & Brian Hamm", tags: ["🥉 Silver Donor"] },
-    { name: "Mary Dallman", tags: ["🥉 Silver Donor"] },
-    { name: "Dennis & JoAnn Cook", tags: ["🥉 Silver Donor"] },
-    { name: "Wendy Bertagnole", tags: ["🥉 Silver Donor"] },
-  ]
+      // Silver Donors
+      { name: "Rob & Lisa Farthing", tags: ["🥉 Silver Donor"] },
+      { name: "Susan Levin", tags: ["🥉 Silver Donor"] },
+      { name: "Mark & Dawn Windley", tags: ["🥉 Silver Donor"] },
+      { name: "Erik Henderson", tags: ["🥉 Silver Donor"] },
+      { name: "Elaine Wuerstlin", tags: ["🥉 Silver Donor"] },
+      { name: "Jennifer Long", tags: ["🥉 Silver Donor"] },
+      { name: "Debbie & Brian Hamm", tags: ["🥉 Silver Donor"] },
+      { name: "Mary Dallman", tags: ["🥉 Silver Donor"] },
+      { name: "Dennis & JoAnn Cook", tags: ["🥉 Silver Donor"] },
+      { name: "Wendy Bertagnole", tags: ["🥉 Silver Donor"] },
+    ],
+    [],
+  )
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
-  const [isHovering, setIsHovering] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index)
-  }
+  }, [])
 
   useEffect(() => {
     if (isHovering) return
 
     const interval = setInterval(() => {
-      const nextSlide = (currentSlide + 1) % donors.length
-      goToSlide(nextSlide)
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % donors.length)
     }, 4000)
 
     return () => clearInterval(interval)
-  }, [currentSlide, isHovering, donors.length])
+  }, [isHovering, donors.length])
 
   return (
     <div className="min-h-screen bg-white relative">
