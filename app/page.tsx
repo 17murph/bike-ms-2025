@@ -25,6 +25,7 @@ export default function Home() {
       { name: "Danny Murphy", tags: ["🥈 Gold Donor"] },
       { name: "Michael Cavicchia", tags: ["🥈 Gold Donor"] },
       { name: "Wendy Bertagnole", tags: ["🥈 Gold Donor"] },
+      { name: "Mike Hull", tags: ["🥈 Gold Donor"] },
 
       // Silver Donors
       { name: "Rob & Lisa Farthing", tags: ["🥉 Silver Donor"] },
@@ -249,15 +250,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$10,560</span>
+                      <span className="font-bold text-3xl">$10,660</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $20,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "52.8%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "53.3%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">52.8%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">53.3%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                   </p>
@@ -510,120 +511,28 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Upcoming Ride - Georgia Peach Ride */}
+            {/* Completed Ride - Georgia Peach Ride */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
                 <div className="flex items-center justify-center">
                   <h3 className="font-bold text-xl text-center">Georgia Peach Ride</h3>
                 </div>
               </div>
               <div className="p-5 flex-grow flex flex-col">
-                <div className="space-y-3 flex-grow">
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
-                    <span className="font-medium">LaGrange, GA</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M8 2v4" />
-                      <path d="M16 2v4" />
-                      <rect width="18" height="18" x="3" y="4" rx="2" />
-                      <path d="M3 10h18" />
-                    </svg>
-                    <span className="font-medium">September 13, 2025</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                    <span className="font-medium">7:00 AM ET</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="18.5" cy="17.5" r="3.5" />
-                      <circle cx="5.5" cy="17.5" r="3.5" />
-                      <circle cx="15" cy="5" r="1" />
-                      <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
-                    </svg>
-                    <span className="font-medium">75 Miles</span>
+                <div className="flex flex-col items-center mb-4 flex-grow">
+                  <div className="relative w-full h-32 my-2">
+                    <Image
+                      src="/images/bike-ms-complete-badge.png"
+                      alt="Bike MS Complete Badge"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
-                <div className="mt-auto">
-                  <CountdownTimer eventDate="2025-09-13T07:00:00-04:00" eventName="Georgia Peach Ride" />
-                  <div className="mt-3 text-center">
-                    <a
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2379"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      About this Ride
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="ml-1"
-                      >
-                        <path d="M7 7h10v10" />
-                        <path d="M7 17 17 7" />
-                      </svg>
-                    </a>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800">September 13, 2025</p>
+                    <p className="text-gray-600 mt-1">70.44 miles / 4Hrs 47min 10Sec</p>
                   </div>
                 </div>
               </div>
