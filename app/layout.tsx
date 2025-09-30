@@ -4,6 +4,7 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import { TodaysDate } from "@/components/todays-date"
 import { GoogleAnalytics } from "./components/google-analytics"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,7 +20,7 @@ export const metadata = {
     "MS Podcast",
     "The Other Side of MS",
   ],
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export const viewport = {
@@ -145,6 +146,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Suspense fallback={<div className="text-center p-2 text-sm text-gray-500">Loading date...</div>}>
           <TodaysDate />
         </Suspense>
+        <Analytics />
       </body>
     </html>
   )
