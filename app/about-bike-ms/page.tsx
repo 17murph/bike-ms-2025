@@ -51,8 +51,8 @@ export default function AboutBikeMS() {
 
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
               <ReliableImage
-                src="/images/TSB.jpg"
-                alt="Team Spanish Beer cyclists at the starting line of Bike MS Suncoast Challenge, showing the back of a rider with team jersey and race number"
+                src="/images/team-spanish-beer-group-2025.jpg"
+                alt="Team Spanish Beer cyclists at Bike MS event - group photo at waterfront with matching team jerseys"
                 fill
                 className="object-cover"
               />
@@ -251,31 +251,9 @@ export default function AboutBikeMS() {
               </div>
 
               <h2 className="mt-4 mb-2">Upcoming Bike MS Events</h2>
-              <p className="mb-2">
-                Through the Bike MS Passport Program, I'll be participating in the following events in 2025,
-                representing Team Spanish Beer across the country:
-              </p>
+              <p className="mb-2">2025 Bike MS Season complete. Look for events coming soon for 2026 Bike MS Season.</p>
 
-              <ul className="list-disc pl-6 space-y-0.5 mb-3">
-                <li>
-                  <strong>Suncoast Challenge</strong> - Sarasota, FL (March 29, 2025)
-                </li>
-                <li>
-                  <strong>Bluegrass Bourbon Ride</strong> - Bardstown, KY (June 14-15, 2025)
-                </li>
-                <li>
-                  <strong>Bike MS Colorado</strong> - Boulder, CO (June 28-29, 2025)
-                </li>
-                <li>
-                  <strong>Best Dam Bike Tour</strong> - Baraboo, WI (August 2-3, 2025)
-                </li>
-                <li>
-                  <strong>Georgia Peach Ride</strong> - LaGrange, GA (September 13, 2025)
-                </li>
-                <li>
-                  <strong>PGA Tour, Bike to the Shore</strong> - Daytona, FL (October 4-5, 2025)
-                </li>
-              </ul>
+              {/* Removed the list of 2025 events */}
             </div>
 
             {/* Add Social Media Links */}
