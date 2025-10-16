@@ -80,12 +80,12 @@ export default function Home() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Bike MS - Cycling to End Multiple Sclerosis
+              Bike MS: Cycling to End Multiple Sclerosis
             </h1>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
               <p className="text-white text-lg md:text-xl leading-relaxed">
-                Join us in the fight against MS through the power of cycling. Every mile ridden and every dollar raised
-                brings us closer to a world free of multiple sclerosis.
+                "The Other Side of MS" Podcast: Creating a space where people with MS can tell their stories without
+                performance, without toxic positivity, and without being reduced to a diagnosis.
               </p>
             </div>
           </div>
@@ -249,15 +249,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$11,645</span>
+                      <span className="font-bold text-3xl">$11,315</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $12,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "97.04%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "94.29%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">97.04%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">94.29%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                   </p>
