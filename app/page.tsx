@@ -79,7 +79,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Bike MS: Cycling to End Multiple Sclerosis
+              Bike MS - Cycling to End Multiple Sclerosis
             </h1>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
               <p className="text-white text-base md:text-lg leading-normal">
@@ -95,10 +95,10 @@ export default function Home() {
       </section>
 
       {/* Hero Section with improved styling */}
-      <section className="relative bg-gradient-to-b from-blue-100 to-white py-12">
+      <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center justify-center">
               <ReliableImage
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
                 alt="Bike MS Logo - National MS Society Cycling Fundraiser"
@@ -163,7 +163,8 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-center gap-2">
                     <span className="text-sm md:text-base lg:text-lg font-medium text-gray-700">
-                      Listen to the latest episode of &apos;The Other Side of MS&apos; podcast
+                      Listen to the latest episode of &apos;The Other Side of MS&apos; podcast...
+                      <em>Sponsored by Birch Island Vet</em>
                     </span>
                     <div className="transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-md rounded-lg overflow-hidden mt-2">
                       <SpotifyBadge />
@@ -172,7 +173,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <Link href="/podcast" className="transition-transform hover:scale-105">
                 <ReliableImage
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20LOGO-h0RSu6vloZsMjIlxVlqVb3HlRPxxMW.png"
@@ -187,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-3">
         <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
             <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[300px] overflow-hidden">
@@ -304,7 +305,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2">
         <Link
           target="_blank"
           rel="noopener noreferrer"
