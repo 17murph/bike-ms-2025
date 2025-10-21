@@ -82,12 +82,12 @@ export default function Home() {
               Bike MS: Cycling to End Multiple Sclerosis
             </h1>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
-              <p className="text-white text-lg md:text-xl leading-relaxed">
-                We ride alongside the stories too often left behind, the fatigue no one sees, the symptoms no one talks
-                about, the truth most don't understand. This isn't about speaking for people with MS, it's about making
-                space to hear them, fully. Every mile, every donation helps expand access to care, fuel research, and
-                make sure no one feels invisible in their fight. We're not just fundraising. We're listening and
-                following their lead.
+              <p className="text-white text-base md:text-lg leading-normal">
+                <em>
+                  We ride alongside the stories too often left behind. We don't speak for people with MS; we make space
+                  to hear them. Every mile and every donation to the National MS Society fuel care and research so no
+                  one with MS feels invisible.
+                </em>
               </p>
             </div>
           </div>
