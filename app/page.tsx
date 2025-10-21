@@ -5,7 +5,6 @@ import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
-import { SocialMediaLinks } from "@/components/social-media-links"
 import { useRef, useState, useEffect, useCallback, useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
@@ -84,8 +83,11 @@ export default function Home() {
             </h1>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
               <p className="text-white text-lg md:text-xl leading-relaxed">
-                "The Other Side of MS" Podcast: Creating a space where people with MS can tell their stories without
-                performance, without toxic positivity, and without being reduced to a diagnosis.
+                We ride alongside the stories too often left behind, the fatigue no one sees, the symptoms no one talks
+                about, the truth most don't understand. This isn't about speaking for people with MS, it's about making
+                space to hear them, fully. Every mile, every donation helps expand access to care, fuel research, and
+                make sure no one feels invisible in their fight. We're not just fundraising. We're listening and
+                following their lead.
               </p>
             </div>
           </div>
@@ -100,15 +102,15 @@ export default function Home() {
               <ReliableImage
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
                 alt="Bike MS Logo - National MS Society Cycling Fundraiser"
-                width={220}
-                height={110}
+                width={400}
+                height={200}
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-6">
-                  <div className="text-center space-y-4">
+                  <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <a
                       href="https://events.nationalmssociety.org/participants/Casey-Murphy"
                       target="_blank"
@@ -147,12 +149,12 @@ export default function Home() {
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       </svg>
                     </a>
+                    <p className="text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3 mt-3">
+                      Every single dollar you donate goes directly to the National Multiple Sclerosis Society, funding
+                      research, delivering services, and providing support for those living with MS.
+                    </p>
                   </div>
                 </div>
-                <p className="text-center text-sm text-gray-600 mb-5 font-medium max-w-md mx-auto">
-                  Every single dollar you donate goes directly to the National Multiple Sclerosis Society — funding
-                  research, delivering services, and providing support for those living with MS.
-                </p>
                 <Link
                   href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
                   className="group"
@@ -175,64 +177,11 @@ export default function Home() {
                 <ReliableImage
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20LOGO-h0RSu6vloZsMjIlxVlqVb3HlRPxxMW.png"
                   alt="The Other Side of MS podcast logo"
-                  width={220}
-                  height={110}
+                  width={400}
+                  height={200}
                   className="object-contain rounded-lg shadow-md"
                 />
               </Link>
-            </div>
-          </div>
-          <div className="max-w-4xl mx-auto mt-8 text-center">
-            <blockquote className="text-gray-700 italic text-sm md:text-base lg:text-lg bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-primary">
-              "We ride alongside the stories too often left behind, the fatigue no one sees, the symptoms no one talks
-              about, the truth most don't understand. This isn't about speaking for people with MS, it's about making
-              space to hear them, fully. Every mile, every donation helps expand access to care, fuel research, and make
-              sure no one feels invisible in their fight. We're not just fundraising. We're listening and following
-              their lead."
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* NPR First Coast Connect Section */}
-      <section className="container mx-auto px-4 py-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
-            {/* Header with Logos */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center">
-                <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
-              </div>
-              <div className="text-center flex-1 mx-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary">
-                  As Featured on NPR's "First Coast Connect"
-                </h2>
-              </div>
-              <div className="flex items-center">
-                <Image src="/images/wjct-logo.png" alt="WJCT Logo" width={80} height={48} className="object-contain" />
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="text-center">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-                In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
-                conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the raw
-                storytelling that drives The Other Side of MS podcast.
-              </p>
-
-              {/* Embedded YouTube Video */}
-              <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
             </div>
           </div>
         </div>
@@ -761,6 +710,56 @@ export default function Home() {
           </div>
         </section>
 
+        {/* NPR First Coast Connect Section */}
+        <section className="container mx-auto px-4 py-8 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
+              {/* Header with Logos */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
+                </div>
+                <div className="text-center flex-1 mx-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-primary">
+                    As Featured on NPR's "First Coast Connect"
+                  </h2>
+                </div>
+                <div className="flex items-center">
+                  <Image
+                    src="/images/wjct-logo.png"
+                    alt="WJCT Logo"
+                    width={80}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="text-center">
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+                  In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
+                  conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the
+                  raw storytelling that drives The Other Side of MS podcast.
+                </p>
+
+                {/* Embedded YouTube Video */}
+                <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="sponsors-section" className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold text-center text-primary">Our Sponsors</h2>
           <div className="flex flex-col items-center space-y-4 bg-white rounded-xl p-6 shadow-sm">
@@ -827,9 +826,6 @@ export default function Home() {
             <span>Contact Us</span>
           </a>
         </section>
-
-        {/* Add Social Media Links */}
-        <SocialMediaLinks />
       </main>
 
       {/* Footer and utility components */}
