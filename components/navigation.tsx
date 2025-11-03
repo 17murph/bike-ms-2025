@@ -10,7 +10,7 @@ const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "About Bike MS", href: "/about-bike-ms", icon: Info },
   { name: "Podcast", href: "/podcast", icon: Mic },
-  { name: "Meet the Team", href: "/team", icon: Calendar },
+  { name: "Events", href: "/events", icon: Calendar }, // Reverted "Meet the Team" back to "Events"
   { name: "Sponsors", href: "/sponsors", icon: Users },
   { name: "Media", href: "/media", icon: Camera }, // Updated Photos entry to Media
   { name: "About / Contact", href: "/contact", icon: Mail },

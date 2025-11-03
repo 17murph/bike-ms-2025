@@ -102,7 +102,7 @@ export default function Home() {
               <span className="font-medium">Listen to the Podcast</span>
             </Link>
             <Link
-              href="/team"
+              href="/about-bike-ms"
               className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span className="text-xl">🚴</span>
