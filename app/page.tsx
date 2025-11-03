@@ -79,17 +79,44 @@ export default function Home() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Bike MS - Cycling to End Multiple Sclerosis
+              The Other Side of MS: Where Stories Move Us and Miles Unite Us
             </h1>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
               <p className="text-white text-base md:text-lg leading-normal">
                 <em>
-                  We ride alongside the stories too often left behind. We don't speak for people with MS; we make space
-                  to hear them. Every mile and every donation to the National MS Society fuel care and research so no
-                  one with MS feels invisible.
+                  A National Bike MS Cycling Team and Podcast Platform cycling across the U.S. to raise awareness, fund
+                  research, and amplify the voices of those living with MS.
                 </em>
               </p>
             </div>
+          </div>
+
+          <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-6 px-4">
+            <Link
+              href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span className="text-xl">🎧</span>
+              <span className="font-medium">Listen to the Podcast</span>
+            </Link>
+            <Link
+              href="/team"
+              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span className="text-xl">🚴</span>
+              <span className="font-medium">Meet the Traveling Team</span>
+            </Link>
+            <Link
+              href="https://events.nationalmssociety.org/participants/Casey-Murphy/donate"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span className="text-xl">❤️</span>
+              <span className="font-medium">Support the Mission</span>
+            </Link>
           </div>
         </div>
       </section>
