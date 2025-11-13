@@ -68,7 +68,7 @@ export default function Home() {
       {/* New Hero Section with Bike MS Focus */}
       <section className="relative">
         {/* Hero Image */}
-        <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+        <div className="relative w-full h-[600px] md:h-[650px] overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <Image
             src="/images/podcast-20seats.jpeg"
@@ -77,11 +77,11 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               The Other Side of MS: Where Stories Move Us and Miles Unite Us
             </h1>
-            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
+            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-4 md:p-6 rounded-lg">
               <p className="text-white text-base md:text-lg leading-normal">
                 <em>
                   A National Bike MS Cycling Team and Podcast Platform cycling across the U.S. to raise awareness, fund
@@ -91,30 +91,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 px-4">
+          <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 px-4">
             <Link
               href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
-              <span className="text-xl">🎧</span>
+              <span className="text-lg sm:text-xl">🎧</span>
               <span className="font-medium">Listen to the Podcast</span>
             </Link>
             <Link
               href="/about-bike-ms"
-              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
-              <span className="text-xl">🚴</span>
+              <span className="text-lg sm:text-xl">🚴</span>
               <span className="font-medium">Meet the Traveling Team</span>
             </Link>
             <Link
               href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
-              <span className="text-xl">❤️</span>
+              <span className="text-lg sm:text-xl">❤️</span>
               <span className="font-medium">Support the Mission</span>
             </Link>
           </div>
