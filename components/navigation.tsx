@@ -96,7 +96,7 @@ export function Navigation() {
             })}
 
             <Link
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+              href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
@@ -177,7 +177,7 @@ export function Navigation() {
               })}
 
               <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

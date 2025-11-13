@@ -71,7 +71,7 @@ export default function Home() {
         <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Podcast%20Seats.jpg-5BvgoqJRLerI7F6Wd226YzErPbx7g4.jpeg"
+            src="/images/podcast-20seats.jpeg"
             alt="Bike MS Fundraising Event"
             fill
             className="object-cover"
@@ -91,28 +91,28 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-6 px-4">
+          <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 px-4">
             <Link
               href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-xl">🎧</span>
               <span className="font-medium">Listen to the Podcast</span>
             </Link>
             <Link
               href="/about-bike-ms"
-              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-xl">🚴</span>
               <span className="font-medium">Meet the Traveling Team</span>
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/participants/Casey-Murphy/donate"
+              href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-xl">❤️</span>
               <span className="font-medium">Support the Mission</span>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center justify-center">
               <ReliableImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
+                src="/images/ms-20logo.jpeg"
                 alt="Bike MS Logo - National MS Society Cycling Fundraiser"
                 width={400}
                 height={200}
@@ -139,7 +139,7 @@ export default function Home() {
                 <div className="flex justify-center mb-6">
                   <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <a
-                      href="https://events.nationalmssociety.org/participants/Casey-Murphy"
+                      href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
@@ -203,7 +203,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <Link href="/podcast" className="transition-transform hover:scale-105">
                 <ReliableImage
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20LOGO-h0RSu6vloZsMjIlxVlqVb3HlRPxxMW.png"
+                  src="/images/2025-20logo.png"
                   alt="The Other Side of MS podcast logo"
                   width={400}
                   height={200}
@@ -317,7 +317,7 @@ export default function Home() {
                   <div className="flex flex-col items-center mt-4">
                     <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
                       <ReliableImage
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/100Bill-i9nf28jeSx9CL6yPqLujoKL5gxjvGI.jpeg"
+                        src="/images/100bill.jpeg"
                         alt="100 Dollar Bill"
                         width={256}
                         height={112}
@@ -793,7 +793,7 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-4 bg-white rounded-xl p-6 shadow-sm">
             <div className="w-48 h-48 relative">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Birch%20Island%20Vet.jpg-4d3gtkh4cnGBdUL3uTO4Za2C1JR80C.jpeg"
+                src="/images/birch-20island-20vet.jpeg"
                 alt="Birch Island Veterinary Center Logo"
                 width={192}
                 height={192}
