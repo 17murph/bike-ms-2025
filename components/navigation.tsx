@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail, Users } from "lucide-react"
+import { usePathname } from 'next/navigation'
+import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail, Users } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navItems = [
@@ -72,7 +72,7 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-primary text-xl">Bike MS 2025</span>
+            <span className="font-bold text-primary text-xl">Bike MS 2026</span>
           </Link>
 
           <div className="flex items-center space-x-1">
@@ -110,7 +110,7 @@ export function Navigation() {
                 onClick={() => {
                   if (navigator.share) {
                     navigator.share({
-                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
+                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
                       url: window.location.href,
                     })
                   }
@@ -127,7 +127,7 @@ export function Navigation() {
         {/* Mobile Navigation Button */}
         <div className="md:hidden flex justify-between items-center">
           <Link href="/" className="text-primary font-bold text-xl">
-            Bike MS 2025
+            Bike MS 2026
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -191,7 +191,7 @@ export function Navigation() {
                 onClick={() => {
                   if (navigator.share) {
                     navigator.share({
-                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
+                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
                       url: window.location.href,
                     })
                   }

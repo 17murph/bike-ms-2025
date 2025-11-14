@@ -6,7 +6,7 @@ import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
 import { useRef, useState, useEffect, useCallback, useMemo } from "react"
-import { Heart } from "lucide-react"
+import { Heart } from 'lucide-react'
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
@@ -371,11 +371,9 @@ export default function Home() {
       <section id="events-section" className="py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2025</h2>
-            <p className="text-orange-600 font-bold text-xl mb-3">2025 Season Complete!</p>
-            <p className="text-gray-700 text-lg mb-4">
-              As 2025 is complete, come back in early 2026 to see our updated list of rides, including adding Boston to
-              our list with an ETA of late June, 2026.
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
+            <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+              This year, we will call the Jack and Back Bike MS Ride, estimated for Sept. 2026, to be our "Home Ride," though we will accept donations for any of our rides.
             </p>
             <a
               href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
@@ -387,164 +385,97 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Completed Ride - Suncoast Challenge */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Ride 1 - Cape Cod Getaway */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Suncoast Challenge</h3>
+                  <h3 className="font-bold text-lg text-center">Cape Cod Getaway</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.jpg"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">📍 Quincy, MA</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">March 29, 2025</p>
-                    <p className="text-gray-600 mt-1">65.68 miles / 4hrs 26 min</p>
+                    <p className="font-semibold text-gray-800 text-sm">June 27/28, 2026</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <a
+                    href="https://events.nationalmssociety.org/pages/10304?eventID=2517"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Ride 2 - Best Dam Bike Tour */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-lg text-center">Best Dam Bike Tour</h3>
+                </div>
+              </div>
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">📍 Baraboo, WI</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800 text-sm">ETA: Aug, 2026</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Completed Ride - Bluegrass Bourbon Ride */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+            {/* Ride 3 - Jack and Back (Home Ride) */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Bluegrass Bourbon</h3>
+                  <h3 className="font-bold text-lg text-center">Jack and Back</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.jpg"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Home Ride</p>
+                    <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">June 14/15th, 2025</p>
-                    <p className="text-gray-600 mt-1">86.4 miles / 6hrs 55 min</p>
+                    <p className="font-semibold text-gray-800 text-sm">ETA: Sept, 2026</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Completed Ride - Bike MS Colorado */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+            {/* Ride 4 - PGA Tour Cycle to the Shore */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Bike MS Colorado</h3>
+                  <h3 className="font-bold text-lg text-center">PGA Tour Cycle to the Shore</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.jpg"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">📍 Location TBA</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">June 28, 2025</p>
-                    <p className="text-gray-600 mt-1">145.7 miles / 10hrs 36min 46sec</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Completed Ride - Best Dam Bike Tour */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Best Dam Bike Tour</h3>
-                </div>
-              </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.jpg"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800">August 2, 2025</p>
-                    <p className="text-gray-600 mt-1">139.1 miles / 9hrs 41min 05sec</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Completed Ride - Georgia Peach Ride */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Georgia Peach Ride</h3>
-                </div>
-              </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.jpg"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800">September 13, 2025</p>
-                    <p className="text-gray-600 mt-1">70.44 miles / 4 Hrs 47 Min 10 Sec</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Completed Ride - PGA Tour, Cycle to the Shore */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">PGA Tour, Cycle to the Shore</h3>
-                </div>
-              </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.jpg"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800">October 4, 2025</p>
-                    <p className="text-gray-600 mt-1">71.1 miles / 4 Hrs 29 min 51 Sec</p>
+                    <p className="font-semibold text-gray-800 text-sm">ETA: Oct, 2026</p>
                   </div>
                 </div>
               </div>
