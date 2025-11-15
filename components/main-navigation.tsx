@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail } from "lucide-react"
+import { usePathname } from 'next/navigation'
+import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
-  { name: "About Bike MS", href: "/about-bike-ms", icon: Info },
+  { name: "National Cycling Team", href: "/about-bike-ms", icon: Info }, // Updated from "About Bike MS" to "National Cycling Team"
   { name: "Podcast", href: "/podcast", icon: Mic },
   { name: "Events", href: "/events", icon: Calendar },
   { name: "Photos", href: "/pictures", icon: Camera },

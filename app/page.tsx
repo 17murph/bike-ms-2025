@@ -358,7 +358,9 @@ export default function Home() {
                   <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                   <path d="M2 12h20" />
                 </svg>
-                <h2 className="text-xl font-semibold text-orange-600">Stay Informed About MS Research</h2>
+                <h2 className="text-xl md:text-4xl font-semibold text-center mb-4 text-primary">
+                  Stay Informed About MS Research
+                </h2>
               </div>
               <p className="text-gray-700">
                 Learn more about the latest breakthroughs in MS Research via Momentum Magazine online
@@ -515,7 +517,7 @@ export default function Home() {
                 <circle cx="15" cy="5" r="1" />
                 <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
               </svg>
-              Find Your Ride
+              National Cycling Team
             </Link>
             <Link
               href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1227&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&language=en&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"

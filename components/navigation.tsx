@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
-  { name: "About Bike MS", href: "/about-bike-ms", icon: Info },
+  { name: "National Cycling Team", href: "/about-bike-ms", icon: Info }, // Changed from "About Bike MS" to "National Cycling Team"
   { name: "Podcast", href: "/podcast", icon: Mic },
-  { name: "Events", href: "/events", icon: Calendar }, // Reverted "Meet the Team" back to "Events"
+  { name: "Events", href: "/events", icon: Calendar },
   { name: "Sponsors", href: "/sponsors", icon: Users },
-  { name: "Media", href: "/media", icon: Camera }, // Updated Photos entry to Media
+  { name: "Media", href: "/media", icon: Camera },
   { name: "About / Contact", href: "/contact", icon: Mail },
 ]
 

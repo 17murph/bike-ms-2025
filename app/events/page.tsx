@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { Calendar, MapPin, Clock, Bike, Target, Award } from "lucide-react"
+import { Calendar, MapPin, Clock, Bike, Target, Award } from 'lucide-react'
 
 export default function EventsPage() {
   const [activeTab, setActiveTab] = useState("upcoming")
@@ -354,7 +354,7 @@ export default function EventsPage() {
                 href="/about-bike-ms"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary transition-colors"
               >
-                Learn About Bike MS
+                Learn About National Cycling Team
               </Link>
             </div>
           </div>
