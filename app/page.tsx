@@ -6,7 +6,7 @@ import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
 import { useRef, useState, useEffect, useCallback, useMemo } from "react"
-import { Heart } from 'lucide-react'
+import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
@@ -375,7 +375,8 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
             <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-              This year, we will call the Jack and Back Bike MS Ride, estimated for Sept. 2026, to be our "Home Ride," though we will accept donations for any of our rides.
+              This year, we will call the Jack and Back Bike MS Ride, estimated for Sept. 2026, to be our "Featured
+              Ride," though we will accept donations for any of our rides.
             </p>
             <a
               href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
@@ -440,7 +441,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Ride 3 - Jack and Back (Home Ride) */}
+            {/* Ride 3 - Jack and Back (Featured Ride) */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
                 <div className="flex items-center justify-center">
@@ -450,7 +451,7 @@ export default function Home() {
               <div className="p-4 flex-grow flex flex-col">
                 <div className="flex flex-col items-center mb-3 flex-grow">
                   <div className="text-center">
-                    <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Home Ride</p>
+                    <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Featured Ride</p>
                     <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
                   </div>
                 </div>
@@ -472,7 +473,7 @@ export default function Home() {
               <div className="p-4 flex-grow flex flex-col">
                 <div className="flex flex-col items-center mb-3 flex-grow">
                   <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Location TBA</p>
+                    <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
