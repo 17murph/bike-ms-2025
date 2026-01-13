@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from 'next/navigation'
-import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail, Users } from 'lucide-react'
+import { usePathname } from "next/navigation"
+import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
-  { name: "National Cycling Team", href: "/about-bike-ms", icon: Info }, // Changed from "About Bike MS" to "National Cycling Team"
+  { name: "About Bike MS", href: "/about-bike-ms", icon: Info },
   { name: "Podcast", href: "/podcast", icon: Mic },
   { name: "Events", href: "/events", icon: Calendar },
   { name: "Sponsors", href: "/sponsors", icon: Users },
-  { name: "Media", href: "/media", icon: Camera },
+  { name: "Media", href: "/media", icon: Camera }, // Updated Photos entry to Media
   { name: "About / Contact", href: "/contact", icon: Mail },
 ]
 
@@ -72,7 +72,7 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-primary text-xl">Bike MS 2026</span>
+            <span className="font-bold text-primary text-xl">Bike MS 2025</span>
           </Link>
 
           <div className="flex items-center space-x-1">
@@ -96,7 +96,7 @@ export function Navigation() {
             })}
 
             <Link
-              href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
@@ -110,7 +110,7 @@ export function Navigation() {
                 onClick={() => {
                   if (navigator.share) {
                     navigator.share({
-                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
+                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
                       url: window.location.href,
                     })
                   }
@@ -127,7 +127,7 @@ export function Navigation() {
         {/* Mobile Navigation Button */}
         <div className="md:hidden flex justify-between items-center">
           <Link href="/" className="text-primary font-bold text-xl">
-            Bike MS 2026
+            Bike MS 2025
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -177,7 +177,7 @@ export function Navigation() {
               })}
 
               <Link
-                href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
+                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
@@ -191,7 +191,7 @@ export function Navigation() {
                 onClick={() => {
                   if (navigator.share) {
                     navigator.share({
-                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
+                      title: "Bike MS 2025 - Cycling to End Multiple Sclerosis",
                       url: window.location.href,
                     })
                   }

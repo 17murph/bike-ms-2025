@@ -85,7 +85,6 @@ export default function PodcastPage() {
                   Unfiltered voices. Uncomfortable truths. Deep humanity.
                 </p>
 
-                {/* Added podcast break message under the platform icons */}
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
                   <a
                     href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
@@ -154,17 +153,12 @@ export default function PodcastPage() {
                       strokeLinejoin="round"
                       className="mr-2"
                     >
-                      <path d="M18.42 14.29c-.22-.12-.43-.23-.63-.35-.56-.35-1.26-.79-1.26-1.47 0-.65.39-1.15 1.16-1.15.35 0 .64.11.89.34.25.23.37.55.37.98h1.96c0-1.16-.46-2.04-1.14-2.64-.68-.6-1.62-.91-2.71-.91-1.17 0-2.14.3-2.87.91-.73.6-1.10 1.45-1.10 2.54 0 1.58.95 2.54 2.19 3.32.41.26.83.50 1.24.74.63.36 1.07.89 1.07 1.47 0 .7-.43 1.14-1.28 1.14-.35 0-.68-.12-.93-.35-.25-.23-.38-.55-.38-.98h-1.96c0 1.16.47 2.04 1.15 2.64.68.6 1.63.91 2.72.91 1.17 0 2.15-.3 2.88-.91.73-.6 1.10-1.45 1.10-2.54 0-1.58-.95-2.54-2.19-3.32-.07-.04-.14-.09-.22-.13-.01-.01-.03-.02-.04-.03-.01-.01-.02-.01-.02-.01z" />
-                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.90 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.20.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34 1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.90-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.20-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.40.76.27 1.40.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.40-.76-.27-1.40-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35-1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
+                      <path d="M18.42 14.29c-.22-.12-.43-.23-.63-.35-.56-.35-1.26-.79-1.26-1.47 0-.65.39-1.15 1.16-1.15.35 0 .64.11.89.34.25.23.37.55.37.98h1.96c0-1.16-.46-2.04-1.14-2.64-.68-.6-1.62-.91-2.71-.91-1.17 0-2.14.3-2.87.91-.73.6-1.1 1.45-1.1 2.54 0 1.58.95 2.54 2.19 3.32.41.26.83.5 1.24.74.63.36 1.07.89 1.07 1.47 0 .7-.43 1.14-1.28 1.14-.35 0-.68-.12-.93-.35-.25-.23-.38-.55-.38-.98h-1.96c0 1.16.47 2.04 1.15 2.64.68.6 1.63.91 2.72.91 1.17 0 2.15-.3 2.88-.91.73-.6 1.1-1.45 1.1-2.54 0-1.58-.95-2.54-2.19-3.32-.07-.04-.14-.09-.22-.13-.01-.01-.03-.02-.04-.03-.01-.01-.02-.01-.02-.01z" />
+                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.9 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.2.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34 1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.9-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.2-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.4.76.27 1.4.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.4-.76-.27-1.4-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35-1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
                     </svg>
                     <span>Amazon</span>
                   </a>
                 </div>
-
-                {/* Added podcast break message */}
-                <p className="text-center text-white/90 mt-6 text-lg italic">
-                  The Podcast is taking a break, please look for us again in Early 2026 for new episodes
-                </p>
               </div>
             </div>
           </div>
@@ -241,31 +235,31 @@ export default function PodcastPage() {
                   <div className="space-y-4 text-gray-700">
                     <p>
                       The Other Side of MS isn't here to inspire you. It's here to show you what it really means to live
-                      with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet
-                      grief, and the complex resilience.
+                      with MS—the chaos behind the smiles, the invisible symptoms, the quiet grief, the complicated
+                      resilience.
                     </p>
                     <p>
-                      This podcast creates a space where people with MS can tell their stories without performing,
+                      This podcast creates a space where people with MS can tell their stories without performance,
                       without toxic positivity, and without being reduced to a diagnosis.
                     </p>
                     <p>
-                      These aren't highlight reels or polished success stories. They're raw conversations: sometimes
+                      These aren't highlight reels or polished success stories. They're raw conversations—sometimes
                       uncomfortable, always honest.
                     </p>
                     <p>
-                      Here, we don't ask guests to be brave; we ask them to be real. MS isn't just a disease; it's a
-                      life that keeps unfolding in ways most people never see. We explore the parts most people avoid:
-                      the rage, the fear, the mourning of who you used to be, and the strength that doesn't come with a
-                      cape but with survival.
+                      Here, we don't ask guests to be brave. We ask them to be real. Because MS isn't just a
+                      disease—it's a life that keeps unfolding in ways most people never see. We explore the parts most
+                      people avoid: the rage, the fear, the mourning of who you used to be, and the strength that
+                      doesn't come with a cape—but with survival.
                     </p>
                     <p>
-                      This podcast isn't about the host. It's about the people who live with MS, who deserve to be seen,
-                      heard, and understood, not as heroes or fighters but as complex humans trying to make it through
+                      This podcast isn't about the host. It's about the people who live with MS—who deserve to be seen,
+                      heard, and understood not as heroes or fighters, but as complex humans trying to make it through
                       another day.
                     </p>
                     <p>
-                      Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let
-                      it.
+                      Inspiration might happen too. This podcast creates the space—so if their honesty happens to
+                      inspire you, let it.
                     </p>
                   </div>
                 </div>
@@ -334,79 +328,10 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/*  Added Ursula Forrester as new featured guest at top */}
-            {/* Ursula Forrester - Featured Guest */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/ursula.jpg"
-                        alt="Ursula Forrester - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-center"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Ursula Forrester</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Ursula Forrester</h3>
-                      <div className="mb-4">
-                        <p className="text-gray-600 mt-4">
-                          Ursula has always been a runner—marathons, half-marathons, and miles that measured more than
-                          distance. But in October 2014, after years of unexplained symptoms, she was diagnosed with
-                          multiple sclerosis. Suddenly, endurance meant something entirely different. She is a wife, a
-                          mother of two, and a professional in advertising who still chooses to see the glass half full.
-                          But behind that optimism lies the daily reality of MS—modifying, compensating, and sometimes
-                          surrendering to the fatigue that doesn't show up on finish line photos. Ursula and her family
-                          created the Mill Chill, a local race that has raised more than $150,000 for the MS Society,
-                          and in 2023 they added Bike MS to their journey, forming Team Mighty Strong.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 21</span>
-                      <a
-                        href="https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/*  Updated Steve to have picture on right (flex-row-reverse) */}
             {/* Steve - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
+                <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -417,7 +342,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Steve Clayton</h3>
                       </div>
@@ -471,11 +396,10 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/*  Updated Brad to have picture on left (flex-row) */}
             {/* Brad Romp - Featured Guest */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -486,7 +410,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Brad Romp</h3>
                       </div>
@@ -542,7 +466,73 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/*  Removed Dan Kindel from Featured Voices - he remains in Episode Archives */}
+            {/* Dan Kindel - Featured Guest (moved to right side) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/dan.jpg"
+                        alt="Dan Kindel - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-gradient-to-r md:from-black/40 md:to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Dan Kindel</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Dan Kindel</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "Being strong doesn't mean pretending you're fine. Sometimes it just means telling the truth."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Dan has been a teacher for over 20 years, a school spirit leader, a cyclist, and a quiet force
+                          in his Florida community. His energy is infectious. His optimism is constant. But behind the
+                          vibrant classroom persona is a man living with relentless, invisible pain—and the pressure to
+                          never let it show. In this episode, Dan opens up about how MS has shaped every part of his
+                          identity, from the walking stick he once felt ashamed of to the pride that makes asking for
+                          help harder than it should be.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 18</span>
+                      <a
+                        href="https://open.spotify.com/episode/2QBJ21rzuDUGmULcNFgDre?si=KIGCN7AKQaam4ophvEPNkA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -626,49 +616,6 @@ export default function PodcastPage() {
               >
                 <div className="p-5">
                   <div className="space-y-6">
-                    {/*  Added Ursula's episode at top of Episode Archives */}
-                    {/* Ursula Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E21: Redefining Strength - Ursula's Story
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Ursula Forrester</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Ursula has always been a runner—marathons, half-marathons, and miles that measured more than
-                          distance. But in October 2014, after years of unexplained symptoms, she was diagnosed with
-                          multiple sclerosis. In this episode, Ursula reflects on running marathons, building a
-                          community through fundraising, and what it really means to balance resilience with honesty.
-                          Her story is not just about crossing finish lines, but about redefining what strength looks
-                          like when MS becomes part of the course.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 21</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
                     {/* Steve Episode */}
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
