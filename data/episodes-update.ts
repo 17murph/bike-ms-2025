@@ -28,7 +28,7 @@ export const season3: Season = {
       date: "Apr 18, 2025",
     },
     {
-      id: "S3 _ E5",
+      id: "S3_E5",
       title: "Zohra - The MS Day No One Sees",
       guest: "Zohra",
       link: "https://open.spotify.com/episode/6H2g63vG8skxID554TFDkB?si=a1d9aafaaadb43f7",

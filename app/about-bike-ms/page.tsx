@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
-import { Bike, Heart, Users, ExternalLink, MapPin, Info, DollarSign, Award, Calendar } from "lucide-react"
+import { Bike, Heart, Users, ExternalLink, MapPin, Info, DollarSign, Award, Calendar } from 'lucide-react'
 import { ReliableImage } from "@/components/reliable-image"
 import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
@@ -26,7 +26,7 @@ export default function AboutBikeMS() {
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-6">
           <section className="space-y-4">
-            <h1 className="text-4xl font-bold text-center">About Bike MS</h1>
+            <h1 className="text-4xl font-bold text-center">National Bike MS Cycling Team</h1>
 
             <div className="flex justify-center gap-4 my-3">
               <Link
@@ -51,17 +51,50 @@ export default function AboutBikeMS() {
 
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
               <ReliableImage
-                src="/images/TSB.jpg"
-                alt="Team Spanish Beer cyclists at the starting line of Bike MS Suncoast Challenge, showing the back of a rider with team jersey and race number"
+                src="/images/team-spanish-beer-group-2025.jpg"
+                alt="Team Spanish Beer cyclists at Bike MS event - group photo at waterfront with matching team jerseys"
                 fill
                 className="object-cover"
               />
             </div>
 
+            <section className="py-4">
+              <div className="container mx-auto px-4">
+                <h2 className="text-3xl font-bold text-primary mb-3">National Bike MS Cycling Team</h2>
+                <div className="prose max-w-none">
+                  <p className="my-2">
+                    The National Bike MS Team exists for one reason. To make sure no one living with MS feels invisible. That is our why. Every mile we ride and every story we share comes back to this simple belief.
+                  </p>
+                  <p className="my-2">
+                    We bring together riders who raise at least $5,000 each year for the National MS Society. These are cyclists who already give everything they have, yet still feel the pull to do more. Many of them travel to rides alone, even though they share the same commitment. The National Team gives them a place to belong and a larger story to be part of.
+                  </p>
+                  <p className="my-2">
+                    Each year we choose one Bike MS event to stand behind. We travel as a unified team and ride with a local chapter to lift their event and shine a light on the people they serve. Our jerseys carry our name, but they also stand for something larger. They reflect our commitment to the Passport Program and our promise to honor the local communities we ride with.
+                  </p>
+                  <p className="my-2">
+                    This team is not about prestige or recognition. It is about purpose. It is about showing what happens when dedicated fundraisers come together to amplify a chapter, inspire new riders, and raise more money for the MS community. It is also about the stories. Through The Other Side of MS podcast, we highlight voices from every chapter we touch. These are real, unfiltered accounts of what MS takes, what it changes, and what it never defeats.
+                  </p>
+                  <p className="my-2">
+                    Our why is connection. Our how is community. Our what is simple. A national team of riders and storytellers who use their miles and their voices to push the mission forward. Not for credit. Not for praise. For the people living with MS who deserve to be heard.
+                  </p>
+
+                  <div className="mt-3">
+                    <a
+                      href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                    >
+                      <Info className="w-5 h-5" />
+                      <span>For More Information</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <div className="prose prose-lg max-w-none">
               <h2 className="mt-4 mb-2">What is Bike MS?</h2>
 
-              <div className="flex justify-center my-3">
+              <div className="flex justify-start my-3">
                 <Link
                   href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1227&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
                   target="_blank"
@@ -79,46 +112,6 @@ export default function AboutBikeMS() {
                 MS participants have raised more than $2,025 to date, funding critical research and programs to improve
                 the lives of people living with MS.
               </p>
-
-              <section className="py-4">
-                <div className="container mx-auto px-4">
-                  <div className="flex flex-col md:flex-row items-center gap-3 mb-3">
-                    <h2 className="text-3xl font-bold text-primary">Why We Ride</h2>
-                    <ReliableImage
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-logo-YalpHen52DqYkUZknWmKZmHJOMCo3n.png"
-                      alt="Team Spanish Beer logo – Bike MS cycling team"
-                      width={150}
-                      height={75}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="prose max-w-none">
-                    <p className="my-2">
-                      Bike MS brings together thousands of cyclists of all levels who share a passion for making a
-                      difference in the lives of people affected by MS. The camaraderie, passion, and memories that come
-                      from the weekend create an experience unlike any other. Bike MS is more than a ride—it's an
-                      extraordinary experience grounded in community and purpose.
-                    </p>
-                    <p className="my-2">
-                      As a proud member of Team Spanish Beer, I ride to fuel breakthroughs, build connections, and raise
-                      critical funds for those living with MS. Our team rides with heart, humor, and a whole lot of grit
-                      — and we're just getting started.
-                    </p>
-
-                    <div className="mt-3">
-                      <a
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=registrationUpdate.team&participantID=632965&success=donordrive.event"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                      >
-                        <Users className="w-5 h-5" />
-                        <span>Join Team Spanish Beer</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </section>
 
               <div className="bg-blue-50 p-4 rounded-lg my-4">
                 <h3 className="flex items-center gap-2 text-xl font-bold mb-2">
@@ -251,31 +244,9 @@ export default function AboutBikeMS() {
               </div>
 
               <h2 className="mt-4 mb-2">Upcoming Bike MS Events</h2>
-              <p className="mb-2">
-                Through the Bike MS Passport Program, I'll be participating in the following events in 2025,
-                representing Team Spanish Beer across the country:
-              </p>
+              <p className="mb-2">2025 Bike MS Season complete. Look for events coming soon for 2026 Bike MS Season.</p>
 
-              <ul className="list-disc pl-6 space-y-0.5 mb-3">
-                <li>
-                  <strong>Suncoast Challenge</strong> - Sarasota, FL (March 29, 2025)
-                </li>
-                <li>
-                  <strong>Bluegrass Bourbon Ride</strong> - Bardstown, KY (June 14-15, 2025)
-                </li>
-                <li>
-                  <strong>Bike MS Colorado</strong> - Boulder, CO (June 28-29, 2025)
-                </li>
-                <li>
-                  <strong>Best Dam Bike Tour</strong> - Baraboo, WI (August 2-3, 2025)
-                </li>
-                <li>
-                  <strong>Georgia Peach Ride</strong> - LaGrange, GA (September 13, 2025)
-                </li>
-                <li>
-                  <strong>PGA Tour, Bike to the Shore</strong> - Daytona, FL (October 4-5, 2025)
-                </li>
-              </ul>
+              {/* Removed the list of 2025 events */}
             </div>
 
             {/* Add Social Media Links */}

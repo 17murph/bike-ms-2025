@@ -4,57 +4,59 @@ import Link from "next/link"
 import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
-import { CountdownTimer } from "@/components/countdown-timer"
 import { Navigation } from "@/components/navigation"
-import { SocialMediaLinks } from "@/components/social-media-links"
-import { useRef, useState, useEffect } from "react"
-import { Heart } from 'lucide-react'
+import { useRef, useState, useEffect, useCallback, useMemo } from "react"
+import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
-  // Donor data from the original website
-  const donors = [
-    // Platinum Donors
-    { name: "M&M Farms", tags: ["🥇 Platinum Donor"] },
-    { name: "Marian Bredenkoetter", tags: ["🥇 Platinum Donor"] },
+  const donors = useMemo(
+    () => [
+      // Platinum Donors
+      { name: "M&M Farms", tags: ["🥇 Platinum Donor"] },
+      { name: "Marian Bredenkoetter", tags: ["🥇 Platinum Donor"] },
+      { name: "Wendy Bertagnole", tags: ["🥇 Platinum Donor"] },
 
-    // Gold Donors
-    { name: "Margaret & Joe", tags: ["🥈 Gold Donor"] },
-    { name: "Danny Murphy", tags: ["🥈 Gold Donor"] },
-    { name: "Michael Cavicchia", tags: ["🥈 Gold Donor"] },
+      // Gold Donors
+      { name: "Margaret & Joe", tags: ["🥈 Gold Donor"] },
+      { name: "Danny Murphy", tags: ["🥈 Gold Donor"] },
+      { name: "Michael Cavicchia", tags: ["🥈 Gold Donor"] },
+      { name: "Mike Hull", tags: ["🥈 Gold Donor"] },
+      { name: "Aami Stewart", tags: ["🥈 Gold Donor"] },
 
-    // Silver Donors
-    { name: "Rob & Lisa Farthing", tags: ["🥉 Silver Donor"] },
-    { name: "Susan Levin", tags: ["🥉 Silver Donor"] },
-    { name: "Mark & Dawn Windley", tags: ["🥉 Silver Donor"] },
-    { name: "Erik Henderson", tags: ["🥉 Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["🥉 Silver Donor"] },
-    { name: "Jennifer Long", tags: ["🥉 Silver Donor"] },
-    { name: "Debbie & Brian Hamm", tags: ["🥉 Silver Donor"] },
-    { name: "Mary Dallman", tags: ["🥉 Silver Donor"] },
-    { name: "Dennis & JoAnn Cook", tags: ["🥉 Silver Donor"] },
-    { name: "Wendy Bertagnole", tags: ["🥉 Silver Donor"] },
-  ]
+      // Silver Donors
+      { name: "Rob & Lisa Farthing", tags: ["🥉 Silver Donor"] },
+      { name: "Susan Levin", tags: ["🥉 Silver Donor"] },
+      { name: "Mark & Dawn Windley", tags: ["🥉 Silver Donor"] },
+      { name: "Erik Henderson", tags: ["🥉 Silver Donor"] },
+      { name: "Elaine Wuerstlin", tags: ["🥉 Silver Donor"] },
+      { name: "Jennifer Long", tags: ["🥉 Silver Donor"] },
+      { name: "Debbie & Brian Hamm", tags: ["🥉 Silver Donor"] },
+      { name: "Mary Dallman", tags: ["🥉 Silver Donor"] },
+      { name: "Dennis & JoAnn Cook", tags: ["🥉 Silver Donor"] },
+      { name: "Edward Acevedo", tags: ["🥉 Silver Donor"] },
+    ],
+    [],
+  )
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
-  const [isHovering, setIsHovering] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index)
-  }
+  }, [])
 
   useEffect(() => {
     if (isHovering) return
 
     const interval = setInterval(() => {
-      const nextSlide = (currentSlide + 1) % donors.length
-      goToSlide(nextSlide)
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % donors.length)
     }, 4000)
 
     return () => clearInterval(interval)
-  }, [currentSlide, isHovering, donors.length])
+  }, [isHovering, donors.length])
 
   return (
     <div className="min-h-screen bg-white relative">
@@ -66,48 +68,78 @@ export default function Home() {
       {/* New Hero Section with Bike MS Focus */}
       <section className="relative">
         {/* Hero Image */}
-        <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+        <div className="relative w-full h-[600px] md:h-[650px] overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Podcast%20Seats.jpg-5BvgoqJRLerI7F6Wd226YzErPbx7g4.jpeg"
+            src="/images/podcast-20seats.jpeg"
             alt="Bike MS Fundraising Event"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Bike MS 2025 – Cycling to End Multiple Sclerosis
+              The Other Side of MS: Where Stories Move Us and Miles Unite Us
             </h1>
-            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-6 rounded-lg">
-              <p className="text-white text-lg md:text-xl leading-relaxed">
-                Join us in the fight against MS through the power of cycling. Every mile ridden and every dollar raised
-                brings us closer to a world free of multiple sclerosis.
+            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-4 md:p-6 rounded-lg">
+              <p className="text-white text-base md:text-lg leading-normal">
+                <em>
+                  A National Bike MS Cycling Team and Podcast Platform cycling across the U.S. to raise awareness, fund
+                  research, and amplify the voices of those living with MS.
+                </em>
               </p>
             </div>
+          </div>
+
+          <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 px-4">
+            <Link
+              href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+            >
+              <span className="text-lg sm:text-xl">🎧</span>
+              <span className="font-medium">Listen to the Podcast</span>
+            </Link>
+            <Link
+              href="/about-bike-ms"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+            >
+              <span className="text-lg sm:text-xl">🚴</span>
+              <span className="font-medium">Meet the Traveling Team</span>
+            </Link>
+            <Link
+              href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+            >
+              <span className="text-lg sm:text-xl">❤️</span>
+              <span className="font-medium">Support the Mission</span>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Hero Section with improved styling */}
-      <section className="relative bg-gradient-to-b from-blue-100 to-white py-12">
+      <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center justify-center">
               <ReliableImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
+                src="/images/ms-20logo.jpeg"
                 alt="Bike MS Logo - National MS Society Cycling Fundraiser"
-                width={220}
-                height={110}
+                width={400}
+                height={200}
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-6">
-                  <div className="text-center space-y-4">
+                  <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <a
-                      href="https://events.nationalmssociety.org/participants/Casey-Murphy"
+                      href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
@@ -144,12 +176,12 @@ export default function Home() {
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       </svg>
                     </a>
+                    <p className="text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3 mt-3">
+                      Every single dollar you donate goes directly to the National Multiple Sclerosis Society, funding
+                      research, delivering services, and providing support for those living with MS.
+                    </p>
                   </div>
                 </div>
-                <p className="text-center text-sm text-gray-600 mb-5 font-medium max-w-md mx-auto">
-                  Every single dollar you donate goes directly to the National Multiple Sclerosis Society — funding
-                  research, delivering services, and providing support for those living with MS.
-                </p>
                 <Link
                   href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
                   className="group"
@@ -158,7 +190,8 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-center gap-2">
                     <span className="text-sm md:text-base lg:text-lg font-medium text-gray-700">
-                      Listen to the latest episode of &apos;The Other Side of MS&apos; podcast
+                      Listen to the latest episode of &apos;The Other Side of MS&apos; podcast...
+                      <em>Sponsored by Birch Island Vet</em>
                     </span>
                     <div className="transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-md rounded-lg overflow-hidden mt-2">
                       <SpotifyBadge />
@@ -167,75 +200,22 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <Link href="/podcast" className="transition-transform hover:scale-105">
                 <ReliableImage
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20LOGO-h0RSu6vloZsMjIlxVlqVb3HlRPxxMW.png"
+                  src="/images/2025-20logo.png"
                   alt="The Other Side of MS podcast logo"
-                  width={220}
-                  height={110}
+                  width={400}
+                  height={200}
                   className="object-contain rounded-lg shadow-md"
                 />
               </Link>
             </div>
           </div>
-          <div className="max-w-4xl mx-auto mt-8 text-center">
-            <blockquote className="text-gray-700 italic text-sm md:text-base lg:text-lg bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-primary">
-              "We ride alongside the stories too often left behind, the fatigue no one sees, the symptoms no one talks
-              about, the truth most don't understand. This isn't about speaking for people with MS, it's about making
-              space to hear them, fully. Every mile, every donation helps expand access to care, fuel research, and make
-              sure no one feels invisible in their fight. We're not just fundraising. We're listening and following
-              their lead."
-            </blockquote>
-          </div>
         </div>
       </section>
 
-      {/* NPR First Coast Connect Section */}
-      <section className="container mx-auto px-4 py-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
-            {/* Header with Logos */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center">
-                <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
-              </div>
-              <div className="text-center flex-1 mx-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary">
-                  As Featured on NPR's "First Coast Connect"
-                </h2>
-              </div>
-              <div className="flex items-center">
-                <Image src="/images/wjct-logo.png" alt="WJCT Logo" width={80} height={48} className="object-contain" />
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="text-center">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-                In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
-                conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the raw
-                storytelling that drives The Other Side of MS podcast.
-              </p>
-
-              {/* Embedded YouTube Video */}
-              <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-3">
         <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
             <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[300px] overflow-hidden">
@@ -246,15 +226,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$10,410</span>
+                      <span className="font-bold text-3xl">$11,415</span>
                       <span className="ml-2">raised</span>
                     </div>
-                    <div className="text-gray-600">Goal: $20,000</div>
+                    <div className="text-gray-600">Goal: $12,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full" style={{ width: "52.05%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "95.13%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">52.05%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">95.13%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
                   </p>
@@ -337,7 +317,7 @@ export default function Home() {
                   <div className="flex flex-col items-center mt-4">
                     <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
                       <ReliableImage
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/100Bill-i9nf28jeSx9CL6yPqLujoKL5gxjvGI.jpeg"
+                        src="/images/100bill.jpeg"
                         alt="100 Dollar Bill"
                         width={256}
                         height={112}
@@ -352,7 +332,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2">
         <Link
           target="_blank"
           rel="noopener noreferrer"
@@ -378,7 +358,9 @@ export default function Home() {
                   <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                   <path d="M2 12h20" />
                 </svg>
-                <h2 className="text-xl font-semibold text-orange-600">Stay Informed About MS Research</h2>
+                <h2 className="text-xl md:text-4xl font-semibold text-center mb-4 text-primary">
+                  Stay Informed About MS Research
+                </h2>
               </div>
               <p className="text-gray-700">
                 Learn more about the latest breakthroughs in MS Research via Momentum Magazine online
@@ -391,351 +373,112 @@ export default function Home() {
       <section id="events-section" className="py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2025</h2>
-            <p className="text-gray-700 text-lg">
-              Follow my journey as a Bike MS Passport rider across six different Bike MS events, including my home ride
-              (PGA Tour, Bike to the Shore)
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
+            <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+              This year, we will call the Jack and Back Bike MS Ride, estimated for Sept. 2026, to be our "Featured
+              Ride," though we will accept donations for any of our rides.
             </p>
+            <a
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 font-semibold underline"
+            >
+              Look for your Bike MS Ride Here
+            </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Completed Ride - Suncoast Challenge */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Ride 1 - Cape Cod Getaway */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Suncoast Challenge</h3>
+                  <h3 className="font-bold text-lg text-center">Cape Cod Getaway</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.png"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">📍 Quincy, MA</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">March 29, 2025</p>
-                    <p className="text-gray-600 mt-1">65.68 miles / 4hrs 26 min</p>
+                    <p className="font-semibold text-gray-800 text-sm">June 27/28, 2026</p>
                   </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <a
+                    href="https://events.nationalmssociety.org/pages/10304?eventID=2517"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Completed Ride - Bluegrass Bourbon Ride */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+            {/* Ride 2 - Best Dam Bike Tour */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Bluegrass Bourbon</h3>
+                  <h3 className="font-bold text-lg text-center">Best Dam Bike Tour</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.png"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">📍 Baraboo, WI</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">June 14/15th, 2025</p>
-                    <p className="text-gray-600 mt-1">86.4 miles / 6hrs 55 min</p>
+                    <p className="font-semibold text-gray-800 text-sm">ETA: Aug, 2026</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Completed Ride - Bike MS Colorado */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+            {/* Ride 3 - Jack and Back (Featured Ride) */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Bike MS Colorado</h3>
+                  <h3 className="font-bold text-lg text-center">Jack and Back</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.png"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Featured Ride</p>
+                    <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">June 28, 2025</p>
-                    <p className="text-gray-600 mt-1">145.7 miles / 10hrs 36min 46sec</p>
+                    <p className="font-semibold text-gray-800 text-sm">ETA: Sept, 2026</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Completed Ride - Best Dam Bike Tour */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4">
+            {/* Ride 4 - PGA Tour Cycle to the Shore */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Best Dam Bike Tour</h3>
+                  <h3 className="font-bold text-lg text-center">PGA Tour Cycle to the Shore</h3>
                 </div>
               </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-4 flex-grow">
-                  <div className="relative w-full h-32 my-2">
-                    <Image
-                      src="/images/bike-ms-complete-badge.png"
-                      alt="Bike MS Complete Badge"
-                      fill
-                      className="object-contain"
-                    />
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800">August 2, 2025</p>
-                    <p className="text-gray-600 mt-1">139.1 miles / 9hrs 41min 05sec</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Upcoming Ride - Georgia Peach Ride */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">Georgia Peach Ride</h3>
-                </div>
-              </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="space-y-3 flex-grow">
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    <span className="font-medium">LaGrange, GA</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M8 2v4" />
-                      <path d="M16 2v4" />
-                      <rect width="18" height="18" x="3" y="4" rx="2" />
-                      <path d="M3 10h18" />
-                    </svg>
-                    <span className="font-medium">September 13, 2025</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                    <span className="font-medium">7:00 AM ET</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="18.5" cy="17.5" r="3.5" />
-                      <circle cx="5.5" cy="17.5" r="3.5" />
-                      <circle cx="15" cy="5" r="1" />
-                      <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
-                    </svg>
-                    <span className="font-medium">75 Miles</span>
-                  </div>
-                </div>
-                <div className="mt-auto">
-                  <CountdownTimer eventDate="2025-09-13T07:00:00-04:00" eventName="Georgia Peach Ride" />
-                  <div className="mt-3 text-center">
-                    <a
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2379"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      About this Ride
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="ml-1"
-                      >
-                        <path d="M7 7h10v10" />
-                        <path d="M7 17 17 7" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Upcoming Ride - PGA Tour, Bike to the Shore */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] h-[400px] flex flex-col">
-              <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black p-4">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-xl text-center">PGA Tour, Cycle to the Shore</h3>
-                </div>
-              </div>
-              <div className="p-5 flex-grow flex flex-col">
-                <div className="space-y-3 flex-grow">
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    <span className="font-medium">Daytona, FL</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M8 2v4" />
-                      <path d="M16 2v4" />
-                      <rect width="18" height="18" x="3" y="4" rx="2" />
-                      <path d="M3 10h18" />
-                    </svg>
-                    <span className="font-medium">October 4, 2025</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                    <span className="font-medium">7:00 AM ET</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <circle cx="18.5" cy="17.5" r="3.5" />
-                      <circle cx="5.5" cy="17.5" r="3.5" />
-                      <circle cx="15" cy="5" r="1" />
-                      <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
-                    </svg>
-                    <span className="font-medium">150 Miles</span>
-                  </div>
-                </div>
-                <div className="mt-auto">
-                  <CountdownTimer eventDate="2025-10-04T07:00:00-04:00" eventName="PGA Tour, Cycle to the Shore" />
-                  <div className="mt-3 text-center">
-                    <a
-                      href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2396"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium"
-                    >
-                      About this Ride
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="ml-1"
-                      >
-                        <path d="M7 7h10v10" />
-                        <path d="M7 17 17 7" />
-                      </svg>
-                    </a>
+                    <p className="font-semibold text-gray-800 text-sm">ETA: Oct, 2026</p>
                   </div>
                 </div>
               </div>
@@ -775,7 +518,7 @@ export default function Home() {
                 <circle cx="15" cy="5" r="1" />
                 <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
               </svg>
-              Find Your Ride
+              National Cycling Team
             </Link>
             <Link
               href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1227&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&language=en&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
@@ -929,12 +672,62 @@ export default function Home() {
           </div>
         </section>
 
+        {/* NPR First Coast Connect Section */}
+        <section className="container mx-auto px-4 py-8 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
+              {/* Header with Logos */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
+                </div>
+                <div className="text-center flex-1 mx-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-primary">
+                    As Featured on NPR's "First Coast Connect"
+                  </h2>
+                </div>
+                <div className="flex items-center">
+                  <Image
+                    src="/images/wjct-logo.png"
+                    alt="WJCT Logo"
+                    width={80}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="text-center">
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+                  In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
+                  conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the
+                  raw storytelling that drives The Other Side of MS podcast.
+                </p>
+
+                {/* Embedded YouTube Video */}
+                <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="sponsors-section" className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold text-center text-primary">Our Sponsors</h2>
           <div className="flex flex-col items-center space-y-4 bg-white rounded-xl p-6 shadow-sm">
             <div className="w-48 h-48 relative">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Birch%20Island%20Vet.jpg-4d3gtkh4cnGBdUL3uTO4Za2C1JR80C.jpeg"
+                src="/images/birch-20island-20vet.jpeg"
                 alt="Birch Island Veterinary Center Logo"
                 width={192}
                 height={192}
@@ -995,9 +788,6 @@ export default function Home() {
             <span>Contact Us</span>
           </a>
         </section>
-
-        {/* Add Social Media Links */}
-        <SocialMediaLinks />
       </main>
 
       {/* Footer and utility components */}

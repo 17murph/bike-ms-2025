@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -46,7 +46,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about-bike-ms" className="text-gray-300 hover:text-white transition-colors">
-                  About Bike MS
+                  National Cycling Team
                 </Link>
               </li>
               <li>

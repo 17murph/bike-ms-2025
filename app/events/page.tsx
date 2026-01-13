@@ -5,8 +5,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
-import { CountdownTimer } from "@/components/countdown-timer"
-import { Calendar, MapPin, Clock, Bike, Target, Award } from "lucide-react"
+import { Calendar, MapPin, Clock, Bike, Target, Award } from 'lucide-react'
 
 export default function EventsPage() {
   const [activeTab, setActiveTab] = useState("upcoming")
@@ -43,12 +42,12 @@ export default function EventsPage() {
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-green-700 mb-2">$10,410</h3>
-                <p className="text-green-600 font-medium">Raised of $20,000 Goal</p>
+                <h3 className="text-2xl font-bold text-green-700 mb-2">$11,415</h3>
+                <p className="text-green-600 font-medium">Raised of $12,000 Goal</p>
                 <div className="mt-3 bg-green-200 rounded-full h-2">
-                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "52.05%" }}></div>
+                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "95.13%" }}></div>
                 </div>
-                <p className="text-sm text-green-600 mt-2">52.05% Complete</p>
+                <p className="text-sm text-green-600 mt-2">95.13% Complete</p>
               </div>
 
               {/* Miles Card */}
@@ -61,7 +60,8 @@ export default function EventsPage() {
                 <div className="text-sm text-blue-600 mt-2">
                   <div>Q1: 366.74 miles</div>
                   <div>Q2: 539 miles</div>
-                  <div>Q3: 327.8 miles</div>
+                  <div>Q3: 661.9 miles</div>
+                  <div>Q4: 71.1 miles</div>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ export default function EventsPage() {
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-orange-700 mb-2">82:38:51</h3>
+                <h3 className="text-2xl font-bold text-orange-700 mb-2">108:33:28</h3>
                 <p className="text-orange-600 font-medium">Total Ride Time</p>
                 <p className="text-sm text-orange-600 mt-2">Hours:Minutes:Seconds</p>
               </div>
@@ -117,109 +117,12 @@ export default function EventsPage() {
 
             {/* Upcoming Events */}
             {activeTab === "upcoming" && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Georgia Peach Ride */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-6">
-                    <h3 className="text-2xl font-bold text-black">Bike MS Georgia Peach Ride</h3>
-                    <p className="text-black/80 mt-2">LaGrange, Georgia</p>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-center gap-3">
-                        <Calendar className="w-5 h-5 text-primary" />
-                        <span className="font-medium">September 13-14, 2025</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <MapPin className="w-5 h-5 text-primary" />
-                        <span>LaGrange, GA</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Bike className="w-5 h-5 text-primary" />
-                        <span>75 Miles (Day 1)</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Clock className="w-5 h-5 text-primary" />
-                        <span>7:00 AM Start Time</span>
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <CountdownTimer eventDate="2025-09-13T07:00:00-04:00" eventName="Georgia Peach Ride" />
-                    </div>
-
-                    <div className="space-y-3">
-                      <Link
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2379"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                      >
-                        Event Details
-                      </Link>
-                      <Link
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full bg-secondary text-white text-center py-3 rounded-lg hover:bg-secondary/90 transition-colors font-medium"
-                      >
-                        Support My Ride
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* PGA Tour, Bike to the Shore */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-6">
-                    <h3 className="text-2xl font-bold text-black">PGA Tour, Bike to the Shore</h3>
-                    <p className="text-black/80 mt-2">Daytona Beach, Florida</p>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-center gap-3">
-                        <Calendar className="w-5 h-5 text-primary" />
-                        <span className="font-medium">October 4-5, 2025</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <MapPin className="w-5 h-5 text-primary" />
-                        <span>Daytona Beach, FL</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Bike className="w-5 h-5 text-primary" />
-                        <span>150 Miles (2 Days)</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Clock className="w-5 h-5 text-primary" />
-                        <span>7:00 AM Start Time</span>
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <CountdownTimer eventDate="2025-10-04T07:00:00-04:00" eventName="PGA Tour, Bike to the Shore" />
-                    </div>
-
-                    <div className="space-y-3">
-                      <Link
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donorDrive.event&eventID=2396"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                      >
-                        Event Details
-                      </Link>
-                      <Link
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full bg-secondary text-white text-center py-3 rounded-lg hover:bg-secondary/90 transition-colors font-medium"
-                      >
-                        Support My Ride
-                      </Link>
-                    </div>
-                  </div>
+              <div className="text-center py-16">
+                <div className="bg-gradient-to-r from-orange-100 to-blue-100 rounded-xl p-8 max-w-2xl mx-auto">
+                  <h3 className="text-3xl font-bold text-primary mb-4">2026 Bike MS Events Coming Soon</h3>
+                  <p className="text-gray-700 text-lg">
+                    Check back in early 2026 for our updated list of Bike MS rides across the country!
+                  </p>
                 </div>
               </div>
             )}
@@ -235,7 +138,6 @@ export default function EventsPage() {
                       <Award className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   <div className="p-4">
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm">
@@ -255,7 +157,6 @@ export default function EventsPage() {
                         <span>4:26:00</span>
                       </div>
                     </div>
-
                     <div className="bg-green-50 rounded-lg p-3 text-center">
                       <span className="text-green-700 font-medium">✓ Completed</span>
                     </div>
@@ -270,7 +171,6 @@ export default function EventsPage() {
                       <Award className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   <div className="p-4">
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm">
@@ -290,7 +190,6 @@ export default function EventsPage() {
                         <span>6:55:00</span>
                       </div>
                     </div>
-
                     <div className="bg-green-50 rounded-lg p-3 text-center">
                       <span className="text-green-700 font-medium">✓ Completed</span>
                     </div>
@@ -305,7 +204,6 @@ export default function EventsPage() {
                       <Award className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   <div className="p-4">
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm">
@@ -325,7 +223,6 @@ export default function EventsPage() {
                         <span>10:36:46</span>
                       </div>
                     </div>
-
                     <div className="bg-green-50 rounded-lg p-3 text-center">
                       <span className="text-green-700 font-medium">✓ Completed</span>
                     </div>
@@ -340,7 +237,6 @@ export default function EventsPage() {
                       <Award className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   <div className="p-4">
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm">
@@ -360,7 +256,72 @@ export default function EventsPage() {
                         <span>9:41:05</span>
                       </div>
                     </div>
+                    <div className="bg-green-50 rounded-lg p-3 text-center">
+                      <span className="text-green-700 font-medium">✓ Completed</span>
+                    </div>
+                  </div>
+                </div>
 
+                {/* Georgia Peach Ride */}
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 p-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xl font-bold text-white">Georgia Peach Ride</h3>
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span>September 13, 2025</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>LaGrange, GA</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Bike className="w-4 h-4 text-primary" />
+                        <span>70.44 miles</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Clock className="w-4 h-4 text-primary" />
+                        <span>4:47:10</span>
+                      </div>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-3 text-center">
+                      <span className="text-green-700 font-medium">✓ Completed</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* PGA Tour, Cycle to the Shore */}
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 p-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xl font-bold text-white">PGA Tour, Cycle to the Shore</h3>
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span>October 4, 2025</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>Daytona Beach, FL</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Bike className="w-4 h-4 text-primary" />
+                        <span>71.1 miles</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Clock className="w-4 h-4 text-primary" />
+                        <span>4:29:51</span>
+                      </div>
+                    </div>
                     <div className="bg-green-50 rounded-lg p-3 text-center">
                       <span className="text-green-700 font-medium">✓ Completed</span>
                     </div>
@@ -393,7 +354,7 @@ export default function EventsPage() {
                 href="/about-bike-ms"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary transition-colors"
               >
-                Learn About Bike MS
+                Learn About National Cycling Team
               </Link>
             </div>
           </div>
