@@ -78,9 +78,12 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              The Other Side of MS: Where Stories Move Us and Miles Unite Us
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
+              The Other Side of MS
             </h1>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight">
+              Where Stories Move Us and Miles Unite Us
+            </p>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-4 md:p-6 rounded-lg">
               <p className="text-white text-base md:text-lg leading-normal">
                 <em>
