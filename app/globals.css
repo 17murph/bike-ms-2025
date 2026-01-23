@@ -392,6 +392,19 @@
   animation: scroll 30s linear infinite;
 }
 
+@keyframes scroll-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-slow {
+  animation: scroll-slow 12s linear infinite;
+}
+
 .hover\:pause-animation:hover {
   animation-play-state: paused;
 }

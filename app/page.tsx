@@ -11,7 +11,10 @@ import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
-  const donors = useMemo(() => [{ name: "Will you be the first donor for the 2026 campaign?", tags: [] }], [])
+  const donors = useMemo(() => [
+    { name: "Joseph Monticello", tags: ["Bronze Donor"] },
+    { name: "Your name could be listed here...", tags: [] }
+  ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -194,7 +197,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-3">
         <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[300px] overflow-hidden">
+            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
               <div className="bg-blue-600 text-white p-3 text-center">
                 <h2 className="text-xl font-semibold">Fundraising Totals</h2>
               </div>
@@ -202,93 +205,55 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$0</span>
+                      <span className="font-bold text-3xl">$250</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $12,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "0%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "2.08%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">0%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">2.08%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
-                    $5,000 provides 20 people with dedicated MS Navigator support to address their unique MS challenges.
+                    Your $100 Donation strengthens the research, support, and advocacy systems people with MS rely on every day.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Thank You Donors - Auto-Scrolling Cards with Pagination */}
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[350px] overflow-hidden">
+            {/* Thank You Donors - Scrolling Ticker */}
+            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
               <div className="bg-blue-600 text-white p-3 text-center">
                 <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
               </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <p className="text-center text-gray-700 italic mb-4">
+              <div className="p-6 flex-grow flex flex-col justify-center">
+                <p className="text-center text-gray-700 italic mb-6 text-sm">
                   "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                 </p>
-                <div className="relative flex flex-col flex-grow">
-                  <div
-                    ref={donorCarouselRef}
-                    className="overflow-hidden flex-grow"
-                    onMouseEnter={() => setIsHovering(true)}
-                    onMouseLeave={() => setIsHovering(false)}
-                  >
-                    <div className="h-full">
-                      {donors.map((donor, index) => (
-                        <div
-                          key={index}
-                          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-                            currentSlide === index ? "opacity-100 z-10" : "opacity-0 z-0"
-                          }`}
-                        >
-                          <div className="bg-white rounded-lg shadow-md p-4 text-center border border-gray-100 mx-auto max-w-xs">
-                            <div className="flex justify-center mb-2">
-                              <Heart className="w-6 h-6 text-orange-500" fill="#f97316" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-800 mb-2">{donor.name}</h3>
-                            {donor.tags.length > 0 && (
-                              <div className="flex flex-wrap justify-center gap-2 mt-2">
-                                {donor.tags.map((tag, tagIndex) => (
-                                  <span key={tagIndex} className="inline-flex items-center text-sm text-gray-600">
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Pagination Indicators - Small Dots/Bubbles */}
-                  <div className="flex justify-center mt-auto pt-4 space-x-2">
-                    {donors.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                          currentSlide === index ? "bg-blue-800" : "bg-gray-300"
-                        }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
+                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg py-4">
+                  <div className="animate-scroll-slow whitespace-nowrap">
+                    {[...donors, ...donors].map((donor, index) => (
+                      <span key={index} className="inline-block px-8 text-center">
+                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                        {donor.tags.length > 0 && (
+                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                        )}
+                      </span>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[350px]">
+            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px]">
               <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Your Donation Provides</h2>
+                <h2 className="text-xl font-semibold">What $100 Donation Supports</h2>
               </div>
               <div className="p-6 flex flex-col justify-between flex-grow">
                 <div className="text-center space-y-4">
                   <ul className="text-left list-disc pl-8 text-black">
-                    <li>One researcher one step closer to a breakthrough</li>
-                    <li>One person getting the clarity they need from a Navigator</li>
-                    <li>One newly diagnosed patient realizing they're not alone</li>
+                    <li>Research advancing treatments and long-term solutions</li>
+                    <li>Support and guidance so newly diagnosed people don't have to face MS alone</li>
                   </ul>
                   <div className="flex flex-col items-center mt-4">
                     <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
@@ -384,6 +349,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Passport Ride</p>
                   <a
                     href="https://events.nationalmssociety.org/pages/10304?eventID=2517"
                     target="_blank"
@@ -411,8 +377,19 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">ETA: Aug, 2026</p>
+                    <p className="font-semibold text-gray-800 text-sm">August 1/2, 2026</p>
                   </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">Team CCC Passport Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/pages/11402?eventID=2735"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
                 </div>
               </div>
             </div>
@@ -430,6 +407,9 @@ export default function Home() {
                     <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Featured Ride</p>
                     <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
                   </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-3">The Other Side of MS Featured Passport Ride</p>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
@@ -451,6 +431,9 @@ export default function Home() {
                   <div className="text-center">
                     <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
                   </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-3">Team Spanish Beer - Home Ride</p>
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
