@@ -94,7 +94,7 @@ export default function Home() {
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-lg sm:text-xl">❤️</span>
-              <span className="font-medium">Support the Mission</span>
+              <span className="font-medium">Donate to Support MS</span>
             </Link>
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function Home() {
                 <div className="text-center space-y-4">
                   <ul className="text-left list-disc pl-8 text-black">
                     <li>Research advancing treatments and long-term solutions</li>
-                    <li>Support and guidance so newly diagnosed people don't have to face MS alone</li>
+                    <li>Support and guidance so people living with MS do not have to face it alone</li>
                   </ul>
                   <div className="flex flex-col items-center mt-4">
                     <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
