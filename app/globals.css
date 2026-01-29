@@ -402,7 +402,7 @@
 }
 
 .animate-scroll-slow {
-  animation: scroll-slow 12s linear infinite;
+  animation: scroll-slow 30s linear infinite;
 }
 
 .hover\:pause-animation:hover {
