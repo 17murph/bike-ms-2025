@@ -55,7 +55,7 @@ const events = [
     distance: "150 Miles",
   },
   {
-    title: "PGA Tour, Bike to the Shore",
+    title: "Bike MS: Cycle to the Shore",
     location: "Daytona, FL",
     date: "Oct 4-5",
     distance: "150 Miles",
@@ -105,7 +105,7 @@ export default function Page() {
       {/* Header */}
       <header className="container mx-auto py-6 flex justify-between items-center">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
+          src="/images/ms-20logo.jpeg"
           alt="Bike MS Logo"
           width={100}
           height={50}
@@ -113,7 +113,7 @@ export default function Page() {
         />
         <h2 className="text-3xl font-bold text-center">Bike MS Rides 2025</h2>
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MS%20Logo.jpg-Qdh5YtnX4mUfDGuoaaoDnULkWuVtAj.jpeg"
+          src="/images/ms-20logo.jpeg"
           alt="Bike MS Logo"
           width={100}
           height={50}
@@ -140,7 +140,7 @@ export default function Page() {
                     <Button className="w-full bg-red-600 hover:bg-red-700">Donate Now</Button>
                   </Link>
                 ) : (
-                  <Button className="w-full" variant="outline" disabled>
+                  <Button className="w-full bg-transparent" variant="outline" disabled>
                     COMING SOON
                   </Button>
                 )}
@@ -196,7 +196,7 @@ export default function Page() {
         <section className="space-y-8">
           <h2 className="text-3xl font-bold text-center">Podcast</h2>
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2025%20Logo.JPEG-LznTItVGXC64kGQ29mVEzAWohOa9LN.jpeg"
+            src="/images/2025-20logo.jpeg"
             alt="The Other Side of MS Podcast Logo"
             width={300}
             height={150}

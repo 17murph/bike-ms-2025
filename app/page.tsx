@@ -419,11 +419,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Ride 4 - PGA Tour Cycle to the Shore */}
+            {/* Ride 4 - Bike MS: Cycle to the Shore */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">PGA Tour Cycle to the Shore</h3>
+                  <h3 className="font-bold text-lg text-center">Bike MS: Cycle to the Shore</h3>
                 </div>
               </div>
               <div className="p-4 flex-grow flex flex-col">

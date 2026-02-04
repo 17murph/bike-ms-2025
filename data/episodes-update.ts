@@ -290,7 +290,7 @@ export const season1: Season = {
       link: "https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ",
     },
     {
-      title: "PGA Tour, Bike MS Major Sponsor",
+      title: "Bike MS: Cycle to the Shore, Major Sponsor",
       guest: "Marianne Novac Davis",
       link: "https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ",
     },
