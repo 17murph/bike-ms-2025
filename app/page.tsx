@@ -88,7 +88,7 @@ export default function Home() {
               <span className="font-medium">Meet the Traveling Team</span>
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/bikems"
+              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
@@ -118,7 +118,7 @@ export default function Home() {
                 <div className="flex justify-center mb-6">
                   <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <a
-                      href="https://events.nationalmssociety.org/bikems"
+                      href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
