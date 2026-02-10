@@ -295,11 +295,11 @@ export default function EventsPage() {
                   </div>
                 </div>
 
-                {/* PGA Tour, Cycle to the Shore */}
+                {/* Bike MS: Cycle to the Shore */}
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="bg-gradient-to-r from-green-500 to-green-600 p-4">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-xl font-bold text-white">PGA Tour, Cycle to the Shore</h3>
+                      <h3 className="text-xl font-bold text-white">Bike MS: Cycle to the Shore</h3>
                       <Award className="w-6 h-6 text-white" />
                     </div>
                   </div>

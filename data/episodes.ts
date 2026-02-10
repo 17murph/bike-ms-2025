@@ -84,7 +84,7 @@ export const season1: Season = {
       link: "https://theothersideofms.podbean.com/e/i-am-the-storm-michael-cavicchia-s-ms-journey/",
     },
     {
-      title: "PGA Tour, Bike MS Major Sponsor",
+      title: "Bike MS: Cycle to the Shore, Major Sponsor",
       guest: "Marianne Novac Davis",
       link: "https://theothersideofms.podbean.com/e/marianne-novac-davis-with-pga-tour-bike-ms-major-sponsor/",
     },

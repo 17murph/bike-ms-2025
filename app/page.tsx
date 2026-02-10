@@ -88,7 +88,7 @@ export default function Home() {
               <span className="font-medium">Meet the Traveling Team</span>
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
+              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
@@ -118,7 +118,7 @@ export default function Home() {
                 <div className="flex justify-center mb-6">
                   <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
                     <a
-                      href="https://events.nationalmssociety.org/participants/764466?referrer=mf%3A764466%3Ayou-copy&language=en"
+                      href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
@@ -205,15 +205,15 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$250</span>
+                      <span className="font-bold text-3xl">$375</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $12,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "2.08%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "3.13%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">2.08%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">3.13%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
                     Your $100 Donation strengthens the research, support, and advocacy systems people with MS rely on every day.
                   </p>
@@ -419,11 +419,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Ride 4 - PGA Tour Cycle to the Shore */}
+            {/* Ride 4 - Bike MS: Cycle to the Shore */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
                 <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">PGA Tour Cycle to the Shore</h3>
+                  <h3 className="font-bold text-lg text-center">Bike MS: Cycle to the Shore</h3>
                 </div>
               </div>
               <div className="p-4 flex-grow flex flex-col">
