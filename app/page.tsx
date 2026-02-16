@@ -215,7 +215,7 @@ export default function Home() {
                   </div>
                   <div className="text-right text-sm text-gray-600 mt-1">3.75%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
-                    Your $100 Donation strengthens the research, support, and advocacy systems people with MS rely on every day.
+                    A $100 Donation strengthens the research, support, and advocacy systems people with MS rely on every day.
                   </p>
                 </div>
               </div>
