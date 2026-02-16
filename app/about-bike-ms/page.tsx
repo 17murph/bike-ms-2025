@@ -63,7 +63,7 @@ export default function AboutBikeMS() {
                 <h2 className="text-3xl font-bold text-primary mb-3">National Bike MS Cycling Team</h2>
                 <div className="prose max-w-none">
                   <p className="my-2">
-                    The National Bike MS Team exists for one reason. To make sure no one living with MS feels invisible. That is our why. Every mile we ride and every story we share comes back to this simple belief.
+                    The National Bike MS Team exists for one reason, to make sure no one living with MS feels invisible. That is our why. Every mile we ride and every story we share comes back to this simple belief.
                   </p>
                   <p className="my-2">
                     We bring together riders who raise at least $5,000 each year for the National MS Society. These are cyclists who already give everything they have, yet still feel the pull to do more. Many of them travel to rides alone, even though they share the same commitment. The National Team gives them a place to belong and a larger story to be part of.
