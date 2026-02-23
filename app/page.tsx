@@ -5,34 +5,19 @@ import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
-import { useRef, useState, useEffect, useCallback, useMemo } from "react"
+import { useRef, useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
   const donors = useMemo(() => [
-    { name: "Joseph Monticello", tags: ["Bronze Donor"] },
+    { name: "Wendy Bertagnole", tags: ["Gold Donor"] },
+    { name: "Joseph Monticello", tags: ["Silver Donor"] },
     { name: "Your name could be listed here...", tags: [] }
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isHovering, setIsHovering] = useState(false)
-
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index)
-  }, [])
-
-  useEffect(() => {
-    if (isHovering) return
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % donors.length)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [isHovering, donors.length])
 
   return (
     <div className="min-h-screen bg-white relative">
@@ -205,17 +190,17 @@ export default function Home() {
                 <div>
                   <div className="text-center space-y-2">
                     <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$450</span>
+                      <span className="font-bold text-3xl">$560</span>
                       <span className="ml-2">raised</span>
                     </div>
                     <div className="text-gray-600">Goal: $12,000</div>
                   </div>
                   <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "3.75%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "4.67%" }}></div>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">3.75%</div>
+                  <div className="text-right text-sm text-gray-600 mt-1">4.67%</div>
                   <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
-                    A $100 Donation strengthens the research, support, and advocacy systems people with MS rely on every day.
+                    $500 Provides up to 6 months in-person counseling services to someone living with MS.
                   </p>
                 </div>
               </div>
@@ -230,15 +215,23 @@ export default function Home() {
                 <p className="text-center text-gray-700 italic mb-6 text-sm">
                   "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                 </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg py-4">
-                  <div className="animate-scroll-slow whitespace-nowrap">
-                    {[...donors, ...donors].map((donor, index) => (
-                      <span key={index} className="inline-block px-8 text-center">
+                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg h-[80px]">
+                  <div className="donor-scroll-vertical flex flex-col">
+                    {donors.map((donor, index) => (
+                      <div key={`a-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
                         <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
                         {donor.tags.length > 0 && (
                           <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
                         )}
-                      </span>
+                      </div>
+                    ))}
+                    {donors.map((donor, index) => (
+                      <div key={`b-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
+                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                        {donor.tags.length > 0 && (
+                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
