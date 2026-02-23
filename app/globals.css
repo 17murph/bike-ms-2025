@@ -409,6 +409,23 @@
   animation-play-state: paused;
 }
 
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.donor-scroll-vertical {
+  animation: scroll-vertical 8s linear infinite;
+}
+
+.donor-scroll-vertical:hover {
+  animation-play-state: paused;
+}
+
 /* Donor slider styles */
 .donor-slider {
   position: relative;

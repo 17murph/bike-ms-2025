@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
-import { useRef, useState, useEffect, useCallback, useMemo } from "react"
+import { useRef, useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
@@ -18,22 +18,6 @@ export default function Home() {
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isHovering, setIsHovering] = useState(false)
-
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index)
-  }, [])
-
-  useEffect(() => {
-    if (isHovering) return
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % donors.length)
-    }, 2500)
-
-    return () => clearInterval(interval)
-  }, [isHovering, donors.length])
 
   return (
     <div className="min-h-screen bg-white relative">
@@ -231,36 +215,23 @@ export default function Home() {
                 <p className="text-center text-gray-700 italic mb-6 text-sm">
                   "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                 </p>
-                <div
-                  className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg py-6"
-                  onMouseEnter={() => setIsHovering(true)}
-                  onMouseLeave={() => setIsHovering(false)}
-                >
-                  {donors.map((donor, index) => (
-                    <div
-                      key={index}
-                      className={`text-center transition-all duration-500 ${
-                        index === currentSlide
-                          ? "opacity-100 relative"
-                          : "opacity-0 absolute inset-0 flex items-center justify-center"
-                      }`}
-                    >
-                      <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
-                      {donor.tags.length > 0 && (
-                        <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
-                      )}
-                    </div>
-                  ))}
-                  <div className="flex justify-center gap-2 mt-3">
-                    {donors.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-2 h-2 rounded-full transition-colors ${
-                          index === currentSlide ? "bg-blue-600" : "bg-gray-300"
-                        }`}
-                        aria-label={`Go to donor ${index + 1}`}
-                      />
+                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg h-[80px]">
+                  <div className="donor-scroll-vertical flex flex-col">
+                    {donors.map((donor, index) => (
+                      <div key={`a-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
+                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                        {donor.tags.length > 0 && (
+                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                        )}
+                      </div>
+                    ))}
+                    {donors.map((donor, index) => (
+                      <div key={`b-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
+                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                        {donor.tags.length > 0 && (
+                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
