@@ -30,7 +30,7 @@ export default function Home() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % donors.length)
-    }, 3000)
+    }, 2500)
 
     return () => clearInterval(interval)
   }, [isHovering, donors.length])
@@ -231,15 +231,36 @@ export default function Home() {
                 <p className="text-center text-gray-700 italic mb-6 text-sm">
                   "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                 </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg py-4">
-                  <div className="animate-scroll-slow whitespace-nowrap">
-                    {[...donors, ...donors].map((donor, index) => (
-                      <span key={index} className="inline-block px-8 text-center">
-                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
-                        )}
-                      </span>
+                <div
+                  className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg py-6"
+                  onMouseEnter={() => setIsHovering(true)}
+                  onMouseLeave={() => setIsHovering(false)}
+                >
+                  {donors.map((donor, index) => (
+                    <div
+                      key={index}
+                      className={`text-center transition-all duration-500 ${
+                        index === currentSlide
+                          ? "opacity-100 relative"
+                          : "opacity-0 absolute inset-0 flex items-center justify-center"
+                      }`}
+                    >
+                      <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                      {donor.tags.length > 0 && (
+                        <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                      )}
+                    </div>
+                  ))}
+                  <div className="flex justify-center gap-2 mt-3">
+                    {donors.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          index === currentSlide ? "bg-blue-600" : "bg-gray-300"
+                        }`}
+                        aria-label={`Go to donor ${index + 1}`}
+                      />
                     ))}
                   </div>
                 </div>
