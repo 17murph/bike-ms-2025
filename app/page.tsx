@@ -12,7 +12,8 @@ import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
   const donors = useMemo(() => [
-    { name: "Joseph Monticello", tags: ["Bronze Donor"] },
+    { name: "Wendy Bertagnole", tags: ["Gold Donor"] },
+    { name: "Joseph Monticello", tags: ["Silver Donor"] },
     { name: "Your name could be listed here...", tags: [] }
   ], [])
 
