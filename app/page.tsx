@@ -30,7 +30,7 @@ export default function Home() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % donors.length)
-    }, 4000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [isHovering, donors.length])
