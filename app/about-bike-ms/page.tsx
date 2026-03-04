@@ -61,6 +61,40 @@ export default function AboutBikeMS() {
             <section className="py-4">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-3">National Bike MS Cycling Team</h2>
+                
+                {/* Team Members Links */}
+                <div className="flex items-center justify-center gap-0 my-4 text-base">
+                  <Link
+                    href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
+                  >
+                    Casey Murphy
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                  <span className="mx-4 text-gray-300">|</span>
+                  <Link
+                    href="https://events.nationalmssociety.org/participants/815802"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
+                  >
+                    John Wallace
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                  <span className="mx-4 text-gray-300">|</span>
+                  <Link
+                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=register.start&eventID=2794&teamID=100303"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
+                  >
+                    Join Our Team
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                </div>
+                
                 <div className="prose max-w-none">
                   <p className="my-2">
                     The National Bike MS Team, under the umbrella "The Other Side of MS" exists for one reason, to make sure no one living with MS feels invisible. That is our why. Every mile we ride and every story we share comes back to this simple belief.

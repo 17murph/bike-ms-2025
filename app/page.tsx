@@ -13,8 +13,8 @@ import { BackToTopButton } from "@/components/back-to-top-button"
 export default function Home() {
   const donors = useMemo(() => [
     { name: "Wendy Bertagnole", tags: ["Gold Donor"] },
-    { name: "Joseph Monticello", tags: ["Silver Donor"] },
-    { name: "Your name could be listed here...", tags: [] }
+    { name: "Dan Sweeney", tags: ["Gold Donor"] },
+    { name: "Joseph Monticello", tags: ["Silver Donor"] }
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
@@ -187,21 +187,40 @@ export default function Home() {
                 <h2 className="text-xl font-semibold">Fundraising Totals</h2>
               </div>
               <div className="p-4 flex flex-col justify-between flex-grow">
+                {/* Casey Murphy Section */}
+                <div className="mb-3">
+                  <div className="text-center">
+                    <span className="font-semibold text-gray-700">Casey Murphy</span>
+                  </div>
+                  <div className="flex items-baseline justify-center text-gray-800 mt-1">
+                    <span className="font-bold text-2xl">$835</span>
+                    <span className="ml-2 text-sm">raised</span>
+                    <span className="mx-2 text-gray-400">|</span>
+                    <span className="text-sm text-gray-600">Goal: $5,000</span>
+                  </div>
+                  <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "16.7%" }}></div>
+                  </div>
+                  <div className="text-right text-xs text-gray-600 mt-1">16.7%</div>
+                </div>
+                
+                <div className="border-t border-gray-200 my-2"></div>
+                
+                {/* Team Total Section */}
                 <div>
-                  <div className="text-center space-y-2">
-                    <div className="flex items-baseline justify-center text-gray-800">
-                      <span className="font-bold text-3xl">$560</span>
-                      <span className="ml-2">raised</span>
-                    </div>
-                    <div className="text-gray-600">Goal: $12,000</div>
+                  <div className="text-center">
+                    <span className="font-semibold text-gray-700">Team Total</span>
                   </div>
-                  <div className="relative w-full h-4 bg-gray-200 rounded-full mt-4 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "4.67%" }}></div>
+                  <div className="flex items-baseline justify-center text-gray-800 mt-1">
+                    <span className="font-bold text-2xl">$925</span>
+                    <span className="ml-2 text-sm">raised</span>
+                    <span className="mx-2 text-gray-400">|</span>
+                    <span className="text-sm text-gray-600">Goal: $25,000</span>
                   </div>
-                  <div className="text-right text-sm text-gray-600 mt-1">4.67%</div>
-                  <p className="text-xs text-center text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg">
-                    $500 Provides up to 6 months in-person counseling services to someone living with MS.
-                  </p>
+                  <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "3.7%" }}></div>
+                  </div>
+                  <div className="text-right text-xs text-gray-600 mt-1">3.7%</div>
                 </div>
               </div>
             </div>
