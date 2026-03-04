@@ -328,7 +328,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
             <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-              This year, we will call the Jack and Back Bike MS Ride, estimated for Sept. 2026, to be our "Featured
+              This year, we will call the Jack and Back Bike MS Ride, Sept 12/13, 2026, to be our "Featured
               Ride," though we will accept donations for any of our rides.
             </p>
             <a
@@ -420,13 +420,21 @@ export default function Home() {
                     <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
                   </div>
                 </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-3">The Other Side of MS Featured Passport Ride</p>
-                </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">ETA: Sept, 2026</p>
+                    <p className="font-semibold text-gray-800 text-sm">Sept 12/13, 2026</p>
                   </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">The Other Side of MS Featured Passport Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/2746"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
                 </div>
               </div>
             </div>
