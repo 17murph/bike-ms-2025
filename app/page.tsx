@@ -452,13 +452,21 @@ export default function Home() {
                     <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
                   </div>
                 </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-3">Team Spanish Beer - Home Ride</p>
-                </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">ETA: Oct, 2026</p>
+                    <p className="font-semibold text-gray-800 text-sm">Oct 3/4, 2026</p>
                   </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Home Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/2776"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
                 </div>
               </div>
             </div>
