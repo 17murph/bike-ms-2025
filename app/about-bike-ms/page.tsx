@@ -75,22 +75,22 @@ export default function AboutBikeMS() {
                   </Link>
                   <span className="mx-4 text-gray-300">|</span>
                   <Link
-                    href="https://events.nationalmssociety.org/participants/815802"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
-                  >
-                    John Wallace
-                    <ExternalLink className="w-4 h-4" />
-                  </Link>
-                  <span className="mx-4 text-gray-300">|</span>
-                  <Link
                     href="https://events.nationalmssociety.org/participants/CurtBike2026"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
                   >
                     Curt Saucer
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                  <span className="mx-4 text-gray-300">|</span>
+                  <Link
+                    href="https://events.nationalmssociety.org/participants/815802"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
+                  >
+                    John Wallace
                     <ExternalLink className="w-4 h-4" />
                   </Link>
                   <span className="mx-4 text-gray-300">|</span>
