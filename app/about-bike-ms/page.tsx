@@ -80,7 +80,7 @@ export default function AboutBikeMS() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
                   >
-                    Curt Saucer
+                    Curt Sauser
                     <ExternalLink className="w-4 h-4" />
                   </Link>
                   <span className="mx-4 text-gray-300">|</span>
