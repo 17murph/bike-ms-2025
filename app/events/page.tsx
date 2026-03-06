@@ -59,7 +59,7 @@ export default function EventsPage() {
               </Link>
               <span className="mx-2 text-gray-300">|</span>
               <Link
-                href="https://events.nationalmssociety.org/participants/815802"
+                href="https://events.nationalmssociety.org/participants/815695"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
