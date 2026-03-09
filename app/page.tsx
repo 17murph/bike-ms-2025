@@ -14,6 +14,7 @@ export default function Home() {
   const donors = useMemo(() => [
     { name: "Wendy Bertagnole", tags: ["Gold Donor"] },
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
+    { name: "Jami Stewart", tags: ["Gold Donor"] },
     { name: "Joseph Monticello", tags: ["Silver Donor"] }
   ], [])
 
