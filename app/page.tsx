@@ -193,15 +193,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Casey Murphy</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$835</span>
+                    <span className="font-bold text-2xl">$1,270</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $5,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "16.7%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "25.4%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">16.7%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">25.4%</div>
                 </div>
                 
                 <div className="border-t border-gray-200 my-2"></div>
@@ -212,15 +212,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Team Total</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$925</span>
+                    <span className="font-bold text-2xl">$1,420</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $25,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "3.7%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "5.7%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">3.7%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">5.7%</div>
                 </div>
               </div>
             </div>
