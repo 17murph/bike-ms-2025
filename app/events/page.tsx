@@ -30,6 +30,45 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Big Bananas Silent Auction Section */}
+      <section className="py-10 bg-gradient-to-r from-yellow-50 to-yellow-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
+              Upcoming Event
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Big Bananas 14th Annual MS Silent Auction</h2>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-gray-700 mb-6">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-yellow-600" />
+                <span className="font-medium">Monday, May 4, 2026</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-yellow-600" />
+                <span>5:30 - 8:30 p.m.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-yellow-600" />
+                <span>Mr. Chubby's Wings, Ponte Vedra</span>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl mx-auto">
+              As always, 100 percent of proceeds benefit the more than 18,000 North Floridians impacted by MS. 
+              More than 300 items from local merchants, restaurants, artists, and service providers will be available.
+            </p>
+            <Link
+              href="https://silentmsauction.weebly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors"
+            >
+              View Silent Auction Items
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Passport Cycling Section */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
@@ -94,12 +133,12 @@ export default function EventsPage() {
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-green-700 mb-2">$835</h3>
+                <h3 className="text-2xl font-bold text-green-700 mb-2">$1,420</h3>
                 <p className="text-green-600 font-medium">Raised of $5,000 Goal</p>
                 <div className="mt-3 bg-green-200 rounded-full h-2">
-                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "16.7%" }}></div>
+                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "28.4%" }}></div>
                 </div>
-                <p className="text-sm text-green-600 mt-2">16.7% Complete</p>
+                <p className="text-sm text-green-600 mt-2">28.4% Complete</p>
               </div>
 
               {/* Miles Card */}
