@@ -58,6 +58,15 @@ export default function Home() {
 
           <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 px-4">
             <Link
+              href="https://silentmsauction.weebly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-yellow-400/95 hover:bg-yellow-400 text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+            >
+              <span className="text-lg sm:text-xl">🍌</span>
+              <span className="font-medium">Big Bananas Silent Auction</span>
+            </Link>
+            <Link
               href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
               target="_blank"
               rel="noopener noreferrer"
