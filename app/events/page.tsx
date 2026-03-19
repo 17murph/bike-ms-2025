@@ -30,6 +30,45 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Big Bananas Silent Auction Section */}
+      <section className="py-10 bg-gradient-to-r from-yellow-50 to-yellow-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
+              Upcoming Event
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Big Bananas 14th Annual MS Silent Auction</h2>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-gray-700 mb-6">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-yellow-600" />
+                <span className="font-medium">Monday, May 4, 2026</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-yellow-600" />
+                <span>5:30 - 8:30 p.m.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-yellow-600" />
+                <span>Mr. Chubby's Wings, Ponte Vedra</span>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl mx-auto">
+              As always, 100 percent of proceeds benefit the more than 18,000 North Floridians impacted by MS. 
+              More than 300 items from local merchants, restaurants, artists, and service providers will be available.
+            </p>
+            <Link
+              href="https://silentmsauction.weebly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors"
+            >
+              View Silent Auction Items
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Passport Cycling Section */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
