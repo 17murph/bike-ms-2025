@@ -235,35 +235,48 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Thank You Donors - Scrolling Ticker */}
+            {/* Thank You Donors - Stock Ticker Style */}
             <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
               <div className="bg-blue-600 text-white p-3 text-center">
                 <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
               </div>
               <div className="p-6 flex-grow flex flex-col justify-center">
-                <p className="text-center text-gray-700 italic mb-6 text-sm">
+                <p className="text-center text-gray-700 italic mb-4 text-sm">
                   "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                 </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg h-[80px]">
-                  <div className="donor-scroll-vertical flex flex-col">
+                <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-lg py-3">
+                  <div className="donor-ticker">
                     {donors.map((donor, index) => (
-                      <div key={`a-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
-                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                      <div key={`a-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
+                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
                         {donor.tags.length > 0 && (
-                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
+                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
+                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
+                            'bg-gray-100 text-gray-600'
+                          }`}>
+                            {donor.tags[0]}
+                          </span>
                         )}
                       </div>
                     ))}
                     {donors.map((donor, index) => (
-                      <div key={`b-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
-                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                      <div key={`b-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
+                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
                         {donor.tags.length > 0 && (
-                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
+                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
+                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
+                            'bg-gray-100 text-gray-600'
+                          }`}>
+                            {donor.tags[0]}
+                          </span>
                         )}
                       </div>
                     ))}
                   </div>
                 </div>
+                <p className="text-center text-xs text-gray-500 mt-3">Hover to pause</p>
               </div>
             </div>
 
@@ -543,7 +556,7 @@ export default function Home() {
               About Bike MS
             </Link>
             <Link
-              href="http://email.fundraisers.donordrive.com/c/eJw00MGOpCAQgOGngZsGChrkwKFnbJO97GlfoEZKm0TRAHZ23n6jvZkjCfmrvhqXSKn-xpX8Wso2RqrffNxSqbEelOqv3n-6h_ronWvMp3CNfih3d0o1ILvbXQ723j8-ePBSSmO05eSl1UJqoXXHacW4_Pneye9brrg0lXBtYnrFSpxe7z4oZ_jTByIrOknSIQYFXyBosthp4ch0hIJHDwJuAkBKAKG71ungvoKdRquNsHJiWkxHChljoVzasKUthxxf1I7byhf_rHUvTN0ZDAyGa3xpE9a4JVx-9O2WZwZDTIH-tuO0MjVMRyEcz39M9ZnmWCrltlTMlYH572CqPyUMzIm83p3sbpKBWTDNB87EVE-J75hrHOOOl94ocObGs5d2PfL-ZFrM59Wund8lf3X4y8O_AAAA___w74eR"
+              href="http://email.fundraisers.donordrive.com/c/eJw80MGOpCAQgOGngZsGChrkwKFnbJO97GlfoEZKm0TRAHZ23n6jvZkjCfmrvhqXSKn-xpX8Wso2RqrffNxSqbEelOqv3n-6h_ronWvMp3CNfih3d0o1ILvbXQ723j8-ePBSSmO05eSl1UJqoXXHacW4_Pneye9brrg0lXBtYnrFSpxe7z4oZ_jTByIrOknSIQYFXyBosthp4ch0hIJHDwJuAkBKAKG71ungvoKdRquNsHJiWkxHChljoVzasKUthxxf1I7byhf_rHUvTN0ZDAyGa3xpE9a4JVx-9O2WZwZDTIH-tuO0MjVMRyEcz39M9ZnmWCrltlTMlYH572CqPyUMzIm83p3sbpKBWTDNB87EVE-J75hrHOOOl94ocObGs5d2PfL-ZFrM59Wund8lf3X4y8O_AAAA___w74eR"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-md hover:bg-secondary/90 text-lg font-medium transition-all hover:translate-x-1"

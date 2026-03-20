@@ -426,6 +426,26 @@
   animation-play-state: paused;
 }
 
+/* Stock ticker horizontal scroll */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.donor-ticker {
+  display: flex;
+  animation: ticker-scroll 20s linear infinite;
+  width: fit-content;
+}
+
+.donor-ticker:hover {
+  animation-play-state: paused;
+}
+
 /* Donor slider styles */
 .donor-slider {
   position: relative;
