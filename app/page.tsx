@@ -12,7 +12,7 @@ import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
   const donors = useMemo(() => [
-    { name: "Wendy Bertagnole", tags: ["Gold Donor"] },
+    { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
     { name: "Jami Stewart", tags: ["Gold Donor"] },
     { name: "Joseph Monticello", tags: ["Silver Donor"] }
@@ -203,15 +203,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Casey Murphy</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,270</span>
+                    <span className="font-bold text-2xl">$1,770</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $5,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "25.4%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "35.4%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">25.4%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">35.4%</div>
                 </div>
                 
                 <div className="border-t border-gray-200 my-2"></div>
@@ -222,48 +222,61 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Team Total</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,420</span>
+                    <span className="font-bold text-2xl">$1,920</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $25,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "5.7%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "7.7%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">5.7%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">7.7%</div>
                 </div>
               </div>
             </div>
 
-            {/* Thank You Donors - Scrolling Ticker */}
+            {/* Thank You Donors - Stock Ticker Style */}
             <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
               <div className="bg-blue-600 text-white p-3 text-center">
                 <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
               </div>
               <div className="p-6 flex-grow flex flex-col justify-center">
-                <p className="text-center text-gray-700 italic mb-6 text-sm">
+                <p className="text-center text-gray-700 italic mb-4 text-sm">
                   "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                 </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-lg h-[80px]">
-                  <div className="donor-scroll-vertical flex flex-col">
+                <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-lg py-3">
+                  <div className="donor-ticker">
                     {donors.map((donor, index) => (
-                      <div key={`a-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
-                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                      <div key={`a-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
+                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
                         {donor.tags.length > 0 && (
-                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
+                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
+                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
+                            'bg-gray-100 text-gray-600'
+                          }`}>
+                            {donor.tags[0]}
+                          </span>
                         )}
                       </div>
                     ))}
                     {donors.map((donor, index) => (
-                      <div key={`b-${index}`} className="flex items-center justify-center h-[40px] shrink-0 text-center">
-                        <span className="font-bold text-gray-800 text-lg">{donor.name}</span>
+                      <div key={`b-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
+                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
                         {donor.tags.length > 0 && (
-                          <span className="ml-2 text-sm text-gray-600">({donor.tags.join(", ")})</span>
+                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
+                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
+                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
+                            'bg-gray-100 text-gray-600'
+                          }`}>
+                            {donor.tags[0]}
+                          </span>
                         )}
                       </div>
                     ))}
                   </div>
                 </div>
+                <p className="text-center text-xs text-gray-500 mt-3">Hover to pause</p>
               </div>
             </div>
 

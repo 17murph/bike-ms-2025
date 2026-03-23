@@ -133,12 +133,12 @@ export default function EventsPage() {
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-green-700 mb-2">$1,420</h3>
+                <h3 className="text-2xl font-bold text-green-700 mb-2">$1,920</h3>
                 <p className="text-green-600 font-medium">Raised of $5,000 Goal</p>
                 <div className="mt-3 bg-green-200 rounded-full h-2">
-                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "28.4%" }}></div>
+                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "38.4%" }}></div>
                 </div>
-                <p className="text-sm text-green-600 mt-2">28.4% Complete</p>
+                <p className="text-sm text-green-600 mt-2">38.4% Complete</p>
               </div>
 
               {/* Miles Card */}
