@@ -15,7 +15,8 @@ export default function Home() {
     { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
     { name: "Jami Stewart", tags: ["Gold Donor"] },
-    { name: "Joseph Monticello", tags: ["Silver Donor"] }
+    { name: "Joseph Monticello", tags: ["Silver Donor"] },
+    { name: "Elaine Wuerstlin", tags: ["Silver Donor"] }
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
@@ -203,15 +204,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Casey Murphy</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,770</span>
+                    <span className="font-bold text-2xl">$1,820</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $5,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "35.4%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "36.4%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">35.4%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">36.4%</div>
                 </div>
                 
                 <div className="border-t border-gray-200 my-2"></div>
@@ -222,15 +223,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Team Total</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,920</span>
+                    <span className="font-bold text-2xl">$1,970</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $25,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "7.7%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "7.9%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">7.7%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">7.9%</div>
                 </div>
               </div>
             </div>
