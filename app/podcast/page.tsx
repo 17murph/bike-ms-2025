@@ -353,7 +353,7 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Selena - Featured Guest (Photo on LEFT) */}
+            {/* Selena Buongiorno - Featured Guest (Photo on LEFT) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
@@ -361,22 +361,22 @@ export default function PodcastPage() {
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
                         src="/images/selena.jpg"
-                        alt="Selena - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-center"
+                        alt="Selena Buongiorno - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-top"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=selena"
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Selena</h3>
+                        <h3 className="text-2xl font-bold text-white">Selena Buongiorno</h3>
                       </div>
                     </div>
                   </div>
 
                   <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Selena</h3>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Selena Buongiorno</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
                           "It was almost like a death of my former self."
