@@ -161,10 +161,29 @@ export default function PodcastPage() {
                   </a>
                 </div>
 
-                {/* Added podcast break message */}
-                <p className="text-center text-white/90 mt-6 text-lg italic">
-                  The Podcast is taking a break, please look for us again in Early 2026 for new episodes
-                </p>
+                {/* New Episode Button */}
+                <a
+                  href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-6 h-6"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Listen to Selena's Episode - Released April 2, 2026
+                </a>
               </div>
             </div>
           </div>
@@ -334,11 +353,73 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/*  Added Ursula Forrester as new featured guest at top */}
-            {/* Ursula Forrester - Featured Guest */}
+            {/* Selena - Featured Guest (Photo on LEFT) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/selena.jpg"
+                        alt="Selena - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=selena"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Selena</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Selena</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "It was almost like a death of my former self."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase "no two days are alike." Listeners will hear what MS looks like through the eyes of a medical provider, how cycling and community support her healing, and why talking openly about the "new normal" is essential for anyone living with MS.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 4, Episode 1</span>
+                      <a
+                        href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Ursula Forrester - Featured Guest (Photo on RIGHT) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -349,7 +430,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Ursula Forrester</h3>
                       </div>
@@ -402,11 +483,10 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/*  Updated Steve to have picture on right (flex-row-reverse) */}
-            {/* Steve - Featured Guest */}
+            {/* Steve - Featured Guest (Photo on LEFT) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
+                <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -417,7 +497,7 @@ export default function PodcastPage() {
                           e.currentTarget.src = "/placeholder.svg?key=ipxhj"
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-l"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
                       <div className="absolute bottom-0 left-0 p-4 md:hidden">
                         <h3 className="text-2xl font-bold text-white">Steve Clayton</h3>
                       </div>
@@ -471,78 +551,7 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/*  Updated Brad to have picture on left (flex-row) */}
-            {/* Brad Romp - Featured Guest */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/brad.jpeg"
-                        alt="Brad Romp - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-top"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:bg-gradient-to-r"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Brad Romp</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Brad Romp</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "Who sees you when the cape comes off? Are you helping others because it heals you—or because
-                          you don't know how to stop?"
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          Brad was diagnosed with MS at 45. Now 64, he's a speaker, a cyclist, and a face of strength
-                          for others living with the disease. But behind the workouts, the travel, and the public
-                          optimism is a more complex truth—one that doesn't always fit into a social media caption or a
-                          feel-good campaign. In this episode, Brad sits down for a different kind of conversation. One
-                          that doesn't ask him to inspire, perform, or push through. Instead, we talk about the days he
-                          can't move. The pressure to keep showing up. The identity that forms around always being the
-                          strong one—and what happens when that strength runs out.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 19</span>
-                      <a
-                        href="https://open.spotify.com/episode/6PDZPGdoAVgtN7AFknTVxN?si=KnAE08LcRTOH1zEkFgOqPQ"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/*  Removed Dan Kindel from Featured Voices - he remains in Episode Archives */}
+            {/* Brad Romp remains in Episode Archives only */}
           </div>
         </section>
 
