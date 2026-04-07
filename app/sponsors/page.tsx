@@ -46,17 +46,30 @@ export default function SponsorsPage() {
                   <div className="flex-1 text-center md:text-left">
                     <h3 className="text-2xl font-bold mb-2">Coggin BMW of Treasure Coast</h3>
                     <p className="text-gray-600 mb-3">
-                      Tell Matthew McNeal that Casey Murphy sent you!
+                      Ask for Matthew McNeal, tell him Casey Murphy sent you!
                     </p>
-                    <a
-                      href="https://www.cogginbmw.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-                    >
-                      <Globe className="w-4 h-4" />
-                      Visit Coggin BMW
-                    </a>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="tel:+17724298300"
+                        className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900"
+                      >
+                        <Phone className="w-4 h-4" />
+                        772-429-8300
+                      </a>
+                      <p className="inline-flex items-center gap-2 text-gray-700">
+                        <Home className="w-4 h-4" />
+                        429 S US Hwy 1, Fort Pierce, FL 34982
+                      </p>
+                      <a
+                        href="https://www.cogginbmw.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        <Globe className="w-4 h-4" />
+                        Visit Coggin BMW
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
