@@ -71,10 +71,10 @@ export default function Home() {
               href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-lg sm:text-xl">🎧</span>
-              <span className="font-medium">Listen to the Podcast</span>
+              <span className="font-medium">Listen to our newest episode</span>
             </Link>
             <Link
               href="/about-bike-ms"
@@ -735,40 +735,80 @@ export default function Home() {
 
         <section id="sponsors-section" className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold text-center text-primary">Our Sponsors</h2>
-          <div className="flex flex-col items-center space-y-4 bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-48 h-48 relative">
-              <Image
-                src="/images/birch-20island-20vet.jpeg"
-                alt="Birch Island Veterinary Center Logo"
-                width={192}
-                height={192}
-                className="object-contain"
-                unoptimized
-              />
-            </div>
-            <Link
-              href="https://www.birchislandvet.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-            >
-              <span>Visit Birch Island Vet</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-arrow-right w-4 h-4"
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 bg-white rounded-xl p-6 shadow-sm">
+            {/* Birch Island Vet */}
+            <div className="flex flex-col items-center space-y-4">
+              <div className="w-48 h-48 relative">
+                <Image
+                  src="/images/birch-20island-20vet.jpeg"
+                  alt="Birch Island Veterinary Center Logo"
+                  width={192}
+                  height={192}
+                  className="object-contain"
+                  unoptimized
+                />
+              </div>
+              <Link
+                href="https://www.birchislandvet.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
               >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </Link>
+                <span>Visit Birch Island Vet</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-arrow-right w-4 h-4"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Coggin BMW */}
+            <div className="flex flex-col items-center space-y-4">
+              <div className="w-48 h-48 relative bg-black rounded-lg flex items-center justify-center">
+                <Image
+                  src="/images/coggin-bmw-logo.png"
+                  alt="Coggin BMW of Treasure Coast Logo"
+                  width={180}
+                  height={100}
+                  className="object-contain p-4"
+                  unoptimized
+                />
+              </div>
+              <Link
+                href="https://www.cogginbmw.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              >
+                <span>Visit Coggin BMW</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-arrow-right w-4 h-4"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </section>
 

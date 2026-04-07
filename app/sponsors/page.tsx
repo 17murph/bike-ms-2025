@@ -22,8 +22,62 @@ export default function SponsorsPage() {
         </Link>
 
         <div className="max-w-4xl mx-auto space-y-12">
+          {/* Our Sponsors Section */}
           <section className="space-y-8">
-            <h1 className="text-4xl font-bold text-center">Sponsor Spotlight</h1>
+            <h1 className="text-4xl font-bold text-center">Our Sponsors</h1>
+            <div className="grid gap-6">
+              {/* Coggin BMW of Treasure Coast */}
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+                <div className="flex flex-col md:flex-row items-center gap-6 p-6">
+                  <a
+                    href="https://www.cogginbmw.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0"
+                  >
+                    <div className="w-64 h-32 relative bg-black rounded-lg overflow-hidden">
+                      <img
+                        src="/images/coggin-bmw-logo.png"
+                        alt="Coggin BMW of Treasure Coast"
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </div>
+                  </a>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl font-bold mb-2">Coggin BMW of Treasure Coast</h3>
+                    <p className="text-gray-600 mb-3">
+                      Ask for Matthew McNeal, tell him Casey Murphy sent you!
+                    </p>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="tel:+17724298300"
+                        className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900"
+                      >
+                        <Phone className="w-4 h-4" />
+                        772-429-8300
+                      </a>
+                      <p className="inline-flex items-center gap-2 text-gray-700">
+                        <Home className="w-4 h-4" />
+                        429 S US Hwy 1, Fort Pierce, FL 34982
+                      </p>
+                      <a
+                        href="https://www.cogginbmw.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        <Globe className="w-4 h-4" />
+                        Visit Coggin BMW
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-8">
+            <h2 className="text-4xl font-bold text-center">Sponsor Spotlight</h2>
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm bg-gradient-to-br from-blue-50 to-white">
               <div className="flex flex-col p-6 text-center space-y-4">
                 <div className="w-64 h-64 mx-auto relative">
