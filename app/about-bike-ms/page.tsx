@@ -58,7 +58,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">Casey Murphy</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Founder of The Other Side of MS podcast and passionate advocate for the MS community through cycling and storytelling. Home ride: Bike MS: Ride to the Shore in Northern Florida (Daytona).</p>
+                      <p className="text-sm text-gray-600 flex-grow">Founder of The Other Side of MS podcast and passionate advocate for the MS community. Top fundraiser who raised over $10,000 in 2025. Home ride: Bike MS: Ride to the Shore in Northern Florida (Daytona).</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
                         target="_blank"
