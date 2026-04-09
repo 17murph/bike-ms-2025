@@ -362,7 +362,7 @@ export default function PodcastPage() {
                       <img
                         src="/images/tiffany.jpg"
                         alt="Tiffany A. Vinson - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-[center_25%]"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=tiffany"
                         }}
