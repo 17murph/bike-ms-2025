@@ -57,22 +57,22 @@ export default function AboutBikeMS() {
                 {/* Team Members Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
                   {/* Casey Murphy */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden bg-gray-100">
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       <img
                         src="/images/casey-murphy.jpg"
                         alt="Casey Murphy - National Bike MS Cycling Team"
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-bold text-lg text-gray-800 mb-1">Casey Murphy</h3>
-                      <p className="text-sm text-gray-600 mb-3">Founder of The Other Side of MS podcast and passionate advocate for the MS community through cycling and storytelling.</p>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-bold text-lg text-gray-800 mb-2">Casey Murphy</h3>
+                      <p className="text-sm text-gray-600 flex-grow">Founder of The Other Side of MS podcast and passionate advocate for the MS community through cycling and storytelling. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors"
+                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
                       >
                         Donate to Casey
                         <ExternalLink className="w-4 h-4" />
@@ -81,8 +81,8 @@ export default function AboutBikeMS() {
                   </div>
 
                   {/* Rob Farthing */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0">
                       <div className="text-center text-gray-400">
                         <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-gray-200 flex items-center justify-center">
                           <Users className="w-8 h-8 text-gray-400" />
@@ -90,14 +90,14 @@ export default function AboutBikeMS() {
                         <span className="text-sm">Photo Pending</span>
                       </div>
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-bold text-lg text-gray-800 mb-1">Rob Farthing</h3>
-                      <p className="text-sm text-gray-600 mb-3">Dedicated cyclist and team member committed to raising funds and awareness for the MS community.</p>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-bold text-lg text-gray-800 mb-2">Rob Farthing</h3>
+                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Ford Warriors from Kentucky. Home ride: Bike MS: Bluegrass Bourbon Ride in Bardstown, KY.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors"
+                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
                       >
                         Donate to Rob
                         <ExternalLink className="w-4 h-4" />
@@ -106,22 +106,22 @@ export default function AboutBikeMS() {
                   </div>
 
                   {/* Curt Sauser */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden bg-gray-100">
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       <img
                         src="/images/curt-sauser.jpg"
                         alt="Curt Sauser - National Bike MS Cycling Team"
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-bold text-lg text-gray-800 mb-1">Curt Sauser</h3>
-                      <p className="text-sm text-gray-600 mb-3">Experienced cyclist and dedicated fundraiser riding to make a difference for those affected by MS.</p>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-bold text-lg text-gray-800 mb-2">Curt Sauser</h3>
+                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Team CCC from Wisconsin. Curt rides with MS and is a top fundraiser. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/CurtBike2026"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors"
+                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
                       >
                         Donate to Curt
                         <ExternalLink className="w-4 h-4" />
@@ -130,8 +130,8 @@ export default function AboutBikeMS() {
                   </div>
 
                   {/* John Wallace */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0">
                       <div className="text-center text-gray-400">
                         <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-gray-200 flex items-center justify-center">
                           <Users className="w-8 h-8 text-gray-400" />
@@ -139,14 +139,14 @@ export default function AboutBikeMS() {
                         <span className="text-sm">Photo Pending</span>
                       </div>
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-bold text-lg text-gray-800 mb-1">John Wallace</h3>
-                      <p className="text-sm text-gray-600 mb-3">Committed team member cycling for the cause and supporting the mission to end MS.</p>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-bold text-lg text-gray-800 mb-2">John Wallace</h3>
+                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Western Express from Tennessee. John is our host for this year&apos;s National Bike MS Cycling Team. Home ride: Bike MS: Jack and Back in Eagleville, TN.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/815695"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors"
+                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
                       >
                         Donate to John
                         <ExternalLink className="w-4 h-4" />
