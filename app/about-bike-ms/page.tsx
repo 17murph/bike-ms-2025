@@ -59,7 +59,8 @@ export default function AboutBikeMS() {
 
             <section className="py-4">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-3">National Bike MS Cycling Team</h2>
+                <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
+                <p className="text-sm text-gray-600 mb-3 text-center">click to donate to one of our team members</p>
                 
                 {/* Team Members Links */}
                 <div className="flex items-center justify-center gap-0 my-4 text-base">
@@ -70,6 +71,16 @@ export default function AboutBikeMS() {
                     className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
                   >
                     Casey Murphy
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                  <span className="mx-4 text-gray-300">|</span>
+                  <Link
+                    href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
+                  >
+                    Rob Farthing
                     <ExternalLink className="w-4 h-4" />
                   </Link>
                   <span className="mx-4 text-gray-300">|</span>
