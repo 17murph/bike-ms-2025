@@ -601,6 +601,113 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-4xl px-4">
             <h2 className="text-3xl font-bold text-center mb-10 text-primary">Episode Archives</h2>
 
+            {/* Season 4 */}
+            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
+              <button
+                onClick={() => toggleSeason(4)}
+                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
+              >
+                <span className="text-xl">Season 4</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 4 ? "rotate-180" : ""}`}
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  openSeason === 4 ? "max-h-[4000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="p-5">
+                  <div className="space-y-6">
+                    {/* Tiffany Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E2: If It Don&apos;t Align, I Decline - Tiffany&apos;s Story
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Tiffany A. Vinson</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Tiffany A. Vinson brings a rare mix of vulnerability and strength to this conversation. She opens up about the diagnosis that changed everything, the identity she had to reconstruct, and the purpose she found on the other side of loss. Her story is raw, real, and deeply human — exactly the kind of honesty this season is built on.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 4, Episode 2</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Selena Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E1: The Death of My Former Self - Selena&apos;s Story
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Selena Buongiorno</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase &quot;no two days are alike.&quot;
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 4, Episode 1</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Season 3 */}
             <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
               <button
