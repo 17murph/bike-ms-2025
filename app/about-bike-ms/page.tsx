@@ -67,7 +67,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">Casey Murphy</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Founder of The Other Side of MS podcast and passionate advocate for the MS community through cycling and storytelling. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
+                      <p className="text-sm text-gray-600 flex-grow">Founder of The Other Side of MS podcast and passionate advocate for the MS community through cycling and storytelling. Home ride: Bike MS: Ride to the Shore in Northern Florida (Daytona).</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
                         target="_blank"
@@ -92,7 +92,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">Rob Farthing</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Ford Warriors from Kentucky. Home ride: Bike MS: Bluegrass Bourbon Ride in Bardstown, KY.</p>
+                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Ford Warriors from Kentucky. Top fundraiser who raised over $10,000 in 2025. Home ride: Bike MS: Bluegrass Bourbon Ride in Bardstown, KY.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
                         target="_blank"
@@ -116,7 +116,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">Curt Sauser</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Team CCC from Wisconsin. Curt rides with MS and is a top fundraiser. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
+                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Team CCC from Wisconsin. Curt rides with MS and raised over $10,000 in 2025. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/CurtBike2026"
                         target="_blank"
@@ -141,7 +141,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">John Wallace</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Western Express from Tennessee. John is our host for this year&apos;s National Bike MS Cycling Team. Home ride: Bike MS: Jack and Back in Eagleville, TN.</p>
+                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Western Express from Tennessee. Top fundraiser who raised over $10,000 in 2025. John is our host for this year&apos;s National Bike MS Cycling Team. Home ride: Bike MS: Jack and Back in Eagleville, TN.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/815695"
                         target="_blank"
