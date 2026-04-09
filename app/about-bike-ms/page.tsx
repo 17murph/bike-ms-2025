@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
 import { Bike, Heart, Users, ExternalLink, MapPin, Info, DollarSign, Award, Calendar } from 'lucide-react'
-import { ReliableImage } from "@/components/reliable-image"
+
 import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
 import { SocialMediaLinks } from "@/components/social-media-links"
@@ -50,11 +50,10 @@ export default function AboutBikeMS() {
             </div>
 
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
-              <ReliableImage
+              <img
                 src="/images/team-spanish-beer-group-2025.jpg"
                 alt="Team Spanish Beer cyclists at Bike MS event - group photo at waterfront with matching team jerseys"
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
 
