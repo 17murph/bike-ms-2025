@@ -58,7 +58,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">Casey Murphy</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Founder of The Other Side of MS podcast and passionate advocate for the MS community. Top fundraiser who raised over $10,000 in 2025. Home ride: Bike MS: Ride to the Shore in Northern Florida (Daytona).</p>
+                      <p className="text-sm text-gray-600 flex-grow">Casey Murphy is the founder and host of The Other Side of MS podcast. He has ridden in Bike MS events since 1995, serves on the North Florida Board of Trustees for the National MS Society, and raised more than $10,000 in 2025. At his home ride, Bike MS: Cycle to the Shore, North Florida, he rides with Team Spanish Beer. He focuses on listening to people living with MS and turning those stories into action through fundraising and advocacy.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
                         target="_blank"
