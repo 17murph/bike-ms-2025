@@ -223,15 +223,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Team Total</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,920</span>
+                    <span className="font-bold text-2xl">$10,692</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $25,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "7.7%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "42.8%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">7.7%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">42.8%</div>
                 </div>
               </div>
             </div>
