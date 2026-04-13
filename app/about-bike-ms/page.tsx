@@ -107,7 +107,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">Curt Sauser</h3>
-                      <p className="text-sm text-gray-600 flex-grow">Team Captain of Team CCC from Wisconsin. Curt rides with MS and raised over $10,000 in 2025. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
+                      <p className="text-sm text-gray-600 flex-grow">Curt was diagnosed with multiple sclerosis in 2009. After struggling to make sense of the news, he made a decision to stop feeling sorry for himself and got on his bike to be part of the effort to find a cure. As Captain of Team CCC (Curt&apos;s Conquest for a Cure) in Wisconsin, his team has surpassed $1,000,000 in lifetime fundraising. He raised over $10,000 personally in 2025. Home ride: Bike MS: Best Dam Bike Tour in Baraboo, WI.</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/CurtBike2026"
                         target="_blank"
