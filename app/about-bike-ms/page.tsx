@@ -133,7 +133,7 @@ export default function AboutBikeMS() {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-bold text-lg text-gray-800 mb-2">John Wallace</h3>
-                      <p className="text-sm text-gray-600">Team Captain of Western Express from Tennessee. Top fundraiser who raised over $10,000 in 2025. John is our host for this year&apos;s National Bike MS Cycling Team.</p>
+                      <p className="text-sm text-gray-600">John Wallace is a retired airline and military pilot from Tennessee who has spent more than ten years riding in the Jack and Back MS Ride and Bike MS in honor of family and friends living with multiple sclerosis. A dedicated cyclist, dog rescuer, and consistent fundraiser, John brings the same discipline and compassion to the road that guided him throughout his career. For him, every ride is an act of service and a way to support the people in his life who face MS each day.</p>
                       <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Jack and Back, Eagleville, TN</p>
                       <Link
                         href="https://events.nationalmssociety.org/participants/815695"
