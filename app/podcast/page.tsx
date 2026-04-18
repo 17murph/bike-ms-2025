@@ -163,7 +163,7 @@ export default function PodcastPage() {
 
                 {/* New Episode Button */}
                 <a
-                  href="https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ"
+                  href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -182,7 +182,7 @@ export default function PodcastPage() {
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                  Listen to Tiffany&apos;s Episode: Released April 9, 2026
+                  Listen to Tyler&apos;s Story: Released April 16, 2026
                 </a>
               </div>
             </div>
@@ -353,10 +353,73 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
 
-            {/* Tiffany A. Vinson - Featured Guest (Photo on LEFT) */}
+            {/* Tyler - Featured Guest (Photo on LEFT) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/tyler.jpg"
+                        alt="Tyler - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=tyler"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Tyler</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Tyler</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          &quot;People will abandon you. They will come up with whatever they need to justify it.&quot;
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Tyler was diagnosed with primary progressive MS in 2013, and the impact reshaped every part of his life. His marriage ended, relationships shifted, and the identity he built as a Division I athlete began to fall away. In this episode, Tyler talks about nine years of denial, the people who stepped back when MS became too heavy for them to hold, and the isolation that comes from realizing you do not get MS alone. He also shares what it is like to have two young daughters who now listen closely when an Ocrevus commercial comes on, trying to understand what the medication might mean for their dad. This is not a story about silver linings. This is a story about truth.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 4, Episode 3</span>
+                      <a
+                        href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tiffany A. Vinson - Featured Guest (Photo on RIGHT) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -416,10 +479,10 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Selena Buongiorno - Featured Guest (Photo on RIGHT) */}
+            {/* Selena Buongiorno - Featured Guest (Photo on LEFT) */}
             <div className="mb-16">
               <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
+                <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
@@ -453,73 +516,6 @@ export default function PodcastPage() {
                       <span className="text-sm text-gray-500">Season 4, Episode 1</span>
                       <a
                         href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Ursula Forrester - Featured Guest (Photo on LEFT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/ursula.jpg"
-                        alt="Ursula Forrester - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-center"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Ursula Forrester</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Ursula Forrester</h3>
-                      <div className="mb-4">
-                        <p className="text-gray-600 mt-4">
-                          Ursula has always been a runner—marathons, half-marathons, and miles that measured more than
-                          distance. But in October 2014, after years of unexplained symptoms, she was diagnosed with
-                          multiple sclerosis. Suddenly, endurance meant something entirely different. She is a wife, a
-                          mother of two, and a professional in advertising who still chooses to see the glass half full.
-                          But behind that optimism lies the daily reality of MS—modifying, compensating, and sometimes
-                          surrendering to the fatigue that doesn&apos;t show up on finish line photos. Ursula and her family
-                          created the Mill Chill, a local race that has raised more than $150,000 for the MS Society,
-                          and in 2023 they added Bike MS to their journey, forming Team Mighty Strong.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 21</span>
-                      <a
-                        href="https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -630,6 +626,43 @@ export default function PodcastPage() {
               >
                 <div className="p-5">
                   <div className="space-y-6">
+                    {/* Tyler Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E3: This Is Not a Story About Silver Linings - Tyler&apos;s Story
+                        </h4>
+                        <p className="text-gray-600 italic text-sm my-2">Guest: Tyler</p>
+                        <p className="text-gray-700 my-2 text-sm">
+                          Tyler was diagnosed with primary progressive MS in 2013, and the impact reshaped every part of his life. His marriage ended, relationships shifted, and the identity he built as a Division I athlete began to fall away. In this episode, Tyler talks about nine years of denial, the people who stepped back when MS became too heavy for them to hold, and the isolation that comes from realizing you do not get MS alone. He also shares what it is like to have two young daughters who now listen closely when an Ocrevus commercial comes on, trying to understand what the medication might mean for their dad. This is not a story about silver linings. This is a story about truth.
+                        </p>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-gray-500">Season 4, Episode 3</span>
+                          <a
+                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
+                            href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Tiffany Episode */}
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
