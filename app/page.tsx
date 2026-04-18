@@ -68,7 +68,7 @@ export default function Home() {
               <span className="font-medium">Big Bananas Silent Auction</span>
             </Link>
             <Link
-              href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
+              href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f0d4d87eae44a62"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-3 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
@@ -204,15 +204,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Casey Murphy</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,920</span>
+                    <span className="font-bold text-2xl">$1,820</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $5,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "38.4%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "36.4%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">38.4%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">36.4%</div>
                 </div>
                 
                 <div className="border-t border-gray-200 my-2"></div>
@@ -223,15 +223,15 @@ export default function Home() {
                     <span className="font-semibold text-gray-700">Team Total</span>
                   </div>
                   <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$10,842</span>
+                    <span className="font-bold text-2xl">$1,970</span>
                     <span className="ml-2 text-sm">raised</span>
                     <span className="mx-2 text-gray-400">|</span>
                     <span className="text-sm text-gray-600">Goal: $25,000</span>
                   </div>
                   <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "43.4%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "7.9%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">43.4%</div>
+                  <div className="text-right text-xs text-gray-600 mt-1">7.9%</div>
                 </div>
               </div>
             </div>
