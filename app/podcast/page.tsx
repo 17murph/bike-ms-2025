@@ -23,32 +23,24 @@ export default function PodcastPage() {
   // Quotes that will rotate - updated with authentic quotes from the podcast
   const impactfulQuotes = [
     {
-      text: "MS is like having a roommate that you never invited to live with you, and they're always messing with your stuff.",
-      author: "Becca Fuqua - Becca's Unfiltered Journey with MS",
+      text: "It was almost like a death of my former self.",
+      author: "Selena - Season 4, Episode 1",
     },
     {
-      text: "The hardest part isn't the physical symptoms, it's having to constantly explain to people why you can't do what you used to do.",
-      author: "Amber Cunningham - Finding Strength Beyond the Diagnosis",
+      text: "If it don't align, I decline.",
+      author: "Tiffany - Season 4, Episode 2",
     },
     {
-      text: "Sometimes people just don't need a silver lining. They need empathy. They need someone just to sit with them in that moment and say, 'Hey, I hear you.'",
-      author: "Jessica - The Other Side of MS",
+      text: "People will abandon you. They will come up with whatever they need to justify it.",
+      author: "Tyler - Season 4, Episode 3",
     },
     {
-      text: "Where was the second half of this story — where we have these amazing medical breakthroughs and innovative research to prevent that from happening?",
-      author: "Delaney - The Other Side of MS",
+      text: "Some days are tougher than others.",
+      author: "Justin Yuhaze - Season 4, Episode 4",
     },
     {
-      text: "MS is isolating. But you're not alone. You have to be proactively not alone.",
-      author: "Karyn - The Other Side of MS",
-    },
-    {
-      text: "I'm not gonna let this… be the decision maker for anything in my life. I'm not gonna sit on the sidelines and miss out on incredible opportunities because I have MS… it's been the reason I've done most of the things in my life since I was diagnosed.",
-      author: "Maddie - The Other Side of MS",
-    },
-    {
-      text: "We need to go from awareness to action to impact… And that means changing the conversation from something daunting or taboo to something we celebrate—recovery, support, and the courage to ask for help.",
-      author: "Dr. Sally Spencer-Thomas - The Suicide Episode",
+      text: "It's an invisible disease until it's not.",
+      author: "Ursula - Season 3, Episode 21",
     },
   ]
 
