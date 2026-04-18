@@ -40,7 +40,7 @@ export default function AboutBikeMS() {
               </Link>
             </div>
 
-            <section className="py-4">
+            <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
                 <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
