@@ -23,32 +23,24 @@ export default function PodcastPage() {
   // Quotes that will rotate - updated with authentic quotes from the podcast
   const impactfulQuotes = [
     {
-      text: "MS is like having a roommate that you never invited to live with you, and they're always messing with your stuff.",
-      author: "Becca Fuqua - Becca's Unfiltered Journey with MS",
+      text: "It was almost like a death of my former self.",
+      author: "Selena - Season 4, Episode 1",
     },
     {
-      text: "The hardest part isn't the physical symptoms, it's having to constantly explain to people why you can't do what you used to do.",
-      author: "Amber Cunningham - Finding Strength Beyond the Diagnosis",
+      text: "If it don't align, I decline.",
+      author: "Tiffany - Season 4, Episode 2",
     },
     {
-      text: "Sometimes people just don't need a silver lining. They need empathy. They need someone just to sit with them in that moment and say, 'Hey, I hear you.'",
-      author: "Jessica - The Other Side of MS",
+      text: "People will abandon you. They will come up with whatever they need to justify it.",
+      author: "Tyler - Season 4, Episode 3",
     },
     {
-      text: "Where was the second half of this story — where we have these amazing medical breakthroughs and innovative research to prevent that from happening?",
-      author: "Delaney - The Other Side of MS",
+      text: "Some days are tougher than others.",
+      author: "Justin Yuhaze - Season 4, Episode 4",
     },
     {
-      text: "MS is isolating. But you're not alone. You have to be proactively not alone.",
-      author: "Karyn - The Other Side of MS",
-    },
-    {
-      text: "I'm not gonna let this… be the decision maker for anything in my life. I'm not gonna sit on the sidelines and miss out on incredible opportunities because I have MS… it's been the reason I've done most of the things in my life since I was diagnosed.",
-      author: "Maddie - The Other Side of MS",
-    },
-    {
-      text: "We need to go from awareness to action to impact… And that means changing the conversation from something daunting or taboo to something we celebrate—recovery, support, and the courage to ask for help.",
-      author: "Dr. Sally Spencer-Thomas - The Suicide Episode",
+      text: "It's an invisible disease until it's not.",
+      author: "Ursula - Season 3, Episode 21",
     },
   ]
 
@@ -182,7 +174,7 @@ export default function PodcastPage() {
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                  Listen to Tyler&apos;s Story: Released April 16, 2026
+                  Listen to Tyler's Story: Released April 16, 2026
                 </a>
               </div>
             </div>
@@ -379,7 +371,7 @@ export default function PodcastPage() {
                       <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Tyler</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          &quot;People will abandon you. They will come up with whatever they need to justify it.&quot;
+                          "People will abandon you. They will come up with whatever they need to justify it."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
                           Tyler was diagnosed with primary progressive MS in 2013, and the impact reshaped every part of his life. His marriage ended, relationships shifted, and the identity he built as a Division I athlete began to fall away. In this episode, Tyler talks about nine years of denial, the people who stepped back when MS became too heavy for them to hold, and the isolation that comes from realizing you do not get MS alone. He also shares what it is like to have two young daughters who now listen closely when an Ocrevus commercial comes on, trying to understand what the medication might mean for their dad. This is not a story about silver linings. This is a story about truth.
@@ -442,7 +434,7 @@ export default function PodcastPage() {
                       <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Tiffany A. Vinson</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          &quot;So if it don&apos;t align, I decline.&quot; &quot;That&apos;s my trademark... and my journal is if it don&apos;t align, I decline.&quot;
+                          "So if it don't align, I decline." "That's my trademark... and my journal is if it don't align, I decline."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
                           Tiffany A. Vinson brings a rare mix of vulnerability and strength to this conversation. She opens up about the diagnosis that changed everything, the identity she had to reconstruct, and the purpose she found on the other side of loss. Her story is raw, real, and deeply human — exactly the kind of honesty this season is built on.
@@ -505,10 +497,10 @@ export default function PodcastPage() {
                       <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Selena Buongiorno</h3>
                       <div className="mb-4">
                         <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          &quot;It was almost like a death of my former self.&quot;
+                          "It was almost like a death of my former self."
                         </blockquote>
                         <p className="text-gray-600 mt-4">
-                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase &quot;no two days are alike.&quot; Listeners will hear what MS looks like through the eyes of a medical provider, how cycling and community support her healing, and why talking openly about the &quot;new normal&quot; is essential for anyone living with MS.
+                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase "no two days are alike." Listeners will hear what MS looks like through the eyes of a medical provider, how cycling and community support her healing, and why talking openly about the "new normal" is essential for anyone living with MS.
                         </p>
                       </div>
                     </div>
@@ -516,6 +508,141 @@ export default function PodcastPage() {
                       <span className="text-sm text-gray-500">Season 4, Episode 1</span>
                       <a
                         href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Ursula Forrester - Featured Guest (Photo on RIGHT) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/ursula.jpg"
+                        alt="Ursula Forrester - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Ursula Forrester</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Ursula Forrester</h3>
+                      <div className="mb-4">
+                        <p className="text-gray-600 mt-4">
+                          Ursula has always been a runner—marathons, half-marathons, and miles that measured more than
+                          distance. But in October 2014, after years of unexplained symptoms, she was diagnosed with
+                          multiple sclerosis. Suddenly, endurance meant something entirely different. She is a wife, a
+                          mother of two, and a professional in advertising who still chooses to see the glass half full.
+                          But behind that optimism lies the daily reality of MS—modifying, compensating, and sometimes
+                          surrendering to the fatigue that doesn't show up on finish line photos. Ursula and her family
+                          created the Mill Chill, a local race that has raised more than $150,000 for the MS Society,
+                          and in 2023 they added Bike MS to their journey, forming Team Mighty Strong.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 21</span>
+                      <a
+                        href="https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Steve - Featured Guest (Photo on LEFT) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/steve.jpg"
+                        alt="Steve - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Steve Clayton</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Steve Clayton</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "As a trauma nurse, I knew the language of medicine. But living it — living MS — is different.
+                          You don't just explain the fear, you carry it."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Steve Clayton brings a unique perspective to The Other Side of MS—one shaped by years of
+                          caring for others in their most vulnerable moments. As a trauma nurse, he understood illness
+                          from the outside. But when MS entered his own life, everything changed. In this honest
+                          conversation, Steve explores the gap between medical knowledge and lived experience, sharing
+                          how his professional background both helped and complicated his journey with the disease.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 3, Episode 20</span>
+                      <a
+                        href="https://open.spotify.com/episode/0x4iZFkMlFWdU5XwiYmUsw?si=fcee49a3752d4cb2"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
@@ -595,15 +722,15 @@ export default function PodcastPage() {
         {/* Episode Archives */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-bold text-center mb-10 text-primary">Episode Archives</h2>
-
+<h2 className="text-3xl font-bold text-center mb-10 text-primary">Episode Archives</h2>
+            
             {/* Season 4 */}
             <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
               <button
                 onClick={() => toggleSeason(4)}
                 className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
               >
-                <span className="text-xl">Season 4</span>
+                <span>Season 4</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -614,9 +741,9 @@ export default function PodcastPage() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 4 ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-300 ${openSeason === 4 ? "rotate-180" : ""}`}
                 >
-                  <path d="m6 9 6 6 6-6"></path>
+                  <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
               </button>
               <div
@@ -630,30 +757,31 @@ export default function PodcastPage() {
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
                         <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E3: This Is Not a Story About Silver Linings - Tyler&apos;s Story
+                          S4_E3: This Is Not a Story About Silver Linings - Tyler's Story
                         </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Tyler</p>
-                        <p className="text-gray-700 my-2 text-sm">
+                        <p className="text-sm text-gray-500 mt-1">Guest: Tyler</p>
+                        <p className="mt-2 text-gray-600">
                           Tyler was diagnosed with primary progressive MS in 2013, and the impact reshaped every part of his life. His marriage ended, relationships shifted, and the identity he built as a Division I athlete began to fall away. In this episode, Tyler talks about nine years of denial, the people who stepped back when MS became too heavy for them to hold, and the isolation that comes from realizing you do not get MS alone. He also shares what it is like to have two young daughters who now listen closely when an Ocrevus commercial comes on, trying to understand what the medication might mean for their dad. This is not a story about silver linings. This is a story about truth.
                         </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 4, Episode 3</span>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 3</span>
                           <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
                             href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
+                              width="14"
+                              height="14"
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
+                              className="mr-1.5"
                             >
                               <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
@@ -667,30 +795,31 @@ export default function PodcastPage() {
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
                         <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E2: If It Don&apos;t Align, I Decline - Tiffany&apos;s Story
+                          S4_E2: If It Don't Align, I Decline - Tiffany's Story
                         </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Tiffany A. Vinson</p>
-                        <p className="text-gray-700 my-2 text-sm">
+                        <p className="text-sm text-gray-500 mt-1">Guest: Tiffany A. Vinson</p>
+                        <p className="mt-2 text-gray-600">
                           Tiffany A. Vinson brings a rare mix of vulnerability and strength to this conversation. She opens up about the diagnosis that changed everything, the identity she had to reconstruct, and the purpose she found on the other side of loss. Her story is raw, real, and deeply human — exactly the kind of honesty this season is built on.
                         </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 4, Episode 2</span>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 2</span>
                           <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
                             href="https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
+                              width="14"
+                              height="14"
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
+                              className="mr-1.5"
                             >
                               <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
@@ -704,30 +833,31 @@ export default function PodcastPage() {
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
                         <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E1: The Death of My Former Self - Selena&apos;s Story
+                          S4_E1: The Death of My Former Self - Selena's Story
                         </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Selena Buongiorno</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase &quot;no two days are alike.&quot;
+                        <p className="text-sm text-gray-500 mt-1">Guest: Selena Buongiorno</p>
+                        <p className="mt-2 text-gray-600">
+                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase "no two days are alike."
                         </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 4, Episode 1</span>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 1</span>
                           <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
                             href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
+                              width="14"
+                              height="14"
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
+                              className="mr-1.5"
                             >
                               <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>

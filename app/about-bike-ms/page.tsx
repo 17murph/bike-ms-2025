@@ -40,7 +40,7 @@ export default function AboutBikeMS() {
               </Link>
             </div>
 
-            <section className="py-4">
+            <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
                 <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
@@ -269,7 +269,7 @@ export default function AboutBikeMS() {
                 <div className="mt-4">
                   <h3 className="text-2xl font-bold mb-2">Who Should Consider Being a Virtual Rider?</h3>
                   <ul className="list-disc pl-8 space-y-0.5 text-lg">
-                    <li>Supporters who can't ride due to health, schedule, or other reasons</li>
+                    <li>Supporters who can&apos;t ride due to health, schedule, or other reasons</li>
                     <li>Family members and friends of cyclists who want to contribute</li>
                     <li>Team supporters who prefer to help with logistics and cheering</li>
                     <li>Anyone passionate about ending MS who prefers not to cycle</li>
@@ -297,8 +297,8 @@ export default function AboutBikeMS() {
                 following year without meeting the fundraising minimum.
               </p>
               <p className="my-2">
-                <strong>How It Works:</strong> Once you raise $5,000 or more in a calendar year, you'll automatically
-                qualify for the Passport Program the following year. You'll receive a special Passport designation that
+                <strong>How It Works:</strong> Once you raise $5,000 or more in a calendar year, you&apos;ll automatically
+                qualify for the Passport Program the following year. You&apos;ll receive a special Passport designation that
                 allows you to register for any Bike MS event nationwide without having to meet the fundraising minimum
                 for that event.
               </p>
@@ -322,7 +322,7 @@ export default function AboutBikeMS() {
                   all united by one goal: a world free of MS.
                 </p>
                 <p className="mb-2">
-                  If you're aiming for $5,000 or more in fundraising, you could be part of this incredible program.
+                  If you&apos;re aiming for $5,000 or more in fundraising, you could be part of this incredible program.
                   Where will your Passport take you?
                 </p>
                 <p className="mb-2 font-medium text-primary">
