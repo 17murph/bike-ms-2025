@@ -51,7 +51,7 @@ export default function AboutBikeMS() {
                   <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
                     <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       <img
-                        src="/images/casey-murphy.jpg"
+                        src="/images/casey-bike-ms-ky.jpg"
                         alt="Casey Murphy - National Bike MS Cycling Team"
                         className="w-full h-full object-cover object-top"
                       />
