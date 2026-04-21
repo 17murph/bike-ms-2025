@@ -65,7 +65,7 @@ export default function Home() {
               className="flex items-center justify-center gap-2 px-3 py-2 bg-yellow-400/95 hover:bg-yellow-400 text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-lg sm:text-xl">🍌</span>
-              <span className="font-medium">Big Bananas Silent Auction - May 4, click for details</span>
+              <span className="font-medium">Big Bananas Silent Auction</span>
             </Link>
             <Link
               href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
