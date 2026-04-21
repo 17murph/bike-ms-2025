@@ -76,7 +76,7 @@ export default function AboutBikeMS() {
                   <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
                     <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       <img
-                        src="/images/rob-farthing.jpg"
+                        src="/images/rob-farthing-new.jpg"
                         alt="Rob Farthing - National Bike MS Cycling Team"
                         className="w-full h-full object-cover object-top"
                       />
