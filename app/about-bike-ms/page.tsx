@@ -371,9 +371,40 @@ export default function AboutBikeMS() {
               </div>
 
               <h2 className="mt-4 mb-2">Upcoming Bike MS Events</h2>
-              <p className="mb-2">2025 Bike MS Season complete. Look for events coming soon for 2026 Bike MS Season.</p>
+              <p className="mb-2">
+                Our featured ride for the 2026 Bike MS Season is the <strong>Jack and Back Ride</strong> in Eagleville, TN on <strong>September 12–13, 2026</strong>.
+              </p>
 
-              {/* Removed the list of 2025 events */}
+              <div className="bg-blue-50 p-4 rounded-lg my-4">
+                <h3 className="flex items-center gap-2 text-xl font-bold mb-2">
+                  <MapPin className="text-primary" /> Jack and Back Ride — Eagleville, TN
+                </h3>
+                <p className="mb-1"><strong>Date:</strong> September 12–13, 2026</p>
+                <p className="mb-3">
+                  Join our Passport Team, The Other Side of MS, at the Jack and Back Ride, a scenic two-day cycling event through the beautiful
+                  Tennessee countryside. Every mile ridden brings us closer to a world free of MS.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-3">
+                  <a
+                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1231&eventID=632"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Info className="w-5 h-5" />
+                    <span>View Ride Details</span>
+                  </a>
+                  <a
+                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=registrationUpdate.team&participantID=815887"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Users className="w-5 h-5" />
+                    <span>Register for the Jack and Back Ride</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Add Social Media Links */}
