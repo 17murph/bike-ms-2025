@@ -102,10 +102,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center justify-center">
               <ReliableImage
-                src="/images/ms-20logo.jpeg"
-                alt="Bike MS Logo - National MS Society Cycling Fundraiser"
+                src="/images/jersey-2026-front.png"
+                alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
                 width={400}
-                height={200}
+                height={400}
                 className="object-contain rounded-lg shadow-md"
               />
             </div>

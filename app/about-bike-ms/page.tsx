@@ -40,6 +40,29 @@ export default function AboutBikeMS() {
               </Link>
             </div>
 
+            {/* 2026 Jersey Section */}
+            <section className="py-6 bg-gray-50 rounded-xl">
+              <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch px-4">
+                <div className="flex-1 flex justify-center">
+                  <img
+                    src="/images/jersey-2026-front.png"
+                    alt="2026 Team Jersey Front"
+                    className="w-full max-w-xs object-contain"
+                  />
+                </div>
+                <div className="flex-1 flex justify-center">
+                  <img
+                    src="/images/jersey-2026-back.png"
+                    alt="2026 Team Jersey Back"
+                    className="w-full max-w-xs object-contain"
+                  />
+                </div>
+              </div>
+              <p className="text-center text-sm text-gray-600 mt-4 px-4">
+                Front and back of our 2026 team jersey &mdash; representing riders nationwide through the Bike MS Passport Program.
+              </p>
+            </section>
+
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
