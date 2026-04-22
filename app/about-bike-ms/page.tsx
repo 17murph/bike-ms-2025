@@ -45,14 +45,14 @@ export default function AboutBikeMS() {
               <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch px-4">
                 <div className="flex-1 flex justify-center">
                   <img
-                    src="/images/jersey-2026-front.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Front-bqLVa4h3UN3sLuSCkoJAg0XLII16n3.png"
                     alt="2026 Team Jersey Front"
                     className="w-full max-w-xs object-contain"
                   />
                 </div>
                 <div className="flex-1 flex justify-center">
                   <img
-                    src="/images/jersey-2026-back.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Back-keIoDp6qooxEQUCNz3V5VllrL8XhCV.png"
                     alt="2026 Team Jersey Back"
                     className="w-full max-w-xs object-contain"
                   />
