@@ -381,7 +381,7 @@ export default function AboutBikeMS() {
                 </h3>
                 <p className="mb-1"><strong>Date:</strong> September 12–13, 2026</p>
                 <p className="mb-3">
-                  Join Team Spanish Beer at the Jack and Back Ride, a scenic two-day cycling event through the beautiful
+                  Join our Passport Team, The Other Side of MS, at the Jack and Back Ride, a scenic two-day cycling event through the beautiful
                   Tennessee countryside. Every mile ridden brings us closer to a world free of MS.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-3">
