@@ -40,6 +40,29 @@ export default function AboutBikeMS() {
               </Link>
             </div>
 
+            {/* 2026 Jersey Section */}
+            <section className="py-6 bg-gray-50 rounded-xl">
+              <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch px-4">
+                <div className="flex-1 flex justify-center">
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Front-bqLVa4h3UN3sLuSCkoJAg0XLII16n3.png"
+                    alt="2026 Team Jersey Front"
+                    className="w-full max-w-xs object-contain"
+                  />
+                </div>
+                <div className="flex-1 flex justify-center">
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Back-keIoDp6qooxEQUCNz3V5VllrL8XhCV.png"
+                    alt="2026 Team Jersey Back"
+                    className="w-full max-w-xs object-contain"
+                  />
+                </div>
+              </div>
+              <p className="text-center text-sm text-gray-600 mt-4 px-4">
+                Front and back of our 2026 team jersey &mdash; representing riders nationwide through the Bike MS Passport Program.
+              </p>
+            </section>
+
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
@@ -51,7 +74,7 @@ export default function AboutBikeMS() {
                   <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
                     <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       <img
-                        src="/images/casey-murphy.jpg"
+                        src="/images/casey-bike-ms-ky.jpg"
                         alt="Casey Murphy - National Bike MS Cycling Team"
                         className="w-full h-full object-cover object-top"
                       />
