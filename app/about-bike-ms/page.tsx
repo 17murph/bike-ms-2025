@@ -59,7 +59,7 @@ export default function AboutBikeMS() {
                 </div>
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
-                Front and back of our 2026 team jersey &mdash; representing riders nationwide through the Bike MS Passport Program.
+                Concept design for our 2026 team jersey, representing riders nationwide through the Bike MS Passport Program.
               </p>
             </section>
 
