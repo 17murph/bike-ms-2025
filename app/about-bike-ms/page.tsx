@@ -42,24 +42,15 @@ export default function AboutBikeMS() {
 
             {/* 2026 Jersey Section */}
             <section className="py-6 bg-gray-50 rounded-xl">
-              <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch px-4">
-                <div className="flex-1 flex justify-center">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Front-bqLVa4h3UN3sLuSCkoJAg0XLII16n3.png"
-                    alt="2026 Team Jersey Front"
-                    className="w-full max-w-xs object-contain"
-                  />
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Back-keIoDp6qooxEQUCNz3V5VllrL8XhCV.png"
-                    alt="2026 Team Jersey Back"
-                    className="w-full max-w-xs object-contain"
-                  />
-                </div>
+              <div className="flex justify-center px-4">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Front-mIoVroTMCCn2v39WAKWU2sVlXYO7VV.png"
+                  alt="2026 Team Jersey Front"
+                  className="w-full max-w-sm object-contain"
+                />
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
-                Concept design for our 2026 team jersey, representing riders nationwide through the Bike MS Passport Program.
+                2026 team jersey featuring "The Other Side of MS" podcast branding and the National Bike MS Cycling Team mission.
               </p>
             </section>
 
