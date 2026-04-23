@@ -9,7 +9,6 @@ const IMAGE_URLS = [
   "TSB-logo-YalpHen52DqYkUZknWmKZmHJOMCo3n.png",
   "spotify-podcast-badge-blk-grn-165x40-SglaMqZjS2grniJuucL8iprpdTENzF.png",
   "2025 Logo.JPEG-LznTItVGXC64kGQ29mVEzAWohOa9LN.jpeg",
-  "Birch Island Vet.jpg-4d3gtkh4cnGBdUL3uTO4Za2C1JR80C.jpeg",
   "iHeart-P6l2uwoMvFVVPrwue7GuQs4DcP9c4z.png",
   "Podcast Seats.jpg-yOo7VS19f1tz8dRnPrHJ7Six3I1iW6.jpeg",
   "Bike MS Sarasota 2024 - Team Spanish Beer.jpg-vp4Po2gtCKuQRr77tV5rNb6mgjAxRf.jpeg",
