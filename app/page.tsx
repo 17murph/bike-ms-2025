@@ -166,7 +166,6 @@ export default function Home() {
                   <div className="flex flex-col items-center gap-2">
                     <span className="text-sm md:text-base lg:text-lg font-medium text-gray-700">
                       Listen to the latest episode of &apos;The Other Side of MS&apos; podcast...
-                      <em>Sponsored by Birch Island Vet</em>
                     </span>
                     <div className="transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-md rounded-lg overflow-hidden mt-2">
                       <SpotifyBadge />
