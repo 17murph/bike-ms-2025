@@ -734,8 +734,48 @@ export default function Home() {
 
         <section id="sponsors-section" className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold text-center text-primary">Our Sponsors</h2>
-
-        <section id="feedback-section" className="text-center mt-8 mb-8 bg-blue-50 rounded-xl p-6">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 bg-white rounded-xl p-6 shadow-sm">
+            {/* Coggin BMW */}
+            <div className="flex flex-col items-center space-y-4">
+              <a
+                href="https://www.cogginbmw.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-48 h-32 relative bg-black rounded-lg overflow-hidden flex items-center justify-center"
+              >
+                <img
+                  src="/images/coggin-bmw-logo.png"
+                  alt="Coggin BMW of Treasure Coast Logo"
+                  className="w-full h-full object-contain p-4"
+                />
+              </a>
+              <Link
+                href="https://www.cogginbmw.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              >
+                <span>Visit Coggin BMW</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
           <h2 className="text-2xl font-bold text-center mb-4 text-primary">Leave Feedback</h2>
           <p className="text-gray-700 mb-4">
             We&apos;d love to hear from you! Share your thoughts, questions, or suggestions.
