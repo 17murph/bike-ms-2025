@@ -174,7 +174,7 @@ export default function PodcastPage() {
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                  Listen to Tyler's Story: Released April 16, 2026
+                  Listen to Justin's Story: Released April 23, 2026
                 </a>
               </div>
             </div>
@@ -344,6 +344,69 @@ export default function PodcastPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
+
+            {/* Justin Yuhaze - Featured Guest (Photo on RIGHT) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row-reverse">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/justin-yuhaze.jpg"
+                        alt="Justin Yuhaze - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=justin"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Justin Yuhaze</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Justin Yuhaze</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "Some days are tougher than others."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Justin Yuhaze was diagnosed with MS just days before the birth of his second daughter. In this episode, he talks about the months that followed, the symptoms he tried to hide, the depression he did not always want to name, and the moments that pushed him toward deeper conversations instead of avoiding them. Justin also shares what it has meant to raise two daughters who have only ever known him with MS and the choices he makes to stay active and present in their lives.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 4, Episode 4</span>
+                      <a
+                        href="https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Tyler - Featured Guest (Photo on LEFT) */}
             <div className="mb-16">
@@ -601,75 +664,7 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Steve - Featured Guest (Photo on LEFT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/steve.jpg"
-                        alt="Steve - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-center"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Steve Clayton</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Steve Clayton</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "As a trauma nurse, I knew the language of medicine. But living it — living MS — is different.
-                          You don't just explain the fear, you carry it."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          Steve Clayton brings a unique perspective to The Other Side of MS—one shaped by years of
-                          caring for others in their most vulnerable moments. As a trauma nurse, he understood illness
-                          from the outside. But when MS entered his own life, everything changed. In this honest
-                          conversation, Steve explores the gap between medical knowledge and lived experience, sharing
-                          how his professional background both helped and complicated his journey with the disease.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 20</span>
-                      <a
-                        href="https://open.spotify.com/episode/0x4iZFkMlFWdU5XwiYmUsw?si=fcee49a3752d4cb2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Brad Romp remains in Episode Archives only */}
+            {/* Brad Romp and Steve Clayton remain in Episode Archives only */}
           </div>
         </section>
 
