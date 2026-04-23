@@ -1394,7 +1394,7 @@ export default function PodcastPage() {
                                       : episode.guest === "Jasmine Hanna"
                                         ? "Jasmine discusses her approach to embracing life's journey with MS, sharing wisdom and practical advice for others facing similar challenges."
                                         : episode.guest === "Dr. Dee"
-                                          ? "Dr. Dee, a veterinarian and owner of Birch Island Veterinary Center, shares her personal connection to MS through her husband's former spouse and why she became an annual donor to the National MS Society."
+                                          ? "Dr. Dee shares her personal connection to MS through her husband's former spouse and why she became an annual donor to the National MS Society."
                                           : episode.guest === "Katie Heckert"
                                             ? "Katie was a litigator with a sharp mind and a powerful voice. But MS forced a different path—one filled with uncertainty, resilience, and new meaning. This episode isn't just about what MS takes—it's about what it reveals."
                                             : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}

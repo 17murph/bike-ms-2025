@@ -166,7 +166,6 @@ export default function Home() {
                   <div className="flex flex-col items-center gap-2">
                     <span className="text-sm md:text-base lg:text-lg font-medium text-gray-700">
                       Listen to the latest episode of &apos;The Other Side of MS&apos; podcast...
-                      <em>Sponsored by Birch Island Vet</em>
                     </span>
                     <div className="transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-md rounded-lg overflow-hidden mt-2">
                       <SpotifyBadge />
@@ -736,55 +735,20 @@ export default function Home() {
         <section id="sponsors-section" className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold text-center text-primary">Our Sponsors</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 bg-white rounded-xl p-6 shadow-sm">
-            {/* Birch Island Vet */}
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-48 h-48 relative">
-                <Image
-                  src="/images/birch-20island-20vet.jpeg"
-                  alt="Birch Island Veterinary Center Logo"
-                  width={192}
-                  height={192}
-                  className="object-contain"
-                  unoptimized
-                />
-              </div>
-              <Link
-                href="https://www.birchislandvet.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-              >
-                <span>Visit Birch Island Vet</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-right w-4 h-4"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
             {/* Coggin BMW */}
             <div className="flex flex-col items-center space-y-4">
-              <div className="w-48 h-48 relative bg-black rounded-lg flex items-center justify-center">
-                <Image
+              <a
+                href="https://www.cogginbmw.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-48 h-32 relative bg-black rounded-lg overflow-hidden flex items-center justify-center"
+              >
+                <img
                   src="/images/coggin-bmw-logo.png"
                   alt="Coggin BMW of Treasure Coast Logo"
-                  width={180}
-                  height={100}
-                  className="object-contain p-4"
-                  unoptimized
+                  className="w-full h-full object-contain p-4"
                 />
-              </div>
+              </a>
               <Link
                 href="https://www.cogginbmw.com/"
                 target="_blank"
@@ -802,10 +766,11 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-arrow-right w-4 h-4"
+                  className="w-5 h-5"
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
                 </svg>
               </Link>
             </div>
