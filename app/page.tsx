@@ -776,6 +776,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="feedback-section" className="text-center mt-8 mb-8 bg-blue-50 rounded-xl p-6">
           <h2 className="text-2xl font-bold text-center mb-4 text-primary">Leave Feedback</h2>
           <p className="text-gray-700 mb-4">
             We&apos;d love to hear from you! Share your thoughts, questions, or suggestions.
