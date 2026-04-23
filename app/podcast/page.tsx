@@ -354,7 +354,7 @@ export default function PodcastPage() {
                       <img
                         src="/images/justin-yuhaze.jpg"
                         alt="Justin Yuhaze - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-top"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=justin"
                         }}
