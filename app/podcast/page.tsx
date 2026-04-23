@@ -352,7 +352,7 @@ export default function PodcastPage() {
                   <div className="md:w-2/5 relative">
                     <div className="h-[280px] md:h-[350px] relative bg-gray-200">
                       <img
-                        src="/images/will-anthony.jpg"
+                        src="/images/justin-yuhaze.jpg"
                         alt="Justin Yuhaze - The Other Side of MS Podcast Guest"
                         className="w-full h-full object-cover object-center"
                         onError={(e) => {
