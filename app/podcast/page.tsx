@@ -381,7 +381,7 @@ export default function PodcastPage() {
                     <div className="mt-4 flex justify-between items-center">
                       <span className="text-sm text-gray-500">Season 4, Episode 4</span>
                       <a
-                        href="https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=47233b5c285246b5"
+                        href="https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
