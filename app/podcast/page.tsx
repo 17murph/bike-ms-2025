@@ -174,7 +174,7 @@ export default function PodcastPage() {
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                  Listen to Tyler's Story: Released April 16, 2026
+                  Listen to Justin's Story: Released April 23, 2026
                 </a>
               </div>
             </div>
