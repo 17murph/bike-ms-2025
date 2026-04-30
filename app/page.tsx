@@ -199,8 +199,18 @@ export default function Home() {
               <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
                 {/* Casey Murphy */}
                 <div className="mb-2">
-                  <div className="flex items-baseline justify-between text-gray-800">
-                    <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
                     <span className="text-xs text-gray-500">$2,270 / $12,000</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
@@ -210,8 +220,18 @@ export default function Home() {
 
                 {/* Curt Sauser */}
                 <div className="mb-2">
-                  <div className="flex items-baseline justify-between text-gray-800">
-                    <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
                     <span className="text-xs text-gray-500">$6,407 / $12,000</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
@@ -221,8 +241,18 @@ export default function Home() {
 
                 {/* Rob Farthing */}
                 <div className="mb-2">
-                  <div className="flex items-baseline justify-between text-gray-800">
-                    <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
                     <span className="text-xs text-gray-500">$2,240 / $12,000</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
@@ -232,8 +262,18 @@ export default function Home() {
 
                 {/* John Wallace */}
                 <div className="mb-2">
-                  <div className="flex items-baseline justify-between text-gray-800">
-                    <span className="font-semibold text-sm text-gray-700">John Wallace</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/815695"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
                     <span className="text-xs text-gray-500">$350 / $12,000</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
