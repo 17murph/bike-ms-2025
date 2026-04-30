@@ -83,7 +83,7 @@ export default function AboutBikeMS() {
                         Donate to Casey
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $1,920</p>
+                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $2,270</p>
                     </div>
                   </div>
 
@@ -135,7 +135,7 @@ export default function AboutBikeMS() {
                         Donate to Curt
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $6,470</p>
+                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $6,407</p>
                     </div>
                   </div>
 
