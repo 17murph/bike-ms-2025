@@ -16,7 +16,9 @@ export default function Home() {
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
     { name: "Jami Stewart", tags: ["Gold Donor"] },
     { name: "Joseph Monticello", tags: ["Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] }
+    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] },
+    { name: "Genese Sweeney", tags: ["Gold Donor"] },
+    { name: "Dennis Cook", tags: ["Gold Donor"] }
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
