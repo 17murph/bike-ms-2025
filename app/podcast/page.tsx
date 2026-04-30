@@ -39,8 +39,8 @@ export default function PodcastPage() {
       author: "Justin Yuhaze - Season 4, Episode 4",
     },
     {
-      text: "It's an invisible disease until it's not.",
-      author: "Ursula - Season 3, Episode 21",
+      text: "We will Win.",
+      author: "Mark Morabito - Season 4, Episode 5",
     },
   ]
 
@@ -155,7 +155,7 @@ export default function PodcastPage() {
 
                 {/* New Episode Button */}
                 <a
-                  href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
+                  href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -174,7 +174,7 @@ export default function PodcastPage() {
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                  Listen to Justin's Story: Released April 23, 2026
+                  Listen to Mark&apos;s Story: Released April 30, 2026
                 </a>
               </div>
             </div>
@@ -344,6 +344,69 @@ export default function PodcastPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto max-w-5xl px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
+
+            {/* Mark Morabito - Featured Guest (Photo on LEFT) */}
+            <div className="mb-16">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5 relative">
+                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
+                      <img
+                        src="/images/mark.jpg"
+                        alt="Mark Morabito - The Other Side of MS Podcast Guest"
+                        className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=mark"
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
+                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
+                        <h3 className="text-2xl font-bold text-white">Mark Morabito</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Mark Morabito</h3>
+                      <div className="mb-4">
+                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
+                          "We will Win."
+                        </blockquote>
+                        <p className="text-gray-600 mt-4">
+                          Mark Morabito looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Season 4, Episode 5</span>
+                      <a
+                        href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Listen Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Justin Yuhaze - Featured Guest (Photo on RIGHT) */}
             <div className="mb-16">
@@ -597,73 +660,6 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Ursula Forrester - Featured Guest (Photo on RIGHT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/ursula.jpg"
-                        alt="Ursula Forrester - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-center"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=ipxhj"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Ursula Forrester</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Ursula Forrester</h3>
-                      <div className="mb-4">
-                        <p className="text-gray-600 mt-4">
-                          Ursula has always been a runner—marathons, half-marathons, and miles that measured more than
-                          distance. But in October 2014, after years of unexplained symptoms, she was diagnosed with
-                          multiple sclerosis. Suddenly, endurance meant something entirely different. She is a wife, a
-                          mother of two, and a professional in advertising who still chooses to see the glass half full.
-                          But behind that optimism lies the daily reality of MS—modifying, compensating, and sometimes
-                          surrendering to the fatigue that doesn't show up on finish line photos. Ursula and her family
-                          created the Mill Chill, a local race that has raised more than $150,000 for the MS Society,
-                          and in 2023 they added Bike MS to their journey, forming Team Mighty Strong.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 3, Episode 21</span>
-                      <a
-                        href="https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Brad Romp and Steve Clayton remain in Episode Archives only */}
           </div>
         </section>
@@ -748,6 +744,82 @@ export default function PodcastPage() {
               >
                 <div className="p-5">
                   <div className="space-y-6">
+                    {/* Mark Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E5: We Will Win - Mark's Story
+                        </h4>
+                        <p className="text-sm text-gray-500 mt-1">Guest: Mark Morabito</p>
+                        <p className="mt-2 text-gray-600">
+                          Mark Morabito looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end.
+                        </p>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 5</span>
+                          <a
+                            href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="mr-1.5"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Justin Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E4: A Different Kind of Victory - Justin's Story
+                        </h4>
+                        <p className="text-sm text-gray-500 mt-1">Guest: Justin Yuhaze</p>
+                        <p className="mt-2 text-gray-600">
+                          Justin shares his powerful journey of living with multiple sclerosis and how he found purpose and strength through unexpected challenges. His story is one of resilience, community, and discovering what victory really means when life takes a different path.
+                        </p>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 4</span>
+                          <a
+                            href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="mr-1.5"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Tyler Episode */}
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
