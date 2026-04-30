@@ -16,7 +16,9 @@ export default function Home() {
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
     { name: "Jami Stewart", tags: ["Gold Donor"] },
     { name: "Joseph Monticello", tags: ["Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] }
+    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] },
+    { name: "Genese Sweeney", tags: ["Gold Donor"] },
+    { name: "Dennis Cook", tags: ["Gold Donor"] }
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
@@ -196,41 +198,103 @@ export default function Home() {
               <div className="bg-blue-600 text-white p-3 text-center">
                 <h2 className="text-xl font-semibold">Fundraising Totals</h2>
               </div>
-              <div className="p-4 flex flex-col justify-between flex-grow">
-                {/* Casey Murphy Section */}
-                <div className="mb-3">
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Casey Murphy</span>
+              <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
+                {/* Curt Sauser */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$6,407</span>
                   </div>
-                  <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$1,820</span>
-                    <span className="ml-2 text-sm">raised</span>
-                    <span className="mx-2 text-gray-400">|</span>
-                    <span className="text-sm text-gray-600">Goal: $5,000</span>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "53.4%" }}></div>
                   </div>
-                  <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "36.4%" }}></div>
-                  </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">36.4%</div>
                 </div>
-                
+
+                {/* Casey Murphy */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$2,270</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
+                  </div>
+                </div>
+
+                {/* Rob Farthing */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$2,240</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "18.7%" }}></div>
+                  </div>
+                </div>
+
+                {/* John Wallace */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/815695"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$350</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "2.9%" }}></div>
+                  </div>
+                </div>
+
                 <div className="border-t border-gray-200 my-2"></div>
-                
-                {/* Team Total Section */}
+
+                {/* Team Total */}
                 <div>
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Team Total</span>
+                  <div className="flex items-baseline justify-between text-gray-800">
+                    <span className="font-semibold text-sm text-gray-700">Team Total</span>
+                    <span className="text-xs text-gray-500">$11,267 / $48,000</span>
                   </div>
-                  <div className="flex items-baseline justify-center text-gray-800 mt-1">
-                    <span className="font-bold text-2xl">$10,197</span>
-                    <span className="ml-2 text-sm">raised</span>
-                    <span className="mx-2 text-gray-400">|</span>
-                    <span className="text-sm text-gray-600">Goal: $25,000</span>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "23.5%" }}></div>
                   </div>
-                  <div className="relative w-full h-3 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "40.8%" }}></div>
-                  </div>
-                  <div className="text-right text-xs text-gray-600 mt-1">40.8%</div>
+                  <div className="text-right text-xs text-gray-500 mt-1">23.5%</div>
                 </div>
               </div>
             </div>
