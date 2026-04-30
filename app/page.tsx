@@ -211,7 +211,7 @@ export default function Home() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$2,270 / $12,000</span>
+                    <span className="text-xs text-gray-500">$2,270</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
                     <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
@@ -232,7 +232,7 @@ export default function Home() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$6,407 / $12,000</span>
+                    <span className="text-xs text-gray-500">$6,407</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
                     <div className="bg-primary rounded-full h-full" style={{ width: "53.4%" }}></div>
@@ -253,7 +253,7 @@ export default function Home() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$2,240 / $12,000</span>
+                    <span className="text-xs text-gray-500">$2,240</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
                     <div className="bg-primary rounded-full h-full" style={{ width: "18.7%" }}></div>
@@ -274,7 +274,7 @@ export default function Home() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$350 / $12,000</span>
+                    <span className="text-xs text-gray-500">$350</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
                     <div className="bg-primary rounded-full h-full" style={{ width: "2.9%" }}></div>
