@@ -145,7 +145,7 @@ export default function AboutBikeMS() {
                       <img
                         src="/images/john-wallace.jpg"
                         alt="John Wallace - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-[center_20%] md:object-center"
                       />
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
