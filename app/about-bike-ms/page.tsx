@@ -141,7 +141,7 @@ export default function AboutBikeMS() {
 
                   {/* John Wallace */}
                   <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
+                    <div className="h-64 md:h-48 overflow-hidden bg-gray-100 flex-shrink-0">
                       <img
                         src="/images/john-wallace.jpg"
                         alt="John Wallace - National Bike MS Cycling Team"
