@@ -199,27 +199,6 @@ export default function Home() {
                 <h2 className="text-xl font-semibold">Fundraising Totals</h2>
               </div>
               <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
-                {/* Casey Murphy */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$2,270</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
-                  </div>
-                </div>
-
                 {/* Curt Sauser */}
                 <div className="mb-2">
                   <div className="flex items-center justify-between">
@@ -238,6 +217,27 @@ export default function Home() {
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
                     <div className="bg-primary rounded-full h-full" style={{ width: "53.4%" }}></div>
+                  </div>
+                </div>
+
+                {/* Casey Murphy */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$2,270</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
                   </div>
                 </div>
 
