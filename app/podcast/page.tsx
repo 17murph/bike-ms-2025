@@ -744,6 +744,82 @@ export default function PodcastPage() {
               >
                 <div className="p-5">
                   <div className="space-y-6">
+                    {/* Mark Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E5: We Will Win - Mark's Story
+                        </h4>
+                        <p className="text-sm text-gray-500 mt-1">Guest: Mark Morabito</p>
+                        <p className="mt-2 text-gray-600">
+                          Mark Morabito looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end.
+                        </p>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 5</span>
+                          <a
+                            href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="mr-1.5"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Justin Episode */}
+                    <div className="border-b border-gray-100 pb-5">
+                      <div className="flex flex-col">
+                        <h4 className="font-bold text-gray-800 text-lg">
+                          S4_E4: A Different Kind of Victory - Justin's Story
+                        </h4>
+                        <p className="text-sm text-gray-500 mt-1">Guest: Justin Yuhaze</p>
+                        <p className="mt-2 text-gray-600">
+                          Justin shares his powerful journey of living with multiple sclerosis and how he found purpose and strength through unexpected challenges. His story is one of resilience, community, and discovering what victory really means when life takes a different path.
+                        </p>
+                        <div className="mt-3 flex justify-between items-center">
+                          <span className="text-sm text-gray-500">Season 4, Episode 4</span>
+                          <a
+                            href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="mr-1.5"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Listen Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Tyler Episode */}
                     <div className="border-b border-gray-100 pb-5">
                       <div className="flex flex-col">
