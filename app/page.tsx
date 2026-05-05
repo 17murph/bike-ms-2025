@@ -61,15 +61,6 @@ export default function Home() {
 
           <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 px-4">
             <Link
-              href="https://silentmsauction.weebly.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-yellow-400/95 hover:bg-yellow-400 text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
-            >
-              <span className="text-lg sm:text-xl">🍌</span>
-              <span className="font-medium">Big Bananas Silent Auction</span>
-            </Link>
-            <Link
               href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
               target="_blank"
               rel="noopener noreferrer"
@@ -220,6 +211,27 @@ export default function Home() {
                   </div>
                 </div>
 
+                {/* Rob Farthing */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$4,940</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "41.2%" }}></div>
+                  </div>
+                </div>
+
                 {/* Casey Murphy */}
                 <div className="mb-2">
                   <div className="flex items-center justify-between">
@@ -238,27 +250,6 @@ export default function Home() {
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
                     <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
-                  </div>
-                </div>
-
-                {/* Rob Farthing */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$2,240</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "18.7%" }}></div>
                   </div>
                 </div>
 
@@ -289,12 +280,12 @@ export default function Home() {
                 <div>
                   <div className="flex items-baseline justify-between text-gray-800">
                     <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                    <span className="text-xs text-gray-500">$11,267 / $48,000</span>
+                    <span className="text-xs text-gray-500">$15,207 / $48,000</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "23.5%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "31.7%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-500 mt-1">23.5%</div>
+                  <div className="text-right text-xs text-gray-500 mt-1">31.7%</div>
                 </div>
               </div>
             </div>
