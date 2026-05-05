@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
+  console.log("[v0] Home component rendering")
   const donors = useMemo(() => [
     { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
