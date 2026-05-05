@@ -94,12 +94,12 @@ export default function EventsPage() {
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-green-700 mb-2">$1,920</h3>
+                <h3 className="text-2xl font-bold text-green-700 mb-2">$2,270</h3>
                 <p className="text-green-600 font-medium">Raised of $5,000 Goal</p>
                 <div className="mt-3 bg-green-200 rounded-full h-2">
-                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "38.4%" }}></div>
+                  <div className="bg-green-500 h-2 rounded-full" style={{ width: "45.4%" }}></div>
                 </div>
-                <p className="text-sm text-green-600 mt-2">38.4% Complete</p>
+                <p className="text-sm text-green-600 mt-2">45.4% Complete</p>
               </div>
 
               {/* Miles Card */}
@@ -107,10 +107,11 @@ export default function EventsPage() {
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Bike className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">194.4</h3>
+                <h3 className="text-2xl font-bold text-blue-700 mb-2">425.1</h3>
                 <p className="text-blue-600 font-medium">Total Miles 2026</p>
                 <div className="text-sm text-blue-600 mt-2">
-                  <div>Q1: 194.4 miles</div>
+                  <div>Q1: 250.5 miles</div>
+                  <div>Q2: 174.6 miles</div>
                 </div>
               </div>
 
@@ -124,15 +125,6 @@ export default function EventsPage() {
                 <p className="text-sm text-purple-600 mt-2">MA, WA, TN, FL</p>
               </div>
 
-              {/* Time Card */}
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-orange-700 mb-2">12:39:44</h3>
-                <p className="text-orange-600 font-medium">Total Ride Time</p>
-                <p className="text-sm text-orange-600 mt-2">Hours:Minutes:Seconds</p>
-              </div>
             </div>
           </div>
         </div>
@@ -183,15 +175,6 @@ export default function EventsPage() {
                 <p className="text-sm text-purple-600 mt-2">FL (x2), WI, GA, CO, KY</p>
               </div>
 
-              {/* Time Card */}
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-orange-700 mb-2">108:33:28</h3>
-                <p className="text-orange-600 font-medium">Total Ride Time</p>
-                <p className="text-sm text-orange-600 mt-2">Hours:Minutes:Seconds</p>
-              </div>
             </div>
           </div>
         </div>
