@@ -94,14 +94,22 @@ export default function Home() {
       <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <ReliableImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Front-bqLVa4h3UN3sLuSCkoJAg0XLII16n3.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026-TvrLc5PBLpfdbcKK6jRDdV1I4QBf3y.jpg"
                 alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
                 width={400}
                 height={400}
                 className="object-contain rounded-lg shadow-md"
               />
+              <a 
+                href="https://jakroo.com/custom-product?id=r1xbn2JeCZg&item=ryg7PGmORbx&tsId=11850&team=rkmPz7ORWl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 text-primary hover:text-primary/80 font-medium underline text-center"
+              >
+                Like it? Order it online today!
+              </a>
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
