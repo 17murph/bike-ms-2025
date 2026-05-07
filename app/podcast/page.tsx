@@ -104,74 +104,6 @@ export default function PodcastPage() {
     },
   ]
 
-  // Episode library data - newest first
-  const episodeLibrary = [
-    {
-      title: "We Will Win - Mark's Story",
-      guest: "Mark Morabito",
-      season: "S4 E5",
-      date: "April 30, 2026",
-      description: "Mark looked at his wife in a hospital room and told her she could leave.",
-      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
-    },
-    {
-      title: "A Different Kind of Victory",
-      guest: "Justin Yuhaze",
-      season: "S4 E4",
-      date: "April 23, 2026",
-      description: "Diagnosed with MS just days before the birth of his second daughter.",
-      link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e",
-    },
-    {
-      title: "This Is Not a Story About Silver Linings",
-      guest: "Tyler",
-      season: "S4 E3",
-      date: "April 16, 2026",
-      description: "Nine years of denial and the isolation that comes from realizing you do not get MS alone.",
-      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
-    },
-    {
-      title: "If It Don't Align, I Decline",
-      guest: "Tiffany A. Vinson",
-      season: "S4 E2",
-      date: "April 9, 2026",
-      description: "The diagnosis that changed everything and the purpose found on the other side of loss.",
-      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
-    },
-    {
-      title: "The Death of My Former Self",
-      guest: "Selena Buongiorno",
-      season: "S4 E1",
-      date: "April 2, 2026",
-      description: "Navigating MS from both sides of care as a clinician and patient.",
-      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
-    },
-    {
-      title: "Finding Strength in Vulnerability",
-      guest: "Katie Heckert",
-      season: "S3 E8",
-      date: "May 19, 2025",
-      description: "Katie opens up about her journey with MS and finding strength through vulnerability.",
-      link: "https://open.spotify.com/episode/7qMHUN7cD54dPQYrwLZWW8",
-    },
-    {
-      title: "The Compassion You Don't Expect",
-      guest: "Dr. Deanna Greer",
-      season: "S3 E7",
-      date: "May 12, 2025",
-      description: "Dr. Dee shares insights on compassion in the MS community.",
-      link: "https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=OIwc2_YBQXusedlhs51LFQ",
-    },
-    {
-      title: "Sometimes, MS Is a Lesson for the Ones Who Watch",
-      guest: "Cori",
-      season: "S3 E6",
-      date: "April 18, 2025",
-      description: "Cori shares how MS has impacted not just her life, but those around her.",
-      link: "https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=d2b71b27bcea4286",
-    },
-  ]
-
   return (
     <div className="min-h-screen bg-white relative">
       <Navigation />
@@ -422,40 +354,11 @@ export default function PodcastPage() {
           <div className="container mx-auto max-w-6xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Episode Library</h2>
             <p className="text-center text-gray-600 mb-12 max-w-xl mx-auto">
-              Browse all episodes. Newest episodes first.
+              Browse all episodes by season.
             </p>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {episodeLibrary.map((episode, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <span className="text-xs font-bold text-primary">{episode.season}</span>
-                      <span className="text-xs text-gray-400 mx-2">•</span>
-                      <span className="text-xs text-gray-500">{episode.date}</span>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{episode.title}</h3>
-                  <p className="text-primary font-medium text-sm mb-2">with {episode.guest}</p>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{episode.description}</p>
-                  <a
-                    href={episode.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] text-white text-sm font-medium rounded-full hover:bg-[#1ed760] transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
-                    </svg>
-                    Listen on Spotify
-                  </a>
-                </div>
-              ))}
-            </div>
 
             {/* Season Archives Accordion */}
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-xl font-bold text-center mb-6 text-gray-700">Full Season Archives</h3>
               
               {/* Season 4 */}
               <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
