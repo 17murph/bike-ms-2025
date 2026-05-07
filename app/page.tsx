@@ -107,7 +107,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
               >
-                Support the ride. Wear the jersey. Order online.
+                Support the cause, wear the jersey. Order online.
               </a>
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">

@@ -54,7 +54,7 @@ export default function AboutBikeMS() {
                   rel="noopener noreferrer"
                   className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
                 >
-                  Support the ride. Wear the jersey. Order online.
+                  Support the cause, wear the jersey. Order online.
                 </a>
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
