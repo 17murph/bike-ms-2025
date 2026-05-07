@@ -284,30 +284,28 @@ export default function PodcastPage() {
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Left - Why These Stories Matter */}
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Why These Stories Matter</h2>
                 
-                {/* Logo and first paragraph side by side */}
-                <div className="flex gap-5 mb-5">
+                {/* Logo displayed cleanly above text */}
+                <div className="mb-6">
                   <img
                     src="/images/podcast-logo-new.png"
                     alt="The Other Side of MS Podcast Logo"
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-xl shadow-lg object-contain flex-shrink-0 bg-white"
+                    className="w-48 h-48 rounded-xl shadow-lg object-contain bg-white p-2"
                     onError={(e) => {
                       e.currentTarget.src = "/images/podcast-logo.png"
                     }}
                   />
-                  <div className="text-gray-700 text-base leading-relaxed">
-                    <p className="mb-3">
-                      The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
-                    </p>
-                    <p>
-                      This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
-                    </p>
-                  </div>
                 </div>
                 
-                {/* Remaining paragraphs */}
-                <div className="text-gray-700 text-base leading-relaxed space-y-3">
+                {/* All paragraphs left-aligned */}
+                <div className="text-gray-700 text-base leading-relaxed space-y-4">
+                  <p>
+                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                  </p>
+                  <p>
+                    This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
+                  </p>
                   <p>
                     These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
                   </p>
