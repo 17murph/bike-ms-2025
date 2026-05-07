@@ -105,26 +105,6 @@ export default function Home() {
                   Unfiltered voices. Uncomfortable truths. Deep humanity.
                 </p>
 
-                {/* Primary CTA */}
-                <a
-                  href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 mb-8"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                  Listen to the Latest Episode
-                </a>
-
                 {/* Platform Buttons */}
                 <div className="flex flex-wrap justify-center gap-3">
                   <a
