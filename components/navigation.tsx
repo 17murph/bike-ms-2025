@@ -71,13 +71,13 @@ export function Navigation() {
           {/* Bike MS Logo Section */}
           <Link href="/bike-ms" className="flex items-center gap-3 group">
             <img 
-              src="/images/bike-ms-complete-badge.png" 
+              src="/images/bike-ms-logo.jpeg" 
               alt="Bike MS Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
             <div className="flex flex-col">
-              <span className="text-xs text-gray-500 group-hover:text-primary transition-colors">Learn about Bike MS</span>
-              <span className="text-xs text-gray-500 group-hover:text-primary transition-colors">rides and fundraising</span>
+              <span className="text-xs text-gray-500 group-hover:text-primary transition-colors">Learn about our Bike MS</span>
+              <span className="text-xs text-gray-500 group-hover:text-primary transition-colors">Rides and Fundraising</span>
             </div>
           </Link>
 
