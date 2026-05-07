@@ -108,6 +108,13 @@ export default function Home() {
                 className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
               >
                 Support the ride. Wear the jersey. Order online.
+              <a 
+                href="https://jakroo.com/custom-product?id=r1xbn2JeCZg&item=ryg7PGmORbx&tsId=11850&team=rkmPz7ORWl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 text-primary hover:text-primary/80 font-medium underline text-center"
+              >
+                Like it? Order it online today!
               </a>
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
