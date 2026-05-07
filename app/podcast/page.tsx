@@ -284,35 +284,32 @@ export default function PodcastPage() {
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Left - Why These Stories Matter */}
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Why These Stories Matter</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
                 
-                {/* Logo displayed cleanly above text */}
-                <div className="mb-6">
+                {/* Text content with floated logo */}
+                <div className="text-gray-700 text-base leading-relaxed">
+                  {/* Logo floated left with text wrapping around */}
                   <img
                     src="/images/podcast-logo-new.png"
                     alt="The Other Side of MS Podcast Logo"
-                    className="w-48 h-48 rounded-xl shadow-lg object-contain bg-white p-2"
+                    className="float-left w-44 h-44 md:w-56 md:h-56 rounded-xl shadow-lg object-contain bg-white p-2 mr-5 mb-4"
                     onError={(e) => {
                       e.currentTarget.src = "/images/podcast-logo.png"
                     }}
                   />
-                </div>
-                
-                {/* All paragraphs left-aligned */}
-                <div className="text-gray-700 text-base leading-relaxed space-y-4">
-                  <p>
+                  <p className="mb-4">
                     The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
                   </p>
                   <p>
