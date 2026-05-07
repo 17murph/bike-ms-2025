@@ -1,27 +1,84 @@
 "use client"
 
-import Link from "next/link"
-import Image from "next/image"
-import { ReliableImage } from "@/components/reliable-image"
-import { SpotifyBadge } from "@/components/spotify-badge"
+import { useState, useEffect } from "react"
 import { Navigation } from "@/components/navigation"
-import { useRef, useMemo } from "react"
-import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
+import { season1, season2, season3 } from "@/data/episodes-update"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
-  const donors = useMemo(() => [
-    { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
-    { name: "Dan Sweeney", tags: ["Gold Donor"] },
-    { name: "Jami Stewart", tags: ["Gold Donor"] },
-    { name: "Joseph Monticello", tags: ["Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] },
-    { name: "Genese Sweeney", tags: ["Gold Donor"] },
-    { name: "Dennis Cook", tags: ["Gold Donor"] }
-  ], [])
+  const [openSeason, setOpenSeason] = useState<number | null>(null)
+  const [activeQuote, setActiveQuote] = useState(0)
 
-  const donorCarouselRef = useRef<HTMLDivElement>(null)
+  const toggleSeason = (seasonNumber: number) => {
+    if (openSeason === seasonNumber) {
+      setOpenSeason(null)
+    } else {
+      setOpenSeason(seasonNumber)
+    }
+  }
+
+  // Rotating quotes from listeners and guests
+  const impactfulQuotes = [
+    {
+      text: "It was almost like a death of my former self.",
+      author: "Selena - Season 4, Episode 1",
+    },
+    {
+      text: "If it don't align, I decline.",
+      author: "Tiffany - Season 4, Episode 2",
+    },
+    {
+      text: "People will abandon you. They will come up with whatever they need to justify it.",
+      author: "Tyler - Season 4, Episode 3",
+    },
+    {
+      text: "Some days are tougher than others.",
+      author: "Justin Yuhaze - Season 4, Episode 4",
+    },
+    {
+      text: "We will Win.",
+      author: "Mark Morabito - Season 4, Episode 5",
+    },
+  ]
+
+  // Rotate quotes every 8 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveQuote((prev) => (prev + 1) % impactfulQuotes.length)
+    }, 8000)
+    return () => clearInterval(interval)
+  }, [impactfulQuotes.length])
+
+  // Start Listening episodes data
+  const startListeningEpisodes = [
+    {
+      title: "We Will Win",
+      guest: "Mark Morabito",
+      description: "A story of survival, love, and choosing to fight.",
+      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
+    },
+    {
+      title: "Death of My Former Self",
+      guest: "Selena Buongiorno",
+      description: "Navigating MS from both sides of care.",
+      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
+    },
+    {
+      title: "This Is Not About Silver Linings",
+      guest: "Tyler Campbell",
+      description: "Nine years of denial and isolation.",
+      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
+    },
+    {
+      title: "If It Don't Align, I Decline",
+      guest: "Tiffany A. Vinson",
+      description: "The diagnosis that changed everything.",
+      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-white relative">
@@ -30,849 +87,440 @@ export default function Home() {
       {/* Add padding to account for fixed navigation */}
       <div className="pt-16 md:pt-20"></div>
 
-      {/* New Hero Section with Bike MS Focus */}
-      <section className="relative">
-        {/* Hero Image */}
-        <div className="relative w-full h-[600px] md:h-[650px] overflow-hidden">
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image
-            src="/images/podcast-20seats.jpeg"
-            alt="Bike MS Fundraising Event"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-              The Other Side of MS
-            </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight">
-              Where Stories Move Us and Miles Unite Us
-            </p>
-            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-4 md:p-6 rounded-lg">
-              <p className="text-white text-base md:text-lg leading-normal">
-                <em>
-                  A National Bike MS Cycling Team and Podcast Platform cycling across the U.S. to raise awareness, fund
-                  research, and amplify the voices of those living with MS.
-                </em>
-              </p>
-            </div>
+      <main className="relative">
+        {/* Hero Banner Section */}
+        <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+          <div className="absolute inset-0 bg-gray-900">
+            <img
+              src="/images/podcast-seats.png"
+              alt="The Other Side of MS Podcast - Two chairs and microphone"
+              className="w-full h-full object-cover opacity-60"
+            />
           </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 flex flex-col items-center justify-center text-white p-4">
+            <div className="container mx-auto max-w-4xl px-4">
+              <div className="flex flex-col items-center text-center">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">The Other Side of MS</h1>
+                <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light text-gray-200 mb-10">
+                  Unfiltered voices. Uncomfortable truths. Deep humanity.
+                </p>
 
-          <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 px-4">
-            <Link
-              href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
-            >
-              <span className="text-lg sm:text-xl">🎧</span>
-              <span className="font-medium">Listen to our newest episode</span>
-            </Link>
-            <Link
-              href="/about-bike-ms"
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
-            >
-              <span className="text-lg sm:text-xl">🚴</span>
-              <span className="font-medium">Meet the Traveling Team</span>
-            </Link>
-            <Link
-              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
-            >
-              <span className="text-lg sm:text-xl">❤️</span>
-              <span className="font-medium">Donate to Support MS</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Section with improved styling */}
-      <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div className="flex flex-col items-center">
-              <ReliableImage
-                src="/images/jersey-2026-new.png"
-                alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
-                width={400}
-                height={400}
-                className="object-contain rounded-lg shadow-md"
-              />
-              <div className="mt-4 text-center text-sm flex flex-col font-medium">
-                <span className="text-primary">Support the cause, wear the jersey</span>
+                {/* Primary CTA */}
                 <a
-                  href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
+                  href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 mb-8"
                 >
-                  Order Online
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Listen to the Latest Episode
                 </a>
+
+                {/* Platform Buttons */}
+                <div className="flex flex-wrap justify-center gap-3">
+                  <a
+                    href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-[#1DB954] text-white px-5 py-2.5 rounded-full hover:bg-[#1ed760] transition-colors font-medium shadow-md"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                    </svg>
+                    Spotify
+                  </a>
+                  <a
+                    href="https://podcasts.apple.com/us/podcast/the-other-side-of-ms/id1682272920"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-full hover:bg-white/30 transition-colors font-medium"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm0 2a6 6 0 0 0-6 6c0 2.21 1.194 4.132 2.969 5.168a.5.5 0 0 0 .531-.848A4.978 4.978 0 0 1 7 12a5 5 0 1 1 7.5 4.32.5.5 0 0 0 .531.848A5.978 5.978 0 0 0 18 12a6 6 0 0 0-6-6zm0 3a3 3 0 0 0-3 3c0 1.098.596 2.052 1.477 2.573a.5.5 0 0 0 .523-.852A1.988 1.988 0 0 1 10 12a2 2 0 1 1 3 1.721.5.5 0 0 0 .523.852A2.988 2.988 0 0 0 15 12a3 3 0 0 0-3-3zm0 3a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5z"/>
+                    </svg>
+                    Apple Podcasts
+                  </a>
+                  <a
+                    href="https://music.amazon.com/podcasts/343490f1-fe67-4b30-9049-500c3baf378d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-full hover:bg-white/30 transition-colors font-medium"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Amazon Music
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="text-center mt-2 md:mt-0 max-w-2xl">
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-6">
-                  <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          </div>
+        </section>
+
+        {/* Rotating Quote Section - Blue */}
+        <section className="bg-primary text-white py-2 relative overflow-hidden">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="relative h-[36px]">
+              {impactfulQuotes.map((quote, index) => (
+                <blockquote
+                  key={index}
+                  className={`absolute inset-0 transition-all duration-1000 flex items-center justify-center text-center ${
+                    index === activeQuote ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <p className="text-sm md:text-base font-light italic">
+                    "{quote.text}" <span className="opacity-75">— {quote.author}</span>
+                  </p>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why These Stories Matter + Latest Episode Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
+              {/* Left - Why These Stories Matter */}
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
+                
+                {/* Text content with floated logo */}
+                <div className="text-gray-700 text-base leading-relaxed">
+                  {/* Logo floated left with text wrapping around */}
+                  <img
+                    src="/images/podcast-logo-new.png"
+                    alt="The Other Side of MS Podcast Logo"
+                    className="float-left w-44 h-44 md:w-56 md:h-56 rounded-xl shadow-lg object-contain bg-white p-2 mr-5 mb-4"
+                    onError={(e) => {
+                      e.currentTarget.src = "/images/podcast-logo.png"
+                    }}
+                  />
+                  <p className="mb-4">
+                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                  </p>
+                  <p className="mb-4">
+                    This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
+                  </p>
+                  <p className="mb-4">
+                    These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
+                  </p>
+                  <p className="mb-4">
+                    Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
+                  </p>
+                  <p className="mb-4">
+                    This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
+                  </p>
+                  <p>
+                    Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let it.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right - Latest Episode */}
+              <div className="lg:w-1/2">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  {/* Episode Artwork */}
+                  <div className="relative">
+                    <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
+                      <img
+                        src="/images/mark.jpg"
+                        alt="Mark Morabito - Latest Episode Guest"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=mark"
+                        }}
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
+                          Latest Episode
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Episode Details */}
+                  <div className="p-6">
+                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 5 • April 30, 2026</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">We Will Win</h3>
+                    <p className="text-lg text-primary font-medium mb-3">with Mark Morabito</p>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      Mark looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end. This is his story of survival, love, and choosing to fight.
+                    </p>
                     <a
-                      href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                      href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
+                      className="inline-flex items-center gap-3 px-6 py-3 bg-[#1DB954] text-white rounded-full hover:bg-[#1ed760] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="w-5 h-5"
-                      >
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
                       </svg>
-                      Donate to Bike MS - 100% goes to MS Society
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="w-3 h-3 ml-1 opacity-70"
-                      >
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14 21 3"></path>
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      </svg>
+                      Listen on Spotify
                     </a>
-                    <p className="text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3 mt-3">
-                      Every single dollar you donate goes directly to the National Multiple Sclerosis Society, funding
-                      research, delivering services, and providing support for those living with MS.
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
-                  className="group"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="flex flex-col items-center gap-2">
-                    <span className="text-sm md:text-base lg:text-lg font-medium text-gray-700">
-                      Listen to the latest episode of &apos;The Other Side of MS&apos; podcast...
-                    </span>
-                    <div className="transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-md rounded-lg overflow-hidden mt-2">
-                      <SpotifyBadge />
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="flex items-start justify-center">
-              <Link href="/podcast" className="transition-transform hover:scale-105">
-                <ReliableImage
-                  src="/images/2025-20logo.png"
-                  alt="The Other Side of MS podcast logo"
-                  width={400}
-                  height={200}
-                  className="object-contain rounded-lg shadow-md"
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="container mx-auto px-4 py-3">
-        <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Fundraising Totals</h2>
-              </div>
-              <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
-                {/* Curt Sauser */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$6,407</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "53.4%" }}></div>
-                  </div>
-                </div>
-
-                {/* Rob Farthing */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$4,940</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "41.2%" }}></div>
-                  </div>
-                </div>
-
-                {/* Casey Murphy */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$2,270</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
-                  </div>
-                </div>
-
-                {/* John Wallace */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/815695"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$350</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "2.9%" }}></div>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 my-2"></div>
-
-                {/* Team Total */}
-                <div>
-                  <div className="flex items-baseline justify-between text-gray-800">
-                    <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                    <span className="text-xs text-gray-500">$15,207 / $48,000</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "31.7%" }}></div>
-                  </div>
-                  <div className="text-right text-xs text-gray-500 mt-1">31.7%</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Thank You Donors - Stock Ticker Style */}
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
-              </div>
-              <div className="p-6 flex-grow flex flex-col justify-center">
-                <p className="text-center text-gray-700 italic mb-4 text-sm">
-                  "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
-                </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-lg py-3">
-                  <div className="donor-ticker">
-                    {donors.map((donor, index) => (
-                      <div key={`a-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
-                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
-                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
-                            'bg-gray-100 text-gray-600'
-                          }`}>
-                            {donor.tags[0]}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                    {donors.map((donor, index) => (
-                      <div key={`b-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
-                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
-                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
-                            'bg-gray-100 text-gray-600'
-                          }`}>
-                            {donor.tags[0]}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-center text-xs text-gray-500 mt-3">Hover to pause</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px]">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">What $100 Donation Supports</h2>
-              </div>
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div className="text-center space-y-4">
-                  <ul className="text-left list-disc pl-8 text-black">
-                    <li>Research advancing treatments and long-term solutions</li>
-                    <li>Support and guidance so people living with MS do not have to face it alone</li>
-                  </ul>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
-                      <ReliableImage
-                        src="/images/100bill.jpeg"
-                        alt="100 Dollar Bill"
-                        width={256}
-                        height={112}
-                        className="object-cover"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div className="container mx-auto px-4 py-2">
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-center"
-          href="https://www.nationalmssociety.org/news-and-magazine/momentum-magazine"
-        >
-          <div className="rounded-xl border bg-gradient-to-r from-orange-50 to-white hover:shadow-md transition-all duration-300 transform hover:scale-[1.01]">
-            <div className="p-4">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-globe w-6 h-6 text-orange-600"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                  <path d="M2 12h20" />
-                </svg>
-                <h2 className="text-xl md:text-4xl font-semibold text-center mb-4 text-primary">
-                  Stay Informed About MS Research
-                </h2>
-              </div>
-              <p className="text-gray-700">
-                Learn more about the latest breakthroughs in MS Research via Momentum Magazine online
-              </p>
-            </div>
-          </div>
-        </Link>
-      </div>
-
-      <section id="events-section" className="py-12 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
-            <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-              This year, we will call the Jack and Back Bike MS Ride, Sept 12/13, 2026, to be our "Featured
-              Ride," though we will accept donations for any of our rides.
+        {/* Start Listening Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Start Listening</h2>
+            <p className="text-center text-gray-600 mb-10 max-w-xl mx-auto">
+              Not sure where to begin? These episodes are a great place to start.
             </p>
-            <a
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 font-semibold underline"
-            >
-              Look for your Bike MS Ride Here
-            </a>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Ride 1 - Cape Cod Getaway */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Cape Cod Getaway</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Quincy, MA</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">June 27/28, 2026</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Passport Ride</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {startListeningEpisodes.map((episode, index) => (
+                <div key={index} className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col">
+                  <h3 className="text-base font-bold text-gray-900 mb-1 leading-tight">{episode.title}</h3>
+                  <p className="text-primary font-medium text-sm mb-2">with {episode.guest}</p>
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">{episode.description}</p>
                   <a
-                    href="https://events.nationalmssociety.org/pages/10304?eventID=2517"
+                    href={episode.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1DB954] text-white text-sm font-medium rounded-full hover:bg-[#1ed760] transition-colors w-full"
                   >
-                    Event Details
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                    </svg>
+                    Listen on Spotify
                   </a>
                 </div>
-              </div>
+              ))}
             </div>
-
-            {/* Ride 2 - Best Dam Bike Tour */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Best Dam Bike Tour</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Baraboo, WI</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">August 1/2, 2026</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team CCC Passport Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/pages/11402?eventID=2735"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 3 - Jack and Back (Featured Ride) */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Jack and Back</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Featured Ride</p>
-                    <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">Sept 12/13, 2026</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">The Other Side of MS Featured Passport Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/2746"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 4 - Bike MS: Cycle to the Shore */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Bike MS: Cycle to the Shore</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">Oct 3/4, 2026</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Home Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/2776"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <main className="container mx-auto py-1 space-y-8">
-        <section className="text-center bg-blue-50 rounded-xl p-6 max-w-3xl mx-auto">
-          <h2 className="text-xl font-bold mb-3">Interested in cycling for MS?</h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed">
-            Join us in the fight against MS through the power of cycling. Every mile ridden and every dollar raised
-            brings us closer to a world free of multiple sclerosis.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-bike w-4 h-4"
-              >
-                <circle cx="18.5" cy="17.5" r="3.5" />
-                <circle cx="5.5" cy="17.5" r="3.5" />
-                <circle cx="15" cy="5" r="1" />
-                <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
-              </svg>
-              National Cycling Team
-            </Link>
-            <Link
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1227&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&language=en&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-bike w-4 h-4"
-              >
-                <circle cx="18.5" cy="17.5" r="3.5" />
-                <circle cx="5.5" cy="17.5" r="3.5" />
-                <circle cx="15" cy="5" r="1" />
-                <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
-              </svg>
-              About Bike MS
-            </Link>
-            <Link
-              href="http://email.fundraisers.donordrive.com/c/eJw80MGOpCAQgOGngZsGChrkwKFnbJO97GlfoEZKm0TRAHZ23n6jvZkjCfmrvhqXSKn-xpX8Wso2RqrffNxSqbEelOqv3n-6h_ronWvMp3CNfih3d0o1ILvbXQ723j8-ePBSSmO05eSl1UJqoXXHacW4_Pneye9brrg0lXBtYnrFSpxe7z4oZ_jTByIrOknSIQYFXyBosthp4ch0hIJHDwJuAkBKAKG71ungvoKdRquNsHJiWkxHChljoVzasKUthxxf1I7byhf_rHUvTN0ZDAyGa3xpE9a4JVx-9O2WZwZDTIH-tuO0MjVMRyEcz39M9ZnmWCrltlTMlYH572CqPyUMzIm83p3sbpKBWTDNB87EVE-J75hrHOOOl94ocObGs5d2PfL-ZFrM59Wund8lf3X4y8O_AAAA___w74eR"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-md hover:bg-secondary/90 text-lg font-medium transition-all hover:translate-x-1"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-users w-4 h-4"
-              >
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Join Team Spanish Beer</span>
-            </Link>
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-12 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-primary">
-              🎙️ Real Stories. Raw Truth. The Other Side of MS.
-            </h2>
+        {/* Episode Library Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Episode Library</h2>
+            <p className="text-center text-gray-600 mb-12 max-w-xl mx-auto">
+              Browse all episodes by season.
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-              {/* Quote 1 */}
-              <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
-                <div className="flex flex-col h-full">
-                  <div className="mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary/20"
-                    >
-                      <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
-                      <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
-                    </svg>
-                  </div>
-                  <blockquote className="text-xl md:text-2xl font-medium text-gray-700 italic mb-4 flex-grow">
-                    "The hardest part isn't the physical symptoms, it's having to constantly explain to people why you
-                    can't do what you used to do."
-                  </blockquote>
-                  <div className="flex items-center mt-auto">
-                    <div className="ml-4">
-                      <p className="font-bold text-gray-800">Amber Cunningham</p>
-                      <p className="text-sm text-gray-500">Finding Strength Beyond the Diagnosis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Quote 2 */}
-              <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
-                <div className="flex flex-col h-full">
-                  <div className="mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary/20"
-                    >
-                      <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
-                      <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
-                    </svg>
-                  </div>
-                  <blockquote className="text-xl md:text-2xl font-medium text-gray-700 italic mb-4 flex-grow">
-                    "Sometimes people just don't need a silver lining. They need empathy. They need someone just to sit
-                    with them in that moment and say, 'Hey, I hear you.'"
-                  </blockquote>
-                  <div className="flex items-center mt-auto">
-                    <div className="ml-4">
-                      <p className="font-bold text-gray-800">Jessica</p>
-                      <p className="text-sm text-gray-500">The Other Side of MS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <Link
-                href="/podcast"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300 text-lg font-medium"
-              >
-                Explore All Episodes
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            {/* Season Archives Accordion */}
+            <div className="max-w-4xl mx-auto">
+              
+              {/* Season 4 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
+                <button
+                  onClick={() => toggleSeason(4)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </Link>
+                  <span className="text-lg">Season 4</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 4 ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {[
+                      { title: "We Will Win - Mark's Story", guest: "Mark Morabito", episode: "S4 E5", link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx" },
+                      { title: "A Different Kind of Victory", guest: "Justin Yuhaze", episode: "S4 E4", link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR" },
+                      { title: "This Is Not a Story About Silver Linings", guest: "Tyler", episode: "S4 E3", link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf" },
+                      { title: "If It Don't Align, I Decline", guest: "Tiffany A. Vinson", episode: "S4 E2", link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb" },
+                      { title: "The Death of My Former Self", guest: "Selena Buongiorno", episode: "S4 E1", link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd" },
+                    ].map((ep, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <span className="text-xs font-bold text-primary">{ep.episode}</span>
+                          <h4 className="font-semibold text-gray-900">{ep.title}</h4>
+                          <p className="text-sm text-gray-500">{ep.guest}</p>
+                        </div>
+                        <a href={ep.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Season 3 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
+                <button
+                  onClick={() => toggleSeason(3)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
+                >
+                  <span className="text-lg">Season 3</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 3 ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 3 ? "max-h-[4000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {season3.episodes.map((episode, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{episode.title}</h4>
+                          <p className="text-sm text-gray-500">{episode.guest}</p>
+                        </div>
+                        <a href={episode.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Season 2 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
+                <button
+                  onClick={() => toggleSeason(2)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
+                >
+                  <span className="text-lg">Season 2</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 2 ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 2 ? "max-h-[6000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {season2.episodes.map((episode, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{episode.title}</h4>
+                          <p className="text-sm text-gray-500">{episode.guest}</p>
+                        </div>
+                        <a href={episode.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Season 1 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+                <button
+                  onClick={() => toggleSeason(1)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
+                >
+                  <span className="text-lg">Season 1</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 1 ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 1 ? "max-h-[6000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {season1.episodes.map((episode, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{episode.title}</h4>
+                          <p className="text-sm text-gray-500">{episode.guest}</p>
+                        </div>
+                        <a href={episode.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* NPR First Coast Connect Section */}
-        <section className="container mx-auto px-4 py-8 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border border-gray-100">
-              {/* Header with Logos */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
-                </div>
-                <div className="text-center flex-1 mx-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary">
-                    As Featured on NPR's "First Coast Connect"
-                  </h2>
-                </div>
-                <div className="flex items-center">
-                  <Image
-                    src="/images/wjct-logo.png"
-                    alt="WJCT Logo"
-                    width={80}
-                    height={48}
-                    className="object-contain"
-                  />
-                </div>
+        {/* NPR Section - Reduced Prominence */}
+        <section className="py-12 bg-gray-50 border-t border-gray-100">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="bg-white rounded-xl shadow-sm p-8 flex flex-col md:flex-row items-center gap-6">
+              <div className="flex items-center gap-4 flex-shrink-0">
+                <Image src="/images/npr-logo.png" alt="NPR Logo" width={60} height={24} className="object-contain opacity-80" />
+                <span className="text-gray-300">|</span>
+                <Image src="/images/wjct-logo.png" alt="WJCT Logo" width={60} height={36} className="object-contain opacity-80" />
               </div>
-
-              {/* Content */}
-              <div className="text-center">
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-                  In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
-                  conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the
-                  raw storytelling that drives The Other Side of MS podcast.
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">As Featured on NPR&apos;s First Coast Connect</h3>
+                <p className="text-sm text-gray-600">
+                  A conversation about MS, advocacy, and the raw storytelling that drives the podcast.
                 </p>
-
-                {/* Embedded YouTube Video */}
-                <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-lg shadow-md max-w-4xl mx-auto">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/5YiuhgqDCI8?si=Xt3HGfK6aYY2PYUv"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="sponsors-section" className="mt-8 space-y-4">
-          <h2 className="text-2xl font-bold text-center text-primary">Our Sponsors</h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8 bg-white rounded-xl p-6 shadow-sm">
-            {/* Coggin BMW */}
-            <div className="flex flex-col items-center space-y-4">
               <a
-                href="https://www.cogginbmw.com/"
+                href="https://www.youtube.com/watch?v=5YiuhgqDCI8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-48 h-32 relative bg-black rounded-lg overflow-hidden flex items-center justify-center"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-600 text-white text-sm font-medium rounded-full hover:bg-red-700 transition-colors flex-shrink-0"
               >
-                <img
-                  src="/images/coggin-bmw-logo.png"
-                  alt="Coggin BMW of Treasure Coast Logo"
-                  className="w-full h-full object-contain p-4"
-                />
-              </a>
-              <Link
-                href="https://www.cogginbmw.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-              >
-                <span>Visit Coggin BMW</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
-              </Link>
+                Watch on YouTube
+              </a>
             </div>
           </div>
-        </section>
-
-        <section id="feedback-section" className="text-center mt-8 mb-8 bg-blue-50 rounded-xl p-6">
-          <h2 className="text-2xl font-bold text-center mb-4 text-primary">Leave Feedback</h2>
-          <p className="text-gray-700 mb-4">
-            We&apos;d love to hear from you! Share your thoughts, questions, or suggestions.
-          </p>
-          <a
-            href="mailto:CMURPHY@SJMALAW.COM"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-mail w-5 h-5"
-            >
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-            <span>Contact Us</span>
-          </a>
         </section>
       </main>
 
-      {/* Footer and utility components */}
       <Footer />
       <BackToTopButton />
     </div>

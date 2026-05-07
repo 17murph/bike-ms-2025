@@ -3,16 +3,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { Home, Mic, Calendar, Heart, Camera, Info, Menu, X, Share2, Mail, Users } from 'lucide-react'
+import { Home, Heart, Info, Menu, X, Share2, Mail } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
-  { name: "National Cycling Team", href: "/about-bike-ms", icon: Info }, // Changed from "About Bike MS" to "National Cycling Team"
-  { name: "Podcast", href: "/podcast", icon: Mic },
-  { name: "Events", href: "/events", icon: Calendar },
-  { name: "Sponsors", href: "/sponsors", icon: Users },
-  { name: "Media", href: "/media", icon: Camera },
+  { name: "Bike MS", href: "/bike-ms", icon: Heart },
+  { name: "National Team", href: "/about-bike-ms", icon: Info },
   { name: "About / Contact", href: "/contact", icon: Mail },
 ]
 
@@ -70,11 +67,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-primary text-xl">Bike MS 2026</span>
-          </Link>
-
+        <div className="hidden md:flex justify-center items-center">
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
@@ -125,10 +118,7 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation Button */}
-        <div className="md:hidden flex justify-between items-center">
-          <Link href="/" className="text-primary font-bold text-xl">
-            Bike MS 2026
-          </Link>
+        <div className="md:hidden flex justify-end items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-3 rounded-lg bg-primary/10 text-primary min-h-[48px] min-w-[48px] flex items-center justify-center"
