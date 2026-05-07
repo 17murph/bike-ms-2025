@@ -11,7 +11,6 @@ import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
-  console.log("[v0] Home component rendering")
   const donors = useMemo(() => [
     { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
@@ -96,12 +95,19 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex flex-col items-center justify-center">
               <ReliableImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026-TvrLc5PBLpfdbcKK6jRDdV1I4QBf3y.jpg"
+                src="/images/jersey-2026-new.png"
                 alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
                 width={400}
                 height={400}
                 className="object-contain rounded-lg shadow-md"
               />
+              <a
+                href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
+              >
+                Support the ride. Wear the jersey. Order online.
               <a 
                 href="https://jakroo.com/custom-product?id=r1xbn2JeCZg&item=ryg7PGmORbx&tsId=11850&team=rkmPz7ORWl"
                 target="_blank"
