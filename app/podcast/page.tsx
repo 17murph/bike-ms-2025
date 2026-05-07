@@ -258,47 +258,35 @@ export default function PodcastPage() {
           </div>
         </section>
 
-        {/* Rotating Quote Section - Blue with Logo */}
-        <section className="bg-primary text-white py-6 relative overflow-hidden">
-          <div className="container mx-auto max-w-5xl px-4">
-            <div className="flex items-center gap-6 md:gap-10">
-              {/* Podcast Logo */}
-              <div className="flex-shrink-0">
-                <img
-                  src="/images/podcast-logo-new.png"
-                  alt="The Other Side of MS Podcast Logo"
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-lg shadow-lg object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "/images/podcast-logo.png"
-                  }}
-                />
-              </div>
-              
+        {/* Rotating Quote Section - Blue */}
+        <section className="bg-primary text-white py-4 relative overflow-hidden">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="flex items-center gap-4">
               {/* Rotating Quotes */}
               <div className="flex-1 min-w-0">
-                <div className="relative h-[70px] md:h-[60px]">
+                <div className="relative h-[50px]">
                   {impactfulQuotes.map((quote, index) => (
                     <blockquote
                       key={index}
-                      className={`absolute inset-0 transition-all duration-1000 flex flex-col justify-center ${
+                      className={`absolute inset-0 transition-all duration-1000 flex flex-col justify-center text-center ${
                         index === activeQuote ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                       }`}
                     >
-                      <p className="text-lg md:text-xl font-light italic leading-snug truncate md:whitespace-normal">"{quote.text}"</p>
-                      <footer className="text-xs md:text-sm opacity-75 font-medium mt-1">— {quote.author}</footer>
+                      <p className="text-base md:text-lg font-light italic leading-snug">"{quote.text}"</p>
+                      <footer className="text-xs opacity-75 font-medium mt-1">— {quote.author}</footer>
                     </blockquote>
                   ))}
                 </div>
               </div>
 
               {/* Quote indicators */}
-              <div className="flex flex-col gap-1.5 flex-shrink-0">
+              <div className="flex gap-1.5 flex-shrink-0">
                 {impactfulQuotes.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveQuote(index)}
                     className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                      index === activeQuote ? "bg-white h-4" : "bg-white/40 hover:bg-white/60"
+                      index === activeQuote ? "bg-white w-4" : "bg-white/40 hover:bg-white/60"
                     }`}
                     aria-label={`Go to quote ${index + 1}`}
                   />
@@ -315,20 +303,29 @@ export default function PodcastPage() {
               {/* Left - Why These Stories Matter */}
               <div className="lg:w-1/2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
-                <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
-                  <p>
+                <div className="text-gray-700 text-lg leading-relaxed">
+                  {/* Logo floated left with text wrapping */}
+                  <img
+                    src="/images/podcast-logo-new.png"
+                    alt="The Other Side of MS Podcast Logo"
+                    className="float-left w-28 h-28 md:w-36 md:h-36 rounded-xl shadow-lg object-cover mr-5 mb-3"
+                    onError={(e) => {
+                      e.currentTarget.src = "/images/podcast-logo.png"
+                    }}
+                  />
+                  <p className="mb-4">
                     The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
                   </p>
                   <p>
