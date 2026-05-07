@@ -20,7 +20,7 @@ export default function PodcastPage() {
     }
   }
 
-  // Quotes that will rotate - updated with authentic quotes from the podcast
+  // Rotating quotes from listeners and guests
   const impactfulQuotes = [
     {
       text: "It was almost like a death of my former self.",
@@ -52,8 +52,128 @@ export default function PodcastPage() {
     return () => clearInterval(interval)
   }, [impactfulQuotes.length])
 
+  // Featured voices data
+  const featuredVoices = [
+    {
+      name: "Mark Morabito",
+      image: "/images/mark.jpg",
+      quote: "We will Win.",
+      summary: "Mark looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end.",
+      season: "Season 4, Episode 5",
+      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
+    },
+    {
+      name: "Selena Buongiorno",
+      image: "/images/selena.jpg",
+      quote: "It was almost like a death of my former self.",
+      summary: "Clinician and MS patient Selena shares her story of navigating MS from both sides of care.",
+      season: "Season 4, Episode 1",
+      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
+    },
+    {
+      name: "Tyler",
+      image: "/images/tyler.jpg",
+      quote: "People will abandon you. They will come up with whatever they need to justify it.",
+      summary: "Nine years of denial, relationships that fell away, and the isolation that comes from realizing you do not get MS alone.",
+      season: "Season 4, Episode 3",
+      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
+    },
+    {
+      name: "Tiffany A. Vinson",
+      image: "/images/tiffany.jpg",
+      quote: "If it don't align, I decline.",
+      summary: "A rare mix of vulnerability and strength about the diagnosis that changed everything.",
+      season: "Season 4, Episode 2",
+      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
+    },
+    {
+      name: "Justin Yuhaze",
+      image: "/images/justin-yuhaze.jpg",
+      quote: "Some days are tougher than others.",
+      summary: "Diagnosed just days before the birth of his second daughter. A father's story of presence and purpose.",
+      season: "Season 4, Episode 4",
+      link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e",
+    },
+    {
+      name: "Ursula Forrester",
+      image: "/images/ursula.jpg",
+      quote: "Redefining what strength looks like when MS becomes part of the course.",
+      summary: "A marathon runner who discovered that crossing finish lines means something different now.",
+      season: "Season 3, Episode 21",
+      link: "https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q",
+    },
+  ]
+
+  // Episode library data - newest first
+  const episodeLibrary = [
+    {
+      title: "We Will Win - Mark's Story",
+      guest: "Mark Morabito",
+      season: "S4 E5",
+      date: "April 30, 2026",
+      description: "Mark looked at his wife in a hospital room and told her she could leave.",
+      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
+    },
+    {
+      title: "A Different Kind of Victory",
+      guest: "Justin Yuhaze",
+      season: "S4 E4",
+      date: "April 23, 2026",
+      description: "Diagnosed with MS just days before the birth of his second daughter.",
+      link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e",
+    },
+    {
+      title: "This Is Not a Story About Silver Linings",
+      guest: "Tyler",
+      season: "S4 E3",
+      date: "April 16, 2026",
+      description: "Nine years of denial and the isolation that comes from realizing you do not get MS alone.",
+      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
+    },
+    {
+      title: "If It Don't Align, I Decline",
+      guest: "Tiffany A. Vinson",
+      season: "S4 E2",
+      date: "April 9, 2026",
+      description: "The diagnosis that changed everything and the purpose found on the other side of loss.",
+      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
+    },
+    {
+      title: "The Death of My Former Self",
+      guest: "Selena Buongiorno",
+      season: "S4 E1",
+      date: "April 2, 2026",
+      description: "Navigating MS from both sides of care as a clinician and patient.",
+      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
+    },
+    {
+      title: "Finding Strength in Vulnerability",
+      guest: "Katie Heckert",
+      season: "S3 E8",
+      date: "May 19, 2025",
+      description: "Katie opens up about her journey with MS and finding strength through vulnerability.",
+      link: "https://open.spotify.com/episode/7qMHUN7cD54dPQYrwLZWW8",
+    },
+    {
+      title: "The Compassion You Don't Expect",
+      guest: "Dr. Deanna Greer",
+      season: "S3 E7",
+      date: "May 12, 2025",
+      description: "Dr. Dee shares insights on compassion in the MS community.",
+      link: "https://open.spotify.com/episode/1CUllXzZEtFltncOxjPAdS?si=OIwc2_YBQXusedlhs51LFQ",
+    },
+    {
+      title: "Sometimes, MS Is a Lesson for the Ones Who Watch",
+      guest: "Cori",
+      season: "S3 E6",
+      date: "April 18, 2025",
+      description: "Cori shares how MS has impacted not just her life, but those around her.",
+      link: "https://open.spotify.com/episode/4KMiRhcr8PNR6D8eXEIfZ2?si=d2b71b27bcea4286",
+    },
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50 relative">
+    <div className="min-h-screen bg-white relative">
       <Navigation />
 
       {/* Add padding to account for fixed navigation */}
@@ -61,105 +181,294 @@ export default function PodcastPage() {
 
       <main className="relative">
         {/* Hero Banner Section */}
-        <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
-          <div className="absolute inset-0 bg-gray-800">
+        <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+          <div className="absolute inset-0 bg-gray-900">
             <img
-              src="/images/podcast-banner.jpg"
-              alt="The Other Side of MS Podcast"
-              className="w-full h-full object-cover brightness-[0.6]"
+              src="/images/podcast-seats.png"
+              alt="The Other Side of MS Podcast - Two chairs and microphone"
+              className="w-full h-full object-cover opacity-60"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30 flex flex-col items-center justify-center text-white p-4">
-            <div className="container mx-auto max-w-5xl px-4">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 flex flex-col items-center justify-center text-white p-4">
+            <div className="container mx-auto max-w-4xl px-4">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">The Other Side of MS</h1>
-                <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">The Other Side of MS</h1>
+                <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light text-gray-200 mb-10">
                   Unfiltered voices. Uncomfortable truths. Deep humanity.
                 </p>
 
-                {/* Added podcast break message under the platform icons */}
-                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                {/* Primary CTA */}
+                <a
+                  href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 mb-8"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Listen to the Latest Episode
+                </a>
+
+                {/* Platform Buttons */}
+                <div className="flex flex-wrap justify-center gap-3">
                   <a
                     href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block transition-transform hover:scale-105"
+                    className="flex items-center gap-2 bg-[#1DB954] text-white px-5 py-2.5 rounded-full hover:bg-[#1ed760] transition-colors font-medium shadow-md"
                   >
-                    <img
-                      src="/images/spotify-podcast-badge.png"
-                      alt="Listen on Spotify"
-                      className="h-12 w-auto md:h-10"
-                    />
-                  </a>
-                  <a
-                    href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="md:hidden flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold text-lg shadow-lg"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-6 h-6"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
                     </svg>
-                    Listen on Spotify
+                    Spotify
                   </a>
                   <a
                     href="https://podcasts.apple.com/us/podcast/the-other-side-of-ms/id1682272920"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors font-medium"
+                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-full hover:bg-white/30 transition-colors font-medium"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M18.7 10.7c-.1-3.1-2.6-5.6-5.7-5.6-3.1 0-5.6 2.5-5.7 5.6-.1 1.3.3 2.6 1.1 3.6.8 1 1.9 1.7 3.2 1.8 0 0 0 0 .1 0 .1 0 .2 0 .3 0 .1 0 .2 0 .3 0 .1 0 .1 0 .1 0 1.3-.2 2.4-.8 3.2-1.8.8-1 1.2-2.3 1.1-3.6zm-5.6 5.4c-.1 0-.2 0-.3 0-.1 0-.2 0-.3 0-1.1-.1-2.1-.7-2.8-1.5-.7-.9-1-2-1-3.1.1-2.7 2.3-4.9 5-4.9 2.7 0 4.9 2.2 5-4.9.1 1.1-.3 2.2-1 3.1-.7.8-1.7 1.4-2.8 1.5h-.8z" />
-                      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" />
-                      <path d="M12.3 14.2c0 .1-.1.2-.3.2s-.3-.1-.3-.2v-4.5c0-.1.1-.2.3-.2s.3.1.3.2v4.5z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm0 2a6 6 0 0 0-6 6c0 2.21 1.194 4.132 2.969 5.168a.5.5 0 0 0 .531-.848A4.978 4.978 0 0 1 7 12a5 5 0 1 1 7.5 4.32.5.5 0 0 0 .531.848A5.978 5.978 0 0 0 18 12a6 6 0 0 0-6-6zm0 3a3 3 0 0 0-3 3c0 1.098.596 2.052 1.477 2.573a.5.5 0 0 0 .523-.852A1.988 1.988 0 0 1 10 12a2 2 0 1 1 3 1.721.5.5 0 0 0 .523.852A2.988 2.988 0 0 0 15 12a3 3 0 0 0-3-3zm0 3a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5z"/>
                     </svg>
-                    <span>Apple</span>
+                    Apple Podcasts
                   </a>
                   <a
                     href="https://music.amazon.com/podcasts/343490f1-fe67-4b30-9049-500c3baf378d"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors font-medium"
+                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-full hover:bg-white/30 transition-colors font-medium"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="mr-2"
-                    >
-                      <path d="M18.42 14.29c-.22-.12-.43-.23-.63-.35-.56-.35-1.26-.79-1.26-1.47 0-.65.39-1.15 1.16-1.15.35 0 .64.11.89.34.25.23.37.55.37.98h1.96c0-1.16-.46-2.04-1.14-2.64-.68-.6-1.62-.91-2.71-.91-1.17 0-2.14.3-2.87.91-.73.6-1.10 1.45-1.10 2.54 0 1.58.95 2.54 2.19 3.32.41.26.83.50 1.24.74.63.36 1.07.89 1.07 1.47 0 .7-.43 1.14-1.28 1.14-.35 0-.68-.12-.93-.35-.25-.23-.38-.55-.38-.98h-1.96c0 1.16.47 2.04 1.15 2.64.68.6 1.63.91 2.72.91 1.17 0 2.15-.3 2.88-.91.73-.6 1.10-1.45 1.10-2.54 0-1.58-.95-2.54-2.19-3.32-.07-.04-.14-.09-.22-.13-.01-.01-.03-.02-.04-.03-.01-.01-.02-.01-.02-.01z" />
-                      <path d="M13.77 2.3c-1.22 0-2.36.18-3.42.54-1.06.36-1.97.89-2.71 1.59-.75.7-1.34 1.57-1.77 2.61-.43 1.04-.65 2.25-.65 3.63v4.8c0 1.38.22 2.59.65 3.63.43 1.04 1.02 1.90 1.77 2.61.74.7 1.65 1.24 2.71 1.59 1.06.36 2.20.54 3.42.54 1.22 0 2.36-.18 3.42-.54 1.06-.36 1.97-.89 2.71-1.59.75-.7 1.34 1.57 1.77-2.61.43-1.04.65-2.25.65-3.63v-4.8c0-1.38-.22-2.59-.65-3.63-.43-1.04-1.02-1.90-1.77-2.61-.74-.7-1.65-1.24-2.71-1.59-1.06-.36-2.20-.54-3.42-.54zm0 1.93c.9 0 1.73.13 2.49.40.76.27 1.40.65 1.91 1.15.51.5.91 1.11 1.19 1.85.28.73.42 1.56.42 2.47v5.4c0 .91-.14 1.74-.42 2.47-.28.73-.67 1.35-1.19 1.85-.51.5-1.15.88-1.91 1.15-.76.27-1.59.4-2.49.4-.9 0-1.73-.13-2.49-.40-.76-.27-1.40-.65-1.91-1.15-.51-.5-.91-1.11-1.19-1.85-.28-.73-.42 1.56-.42-2.47v-5.4c0-.91.14-1.74.42-2.47.28-.73.67 1.35-1.19-1.85.51-.5 1.15-.88 1.91-1.15.76-.27 1.59-.4 2.49-.4z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
-                    <span>Amazon</span>
+                    Amazon Music
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                {/* New Episode Button */}
-                <a
-                  href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+        {/* Rotating Quote Section - Blue */}
+        <section className="bg-primary text-white py-2 relative overflow-hidden">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="relative h-[36px]">
+              {impactfulQuotes.map((quote, index) => (
+                <blockquote
+                  key={index}
+                  className={`absolute inset-0 transition-all duration-1000 flex items-center justify-center text-center ${
+                    index === activeQuote ? "opacity-100" : "opacity-0"
+                  }`}
                 >
+                  <p className="text-sm md:text-base font-light italic">
+                    "{quote.text}" <span className="opacity-75">— {quote.author}</span>
+                  </p>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why These Stories Matter + Latest Episode Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
+              {/* Left - Why These Stories Matter */}
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
+                
+                {/* Logo and first paragraph side by side */}
+                <div className="flex gap-5 mb-5">
+                  <img
+                    src="/images/podcast-logo-new.png"
+                    alt="The Other Side of MS Podcast Logo"
+                    className="w-32 h-32 md:w-40 md:h-40 rounded-xl shadow-lg object-contain flex-shrink-0 bg-white"
+                    onError={(e) => {
+                      e.currentTarget.src = "/images/podcast-logo.png"
+                    }}
+                  />
+                  <div className="text-gray-700 text-base leading-relaxed">
+                    <p className="mb-3">
+                      The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                    </p>
+                    <p>
+                      This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Remaining paragraphs */}
+                <div className="text-gray-700 text-base leading-relaxed space-y-3">
+                  <p>
+                    These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
+                  </p>
+                  <p>
+                    Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
+                  </p>
+                  <p>
+                    This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
+                  </p>
+                  <p>
+                    Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let it.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right - Latest Episode */}
+              <div className="lg:w-1/2">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  {/* Episode Artwork */}
+                  <div className="relative">
+                    <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
+                      <img
+                        src="/images/mark.jpg"
+                        alt="Mark Morabito - Latest Episode Guest"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=mark"
+                        }}
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
+                          Latest Episode
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Episode Details */}
+                  <div className="p-6">
+                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 5 • April 30, 2026</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">We Will Win</h3>
+                    <p className="text-lg text-primary font-medium mb-3">with Mark Morabito</p>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      Mark looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end. This is his story of survival, love, and choosing to fight.
+                    </p>
+                    <a
+                      href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 px-6 py-3 bg-[#1DB954] text-white rounded-full hover:bg-[#1ed760] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                      </svg>
+                      Listen on Spotify
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Voices Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Featured Voices</h2>
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+              Real stories from people living with MS. No scripts. No filters. Just truth.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredVoices.map((voice, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={voice.image}
+                      alt={`${voice.name} - The Other Side of MS Podcast Guest`}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        e.currentTarget.src = "/placeholder.svg"
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="text-xl font-bold text-white">{voice.name}</h3>
+                      <p className="text-sm text-gray-300">{voice.season}</p>
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <blockquote className="text-primary font-medium italic mb-3 text-lg">
+                      "{voice.quote}"
+                    </blockquote>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{voice.summary}</p>
+                    <a
+                      href={voice.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                      </svg>
+                      Listen to Episode
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* Episode Library Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Episode Library</h2>
+            <p className="text-center text-gray-600 mb-12 max-w-xl mx-auto">
+              Browse all episodes. Newest episodes first.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {episodeLibrary.map((episode, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <span className="text-xs font-bold text-primary">{episode.season}</span>
+                      <span className="text-xs text-gray-400 mx-2">•</span>
+                      <span className="text-xs text-gray-500">{episode.date}</span>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{episode.title}</h3>
+                  <p className="text-primary font-medium text-sm mb-2">with {episode.guest}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{episode.description}</p>
+                  <a
+                    href={episode.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] text-white text-sm font-medium rounded-full hover:bg-[#1ed760] transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                    </svg>
+                    Listen on Spotify
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            {/* Season Archives Accordion */}
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold text-center mb-6 text-gray-700">Full Season Archives</h3>
+              
+              {/* Season 4 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
+                <button
+                  onClick={() => toggleSeason(4)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
+                >
+                  <span className="text-lg">Season 4</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -170,1480 +479,189 @@ export default function PodcastPage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-6 h-6"
+                    className={`transition-transform duration-300 ${openSeason === 4 ? "rotate-180" : ""}`}
                   >
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
-                  Listen to Mark&apos;s Story: Released April 30, 2026
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Rotating Quote Section */}
-        <section className="bg-primary text-white py-8 relative overflow-hidden">
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="relative h-[120px] md:h-[100px]">
-              {impactfulQuotes.map((quote, index) => (
-                <blockquote
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 flex flex-col items-center justify-center text-center ${
-                    index === activeQuote ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <p className="text-xl md:text-2xl font-light italic mb-2">"{quote.text}"</p>
-                  <footer className="text-sm opacity-75">— {quote.author}</footer>
-                </blockquote>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About the Podcast / Why These Stories Matter */}
-        <section className="pt-12 pb-4 bg-white">
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-              <div className="md:w-1/3 flex-shrink-0">
-                <div className="sticky top-24">
-                  <div className="text-center mb-8">
-                    <div className="relative w-[280px] h-[200px] mx-auto mb-4">
-                      <img
-                        src="/images/podcast-logo-new.png"
-                        alt="The Other Side of MS Podcast Logo"
-                        className="w-full h-full object-contain rounded-lg shadow-lg"
-                      />
-                    </div>
-
-                    <div className="mt-6">
-                      <a
-                        href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="w-5 h-5"
-                        >
-                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                        </svg>
-                        Donate to Bike MS
-                      </a>
-                      <p className="text-sm text-gray-600 mt-3 px-4">
-                        Every story is a voice. Every voice deserves to be heard. Donations help us keep sharing them.
-                      </p>
-                    </div>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {[
+                      { title: "We Will Win - Mark's Story", guest: "Mark Morabito", episode: "S4 E5", link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx" },
+                      { title: "A Different Kind of Victory", guest: "Justin Yuhaze", episode: "S4 E4", link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR" },
+                      { title: "This Is Not a Story About Silver Linings", guest: "Tyler", episode: "S4 E3", link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf" },
+                      { title: "If It Don't Align, I Decline", guest: "Tiffany A. Vinson", episode: "S4 E2", link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb" },
+                      { title: "The Death of My Former Self", guest: "Selena Buongiorno", episode: "S4 E1", link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd" },
+                    ].map((ep, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <span className="text-xs font-bold text-primary">{ep.episode}</span>
+                          <h4 className="font-semibold text-gray-900">{ep.title}</h4>
+                          <p className="text-sm text-gray-500">{ep.guest}</p>
+                        </div>
+                        <a href={ep.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              <div className="md:w-2/3">
-                <div className="mb-12">
-                  <h2 className="text-3xl font-bold mb-6 text-gray-800">Why these stories matter</h2>
-                  <div className="space-y-4 text-gray-700">
-                    <p>
-                      The Other Side of MS isn't here to inspire you. It's here to show you what it really means to live
-                      with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet
-                      grief, and the complex resilience.
-                    </p>
-                    <p>
-                      This podcast creates a space where people with MS can tell their stories without performing,
-                      without toxic positivity, and without being reduced to a diagnosis.
-                    </p>
-                    <p>
-                      These aren't highlight reels or polished success stories. They're raw conversations: sometimes
-                      uncomfortable, always honest.
-                    </p>
-                    <p>
-                      Here, we don't ask guests to be brave; we ask them to be real. MS isn't just a disease; it's a
-                      life that keeps unfolding in ways most people never see. We explore the parts most people avoid:
-                      the rage, the fear, the mourning of who you used to be, and the strength that doesn't come with a
-                      cape but with survival.
-                    </p>
-                    <p>
-                      This podcast isn't about the host. It's about the people who live with MS, who deserve to be seen,
-                      heard, and understood, not as heroes or fighters but as complex humans trying to make it through
-                      another day.
-                    </p>
-                    <p>
-                      Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let
-                      it.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* NPR First Coast Connect Section */}
-        <section className="py-8 bg-blue-50 border-t border-gray-100">
-          <div className="container mx-auto max-w-5xl px-4">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              {/* Header with Logos */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <Image src="/images/npr-logo.png" alt="NPR Logo" width={80} height={32} className="object-contain" />
-                </div>
-                <div className="text-center flex-1 mx-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary">
-                    As Featured on NPR's "First Coast Connect"
-                  </h3>
-                </div>
-                <div className="flex items-center">
-                  <Image
-                    src="/images/wjct-logo.png"
-                    alt="WJCT Logo"
-                    width={80}
-                    height={48}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="text-center">
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-                  In this NPR segment, host Al Emerick is joined by Teresa Eichner and Casey Murphy for a powerful
-                  conversation about multiple sclerosis, the mission behind the Jax Bourbon Social fundraiser, and the
-                  raw storytelling that drives The Other Side of MS podcast.
-                </p>
-                <Link
-                  href="https://www.youtube.com/watch?v=5YiuhgqDCI8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 text-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+              {/* Season 3 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
+                <button
+                  onClick={() => toggleSeason(3)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
                 >
+                  <span className="text-lg">Season 3</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 3 ? "rotate-180" : ""}`}
                   >
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
-                  Listen on YouTube
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Voices Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto max-w-5xl px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Voices</h2>
-
-            {/* Mark Morabito - Featured Guest (Photo on LEFT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/mark.jpg"
-                        alt="Mark Morabito - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-top"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=mark"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Mark Morabito</h3>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 3 ? "max-h-[4000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {season3.episodes.map((episode, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{episode.title}</h4>
+                          <p className="text-sm text-gray-500">{episode.guest}</p>
+                        </div>
+                        <a href={episode.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Mark Morabito</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "We will Win."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          Mark Morabito looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 4, Episode 5</span>
-                      <a
-                        href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Justin Yuhaze - Featured Guest (Photo on RIGHT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/justin-yuhaze.jpg"
-                        alt="Justin Yuhaze - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-top"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=justin"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Justin Yuhaze</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Justin Yuhaze</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "Some days are tougher than others."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          Justin Yuhaze was diagnosed with MS just days before the birth of his second daughter. In this episode, he talks about the months that followed, the symptoms he tried to hide, the depression he did not always want to name, and the moments that pushed him toward deeper conversations instead of avoiding them. Justin also shares what it has meant to raise two daughters who have only ever known him with MS and the choices he makes to stay active and present in their lives.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 4, Episode 4</span>
-                      <a
-                        href="https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Tyler - Featured Guest (Photo on LEFT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/tyler.jpg"
-                        alt="Tyler - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-top"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=tyler"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Tyler</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Tyler</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "People will abandon you. They will come up with whatever they need to justify it."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          Tyler was diagnosed with primary progressive MS in 2013, and the impact reshaped every part of his life. His marriage ended, relationships shifted, and the identity he built as a Division I athlete began to fall away. In this episode, Tyler talks about nine years of denial, the people who stepped back when MS became too heavy for them to hold, and the isolation that comes from realizing you do not get MS alone. He also shares what it is like to have two young daughters who now listen closely when an Ocrevus commercial comes on, trying to understand what the medication might mean for their dad. This is not a story about silver linings. This is a story about truth.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 4, Episode 3</span>
-                      <a
-                        href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Tiffany A. Vinson - Featured Guest (Photo on RIGHT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row-reverse">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/tiffany.jpg"
-                        alt="Tiffany A. Vinson - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-[center_25%]"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=tiffany"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Tiffany A. Vinson</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Tiffany A. Vinson</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "So if it don't align, I decline." "That's my trademark... and my journal is if it don't align, I decline."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          Tiffany A. Vinson brings a rare mix of vulnerability and strength to this conversation. She opens up about the diagnosis that changed everything, the identity she had to reconstruct, and the purpose she found on the other side of loss. Her story is raw, real, and deeply human — exactly the kind of honesty this season is built on.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 4, Episode 2</span>
-                      <a
-                        href="https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Selena Buongiorno - Featured Guest (Photo on LEFT) */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 relative">
-                    <div className="h-[280px] md:h-[350px] relative bg-gray-200">
-                      <img
-                        src="/images/selena.jpg"
-                        alt="Selena Buongiorno - The Other Side of MS Podcast Guest"
-                        className="w-full h-full object-cover object-top"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=selena"
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
-                      <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                        <h3 className="text-2xl font-bold text-white">Selena Buongiorno</h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary hidden md:block">Selena Buongiorno</h3>
-                      <div className="mb-4">
-                        <blockquote className="text-xl italic text-gray-700 border-l-4 border-primary pl-4 my-4">
-                          "It was almost like a death of my former self."
-                        </blockquote>
-                        <p className="text-gray-600 mt-4">
-                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase "no two days are alike." Listeners will hear what MS looks like through the eyes of a medical provider, how cycling and community support her healing, and why talking openly about the "new normal" is essential for anyone living with MS.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-between items-center">
-                      <span className="text-sm text-gray-500">Season 4, Episode 1</span>
-                      <a
-                        href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 transition-colors"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-2"
-                        >
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Listen Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Brad Romp and Steve Clayton remain in Episode Archives only */}
-          </div>
-        </section>
-
-        {/* Contact Info */}
-        <section className="py-8 bg-white border-t border-gray-100">
-          <div className="container mx-auto max-w-3xl px-4">
-            <div className="flex flex-col sm:flex-row justify-center gap-4 items-center bg-blue-50 p-6 rounded-lg">
-              <div className="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5 text-gray-600"
+              {/* Season 2 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden mb-4 bg-white">
+                <button
+                  onClick={() => toggleSeason(2)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
                 >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span>904-504-1500</span>
+                  <span className="text-lg">Season 2</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 2 ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 2 ? "max-h-[6000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {season2.episodes.map((episode, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{episode.title}</h4>
+                          <p className="text-sm text-gray-500">{episode.guest}</p>
+                        </div>
+                        <a href={episode.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Season 1 */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+                <button
+                  onClick={() => toggleSeason(1)}
+                  className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center hover:bg-primary/90 transition-colors"
+                >
+                  <span className="text-lg">Season 1</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-300 ${openSeason === 1 ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 1 ? "max-h-[6000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="p-5 space-y-4">
+                    {season1.episodes.map((episode, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{episode.title}</h4>
+                          <p className="text-sm text-gray-500">{episode.guest}</p>
+                        </div>
+                        <a href={episode.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NPR Section - Reduced Prominence */}
+        <section className="py-12 bg-gray-50 border-t border-gray-100">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="bg-white rounded-xl shadow-sm p-8 flex flex-col md:flex-row items-center gap-6">
+              <div className="flex items-center gap-4 flex-shrink-0">
+                <Image src="/images/npr-logo.png" alt="NPR Logo" width={60} height={24} className="object-contain opacity-80" />
+                <span className="text-gray-300">|</span>
+                <Image src="/images/wjct-logo.png" alt="WJCT Logo" width={60} height={36} className="object-contain opacity-80" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">As Featured on NPR&apos;s First Coast Connect</h3>
+                <p className="text-sm text-gray-600">
+                  A conversation about MS, advocacy, and the raw storytelling that drives the podcast.
+                </p>
               </div>
               <a
-                href="mailto:CMURPHY@SJMALAW.COM"
-                className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                href="https://www.youtube.com/watch?v=5YiuhgqDCI8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-600 text-white text-sm font-medium rounded-full hover:bg-red-700 transition-colors flex-shrink-0"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
-                <span>CMURPHY@SJMALAW.COM</span>
+                Watch on YouTube
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Episode Archives */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto max-w-4xl px-4">
-<h2 className="text-3xl font-bold text-center mb-10 text-primary">Episode Archives</h2>
-            
-            {/* Season 4 */}
-            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
-              <button
-                onClick={() => toggleSeason(4)}
-                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
-              >
-                <span>Season 4</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className={`transition-transform duration-300 ${openSeason === 4 ? "rotate-180" : ""}`}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openSeason === 4 ? "max-h-[4000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="p-5">
-                  <div className="space-y-6">
-                    {/* Mark Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E5: We Will Win - Mark's Story
-                        </h4>
-                        <p className="text-sm text-gray-500 mt-1">Guest: Mark Morabito</p>
-                        <p className="mt-2 text-gray-600">
-                          Mark Morabito looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end.
-                        </p>
-                        <div className="mt-3 flex justify-between items-center">
-                          <span className="text-sm text-gray-500">Season 4, Episode 5</span>
-                          <a
-                            href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14"
-                              height="14"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="mr-1.5"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Justin Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E4: A Different Kind of Victory - Justin's Story
-                        </h4>
-                        <p className="text-sm text-gray-500 mt-1">Guest: Justin Yuhaze</p>
-                        <p className="mt-2 text-gray-600">
-                          Justin shares his powerful journey of living with multiple sclerosis and how he found purpose and strength through unexpected challenges. His story is one of resilience, community, and discovering what victory really means when life takes a different path.
-                        </p>
-                        <div className="mt-3 flex justify-between items-center">
-                          <span className="text-sm text-gray-500">Season 4, Episode 4</span>
-                          <a
-                            href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14"
-                              height="14"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="mr-1.5"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Tyler Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E3: This Is Not a Story About Silver Linings - Tyler's Story
-                        </h4>
-                        <p className="text-sm text-gray-500 mt-1">Guest: Tyler</p>
-                        <p className="mt-2 text-gray-600">
-                          Tyler was diagnosed with primary progressive MS in 2013, and the impact reshaped every part of his life. His marriage ended, relationships shifted, and the identity he built as a Division I athlete began to fall away. In this episode, Tyler talks about nine years of denial, the people who stepped back when MS became too heavy for them to hold, and the isolation that comes from realizing you do not get MS alone. He also shares what it is like to have two young daughters who now listen closely when an Ocrevus commercial comes on, trying to understand what the medication might mean for their dad. This is not a story about silver linings. This is a story about truth.
-                        </p>
-                        <div className="mt-3 flex justify-between items-center">
-                          <span className="text-sm text-gray-500">Season 4, Episode 3</span>
-                          <a
-                            href="https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14"
-                              height="14"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="mr-1.5"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Tiffany Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E2: If It Don't Align, I Decline - Tiffany's Story
-                        </h4>
-                        <p className="text-sm text-gray-500 mt-1">Guest: Tiffany A. Vinson</p>
-                        <p className="mt-2 text-gray-600">
-                          Tiffany A. Vinson brings a rare mix of vulnerability and strength to this conversation. She opens up about the diagnosis that changed everything, the identity she had to reconstruct, and the purpose she found on the other side of loss. Her story is raw, real, and deeply human — exactly the kind of honesty this season is built on.
-                        </p>
-                        <div className="mt-3 flex justify-between items-center">
-                          <span className="text-sm text-gray-500">Season 4, Episode 2</span>
-                          <a
-                            href="https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14"
-                              height="14"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="mr-1.5"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Selena Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S4_E1: The Death of My Former Self - Selena's Story
-                        </h4>
-                        <p className="text-sm text-gray-500 mt-1">Guest: Selena Buongiorno</p>
-                        <p className="mt-2 text-gray-600">
-                          In this Season 4 premiere, clinician and MS patient Selena shares her powerful story of navigating multiple sclerosis from both sides of care. She opens up about the early symptoms she hid, the fear and uncertainty of diagnosis, the grief of losing her former self, and the daily reality behind the phrase "no two days are alike."
-                        </p>
-                        <div className="mt-3 flex justify-between items-center">
-                          <span className="text-sm text-gray-500">Season 4, Episode 1</span>
-                          <a
-                            href="https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-4 py-1.5 rounded-md bg-orange-600 text-white text-sm hover:bg-orange-700 transition-colors"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14"
-                              height="14"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="mr-1.5"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Season 3 */}
-            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
-              <button
-                onClick={() => toggleSeason(3)}
-                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
-              >
-                <span className="text-xl">Season 3</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 3 ? "rotate-180" : ""}`}
-                >
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
-              </button>
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openSeason === 3 ? "max-h-[4000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="p-5">
-                  <div className="space-y-6">
-                    {/*  Added Ursula's episode at top of Episode Archives */}
-                    {/* Ursula Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E21: Redefining Strength - Ursula's Story
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Ursula Forrester</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Ursula has always been a runner—marathons, half-marathons, and miles that measured more than
-                          distance. But in October 2014, after years of unexplained symptoms, she was diagnosed with
-                          multiple sclerosis. In this episode, Ursula reflects on running marathons, building a
-                          community through fundraising, and what it really means to balance resilience with honesty.
-                          Her story is not just about crossing finish lines, but about redefining what strength looks
-                          like when MS becomes part of the course.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 21</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Steve Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">S3_E20: Steve's Story</h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Steve</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Steve joins The Other Side of MS to share his personal journey with multiple sclerosis. In
-                          this candid conversation, he opens up about the realities of living with MS, the challenges he
-                          faces, and the strength he's found along the way. His story adds another authentic voice to
-                          the podcast's mission of sharing unfiltered experiences from the MS community.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 20</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/0x4iZFkMlFWdU5XwiYmUsw?si=fcee49a3752d4cb2"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Brad Romp Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E19: When the Cape Comes Off - Brad's Truth
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Brad Romp</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Brad was diagnosed with MS at 45. Now 64, he's a speaker, a cyclist, and a face of strength
-                          for others living with the disease. But behind the workouts, the travel, and the public
-                          optimism is a more complex truth—one that doesn't always fit into a social media caption or a
-                          feel-good campaign. In this episode, Brad sits down for a different kind of conversation about
-                          the days he can't move, the pressure to keep showing up, and what happens when that strength
-                          runs out.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 19</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/6PDZPGdoAVgtN7AFknTVxN?si=KnAE08LcRTOH1zEkFgOqPQ"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Dan Kindel Episode */}
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E18: School Dan vs Real Dan - A Teacher's Truth
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Dan Kindel</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Dan has been a teacher for over 20 years, a school spirit leader, a cyclist, and a quiet force
-                          in his Florida community. His energy is infectious. His optimism is constant. But behind the
-                          vibrant classroom persona is a man living with relentless, invisible pain—and the pressure to
-                          never let it show. He talks about the dual realities of living with a disease that makes him
-                          stronger while slowly wearing him down.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 18</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/2QBJ21rzuDUGmULcNFgDre?si=KIGCN7AKQaam4ophvEPNkA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E17: Behind the Bourbon Glass - Teresa's Story
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Teresa Eichner</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Diagnosed with MS in 2016, Teresa Eichner is the driving force behind Jax Bourbon Social, a
-                          fundraiser that's generated over $300,000 for the National MS Society. But behind the public
-                          accolades and polished events is a woman who naps every day just to function—and who quietly
-                          carries the invisible cost of looking "fine." In this episode, Teresa shares the truth behind
-                          the bourbon glass: the fatigue, the fear, and the fight most never see.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 17</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/1XuOtk1mnlkckHrSQOIcOo?si=0e39e0b99c7648bb"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E15: Finding Strength in Vulnerability - Emma's Story
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Emma Archuletta</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Emma shares her candid journey with MS, discussing the challenges of navigating life with an
-                          invisible illness while maintaining hope and determination. Her story offers insights into
-                          resilience, self-advocacy, and finding joy despite uncertainty.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 15</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/76jUgivzgzX4A7nCEUODuV?si=facfced7c15c4a64"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E14: Coming Out of My Shell - Hanna's Journey
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Hanna Garrison</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Hanna opens up about her experience with MS, sharing the raw realities of living with an
-                          unpredictable condition. Her story explores themes of identity, acceptance, and the power of
-                          authentic connection in the face of life's unexpected challenges.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 14</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/5YmIhlADk9SOtHDn1Gt2TG?si=f7271f8864fd4c8d"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E13: Running Through MS - Chris's Journey
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Chris Brown</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Chris shares his inspiring journey of living with MS while maintaining an active lifestyle.
-                          From running marathons to navigating daily challenges, his story demonstrates that MS doesn't
-                          have to stop you from pursuing your passions and achieving your dreams.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 13</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/4Z72oyqGrLjPSKlGrOpCiz?si=sRVx5IeTRTCSnhGWlm2khQ"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E12: Finding Strength in Vulnerability - Allie's Story
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Allie Schmidl</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Allie opens up about her journey with MS, sharing the raw realities of living with an
-                          invisible illness and how she's learned to find strength in vulnerability. Her story offers
-                          profound insights into resilience and the power of authentic connection.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 12</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/3LseCgCUxQlj2TvKUfg5wq?si=706fe0e131ef494c"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E11: The Journey with MS - Finding Strength in Vulnerability
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Susie Wyss</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Susie shares her powerful journey with MS, discussing how she's learned to navigate the
-                          challenges while maintaining her sense of humor and determination. Her story offers hope and
-                          practical wisdom for others facing similar struggles.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 11</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/33KXYLjXx7LMXDjmnrw4dE?si=119fa69c9c624451"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E10: Resilience and Determination - Living with MS
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Will Anthony</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Will Anthony shares his powerful journey with MS, discussing the challenges, triumphs, and
-                          unexpected lessons learned along the way. His story is one of resilience and determination in
-                          the face of an unpredictable condition.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 10</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/1F0c1u8Z0nHXS3l36JfB8x?si=OCIq0GAjTFG4xS2Jp5y-9g"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-b border-gray-100 pb-5">
-                      <div className="flex flex-col">
-                        <h4 className="font-bold text-gray-800 text-lg">
-                          S3_E9: Navigating Life with MS - Troy's Story
-                        </h4>
-                        <p className="text-gray-600 italic text-sm my-2">Guest: Troy Mitchell</p>
-                        <p className="text-gray-700 my-2 text-sm">
-                          Troy Mitchell shares his personal journey with MS, offering insights into the daily challenges
-                          and unexpected moments of strength he's discovered along the way. His perspective brings a
-                          unique voice to the conversation about living with MS.
-                        </p>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-gray-500">Season 3, Episode 9</span>
-                          <a
-                            className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                            href="https://open.spotify.com/episode/1NSC5Hc1Ax45PEAGzuaOP3?si=6e56cb45e7d24dd8"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            Listen Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Now continue with the existing episodes from season3.episodes */}
-                    {season3.episodes.map((episode, index) => (
-                      <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
-                        <div className="flex flex-col">
-                          <h4 className="font-bold text-gray-800 text-lg">
-                            {episode.id}: {episode.title}
-                          </h4>
-                          <p className="text-gray-600 italic text-sm my-2">
-                            Guest: {episode.guest} {episode.date && `• ${episode.date}`}
-                          </p>
-                          <p className="text-gray-700 my-2 text-sm">
-                            {episode.guest === "Amber Cunningham"
-                              ? "Amber discusses the daily challenges of MS, the misconceptions others have, and how she's learned to advocate for herself."
-                              : episode.guest === "Cori"
-                                ? "Cori shares her journey with MS and how she's learned to navigate life's challenges with resilience and determination, offering a raw and honest look at the realities of living with MS."
-                                : episode.guest === "Zohra"
-                                  ? "Zohra shares her raw, unfiltered experience of living with MS, including the invisible symptoms and daily challenges that most people never witness."
-                                  : episode.guest === "Becca"
-                                    ? "Becca offers an unfiltered look at her journey with MS, discussing the daily challenges and unexpected moments of strength she's discovered along the way."
-                                    : episode.guest === "Pam Grimes"
-                                      ? "Pam shares her experience navigating MS with grace and humor, offering insights into how she's adapted to life's challenges."
-                                      : episode.guest === "Jasmine Hanna"
-                                        ? "Jasmine discusses her approach to embracing life's journey with MS, sharing wisdom and practical advice for others facing similar challenges."
-                                        : episode.guest === "Dr. Dee"
-                                          ? "Dr. Dee shares her personal connection to MS through her husband's former spouse and why she became an annual donor to the National MS Society."
-                                          : episode.guest === "Katie Heckert"
-                                            ? "Katie was a litigator with a sharp mind and a powerful voice. But MS forced a different path—one filled with uncertainty, resilience, and new meaning. This episode isn't just about what MS takes—it's about what it reveals."
-                                            : "A powerful conversation about living with MS and the complex reality behind the diagnosis."}
-                          </p>
-                          <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">
-                              Season 3, Episode {season3.episodes.length - index}
-                            </span>
-                            <a
-                              className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                              href={episode.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                              </svg>
-                              Listen Now
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Season 2 */}
-            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
-              <button
-                onClick={() => toggleSeason(2)}
-                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
-              >
-                <span className="text-xl">Season 2</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 2 ? "rotate-180" : ""}`}
-                >
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
-              </button>
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openSeason === 2 ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="p-5">
-                  <div className="space-y-6">
-                    {season2.episodes.map((episode, index) => (
-                      <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
-                        <div className="flex flex-col">
-                          <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
-                          <p className="text-gray-600 text-sm my-2">Guest: {episode.guest}</p>
-                          <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">
-                              Season 2, Episode {season2.episodes.length - index}
-                            </span>
-                            <a
-                              className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                              href={
-                                episode.link.replace("podbean.com", "open.spotify.com").includes("open.spotify.com")
-                                  ? episode.link
-                                  : `https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f80883c052d4c2f`
-                              }
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="mr-2"
-                              >
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                              </svg>
-                              Listen Now
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Season 1 */}
-            <div className="border rounded-lg overflow-hidden mb-8 bg-white shadow-sm">
-              <button
-                onClick={() => toggleSeason(1)}
-                className="w-full p-5 text-left bg-primary text-white font-semibold flex justify-between items-center"
-              >
-                <span className="text-xl">Season 1</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className={`h-5 w-5 transition-transform duration-300 ${openSeason === 1 ? "rotate-180" : ""}`}
-                >
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
-              </button>
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openSeason === 1 ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="p-5">
-                  <div className="space-y-6">
-                    {season1.episodes.map((episode, index) => (
-                      <div key={index} className="border-b border-gray-100 pb-5 last:border-0">
-                        <div className="flex flex-col">
-                          <h4 className="font-bold text-gray-800 text-lg">{episode.title}</h4>
-                          <p className="text-gray-600 text-sm my-2">Guest: {episode.guest}</p>
-                          <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">
-                              Season 1, Episode {season1.episodes.length - index}
-                            </span>
-                            <a
-                              className="text-orange-600 hover:text-orange-700 text-sm font-medium flex items-center gap-1"
-                              href={
-                                episode.link.replace("podbean.com", "open.spotify.com").includes("open.spotify.com")
-                                  ? episode.link
-                                  : `https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=2f80883c052d4c2f`
-                              }
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="mr-2"
-                              >
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                              </svg>
-                              Listen Now
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
