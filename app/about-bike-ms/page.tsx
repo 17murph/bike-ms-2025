@@ -48,14 +48,18 @@ export default function AboutBikeMS() {
                   alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
                   className="w-full max-w-sm object-contain"
                 />
-                <a
-                  href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
-                >
-                  Support the ride. Wear the jersey. Order online.
-                </a>
+                <div className="mt-4 text-center font-medium">
+                  <span className="text-primary">Support the cause, wear the jersey</span>
+                  {" "}
+                  <a
+                    href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+                  >
+                    Order Online
+                  </a>
+                </div>
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
                 2026 team jersey featuring "The Other Side of MS" podcast branding and the National Bike MS Cycling Team mission.

@@ -92,8 +92,8 @@ export default function Home() {
       {/* Hero Section with improved styling */}
       <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-6">
+            <div className="flex flex-col items-center">
               <ReliableImage
                 src="/images/jersey-2026-new.png"
                 alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
@@ -101,14 +101,17 @@ export default function Home() {
                 height={400}
                 className="object-contain rounded-lg shadow-md"
               />
-              <a
-                href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
-              >
-                Support the ride. Wear the jersey. Order online.
-              </a>
+              <div className="mt-4 text-center text-sm flex flex-col font-medium">
+                <span className="text-primary">Support the cause, wear the jersey</span>
+                <a
+                  href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+                >
+                  Order Online
+                </a>
+              </div>
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
@@ -175,7 +178,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-start justify-center">
               <Link href="/podcast" className="transition-transform hover:scale-105">
                 <ReliableImage
                   src="/images/2025-20logo.png"
