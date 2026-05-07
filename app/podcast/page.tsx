@@ -259,39 +259,21 @@ export default function PodcastPage() {
         </section>
 
         {/* Rotating Quote Section - Blue */}
-        <section className="bg-primary text-white py-4 relative overflow-hidden">
+        <section className="bg-primary text-white py-2 relative overflow-hidden">
           <div className="container mx-auto max-w-4xl px-4">
-            <div className="flex items-center gap-4">
-              {/* Rotating Quotes */}
-              <div className="flex-1 min-w-0">
-                <div className="relative h-[50px]">
-                  {impactfulQuotes.map((quote, index) => (
-                    <blockquote
-                      key={index}
-                      className={`absolute inset-0 transition-all duration-1000 flex flex-col justify-center text-center ${
-                        index === activeQuote ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-                      }`}
-                    >
-                      <p className="text-base md:text-lg font-light italic leading-snug">"{quote.text}"</p>
-                      <footer className="text-xs opacity-75 font-medium mt-1">— {quote.author}</footer>
-                    </blockquote>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quote indicators */}
-              <div className="flex gap-1.5 flex-shrink-0">
-                {impactfulQuotes.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveQuote(index)}
-                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                      index === activeQuote ? "bg-white w-4" : "bg-white/40 hover:bg-white/60"
-                    }`}
-                    aria-label={`Go to quote ${index + 1}`}
-                  />
-                ))}
-              </div>
+            <div className="relative h-[36px]">
+              {impactfulQuotes.map((quote, index) => (
+                <blockquote
+                  key={index}
+                  className={`absolute inset-0 transition-all duration-1000 flex items-center justify-center text-center ${
+                    index === activeQuote ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <p className="text-sm md:text-base font-light italic">
+                    "{quote.text}" <span className="opacity-75">— {quote.author}</span>
+                  </p>
+                </blockquote>
+              ))}
             </div>
           </div>
         </section>
@@ -303,29 +285,36 @@ export default function PodcastPage() {
               {/* Left - Why These Stories Matter */}
               <div className="lg:w-1/2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
-                <div className="text-gray-700 text-lg leading-relaxed">
-                  {/* Logo floated left with text wrapping */}
+                
+                {/* Logo and first paragraph side by side */}
+                <div className="flex gap-5 mb-5">
                   <img
                     src="/images/podcast-logo-new.png"
                     alt="The Other Side of MS Podcast Logo"
-                    className="float-left w-28 h-28 md:w-36 md:h-36 rounded-xl shadow-lg object-cover mr-5 mb-3"
+                    className="w-32 h-32 md:w-40 md:h-40 rounded-xl shadow-lg object-contain flex-shrink-0 bg-white"
                     onError={(e) => {
                       e.currentTarget.src = "/images/podcast-logo.png"
                     }}
                   />
-                  <p className="mb-4">
-                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
-                  </p>
-                  <p className="mb-4">
-                    This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
-                  </p>
-                  <p className="mb-4">
+                  <div className="text-gray-700 text-base leading-relaxed">
+                    <p className="mb-3">
+                      The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                    </p>
+                    <p>
+                      This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Remaining paragraphs */}
+                <div className="text-gray-700 text-base leading-relaxed space-y-3">
+                  <p>
                     These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
                   </p>
-                  <p className="mb-4">
+                  <p>
                     Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
                   </p>
-                  <p className="mb-4">
+                  <p>
                     This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
                   </p>
                   <p>
