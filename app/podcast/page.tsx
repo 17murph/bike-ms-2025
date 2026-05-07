@@ -52,52 +52,6 @@ export default function PodcastPage() {
     return () => clearInterval(interval)
   }, [impactfulQuotes.length])
 
-  // Featured voices data - reduced text for easier scanning
-  const featuredVoices = [
-    {
-      name: "Mark Morabito",
-      image: "/images/mark.jpg",
-      quote: "We will Win.",
-      season: "Season 4, Episode 5",
-      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
-    },
-    {
-      name: "Selena Buongiorno",
-      image: "/images/selena.jpg",
-      quote: "It was almost like a death of my former self.",
-      season: "Season 4, Episode 1",
-      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
-    },
-    {
-      name: "Tyler",
-      image: "/images/tyler.jpg",
-      quote: "People will abandon you.",
-      season: "Season 4, Episode 3",
-      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
-    },
-    {
-      name: "Tiffany A. Vinson",
-      image: "/images/tiffany.jpg",
-      quote: "If it don't align, I decline.",
-      season: "Season 4, Episode 2",
-      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
-    },
-    {
-      name: "Justin Yuhaze",
-      image: "/images/justin-yuhaze.jpg",
-      quote: "Some days are tougher than others.",
-      season: "Season 4, Episode 4",
-      link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e",
-    },
-    {
-      name: "Ursula Forrester",
-      image: "/images/ursula.jpg",
-      quote: "Redefining what strength looks like.",
-      season: "Season 3, Episode 21",
-      link: "https://open.spotify.com/episode/4sOHB38DZcOWCUAblSRmyk?si=0qsU82GGQTqu5c__id8p-Q",
-    },
-  ]
-
   // Start Listening episodes data
   const startListeningEpisodes = [
     {
@@ -107,22 +61,22 @@ export default function PodcastPage() {
       link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
     },
     {
-      title: "The Death of My Former Self",
+      title: "Death of My Former Self",
       guest: "Selena Buongiorno",
       description: "Navigating MS from both sides of care.",
       link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
+    },
+    {
+      title: "This Is Not About Silver Linings",
+      guest: "Tyler Campbell",
+      description: "Nine years of denial and isolation.",
+      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
     },
     {
       title: "If It Don't Align, I Decline",
       guest: "Tiffany A. Vinson",
       description: "The diagnosis that changed everything.",
       link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
-    },
-    {
-      title: "A Different Kind of Victory",
-      guest: "Justin Yuhaze",
-      description: "Diagnosed days before his daughter's birth.",
-      link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR?si=4de1105a6e29445e",
     },
   ]
 
@@ -320,54 +274,6 @@ export default function PodcastPage() {
           </div>
         </section>
 
-        {/* Featured Voices Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto max-w-6xl px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Featured Voices</h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Real stories from people living with MS. No scripts. No filters. Just truth.
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredVoices.map((voice, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-                  <div className="relative h-56 overflow-hidden">
-                    <img
-                      src={voice.image}
-                      alt={`${voice.name} - The Other Side of MS Podcast Guest`}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        e.currentTarget.src = "/placeholder.svg"
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-xl font-bold text-white">{voice.name}</h3>
-                      <p className="text-sm text-gray-300">{voice.season}</p>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <blockquote className="text-primary font-medium italic mb-3">
-                      "{voice.quote}"
-                    </blockquote>
-                    <a
-                      href={voice.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                      </svg>
-                      Listen
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Start Listening Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto max-w-6xl px-4">
@@ -379,7 +285,7 @@ export default function PodcastPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {startListeningEpisodes.map((episode, index) => (
                 <div key={index} className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col">
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{episode.title}</h3>
+                  <h3 className="text-base font-bold text-gray-900 mb-1 leading-tight">{episode.title}</h3>
                   <p className="text-primary font-medium text-sm mb-2">with {episode.guest}</p>
                   <p className="text-gray-600 text-sm mb-4 flex-grow">{episode.description}</p>
                   <a
