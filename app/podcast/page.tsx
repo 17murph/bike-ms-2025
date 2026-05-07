@@ -52,38 +52,6 @@ export default function PodcastPage() {
     return () => clearInterval(interval)
   }, [impactfulQuotes.length])
 
-  // Featured episodes for the discovery section
-  const featuredEpisodes = [
-    {
-      label: "Latest Episode",
-      title: "We Will Win",
-      guest: "Mark Morabito",
-      description: "A story about refusing to let MS define the ending.",
-      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298",
-    },
-    {
-      label: "Most Listened",
-      title: "MS, Suicide, and Mental Health",
-      guest: "Dr. Sally Spencer-Thomas",
-      description: "A conversation that needed to happen.",
-      link: "https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ",
-    },
-    {
-      label: "Editor's Pick",
-      title: "The Death of My Former Self",
-      guest: "Selena Buongiorno",
-      description: "What it means to grieve the person you used to be.",
-      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
-    },
-    {
-      label: "Start Here",
-      title: "My Why",
-      guest: "Casey Murphy",
-      description: "The story that started it all.",
-      link: "https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ",
-    },
-  ]
-
   // Featured voices data
   const featuredVoices = [
     {
@@ -322,46 +290,72 @@ export default function PodcastPage() {
           </div>
         </section>
 
-        {/* Latest Episode Section - Large Featured */}
+        {/* Why These Stories Matter + Latest Episode Section */}
         <section className="py-16 bg-gray-50">
-          <div className="container mx-auto max-w-5xl px-4">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="flex flex-col lg:flex-row">
-                {/* Episode Artwork */}
-                <div className="lg:w-2/5 relative">
-                  <div className="aspect-square lg:aspect-auto lg:h-full relative bg-gradient-to-br from-primary to-primary/80">
-                    <img
-                      src="/images/mark.jpg"
-                      alt="Mark Morabito - Latest Episode Guest"
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src = "/placeholder.svg?key=mark"
-                      }}
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
-                        Latest Episode
-                      </span>
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
+              {/* Left - Why These Stories Matter */}
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
+                <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+                  <p>
+                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                  </p>
+                  <p>
+                    This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
+                  </p>
+                  <p>
+                    These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
+                  </p>
+                  <p>
+                    Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
+                  </p>
+                  <p>
+                    This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
+                  </p>
+                  <p>
+                    Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let it.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right - Latest Episode */}
+              <div className="lg:w-1/2">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  {/* Episode Artwork */}
+                  <div className="relative">
+                    <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
+                      <img
+                        src="/images/mark.jpg"
+                        alt="Mark Morabito - Latest Episode Guest"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg?key=mark"
+                        }}
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
+                          Latest Episode
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Episode Details */}
-                <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 5 • April 30, 2026</div>
-                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">We Will Win</h2>
-                  <p className="text-xl text-primary font-medium mb-4">with Mark Morabito</p>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                    Mark looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end. This is his story of survival, love, and choosing to fight.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
+                  {/* Episode Details */}
+                  <div className="p-6">
+                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 5 • April 30, 2026</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">We Will Win</h3>
+                    <p className="text-lg text-primary font-medium mb-3">with Mark Morabito</p>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      Mark looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end. This is his story of survival, love, and choosing to fight.
+                    </p>
                     <a
                       href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 px-8 py-4 bg-[#1DB954] text-white rounded-full hover:bg-[#1ed760] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="inline-flex items-center gap-3 px-6 py-3 bg-[#1DB954] text-white rounded-full hover:bg-[#1ed760] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
                       </svg>
                       Listen on Spotify
@@ -422,64 +416,7 @@ export default function PodcastPage() {
           </div>
         </section>
 
-        {/* Why These Stories Matter + Featured Player Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto max-w-6xl px-4">
-            <div className="flex flex-col lg:flex-row gap-12">
-              {/* Left - Why These Stories Matter */}
-              <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
-                <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
-                  <p>
-                    The Other Side of MS exists for the stories that are rarely told. The hard parts. The quiet grief. The invisible symptoms. The moments people often carry alone.
-                  </p>
-                  <p>
-                    We do not ask guests to sound inspirational. We ask them to be real.
-                  </p>
-                  <p>
-                    These are not highlight reels or polished success stories. They are raw conversations: sometimes uncomfortable, always honest.
-                  </p>
-                  <p>
-                    MS is not just a disease; it is a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be.
-                  </p>
-                </div>
-              </div>
 
-              {/* Right - Featured Episode Discovery */}
-              <div className="lg:w-1/2">
-                <h3 className="text-xl font-bold mb-6 text-gray-900">Start Listening</h3>
-                <div className="space-y-3">
-                  {featuredEpisodes.map((episode, index) => (
-                    <a
-                      key={index}
-                      href={episode.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
-                    >
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-primary group-hover:text-white">
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <span className="text-xs font-bold text-orange-600 uppercase tracking-wide">{episode.label}</span>
-                        </div>
-                        <h4 className="font-semibold text-gray-900 truncate">{episode.title}</h4>
-                        <p className="text-sm text-gray-500">{episode.guest}</p>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 group-hover:text-primary transition-colors flex-shrink-0">
-                        <path d="M5 12h14"></path>
-                        <path d="m12 5 7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Episode Library Section */}
         <section className="py-16 bg-white">
