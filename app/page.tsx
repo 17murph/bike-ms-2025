@@ -105,9 +105,10 @@ export default function Home() {
                 href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
+                className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors text-sm flex flex-col"
               >
-                Support the cause, wear the jersey. Order online.
+                <span>Support the cause, wear the jersey.</span>
+                <span>Order online.</span>
               </a>
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
