@@ -92,8 +92,8 @@ export default function Home() {
       {/* Hero Section with improved styling */}
       <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-6">
+            <div className="flex flex-col items-center">
               <ReliableImage
                 src="/images/jersey-2026-new.png"
                 alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
@@ -175,7 +175,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-start justify-center">
               <Link href="/podcast" className="transition-transform hover:scale-105">
                 <ReliableImage
                   src="/images/2025-20logo.png"
