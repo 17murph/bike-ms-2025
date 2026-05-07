@@ -67,7 +67,20 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-center items-center">
+        <div className="hidden md:flex justify-between items-center">
+          {/* Bike MS Logo Section */}
+          <Link href="/bike-ms" className="flex items-center gap-3 group">
+            <img 
+              src="/images/bike-ms-complete-badge.png" 
+              alt="Bike MS Logo" 
+              className="h-10 w-auto"
+            />
+            <div className="flex flex-col">
+              <span className="text-xs text-gray-500 group-hover:text-primary transition-colors">Learn about Bike MS</span>
+              <span className="text-xs text-gray-500 group-hover:text-primary transition-colors">rides and fundraising</span>
+            </div>
+          </Link>
+
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
@@ -95,7 +108,7 @@ export function Navigation() {
               className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
             >
               <Heart className="w-4 h-4 mr-2" />
-              <span>Donate</span>
+              <span>Donate to Bike MS</span>
             </Link>
 
             <div className="ml-2 pl-2 border-l border-gray-200">
@@ -174,7 +187,7 @@ export function Navigation() {
                 className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors min-h-[48px]"
               >
                 <Heart className="w-6 h-6 mr-3" />
-                <span className="text-lg">Donate</span>
+                <span className="text-lg">Donate to Bike MS</span>
               </Link>
 
               <button
