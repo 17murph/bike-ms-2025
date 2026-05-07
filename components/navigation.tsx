@@ -67,11 +67,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-primary text-xl">Bike MS 2026</span>
-          </Link>
-
+        <div className="hidden md:flex justify-center items-center">
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
@@ -122,10 +118,7 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation Button */}
-        <div className="md:hidden flex justify-between items-center">
-          <Link href="/" className="text-primary font-bold text-xl">
-            Bike MS 2026
-          </Link>
+        <div className="md:hidden flex justify-end items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-3 rounded-lg bg-primary/10 text-primary min-h-[48px] min-w-[48px] flex items-center justify-center"
