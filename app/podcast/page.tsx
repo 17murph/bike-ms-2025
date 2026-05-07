@@ -258,34 +258,52 @@ export default function PodcastPage() {
           </div>
         </section>
 
-        {/* Rotating Quote Section - Blue */}
-        <section className="bg-primary text-white py-12 relative overflow-hidden">
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="relative h-[140px] md:h-[120px]">
-              {impactfulQuotes.map((quote, index) => (
-                <blockquote
-                  key={index}
-                  className={`absolute inset-0 transition-all duration-1000 flex flex-col items-center justify-center text-center ${
-                    index === activeQuote ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  }`}
-                >
-                  <p className="text-2xl md:text-3xl font-light italic mb-4 leading-relaxed">"{quote.text}"</p>
-                  <footer className="text-sm opacity-80 font-medium">— {quote.author}</footer>
-                </blockquote>
-              ))}
-            </div>
-            {/* Quote indicators */}
-            <div className="flex justify-center gap-2 mt-4">
-              {impactfulQuotes.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveQuote(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === activeQuote ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
-                  }`}
-                  aria-label={`Go to quote ${index + 1}`}
+        {/* Rotating Quote Section - Blue with Logo */}
+        <section className="bg-primary text-white py-6 relative overflow-hidden">
+          <div className="container mx-auto max-w-5xl px-4">
+            <div className="flex items-center gap-6 md:gap-10">
+              {/* Podcast Logo */}
+              <div className="flex-shrink-0">
+                <img
+                  src="/images/podcast-logo-new.png"
+                  alt="The Other Side of MS Podcast Logo"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-lg shadow-lg object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "/images/podcast-logo.png"
+                  }}
                 />
-              ))}
+              </div>
+              
+              {/* Rotating Quotes */}
+              <div className="flex-1 min-w-0">
+                <div className="relative h-[70px] md:h-[60px]">
+                  {impactfulQuotes.map((quote, index) => (
+                    <blockquote
+                      key={index}
+                      className={`absolute inset-0 transition-all duration-1000 flex flex-col justify-center ${
+                        index === activeQuote ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                      }`}
+                    >
+                      <p className="text-lg md:text-xl font-light italic leading-snug truncate md:whitespace-normal">"{quote.text}"</p>
+                      <footer className="text-xs md:text-sm opacity-75 font-medium mt-1">— {quote.author}</footer>
+                    </blockquote>
+                  ))}
+                </div>
+              </div>
+
+              {/* Quote indicators */}
+              <div className="flex flex-col gap-1.5 flex-shrink-0">
+                {impactfulQuotes.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveQuote(index)}
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                      index === activeQuote ? "bg-white h-4" : "bg-white/40 hover:bg-white/60"
+                    }`}
+                    aria-label={`Go to quote ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
