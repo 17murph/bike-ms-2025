@@ -11,7 +11,6 @@ import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function Home() {
-  console.log("[v0] Home component rendering")
   const donors = useMemo(() => [
     { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
     { name: "Dan Sweeney", tags: ["Gold Donor"] },
@@ -94,14 +93,22 @@ export default function Home() {
       <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <ReliableImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jersey%202026%20Front-bqLVa4h3UN3sLuSCkoJAg0XLII16n3.png"
+                src="/images/jersey-2026-new.png"
                 alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
                 width={400}
                 height={400}
                 className="object-contain rounded-lg shadow-md"
               />
+              <a
+                href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 text-center text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
+              >
+                Support the ride. Wear the jersey. Order online.
+              </a>
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
