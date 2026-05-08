@@ -211,7 +211,7 @@ export default function Home() {
                   <img
                     src="/images/2026-other-side-of-ms-logo.png"
                     alt="The Other Side of MS Podcast Logo"
-                    className="float-left w-28 h-28 md:w-36 md:h-36 object-contain mr-3 -ml-1 -mt-1"
+                    className="float-left w-32 h-32 md:w-44 md:h-44 object-contain mr-3 -ml-1 -mt-1"
                     onError={(e) => {
                       e.currentTarget.src = "/images/podcast-logo.png"
                     }}
