@@ -13,9 +13,9 @@ export default function SponsorsPage() {
     <div className="min-h-screen bg-white relative">
       <Navigation />
 
-      {/* Add padding-top to account for the fixed navigation bar */}
-      <main className="container mx-auto pt-24 md:pt-28 pb-12 px-4">
-        <Link href="/" className="absolute top-24 md:top-28 left-4">
+      {/* Add padding-top to account for the fixed banner and navigation bar */}
+      <main className="container mx-auto pt-[136px] md:pt-[152px] pb-12 px-4">
+        <Link href="/" className="absolute top-[136px] md:top-[152px] left-4">
           <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
             <Home className="h-4 w-4" />
           </button>

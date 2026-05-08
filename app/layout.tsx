@@ -2,9 +2,10 @@ import { Suspense } from "react"
 import type React from "react"
 import "./globals.css"
 import { Inter } from "next/font/google"
-import { TodaysDate } from "@/components/todays-date"
+
 import { GoogleAnalytics } from "./components/google-analytics"
 import { Analytics } from "@vercel/analytics/next"
+import { DonationBanner } from "@/components/donation-banner"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -51,10 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Suspense>
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <DonationBanner />
         <div className="flex-grow">{children}</div>
-        <Suspense fallback={<div className="text-center p-2 text-sm text-gray-500">Loading date...</div>}>
-          <TodaysDate />
-        </Suspense>
         <Analytics />
       </body>
     </html>

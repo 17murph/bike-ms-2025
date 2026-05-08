@@ -50,7 +50,7 @@ export const season3: Season = {
     },
     {
       id: "S3_E2",
-      title: "Amber Cunningham - The Journy of Transformation, Finding Why Through MS",
+      title: "Amber Cunningham - The Journey of Transformation, Finding Why Through MS",
       guest: "Amber Cunningham",
       link: "https://open.spotify.com/episode/1EgzEQ0LgKmKS1ftw8zrr9?si=31fba761f062473f",
       date: "Mar 24, 2025",

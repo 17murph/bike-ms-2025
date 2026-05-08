@@ -84,8 +84,8 @@ export default function Home() {
     <div className="min-h-screen bg-white relative">
       <Navigation />
 
-      {/* Add padding to account for fixed navigation */}
-      <div className="pt-16 md:pt-20"></div>
+      {/* Add padding to account for fixed banner and navigation */}
+      <div className="pt-[104px] md:pt-[120px]"></div>
 
       <main className="relative">
         {/* Hero Banner Section */}
@@ -162,6 +162,39 @@ export default function Home() {
                   </p>
                 </blockquote>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Donation Progress Block */}
+        <section className="py-8 bg-gray-100">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">2026 Fundraising Goal</h3>
+                <div className="flex items-baseline gap-2 justify-center md:justify-start">
+                  <span className="text-3xl font-bold text-primary">$2,270</span>
+                  <span className="text-gray-500">of $10,000 raised</span>
+                </div>
+                {/* Progress bar */}
+                <div className="w-full bg-gray-200 rounded-full h-3 mt-3">
+                  <div 
+                    className="bg-primary h-3 rounded-full transition-all duration-500" 
+                    style={{ width: '22.7%' }}
+                  ></div>
+                </div>
+              </div>
+              <a
+                href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary/90 transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                Donate Now
+              </a>
             </div>
           </div>
         </section>
