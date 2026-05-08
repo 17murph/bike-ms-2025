@@ -171,7 +171,7 @@ export default function Home() {
           <div className="container mx-auto max-w-2xl px-4">
             <div className="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between gap-4">
               <div className="flex-1">
-                <h3 className="text-sm font-semibold text-gray-900 mb-1">2026 Bike MS Fundraising Goal</h3>
+                <h3 className="text-sm font-semibold text-gray-900 mb-1">We&apos;re not just a podcast. We ride Bike MS to fund the fight against MS.</h3>
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-xl font-bold text-primary">$2,270</span>
                   <span className="text-gray-500 text-sm">of $10,000</span>
