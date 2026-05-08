@@ -847,7 +847,7 @@ export default function BikeMS() {
             We&apos;d love to hear from you! Share your thoughts, questions, or suggestions.
           </p>
           <a
-            href="mailto:CMURPHY@SJMALAW.COM"
+            href="mailto:cmurphy@sjmalaw.com"
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
           >
             <svg

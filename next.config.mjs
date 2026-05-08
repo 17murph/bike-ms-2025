@@ -6,9 +6,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
- 
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/podcast',
+        destination: '/',
+        permanent: true,
+      },
+    ]
   },
 }
 

@@ -30,7 +30,7 @@ Comment: ${formData.comment}
     `
 
     // Create mailto link with encoded subject and body
-    const mailtoLink = `mailto:CMURPHY@SJMALAW.COM?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:cmurphy@sjmalaw.com?subject=${encodeURIComponent(
       emailSubject,
     )}&body=${encodeURIComponent(emailBody)}`
 
