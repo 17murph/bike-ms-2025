@@ -14,8 +14,8 @@ export default function EventsPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Add padding to account for fixed navigation */}
-      <div className="pt-16 md:pt-20"></div>
+      {/* Add padding to account for fixed banner and navigation */}
+      <div className="pt-[104px] md:pt-[120px]"></div>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-blue-100 to-white py-16">

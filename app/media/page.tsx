@@ -11,8 +11,8 @@ export default function MediaPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Add padding to account for fixed navigation */}
-      <div className="pt-16 md:pt-20"></div>
+      {/* Add padding to account for fixed banner and navigation */}
+      <div className="pt-[104px] md:pt-[120px]"></div>
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
