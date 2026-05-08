@@ -20,7 +20,7 @@ export function ContactModal() {
   }
 
   const handleEmail = () => {
-    window.location.href = `mailto:CMURPHY@SJMALAW.COM`
+    window.location.href = `mailto:cmurphy@sjmalaw.com`
     setIsOpen(false)
   }
 

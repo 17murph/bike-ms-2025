@@ -162,17 +162,17 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
                 <p className="text-gray-700 mb-4">Send an email anytime</p>
                 <a
-                  href="mailto:CMURPHY@SJMALAW.COM"
+                  href="mailto:cmurphy@sjmalaw.com"
                   className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
                 >
-                  CMURPHY@SJMALAW.COM
+                  cmurphy@sjmalaw.com
                 </a>
               </div>
             </div>
 
             <div className="flex justify-center mt-8">
               <a
-                href="mailto:CMURPHY@SJMALAW.COM?subject=Bike%20MS%20Contact%20Inquiry"
+                href="mailto:cmurphy@sjmalaw.com?subject=Bike%20MS%20Contact%20Inquiry"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
               >
                 <Mail className="w-5 h-5" />
