@@ -206,24 +206,20 @@ export default function Home() {
               <div className="lg:w-1/2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
                 
-                {/* Logo and first paragraph side by side */}
-                <div className="flex flex-col md:flex-row items-start gap-4 mb-4">
+                {/* Text content with floated logo */}
+                <div className="text-gray-700 text-base leading-relaxed">
                   <img
                     src="/images/2026-other-side-of-ms-logo.png"
                     alt="The Other Side of MS Podcast Logo"
-                    className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 object-contain"
+                    className="float-left w-36 h-36 md:w-44 md:h-44 object-contain mr-4 mb-2"
                     onError={(e) => {
                       e.currentTarget.src = "/images/podcast-logo.png"
                     }}
                   />
-                  <p className="text-gray-700 text-base leading-relaxed">
+                  <p className="mb-4">
                     The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): The chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
                   </p>
-                </div>
-                
-                {/* Remaining paragraphs spanning full width */}
-                <div className="text-gray-700 text-base leading-relaxed">
-                  <p className="mb-4">
+                <p className="mb-4">
                     This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
                   </p>
                   <p className="mb-4">
