@@ -100,7 +100,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 flex flex-col items-center justify-center text-white p-4">
             <div className="container mx-auto max-w-4xl px-4">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">The Other Side of MS</h1>
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">The Other Side of <span className="text-orange-500">MS</span></h1>
                 <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light text-gray-200 mb-10">
                   Unfiltered voices. Uncomfortable truths. Deep humanity.
                 </p>
