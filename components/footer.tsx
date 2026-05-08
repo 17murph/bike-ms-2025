@@ -18,23 +18,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/podcast" className="text-gray-300 hover:text-white transition-colors">
-                  Podcast
+                <Link href="/bike-ms" className="text-gray-300 hover:text-white transition-colors">
+                  Bike MS
                 </Link>
               </li>
               <li>
-                <Link href="/pictures" className="text-gray-300 hover:text-white transition-colors">
-                  Media
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
+                <Link href="/about-bike-ms" className="text-gray-300 hover:text-white transition-colors">
+                  National Bike MS Team
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
+                  About / Contact
                 </Link>
               </li>
             </ul>
@@ -128,17 +123,14 @@ export function Footer() {
               <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Home
               </Link>
-              <Link href="/podcast" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Podcast
+              <Link href="/bike-ms" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Bike MS
               </Link>
-              <Link href="/pictures" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Media
-              </Link>
-              <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                About
+              <Link href="/about-bike-ms" className="text-gray-400 hover:text-white transition-colors text-sm">
+                National Bike MS Team
               </Link>
               <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Contact
+                About / Contact
               </Link>
             </div>
           </div>
