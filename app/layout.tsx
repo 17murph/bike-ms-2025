@@ -10,7 +10,7 @@ import { DonationBanner } from "@/components/donation-banner"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Bike MS 2025 & Podcast",
+  title: "The Other Side of MS | Bike MS 2026",
   description: "Join Casey Murphy in the Bike MS Passport Program and listen to The Other Side of MS podcast",
   keywords: [
     "Bike MS",
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#ffffff" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bike MS 2025 & Podcast" />
+        <meta property="og:title" content="The Other Side of MS | Bike MS 2026" />
         <meta
           property="og:description"
           content="Join Casey Murphy in the Bike MS Passport Program and listen to The Other Side of MS podcast"
