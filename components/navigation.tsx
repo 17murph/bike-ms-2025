@@ -131,7 +131,7 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation Button */}
-        <div className="md:hidden flex justify-end items-center">
+        <div className="md:hidden flex justify-end items-center pt-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-3 rounded-lg bg-primary/10 text-primary min-h-[48px] min-w-[48px] flex items-center justify-center"

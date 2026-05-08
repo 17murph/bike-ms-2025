@@ -21,7 +21,8 @@ export function DonationBanner() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
         >
-          <span>🚴 MS has no finish line. Casey Murphy rides anyway.</span>
+          <span className="hidden sm:inline">🚴 MS has no finish line. Casey Murphy rides anyway.</span>
+          <span className="sm:hidden">🚴 MS has no finish line.</span>
           <span className="underline font-semibold">→ Donate Now</span>
         </Link>
       </div>
