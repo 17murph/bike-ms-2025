@@ -210,7 +210,7 @@ export default function Home() {
                 <div className="text-gray-700 text-base leading-relaxed">
                   {/* Logo floated left with text wrapping around */}
                   <img
-                    src="/images/podcast-logo-new.png"
+                    src="/images/2026-other-side-of-ms-logo.png"
                     alt="The Other Side of MS Podcast Logo"
                     className="float-left w-44 h-44 md:w-56 md:h-56 rounded-xl shadow-lg object-contain bg-white p-2 mr-5 mb-4"
                     onError={(e) => {
@@ -218,16 +218,16 @@ export default function Home() {
                     }}
                   />
                   <p className="mb-4">
-                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): the chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): The chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
                   </p>
                   <p className="mb-4">
                     This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
                   </p>
                   <p className="mb-4">
-                    These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations: sometimes uncomfortable, always honest.
+                    These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations, sometimes uncomfortable, always honest.
                   </p>
                   <p className="mb-4">
-                    Here, we don&apos;t ask guests to be brave; we ask them to be real. MS isn&apos;t just a disease; it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
+                    Here, we don&apos;t ask guests to be brave, we ask them to be real. MS isn&apos;t just a disease, it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
                   </p>
                   <p className="mb-4">
                     This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
