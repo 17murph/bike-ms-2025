@@ -11,6 +11,11 @@ export function middleware(request: NextRequest) {
     hostname === "www.bike-ms.com" ||
     hostname.endsWith(".bike-ms.com")
 
+  // If on bike-ms.com domain and requesting /podcast, redirect to theothersideofms.com
+  if (isBikeMsDomain && pathname === "/podcast") {
+    return NextResponse.redirect("https://theothersideofms.com", 308)
+  }
+
   // If on bike-ms.com domain and not already on /about-bike-ms, redirect
   if (isBikeMsDomain && !pathname.startsWith("/about-bike-ms")) {
     const url = request.nextUrl.clone()
