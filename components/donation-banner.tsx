@@ -11,12 +11,22 @@ export function DonationBanner() {
     return null
   }
 
+  const isOnAboutBikeMs = pathname === "/about-bike-ms"
+
+  const handleMobileClick = (e: React.MouseEvent) => {
+    if (isOnAboutBikeMs) {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }
+
   return (
     <>
       {/* Mobile banner - sticky/fixed */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-[60] bg-secondary text-white py-2 px-4 text-center">
         <Link
           href="/about-bike-ms"
+          onClick={handleMobileClick}
           className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
         >
           <span>Team Bike MS — Donate →</span>
