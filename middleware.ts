@@ -5,6 +5,17 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || ""
   const pathname = request.nextUrl.pathname
 
+  // Check if the request is from theothersideofms.com - these should pass through normally
+  const isTheOtherSideOfMsDomain =
+    hostname === "theothersideofms.com" ||
+    hostname === "www.theothersideofms.com" ||
+    hostname.endsWith(".theothersideofms.com")
+
+  // If on theothersideofms.com domain, continue normally (no redirects)
+  if (isTheOtherSideOfMsDomain) {
+    return NextResponse.next()
+  }
+
   // Check if the request is from bike-ms.com or www.bike-ms.com
   const isBikeMsDomain =
     hostname === "bike-ms.com" ||
@@ -23,7 +34,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308)
   }
 
-  // For theothersideofms.com or any other domain, continue normally
+  // For any other domain (including v0 preview, localhost, etc.), continue normally
   return NextResponse.next()
 }
 
