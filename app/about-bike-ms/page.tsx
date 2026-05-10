@@ -26,7 +26,7 @@ export default function AboutBikeMS() {
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-6">
           <section className="space-y-4">
-            <h1 className="text-4xl font-bold text-center">National Bike MS Cycling Team</h1>
+            <h1 className="text-4xl font-bold text-center">National Bike <span className="text-orange-500">MS</span> Cycling Team</h1>
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 my-3">
               <Link
