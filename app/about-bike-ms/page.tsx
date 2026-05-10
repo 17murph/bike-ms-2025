@@ -28,15 +28,47 @@ export default function AboutBikeMS() {
           <section className="space-y-4">
             <h1 className="text-4xl font-bold text-center">National Bike MS Cycling Team</h1>
 
-            <div className="flex justify-center gap-4 my-3">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 my-3">
+              <Link
+                href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
+              >
+                Donate to Casey
+              </Link>
+              <Link
+                href="https://events.nationalmssociety.org/participants/CurtBike2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
+              >
+                Donate to Curt
+              </Link>
               <Link
                 href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white border-2 border-orange-500 text-orange-600 rounded-full hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
               >
                 <Bike className="w-5 h-5" />
                 <span>Find Your Ride</span>
+              </Link>
+              <Link
+                href="https://events.nationalmssociety.org/participants/815695"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
+              >
+                Donate to John
+              </Link>
+              <Link
+                href="https://events.nationalmssociety.org/participants/764003?language=en&referrer=mf%3A764003%3Ayou-copy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
+              >
+                Donate to Rob
               </Link>
             </div>
 
@@ -68,7 +100,7 @@ export default function AboutBikeMS() {
 
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
+                <h2 className="text-3xl font-bold text-primary mb-1">Meet Our Team</h2>
                 <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
                 
                 {/* Team Members Grid */}
@@ -96,32 +128,6 @@ export default function AboutBikeMS() {
                         <ExternalLink className="w-4 h-4" />
                       </Link>
                       <p className="text-sm text-green-700 font-semibold mt-1">Raised: $2,270</p>
-                    </div>
-                  </div>
-
-                  {/* Rob Farthing */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/rob-farthing-new.jpg"
-                        alt="Rob Farthing - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Rob Farthing</h3>
-                      <p className="text-sm text-gray-600">Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Bluegrass Bourbon, Bardstown, KY</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Rob
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $2,240</p>
                     </div>
                   </div>
 
@@ -174,6 +180,32 @@ export default function AboutBikeMS() {
                         <ExternalLink className="w-4 h-4" />
                       </Link>
                       <p className="text-sm text-green-700 font-semibold mt-1">Raised: $350</p>
+                    </div>
+                  </div>
+
+                  {/* Rob Farthing */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
+                      <img
+                        src="/images/rob-farthing-new.jpg"
+                        alt="Rob Farthing - National Bike MS Cycling Team"
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-bold text-lg text-gray-800 mb-2">Rob Farthing</h3>
+                      <p className="text-sm text-gray-600">Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.</p>
+                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Bluegrass Bourbon, Bardstown, KY</p>
+                      <Link
+                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
+                      >
+                        Donate to Rob
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $2,240</p>
                     </div>
                   </div>
                 </div>
