@@ -11,12 +11,12 @@ export function middleware(request: NextRequest) {
     hostname === "www.bike-ms.com" ||
     hostname.endsWith(".bike-ms.com")
 
-  // If on bike-ms.com domain and requesting /podcast, redirect to theothersideofms.com
-  if (isBikeMsDomain && pathname === "/podcast") {
-    return NextResponse.redirect("https://theothersideofms.com", 308)
+  // If on bike-ms.com domain and requesting /podcast, redirect to www.theothersideofms.com
+  if (isBikeMsDomain && (pathname === "/podcast" || pathname === "/podcast/")) {
+    return NextResponse.redirect("https://www.theothersideofms.com", 308)
   }
 
-  // If on bike-ms.com domain and not already on /about-bike-ms, redirect
+  // If on bike-ms.com domain, redirect to /about-bike-ms (except if already there)
   if (isBikeMsDomain && !pathname.startsWith("/about-bike-ms")) {
     const url = request.nextUrl.clone()
     url.pathname = "/about-bike-ms"
