@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
 
   // If on bike-ms.com domain and requesting /podcast, redirect to www.theothersideofms.com
   if (isBikeMsDomain && (pathname === "/podcast" || pathname === "/podcast/")) {
-    return NextResponse.redirect("https://www.theothersideofms.com", 308)
+    return NextResponse.redirect(new URL("https://www.theothersideofms.com"), 308)
   }
 
   // If on bike-ms.com domain, redirect to /about-bike-ms (except if already there)
