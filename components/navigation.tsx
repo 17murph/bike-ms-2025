@@ -62,27 +62,24 @@ export function Navigation() {
     <nav
       className={cn(
         "w-full transition-all duration-300 z-50",
-        "fixed top-10 left-0 right-0 md:relative md:top-0",
-        scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5 md:py-2",
+        "fixed top-0 left-0 right-0",
+        scrolled ? "bg-white shadow-md py-0.5" : "bg-white/95 backdrop-blur-sm py-0.5",
       )}
     >
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-between items-center">
           {/* Bike MS Logo Section */}
-          <Link href="/bike-ms" className="flex items-center gap-3 group hover:bg-primary/5 rounded-lg p-2 -ml-2 transition-colors">
+          <Link href="/bike-ms" className="flex items-center gap-2 group hover:bg-primary/5 rounded p-1 -ml-1 transition-colors">
             <img 
               src="/images/bike-ms-logo.jpeg" 
               alt="Bike MS Logo" 
-              className="h-12 w-auto"
+              className="h-6 w-auto"
             />
-            <div className="flex flex-col">
-              <span className="text-xs text-primary font-medium underline underline-offset-2 group-hover:text-primary/80 transition-colors">Learn about our Bike MS</span>
-              <span className="text-xs text-primary font-medium underline underline-offset-2 group-hover:text-primary/80 transition-colors">Rides and Fundraising →</span>
-            </div>
+            <span className="text-xs text-primary font-medium group-hover:text-primary/80 transition-colors">Bike MS →</span>
           </Link>
 
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-0.5">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
 
@@ -91,12 +88,12 @@ export function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "flex items-center px-3 py-2 rounded-lg transition-colors",
+                    "flex items-center px-2 py-1 rounded text-sm transition-colors",
                     "hover:bg-primary/10 hover:text-primary",
                     isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
                   )}
                 >
-                  <item.icon className="w-4 h-4 mr-2" />
+                  <item.icon className="w-3.5 h-3.5 mr-1" />
                   <span>{item.name}</span>
                 </Link>
               )
@@ -106,13 +103,13 @@ export function Navigation() {
               href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
+              className="flex items-center px-2 py-1 ml-1 rounded text-sm bg-secondary text-white hover:bg-secondary/90 transition-colors"
             >
-              <Heart className="w-4 h-4 mr-2" />
-              <span>Donate to Bike MS</span>
+              <Heart className="w-3.5 h-3.5 mr-1" />
+              <span>Donate</span>
             </Link>
 
-            <div className="ml-2 pl-2 border-l border-gray-200">
+            <div className="ml-1 pl-1 border-l border-gray-200">
               <button
                 onClick={() => {
                   if (navigator.share) {
@@ -122,10 +119,10 @@ export function Navigation() {
                     })
                   }
                 }}
-                className="flex items-center px-3 py-2 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
+                className="flex items-center px-2 py-1 rounded text-sm transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
                 aria-label="Share"
               >
-                <Share2 className="w-4 h-4" />
+                <Share2 className="w-3.5 h-3.5" />
               </button>
             </div>
           </div>
