@@ -123,8 +123,8 @@ export default function AboutBikeMS() {
 
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-1">Meet the riders who make this mission real</h2>
-                <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
+                <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
+                <p className="text-sm text-gray-600 mb-6">Click a name below to donate to one of our cyclists Bike MS Fundraiser, 100% of all donations go to the National MS Society.</p>
                 
                 {/* Team Members Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
