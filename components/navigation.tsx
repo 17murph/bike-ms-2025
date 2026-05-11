@@ -32,16 +32,21 @@ export function Navigation() {
     setIsOpen(false)
   }, [pathname])
 
-  // Implement smooth scrolling for anchor links
+  // Implement smooth scrolling for anchor links (only for same-page hash links)
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement
       const anchor = target.closest("a")
 
+      // Only handle hash links that are on the same page AND have a hash
       if (
         anchor &&
         anchor.hash &&
         anchor.hash.startsWith("#") &&
+        anchor.hash.length > 1 && // Must have content after #
+        !anchor.href.includes("/about-bike-ms") && // Don't intercept navigation links
+        !anchor.href.includes("/bike-ms") &&
+        !anchor.href.includes("/contact") &&
         anchor.origin + anchor.pathname === window.location.origin + window.location.pathname
       ) {
         e.preventDefault()
@@ -62,7 +67,7 @@ export function Navigation() {
     <nav
       className={cn(
         "w-full transition-all duration-300 z-50",
-        "fixed top-10 left-0 right-0 md:relative md:top-0",
+        "fixed top-10 left-0 right-0 md:sticky md:top-0",
         scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5 md:py-2",
       )}
     >

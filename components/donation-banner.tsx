@@ -35,14 +35,14 @@ export function DonationBanner() {
       {/* Mobile spacer for fixed banner height */}
       <div className="md:hidden h-10"></div>
 
-      {/* Desktop banner - not sticky */}
-      <div className="hidden md:block bg-secondary text-white py-2 px-4 text-center">
+      {/* Desktop banner - sticky */}
+      <div className="hidden md:block sticky top-0 z-[60] bg-secondary text-white py-2 px-4 text-center">
         <Link
           href="/about-bike-ms"
           className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
         >
-          <span>🚴 MS has no finish line. Donate to one of our Bike MS Riders.</span>
-          <span className="underline font-semibold">→ Donate Now</span>
+          <span>MS has no finish line. Donate to one of our Bike MS Riders.</span>
+          <span className="underline font-semibold">Donate Now</span>
         </Link>
       </div>
     </>
