@@ -100,7 +100,7 @@ export default function AboutBikeMS() {
 
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-1">Meet Our Team</h2>
+                <h2 className="text-3xl font-bold text-primary mb-1">Meet the riders who make this mission real</h2>
                 <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
                 
                 {/* Team Members Grid */}
@@ -127,7 +127,6 @@ export default function AboutBikeMS() {
                         Donate to Casey
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $2,270</p>
                     </div>
                   </div>
 
@@ -153,7 +152,6 @@ export default function AboutBikeMS() {
                         Donate to Curt
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $6,407</p>
                     </div>
                   </div>
 
@@ -179,7 +177,6 @@ export default function AboutBikeMS() {
                         Donate to John
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $350</p>
                     </div>
                   </div>
 
@@ -205,7 +202,6 @@ export default function AboutBikeMS() {
                         Donate to Rob
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      <p className="text-sm text-green-700 font-semibold mt-1">Raised: $2,240</p>
                     </div>
                   </div>
                 </div>
