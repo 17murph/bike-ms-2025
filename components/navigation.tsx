@@ -16,7 +16,15 @@ const navItems = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isBikeMsDomain, setIsBikeMsDomain] = useState(false)
   const pathname = usePathname() || "/"
+
+  // Check if we're on the bike-ms.com domain
+  useEffect(() => {
+    const hostname = window.location.hostname
+    const isBikeMs = hostname === "bike-ms.com" || hostname === "www.bike-ms.com" || hostname.endsWith(".bike-ms.com")
+    setIsBikeMsDomain(isBikeMs)
+  }, [])
 
   // Handle scroll effect
   useEffect(() => {
@@ -71,7 +79,11 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-between items-center">
           {/* Bike MS Logo Section */}
-          <Link href="/bike-ms" className="flex items-center gap-3 group hover:bg-primary/5 rounded-lg p-2 -ml-2 transition-colors">
+          <Link 
+            href={isBikeMsDomain ? "https://www.theothersideofms.com/bike-ms" : "/bike-ms"} 
+            {...(isBikeMsDomain ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className="flex items-center gap-3 group hover:bg-primary/5 rounded-lg p-2 -ml-2 transition-colors"
+          >
             <img 
               src="/images/bike-ms-logo.jpeg" 
               alt="Bike MS Logo" 
@@ -86,11 +98,17 @@ export function Navigation() {
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+              // On bike-ms.com, link to theothersideofms.com for pages other than /about-bike-ms
+              const href = isBikeMsDomain && item.href !== "/about-bike-ms" 
+                ? `https://www.theothersideofms.com${item.href}` 
+                : item.href
+              const isExternal = isBikeMsDomain && item.href !== "/about-bike-ms"
 
               return (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={href}
+                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className={cn(
                     "flex items-center px-3 py-2 rounded-lg transition-colors",
                     "hover:bg-primary/10 hover:text-primary",
@@ -163,11 +181,17 @@ export function Navigation() {
 
               {navItems.map((item) => {
                 const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+                // On bike-ms.com, link to theothersideofms.com for pages other than /about-bike-ms
+                const href = isBikeMsDomain && item.href !== "/about-bike-ms" 
+                  ? `https://www.theothersideofms.com${item.href}` 
+                  : item.href
+                const isExternal = isBikeMsDomain && item.href !== "/about-bike-ms"
 
                 return (
                   <Link
                     key={item.name}
-                    href={item.href}
+                    href={href}
+                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "flex items-center px-4 py-4 rounded-lg transition-colors min-h-[48px]",
