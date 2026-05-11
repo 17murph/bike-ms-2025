@@ -98,6 +98,30 @@ export default function AboutBikeMS() {
               </p>
             </section>
 
+            {/* Our Mission Section */}
+            <section className="py-6 bg-gray-50 rounded-xl">
+              <div className="container mx-auto px-4">
+                <h2 className="text-3xl font-bold text-primary mb-4">Our Mission</h2>
+                <div className="prose max-w-none">
+                  <p className="my-2">
+                    The National Bike MS Team, under the umbrella "The Other Side of MS" exists for one reason, to make sure no one living with MS feels invisible. That is our why. Every mile we ride and every story we share comes back to this simple belief.
+                  </p>
+                  <p className="my-2">
+                    We bring together riders who raise at least $5,000 each year for the National MS Society. These are cyclists who already give everything they have, yet still feel the pull to do more. Many of them travel to rides alone, even though they share the same commitment. The National Team gives them a place to belong and a larger story to be part of.
+                  </p>
+                  <p className="my-2">
+                    Each year we choose one Bike MS event to stand behind. We travel as a unified team and ride with a local chapter to lift their event and shine a light on the people they serve. Our jerseys carry our name, but they also stand for something larger. They reflect our commitment to the Passport Program and our promise to honor the local communities we ride with.
+                  </p>
+                  <p className="my-2">
+                    This team is not about prestige or recognition. It is about purpose. It is about showing what happens when dedicated fundraisers come together to amplify a chapter, inspire new riders, and raise more money for the MS community. It is also about the stories. Through The Other Side of MS podcast, we highlight voices from every chapter we touch. These are real, unfiltered accounts of what MS takes, what it changes, and what it never defeats.
+                  </p>
+                  <p className="my-2">
+                    Our why is connection. Our how is community. Our what is simple. A national team of riders and storytellers who use their miles and their voices to push the mission forward. Not for credit. Not for praise. For the people living with MS who deserve to be heard.
+                  </p>
+                </div>
+              </div>
+            </section>
+
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-1">Meet the riders who make this mission real</h2>
@@ -218,33 +242,15 @@ export default function AboutBikeMS() {
                     <span>Join Our Team</span>
                   </Link>
                 </div>
-                
-                <div className="prose max-w-none">
-                  <p className="my-2">
-                    The National Bike MS Team, under the umbrella "The Other Side of MS" exists for one reason, to make sure no one living with MS feels invisible. That is our why. Every mile we ride and every story we share comes back to this simple belief.
-                  </p>
-                  <p className="my-2">
-                    We bring together riders who raise at least $5,000 each year for the National MS Society. These are cyclists who already give everything they have, yet still feel the pull to do more. Many of them travel to rides alone, even though they share the same commitment. The National Team gives them a place to belong and a larger story to be part of.
-                  </p>
-                  <p className="my-2">
-                    Each year we choose one Bike MS event to stand behind. We travel as a unified team and ride with a local chapter to lift their event and shine a light on the people they serve. Our jerseys carry our name, but they also stand for something larger. They reflect our commitment to the Passport Program and our promise to honor the local communities we ride with.
-                  </p>
-                  <p className="my-2">
-                    This team is not about prestige or recognition. It is about purpose. It is about showing what happens when dedicated fundraisers come together to amplify a chapter, inspire new riders, and raise more money for the MS community. It is also about the stories. Through The Other Side of MS podcast, we highlight voices from every chapter we touch. These are real, unfiltered accounts of what MS takes, what it changes, and what it never defeats.
-                  </p>
-                  <p className="my-2">
-                    Our why is connection. Our how is community. Our what is simple. A national team of riders and storytellers who use their miles and their voices to push the mission forward. Not for credit. Not for praise. For the people living with MS who deserve to be heard.
-                  </p>
 
-                  <div className="mt-3">
-                    <a
-                      href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                    >
-                      <Info className="w-5 h-5" />
-                      <span>For More Information</span>
-                    </a>
-                  </div>
+                <div className="mt-3">
+                  <a
+                    href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Info className="w-5 h-5" />
+                    <span>For More Information</span>
+                  </a>
                 </div>
               </div>
             </section>
