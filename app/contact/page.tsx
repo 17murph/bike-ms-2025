@@ -20,7 +20,7 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Add padding to account for fixed banner and navigation */}
-      <div className="pt-[104px] md:pt-[120px]"></div>
+      <div className="pt-[56px] md:pt-[16px]"></div>
 
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-8">
