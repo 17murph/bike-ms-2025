@@ -32,29 +32,25 @@ export function Navigation() {
     setIsOpen(false)
   }, [pathname])
 
-  // Implement smooth scrolling for anchor links (only for same-page hash links)
+  // Implement smooth scrolling for hash-only anchor links (e.g., href="#section")
+  // This only handles pure hash links, not navigation links to other pages
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement
       const anchor = target.closest("a")
 
-      // Only handle hash links that are on the same page AND have a hash
-      if (
-        anchor &&
-        anchor.hash &&
-        anchor.hash.startsWith("#") &&
-        anchor.hash.length > 1 && // Must have content after #
-        !anchor.href.includes("/about-bike-ms") && // Don't intercept navigation links
-        !anchor.href.includes("/bike-ms") &&
-        !anchor.href.includes("/contact") &&
-        anchor.origin + anchor.pathname === window.location.origin + window.location.pathname
-      ) {
+      if (!anchor) return
+
+      // Get the href attribute directly - if it starts with "#", it's a same-page hash link
+      const href = anchor.getAttribute("href")
+      
+      // Only handle pure hash links like "#section" - not "/page#section" or full URLs
+      if (href && href.startsWith("#") && href.length > 1) {
         e.preventDefault()
-        const targetElement = document.querySelector(anchor.hash)
+        const targetElement = document.querySelector(href)
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: "smooth" })
-          // Update URL without reload
-          window.history.pushState(null, "", anchor.hash)
+          window.history.pushState(null, "", href)
         }
       }
     }
