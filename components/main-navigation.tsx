@@ -64,17 +64,17 @@ export function MainNavigation() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
-        scrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm",
+        scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5 md:py-2",
       )}
     >
-      <div className="container mx-auto px-4 py-0">
+      <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-between items-center h-8">
-          <Link href="/" className="flex items-center gap-1">
-            <span className="font-bold text-primary text-xs">Bike MS 2025</span>
+        <div className="hidden md:flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-2">
+            <span className="font-bold text-primary text-xl">Bike MS 2025</span>
           </Link>
 
-          <div className="flex items-center space-x-0">
+          <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
 
@@ -83,12 +83,12 @@ export function MainNavigation() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "flex items-center px-1.5 py-0.5 rounded text-xs transition-colors",
+                    "flex items-center px-3 py-2 rounded-lg transition-colors",
                     "hover:bg-primary/10 hover:text-primary",
                     isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
                   )}
                 >
-                  <item.icon className="w-3 h-3 mr-0.5" />
+                  <item.icon className="w-4 h-4 mr-2" />
                   <span>{item.name}</span>
                 </Link>
               )
@@ -98,13 +98,13 @@ export function MainNavigation() {
               href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center px-1.5 py-0.5 ml-1 rounded text-xs bg-secondary text-white hover:bg-secondary/90 transition-colors"
+              className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
             >
-              <Heart className="w-3 h-3 mr-0.5" />
+              <Heart className="w-4 h-4 mr-2" />
               <span>Donate</span>
             </Link>
 
-            <div className="ml-1 pl-1 border-l border-gray-200">
+            <div className="ml-2 pl-2 border-l border-gray-200">
               <button
                 onClick={() => {
                   if (navigator.share) {
@@ -114,10 +114,10 @@ export function MainNavigation() {
                     })
                   }
                 }}
-                className="flex items-center px-1.5 py-0.5 rounded text-xs transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
+                className="flex items-center px-3 py-2 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
                 aria-label="Share"
               >
-                <Share2 className="w-3 h-3" />
+                <Share2 className="w-4 h-4" />
               </button>
             </div>
           </div>

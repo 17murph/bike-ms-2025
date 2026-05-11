@@ -62,24 +62,27 @@ export function Navigation() {
     <nav
       className={cn(
         "w-full transition-all duration-300 z-50",
-        "fixed top-0 left-0 right-0",
-        scrolled ? "bg-white shadow-sm" : "bg-white/95 backdrop-blur-sm",
+        "fixed top-10 left-0 right-0 md:relative md:top-0",
+        scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5 md:py-2",
       )}
     >
       <div className="container mx-auto px-4">
-        {/* Desktop Navigation - Compact 28px height */}
-        <div className="hidden md:flex justify-between items-center h-7">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex justify-between items-center">
           {/* Bike MS Logo Section */}
-          <Link href="/bike-ms" className="flex items-center gap-1 group hover:bg-primary/5 rounded px-1 transition-colors">
+          <Link href="/bike-ms" className="flex items-center gap-3 group hover:bg-primary/5 rounded-lg p-2 -ml-2 transition-colors">
             <img 
               src="/images/bike-ms-logo.jpeg" 
               alt="Bike MS Logo" 
-              className="h-4 w-auto"
+              className="h-12 w-auto"
             />
-            <span className="text-[10px] text-primary font-medium group-hover:text-primary/80 transition-colors">Bike MS</span>
+            <div className="flex flex-col">
+              <span className="text-xs text-primary font-medium underline underline-offset-2 group-hover:text-primary/80 transition-colors">Learn about our Bike MS</span>
+              <span className="text-xs text-primary font-medium underline underline-offset-2 group-hover:text-primary/80 transition-colors">Rides and Fundraising →</span>
+            </div>
           </Link>
 
-          <div className="flex items-center">
+          <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
 
@@ -88,12 +91,12 @@ export function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "flex items-center px-1.5 py-0.5 rounded text-[11px] transition-colors",
+                    "flex items-center px-3 py-2 rounded-lg transition-colors",
                     "hover:bg-primary/10 hover:text-primary",
                     isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
                   )}
                 >
-                  <item.icon className="w-3 h-3 mr-0.5" />
+                  <item.icon className="w-4 h-4 mr-2" />
                   <span>{item.name}</span>
                 </Link>
               )
@@ -103,13 +106,13 @@ export function Navigation() {
               href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center px-1.5 py-0.5 ml-1 rounded text-[11px] bg-secondary text-white hover:bg-secondary/90 transition-colors"
+              className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
             >
-              <Heart className="w-3 h-3 mr-0.5" />
-              <span>Donate</span>
+              <Heart className="w-4 h-4 mr-2" />
+              <span>Donate to Bike MS</span>
             </Link>
 
-            <div className="ml-1 pl-1 border-l border-gray-200">
+            <div className="ml-2 pl-2 border-l border-gray-200">
               <button
                 onClick={() => {
                   if (navigator.share) {
@@ -119,10 +122,10 @@ export function Navigation() {
                     })
                   }
                 }}
-                className="flex items-center px-1 py-0.5 rounded text-[11px] transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
+                className="flex items-center px-3 py-2 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
                 aria-label="Share"
               >
-                <Share2 className="w-3 h-3" />
+                <Share2 className="w-4 h-4" />
               </button>
             </div>
           </div>

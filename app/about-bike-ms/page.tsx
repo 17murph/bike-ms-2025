@@ -20,8 +20,8 @@ export default function AboutBikeMS() {
     <div className="min-h-screen bg-white relative">
       <Navigation />
 
-      {/* Add padding to account for fixed navigation */}
-      <div className="pt-[56px] md:pt-[28px]"></div>
+      {/* Add padding to account for fixed banner and navigation */}
+      <div className="pt-[56px] md:pt-[16px]"></div>
 
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-6">
