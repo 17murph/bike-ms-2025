@@ -26,6 +26,7 @@ export default function AboutBikeMS() {
         <div className="max-w-4xl mx-auto space-y-6">
           <section className="space-y-4">
             <h1 className="text-4xl font-bold text-center">National Bike <span className="text-orange-500">MS</span> Cycling Team</h1>
+            <p className="text-sm text-gray-600 text-center">Click a name below to donate to one of our cyclists Bike MS Fundraiser, 100% of all donations go to the National MS Society.</p>
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 my-3">
               <Link
@@ -123,8 +124,8 @@ export default function AboutBikeMS() {
 
             <section className="py-4 mt-8">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-1">National Bike MS Cycling Team</h2>
-                <p className="text-sm text-gray-600 mb-6">Click a name below to donate to one of our cyclists Bike MS Fundraiser, 100% of all donations go to the National MS Society.</p>
+                <h2 className="text-3xl font-bold text-primary mb-1">Meet the riders who make this mission real</h2>
+                <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
                 
                 {/* Team Members Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
