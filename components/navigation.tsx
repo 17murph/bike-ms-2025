@@ -63,23 +63,23 @@ export function Navigation() {
       className={cn(
         "w-full transition-all duration-300 z-50",
         "fixed top-0 left-0 right-0",
-        scrolled ? "bg-white shadow-md py-0.5" : "bg-white/95 backdrop-blur-sm py-0.5",
+        scrolled ? "bg-white shadow-sm" : "bg-white/95 backdrop-blur-sm",
       )}
     >
       <div className="container mx-auto px-4">
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-between items-center">
+        {/* Desktop Navigation - Compact 28px height */}
+        <div className="hidden md:flex justify-between items-center h-7">
           {/* Bike MS Logo Section */}
-          <Link href="/bike-ms" className="flex items-center gap-2 group hover:bg-primary/5 rounded p-1 -ml-1 transition-colors">
+          <Link href="/bike-ms" className="flex items-center gap-1 group hover:bg-primary/5 rounded px-1 transition-colors">
             <img 
               src="/images/bike-ms-logo.jpeg" 
               alt="Bike MS Logo" 
-              className="h-6 w-auto"
+              className="h-4 w-auto"
             />
-            <span className="text-xs text-primary font-medium group-hover:text-primary/80 transition-colors">Bike MS →</span>
+            <span className="text-[10px] text-primary font-medium group-hover:text-primary/80 transition-colors">Bike MS</span>
           </Link>
 
-          <div className="flex items-center space-x-0.5">
+          <div className="flex items-center">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
 
@@ -88,12 +88,12 @@ export function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "flex items-center px-2 py-1 rounded text-sm transition-colors",
+                    "flex items-center px-1.5 py-0.5 rounded text-[11px] transition-colors",
                     "hover:bg-primary/10 hover:text-primary",
                     isActive ? "bg-primary/10 text-primary font-medium" : "text-gray-700",
                   )}
                 >
-                  <item.icon className="w-3.5 h-3.5 mr-1" />
+                  <item.icon className="w-3 h-3 mr-0.5" />
                   <span>{item.name}</span>
                 </Link>
               )
@@ -103,9 +103,9 @@ export function Navigation() {
               href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center px-2 py-1 ml-1 rounded text-sm bg-secondary text-white hover:bg-secondary/90 transition-colors"
+              className="flex items-center px-1.5 py-0.5 ml-1 rounded text-[11px] bg-secondary text-white hover:bg-secondary/90 transition-colors"
             >
-              <Heart className="w-3.5 h-3.5 mr-1" />
+              <Heart className="w-3 h-3 mr-0.5" />
               <span>Donate</span>
             </Link>
 
@@ -119,10 +119,10 @@ export function Navigation() {
                     })
                   }
                 }}
-                className="flex items-center px-2 py-1 rounded text-sm transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
+                className="flex items-center px-1 py-0.5 rounded text-[11px] transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
                 aria-label="Share"
               >
-                <Share2 className="w-3.5 h-3.5" />
+                <Share2 className="w-3 h-3" />
               </button>
             </div>
           </div>

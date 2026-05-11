@@ -84,8 +84,8 @@ export default function Home() {
     <div className="min-h-screen bg-white relative">
       <Navigation />
 
-      {/* Add padding to account for fixed banner and navigation */}
-      <div className="pt-[36px] md:pt-[40px]"></div>
+      {/* Add padding to account for fixed navigation */}
+      <div className="pt-[56px] md:pt-[28px]"></div>
 
       <main className="relative">
         {/* Hero Banner Section */}
