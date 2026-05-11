@@ -63,7 +63,7 @@ export function Navigation() {
       className={cn(
         "w-full transition-all duration-300 z-50",
         "fixed top-10 left-0 right-0 md:relative md:top-0",
-        scrolled ? "bg-white shadow-md py-2" : "bg-white/95 backdrop-blur-sm py-3 md:py-4",
+        scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5 md:py-2",
       )}
     >
       <div className="container mx-auto px-4">

@@ -28,7 +28,7 @@ export default function BikeMS() {
       <Navigation />
 
       {/* Add padding to account for fixed banner and navigation */}
-      <div className="pt-[104px] md:pt-[120px]"></div>
+      <div className="pt-[72px] md:pt-[80px]"></div>
 
       {/* New Hero Section with Bike MS Focus */}
       <section className="relative">

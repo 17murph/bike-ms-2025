@@ -10,7 +10,7 @@ const PicturesPage = () => {
       <Navigation />
 
       {/* Add padding to account for fixed banner and navigation */}
-      <div className="pt-[104px] md:pt-[120px]"></div>
+      <div className="pt-[72px] md:pt-[80px]"></div>
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
