@@ -244,28 +244,14 @@ export default function Home() {
               {/* Right - Latest Episode */}
               <div className="lg:w-1/2">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                  {/* Episode Artwork */}
-                  <div className="relative">
-                    <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
-                      <img
-                        src="/images/rachael-fenich.jpg"
-                        alt="Rachael Fenich - Latest Episode Guest"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=rachael"
-                        }}
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
-                          Latest Episode
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* Episode Details */}
                   <div className="p-6">
-                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 6 • May 14, 2026</div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
+                        Latest Episode
+                      </span>
+                      <span className="text-sm text-gray-500 font-medium">Season 4, Episode 6 • May 14, 2026</span>
+                    </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Inside Something You Didn&apos;t Choose</h3>
                     <p className="text-lg text-primary font-medium mb-3">with Rachael Fenich</p>
                     <p className="text-gray-600 leading-relaxed mb-6">
