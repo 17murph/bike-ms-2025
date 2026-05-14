@@ -42,6 +42,10 @@ export default function Home() {
       text: "We will Win.",
       author: "Mark Morabito - Season 4, Episode 5",
     },
+    {
+      text: "This is not a story about inspiration. It's about learning how to live inside something you didn't choose, together.",
+      author: "Rachael Fenich - Season 4, Episode 6",
+    },
   ]
 
   // Rotate quotes every 8 seconds
@@ -52,8 +56,14 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [impactfulQuotes.length])
 
-  // Start Listening episodes data
+  // Start Listening episodes data (ordered by release date, left to right)
   const startListeningEpisodes = [
+    {
+      title: "This Is Not About Silver Linings",
+      guest: "Tyler Campbell",
+      description: "Nine years of denial and isolation.",
+      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
+    },
     {
       title: "We Will Win",
       guest: "Mark Morabito",
@@ -67,16 +77,10 @@ export default function Home() {
       link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd?si=ee8f5d3eb5b8487c",
     },
     {
-      title: "This Is Not About Silver Linings",
-      guest: "Tyler Campbell",
-      description: "Nine years of denial and isolation.",
-      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf?si=8XcWBdi8QCOF-Nt8SH0mAQ",
-    },
-    {
-      title: "If It Don't Align, I Decline",
-      guest: "Tiffany A. Vinson",
-      description: "The diagnosis that changed everything.",
-      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb?si=D3gyi6pgQFKQRKujP1MbLQ",
+      title: "Living Inside Something You Didn't Choose",
+      guest: "Rachael Fenich",
+      description: "What MS looks like inside a marriage.",
+      link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z?si=5f85a67aaee14580",
     },
   ]
 
@@ -244,11 +248,11 @@ export default function Home() {
                   <div className="relative">
                     <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
                       <img
-                        src="/images/mark.jpg"
-                        alt="Mark Morabito - Latest Episode Guest"
+                        src="/images/rachael-fenich.jpg"
+                        alt="Rachael Fenich - Latest Episode Guest"
                         className="w-full h-full object-cover"
                         onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=mark"
+                          e.currentTarget.src = "/placeholder.svg?key=rachael"
                         }}
                       />
                       <div className="absolute top-4 left-4">
@@ -261,14 +265,14 @@ export default function Home() {
 
                   {/* Episode Details */}
                   <div className="p-6">
-                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 5 • April 30, 2026</div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">We Will Win</h3>
-                    <p className="text-lg text-primary font-medium mb-3">with Mark Morabito</p>
+                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 6 • May 14, 2026</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Inside Something You Didn&apos;t Choose</h3>
+                    <p className="text-lg text-primary font-medium mb-3">with Rachael Fenich</p>
                     <p className="text-gray-600 leading-relaxed mb-6">
-                      Mark looked at his wife in a hospital room and told her she could leave. He had just been diagnosed with MS. And in his mind, he already knew how it would end. This is his story of survival, love, and choosing to fight.
+                      Rachael Fenich has seen multiple sclerosis from more than one angle. Her husband lives with it. So do other members of her family. In this conversation, Rachael talks about what MS actually looks like inside a marriage. The parts you don&apos;t see. The things that don&apos;t get said. This is not a story about inspiration. It&apos;s about learning how to live inside something you didn&apos;t choose, together.
                     </p>
                     <a
-                      href="https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx?si=87c089007a7c4298"
+                      href="https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z?si=5f85a67aaee14580"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 px-6 py-3 bg-[#1DB954] text-white rounded-full hover:bg-[#1ed760] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -352,6 +356,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "Living Inside Something You Didn't Choose", guest: "Rachael Fenich", episode: "S4 E6", link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z" },
                       { title: "We Will Win - Mark's Story", guest: "Mark Morabito", episode: "S4 E5", link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx" },
                       { title: "A Different Kind of Victory", guest: "Justin Yuhaze", episode: "S4 E4", link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR" },
                       { title: "This Is Not a Story About Silver Linings", guest: "Tyler", episode: "S4 E3", link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf" },

@@ -3,6 +3,54 @@ import type { Season } from "../types/podcast"
 // This is a comprehensive list of all episodes from all seasons
 // Based on the content from www.theothersideofms.podbean.com
 
+export const season4: Season = {
+  number: 4,
+  episodes: [
+    {
+      id: "S4_E6",
+      title: "Living Inside Something You Didn't Choose",
+      guest: "Rachael Fenich",
+      link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z",
+      date: "May 14, 2026",
+    },
+    {
+      id: "S4_E5",
+      title: "We Will Win",
+      guest: "Mark Morabito",
+      link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx",
+      date: "Apr 30, 2026",
+    },
+    {
+      id: "S4_E4",
+      title: "A Different Kind of Victory",
+      guest: "Justin Yuhaze",
+      link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR",
+      date: "Apr 23, 2026",
+    },
+    {
+      id: "S4_E3",
+      title: "This Is Not a Story About Silver Linings",
+      guest: "Tyler Campbell",
+      link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf",
+      date: "Apr 16, 2026",
+    },
+    {
+      id: "S4_E2",
+      title: "If It Don't Align, I Decline",
+      guest: "Tiffany A. Vinson",
+      link: "https://open.spotify.com/episode/2J2pYJ2B8VXlsJplbBv3jb",
+      date: "Apr 9, 2026",
+    },
+    {
+      id: "S4_E1",
+      title: "The Death of My Former Self",
+      guest: "Selena Buongiorno",
+      link: "https://open.spotify.com/episode/1VQF7VkP17AXqWN4ivB9Wd",
+      date: "Apr 2, 2026",
+    },
+  ],
+}
+
 export const season3: Season = {
   number: 3,
   episodes: [
