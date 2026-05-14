@@ -44,7 +44,7 @@ export default function Home() {
     },
     {
       text: "This is not a story about inspiration. It's about learning how to live inside something you didn't choose, together.",
-      author: "Rachael Renich - Season 4, Episode 6",
+      author: "Rachael Fenich - Season 4, Episode 6",
     },
   ]
 
@@ -78,7 +78,7 @@ export default function Home() {
     },
     {
       title: "Living Inside Something You Didn't Choose",
-      guest: "Rachael Renich",
+      guest: "Rachael Fenich",
       description: "What MS looks like inside a marriage.",
       link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z?si=5f85a67aaee14580",
     },
@@ -248,8 +248,8 @@ export default function Home() {
                   <div className="relative">
                     <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
                       <img
-                        src="/images/rachael-renich.jpg"
-                        alt="Rachael Renich - Latest Episode Guest"
+                        src="/images/rachael-fenich.jpg"
+                        alt="Rachael Fenich - Latest Episode Guest"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg?key=rachael"
@@ -267,9 +267,9 @@ export default function Home() {
                   <div className="p-6">
                     <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 6 • May 14, 2026</div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Inside Something You Didn&apos;t Choose</h3>
-                    <p className="text-lg text-primary font-medium mb-3">with Rachael Renich</p>
+                    <p className="text-lg text-primary font-medium mb-3">with Rachael Fenich</p>
                     <p className="text-gray-600 leading-relaxed mb-6">
-                      Rachael Renich has seen multiple sclerosis from more than one angle. Her husband lives with it. So do other members of her family. In this conversation, Rachael talks about what MS actually looks like inside a marriage. The parts you don&apos;t see. The things that don&apos;t get said. This is not a story about inspiration. It&apos;s about learning how to live inside something you didn&apos;t choose, together.
+                      Rachael Fenich has seen multiple sclerosis from more than one angle. Her husband lives with it. So do other members of her family. In this conversation, Rachael talks about what MS actually looks like inside a marriage. The parts you don&apos;t see. The things that don&apos;t get said. This is not a story about inspiration. It&apos;s about learning how to live inside something you didn&apos;t choose, together.
                     </p>
                     <a
                       href="https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z?si=5f85a67aaee14580"
@@ -356,7 +356,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
-                      { title: "Living Inside Something You Didn't Choose", guest: "Rachael Renich", episode: "S4 E6", link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z" },
+                      { title: "Living Inside Something You Didn't Choose", guest: "Rachael Fenich", episode: "S4 E6", link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z" },
                       { title: "We Will Win - Mark's Story", guest: "Mark Morabito", episode: "S4 E5", link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx" },
                       { title: "A Different Kind of Victory", guest: "Justin Yuhaze", episode: "S4 E4", link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR" },
                       { title: "This Is Not a Story About Silver Linings", guest: "Tyler", episode: "S4 E3", link: "https://open.spotify.com/episode/2IF9Yd950JarGdF2sUPnOf" },

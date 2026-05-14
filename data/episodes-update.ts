@@ -9,7 +9,7 @@ export const season4: Season = {
     {
       id: "S4_E6",
       title: "Living Inside Something You Didn't Choose",
-      guest: "Rachael Renich",
+      guest: "Rachael Fenich",
       link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z",
       date: "May 14, 2026",
     },
