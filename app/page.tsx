@@ -109,17 +109,17 @@ export default function Home() {
                   Unfiltered voices. Uncomfortable truths. Deep humanity.
                 </p>
 
-                {/* Hear the Story Button */}
+                {/* Hear the Stories Button */}
                 <a
                   href="https://directory.libsyn.com/shows/view/id/e02b301a-9cb5-48e2-a16d-02b3600051fa"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors font-semibold shadow-lg text-lg"
+                  className="flex items-center gap-2 bg-[#5A5A5A] text-white px-8 py-3 rounded-lg hover:bg-[#4A4A4A] transition-colors font-semibold text-lg"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                  Hear the Story
+                  Hear the Stories
                 </a>
               </div>
             </div>
