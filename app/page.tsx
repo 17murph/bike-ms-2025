@@ -109,42 +109,18 @@ export default function Home() {
                   Unfiltered voices. Uncomfortable truths. Deep humanity.
                 </p>
 
-                {/* Platform Buttons */}
-                <div className="flex flex-wrap justify-center gap-3">
-                  <a
-                    href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-[#1DB954] text-white px-5 py-2.5 rounded-full hover:bg-[#1ed760] transition-colors font-medium shadow-md"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
-                    </svg>
-                    Spotify
-                  </a>
-                  <a
-                    href="https://podcasts.apple.com/us/podcast/the-other-side-of-ms/id1682272920"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-full hover:bg-white/30 transition-colors font-medium"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm0 2a6 6 0 0 0-6 6c0 2.21 1.194 4.132 2.969 5.168a.5.5 0 0 0 .531-.848A4.978 4.978 0 0 1 7 12a5 5 0 1 1 7.5 4.32.5.5 0 0 0 .531.848A5.978 5.978 0 0 0 18 12a6 6 0 0 0-6-6zm0 3a3 3 0 0 0-3 3c0 1.098.596 2.052 1.477 2.573a.5.5 0 0 0 .523-.852A1.988 1.988 0 0 1 10 12a2 2 0 1 1 3 1.721.5.5 0 0 0 .523.852A2.988 2.988 0 0 0 15 12a3 3 0 0 0-3-3zm0 3a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5z"/>
-                    </svg>
-                    Apple Podcasts
-                  </a>
-                  <a
-                    href="https://music.amazon.com/podcasts/343490f1-fe67-4b30-9049-500c3baf378d"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-full hover:bg-white/30 transition-colors font-medium"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    Amazon Music
-                  </a>
-                </div>
+                {/* Hear the Stories Button */}
+                <a
+                  href="https://directory.libsyn.com/shows/view/id/e02b301a-9cb5-48e2-a16d-02b3600051fa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[#5A5A5A] text-white px-8 py-3 rounded-lg hover:bg-[#4A4A4A] transition-colors font-semibold text-lg"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Hear the Stories
+                </a>
               </div>
             </div>
           </div>
@@ -304,10 +280,48 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            {/* Platform Buttons */}
+            <div className="mt-12 text-center">
+              <p className="text-gray-500 text-sm mb-4">Listen on your favorite platform</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <a
+                  href="https://open.spotify.com/show/4mbtaL1bqpXpmUPmhYBlrZ?si=97200f7d613a4054"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[#1DB954] text-white px-5 py-2.5 rounded-full hover:bg-[#1ed760] transition-colors font-medium shadow-md"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
+                  </svg>
+                  Spotify
+                </a>
+                <a
+                  href="https://podcasts.apple.com/us/podcast/the-other-side-of-ms/id1682272920"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-gray-800 text-white px-5 py-2.5 rounded-full hover:bg-gray-700 transition-colors font-medium shadow-md"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm0 2a6 6 0 0 0-6 6c0 2.21 1.194 4.132 2.969 5.168a.5.5 0 0 0 .531-.848A4.978 4.978 0 0 1 7 12a5 5 0 1 1 7.5 4.32.5.5 0 0 0 .531.848A5.978 5.978 0 0 0 18 12a6 6 0 0 0-6-6zm0 3a3 3 0 0 0-3 3c0 1.098.596 2.052 1.477 2.573a.5.5 0 0 0 .523-.852A1.988 1.988 0 0 1 10 12a2 2 0 1 1 3 1.721.5.5 0 0 0 .523.852A2.988 2.988 0 0 0 15 12a3 3 0 0 0-3-3zm0 3a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5z"/>
+                  </svg>
+                  Apple Podcasts
+                </a>
+                <a
+                  href="https://music.amazon.com/podcasts/343490f1-fe67-4b30-9049-500c3baf378d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-gray-800 text-white px-5 py-2.5 rounded-full hover:bg-gray-700 transition-colors font-medium shadow-md"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  Amazon Music
+                </a>
+              </div>
+            </div>
           </div>
         </section>
-
-        {/* Episode Library Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto max-w-6xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Episode Library</h2>
