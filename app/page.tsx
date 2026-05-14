@@ -244,44 +244,31 @@ export default function Home() {
               {/* Right - Latest Episode */}
               <div className="lg:w-1/2">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                  {/* Episode Artwork */}
-                  <div className="relative">
-                    <div className="aspect-square relative bg-gradient-to-br from-primary to-primary/80">
-                      <img
-                        src="/images/rachael-fenich.jpg"
-                        alt="Rachael Fenich - Latest Episode Guest"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/placeholder.svg?key=rachael"
-                        }}
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
-                          Latest Episode
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* Episode Details */}
                   <div className="p-6">
-                    <div className="text-sm text-gray-500 font-medium mb-2">Season 4, Episode 6 • May 14, 2026</div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
+                        Latest Episode
+                      </span>
+                      <span className="text-sm text-gray-500 font-medium">Season 4, Episode 6 • May 14, 2026</span>
+                    </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Inside Something You Didn&apos;t Choose</h3>
                     <p className="text-lg text-primary font-medium mb-3">with Rachael Fenich</p>
                     <p className="text-gray-600 leading-relaxed mb-6">
                       Rachael Fenich has seen multiple sclerosis from more than one angle. Her husband lives with it. So do other members of her family. In this conversation, Rachael talks about what MS actually looks like inside a marriage. The parts you don&apos;t see. The things that don&apos;t get said. This is not a story about inspiration. It&apos;s about learning how to live inside something you didn&apos;t choose, together.
                     </p>
-                    <a
-                      href="https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z?si=5f85a67aaee14580"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 px-6 py-3 bg-[#1DB954] text-white rounded-full hover:bg-[#1ed760] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.6 0-.359.24-.66.54-.78 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.242 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
-                      </svg>
-                      Listen on Spotify
-                    </a>
+                    {/* Libsyn Embed Player */}
+                    <div className="w-full rounded-lg overflow-hidden">
+                      <iframe 
+                        title="Embed Player" 
+                        style={{ border: 'none' }} 
+                        src="https://play.libsyn.com/embed/episode/id/41140130/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        height="192" 
+                        width="100%" 
+                        scrolling="no" 
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
               </div>
