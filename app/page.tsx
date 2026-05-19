@@ -238,7 +238,7 @@ export default function Home() {
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/41103540/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/41140130/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
