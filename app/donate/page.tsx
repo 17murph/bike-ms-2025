@@ -8,6 +8,7 @@ import { useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
+import { cn } from "@/lib/utils"
 
 export default function DonatePage() {
   const donors = useMemo(() => [
