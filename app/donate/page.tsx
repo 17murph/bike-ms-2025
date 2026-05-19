@@ -32,25 +32,27 @@ export default function DonatePage() {
       <section className="relative">
         <div className="relative w-full h-[500px] md:h-[550px] overflow-hidden">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
-          {/* Blended hero with multiple elements */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/bike-ms-logo.jpeg"
-              alt="Bike MS Logo"
-              fill
-              className="object-contain opacity-20"
-              priority
-            />
-          </div>
-          <div className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
+          {/* Centered cycling photo as main background */}
+          <div className="absolute inset-0 z-0 flex items-center justify-center">
             <Image
               src="/images/Casey_BikeMS_cycling.png"
               alt="Casey cycling in Bike MS jersey"
-              width={200}
-              height={200}
+              fill
+              className="object-contain opacity-25"
+              priority
+            />
+          </div>
+          {/* Bike MS Logo - left side */}
+          <div className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
+            <Image
+              src="/images/bike-ms-logo.jpeg"
+              alt="Bike MS Logo"
+              width={180}
+              height={180}
               className="object-contain"
             />
           </div>
+          {/* Passport Logo - right side */}
           <div className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
             <Image
               src="/images/Passport.png"
@@ -62,7 +64,7 @@ export default function DonatePage() {
           </div>
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              You&apos;re donating to the National MS Society.
+              You&apos;re donating to the National <span className="text-[#E25D28]">MS</span> Society.
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
               Every dollar fuels research, care, and hope for people living with MS.
@@ -85,25 +87,18 @@ export default function DonatePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Why It Matters</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Multiple Sclerosis affects nearly a million people in the U.S. The National MS Society leads the charge to end MS forever — through research, advocacy, and support programs. When you donate here, you&apos;re joining that movement.
             </p>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
-              <Image
-                src="/images/bike-ms-logo.jpeg"
-                alt="Bike MS Logo"
-                width={120}
-                height={60}
-                className="object-contain"
-              />
+            <Link href="/" className="inline-block transition-transform hover:scale-105">
               <Image
                 src="/images/Transparent_Logo_2026.png"
                 alt="The Other Side of MS Logo"
-                width={150}
-                height={75}
-                className="object-contain"
+                width={280}
+                height={140}
+                className="object-contain mx-auto"
               />
-            </div>
+            </Link>
           </div>
         </div>
       </section>
