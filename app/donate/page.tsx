@@ -183,8 +183,8 @@ export default function DonatePage() {
                 </div>
               </div>
 
-              {/* Bike MS 2026 Rides Preview */}
-              <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px]">
+              {/* Bike MS 2026 Rides Preview - Hidden on mobile, shown on desktop */}
+              <div className="hidden md:flex bg-white rounded-lg shadow-sm flex-col h-auto md:h-[320px]">
                 <div className="bg-blue-600 text-white p-3 text-center">
                   <h2 className="text-xl font-semibold">Bike MS 2026 Rides</h2>
                 </div>
