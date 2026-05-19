@@ -11,7 +11,7 @@ const navItems = [
   { name: "Bike MS", href: "/bike-ms", icon: Heart },
   { name: "National Bike MS Team", href: "/about-bike-ms", icon: Info },
   { name: "About / Contact", href: "/contact", icon: Mail },
-  { name: "Donate", href: "/donate", icon: DollarSign },
+  { name: "Donate to My Bike MS Fundraiser", href: "/donate", icon: DollarSign },
 ]
 
 export function Navigation() {

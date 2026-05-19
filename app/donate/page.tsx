@@ -44,8 +44,8 @@ export default function DonatePage() {
           </div>
           <div className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
             <Image
-              src="/images/jersey-2026-new.png"
-              alt="The Other Side of MS Jersey"
+              src="/images/Casey_BikeMS_cycling.png"
+              alt="Casey cycling in Bike MS jersey"
               width={200}
               height={200}
               className="object-contain"
@@ -53,7 +53,7 @@ export default function DonatePage() {
           </div>
           <div className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
             <Image
-              src="/images/bike-ms-complete-badge.png"
+              src="/images/Passport.png"
               alt="Bike MS Passport Program Seal"
               width={180}
               height={180}
@@ -97,7 +97,7 @@ export default function DonatePage() {
                 className="object-contain"
               />
               <Image
-                src="/images/2025-20logo.png"
+                src="/images/Transparent_Logo_2026.png"
                 alt="The Other Side of MS Logo"
                 width={150}
                 height={75}
@@ -220,6 +220,189 @@ export default function DonatePage() {
                       View All Rides →
                     </Link>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fundraising Progress Bar */}
+      <section className="py-4 bg-gray-100">
+        <div className="container mx-auto max-w-2xl px-4">
+          <div className="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between gap-4">
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-gray-900 mb-1">We&apos;re not just a podcast. We ride Bike MS to fund the fight against MS.</h3>
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-xl font-bold text-primary">$2,270</span>
+                <span className="text-gray-500 text-sm">of $10,000</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                <div 
+                  className="bg-primary h-1.5 rounded-full transition-all duration-500" 
+                  style={{ width: '22.7%' }}
+                ></div>
+              </div>
+            </div>
+            <a
+              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-secondary text-white text-sm font-semibold rounded-full hover:bg-secondary/90 transition-all whitespace-nowrap"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+              Donate
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Bike MS 2026 Rides Section */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS 2026 Rides</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Here&apos;s where we&apos;re riding in 2026. Join us or sponsor a ride to support the National MS Society.
+            </p>
+            <a
+              href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 font-semibold underline"
+            >
+              Look for your Bike MS Ride Here
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Ride 1 - Cape Cod Getaway */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-lg text-center">Cape Cod Getaway</h3>
+                </div>
+              </div>
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">Quincy, MA</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800 text-sm">June 27/28, 2026</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Passport Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/pages/10304?eventID=2517"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Ride 2 - Best Dam Bike Tour */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-lg text-center">Best Dam Bike Tour</h3>
+                </div>
+              </div>
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">Baraboo, WI</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800 text-sm">August 1/2, 2026</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">Team CCC Passport Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/pages/11402?eventID=2735"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Ride 3 - Jack and Back (Featured Ride) */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-lg text-center">Jack and Back</h3>
+                </div>
+              </div>
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-orange-600 mb-1">Featured Ride</p>
+                    <p className="text-sm text-gray-600">Eagleville, TN</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800 text-sm">Sept 12/13, 2026</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">The Other Side of MS Featured Passport Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/2746"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Ride 4 - Bike MS: Cycle to the Shore */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
+                <div className="flex items-center justify-center">
+                  <h3 className="font-bold text-lg text-center">Bike MS: Cycle to the Shore</h3>
+                </div>
+              </div>
+              <div className="p-4 flex-grow flex flex-col">
+                <div className="flex flex-col items-center mb-3 flex-grow">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-2">Daytona, FL</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-800 text-sm">Oct 3/4, 2026</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Home Ride</p>
+                  <a
+                    href="https://events.nationalmssociety.org/2776"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
+                  >
+                    Event Details
+                  </a>
                 </div>
               </div>
             </div>
