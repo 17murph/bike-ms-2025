@@ -44,7 +44,7 @@ export default function BikeMS() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-              Bike MS 2026
+              Bike <span className="text-[#E25D28]">MS</span> 2026
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight">
               Where Miles Unite Us to End MS
