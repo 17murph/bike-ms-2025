@@ -32,6 +32,11 @@ export function Footer() {
                   About / Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/donate" className="text-gray-300 hover:text-white transition-colors">
+                  Donate to My Bike MS Fundraiser
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -131,6 +136,9 @@ export function Footer() {
               </Link>
               <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                 About / Contact
+              </Link>
+              <Link href="/donate" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Donate to My Bike MS Fundraiser
               </Link>
             </div>
           </div>
