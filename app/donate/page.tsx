@@ -64,7 +64,7 @@ export default function DonatePage() {
           </div>
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              Your donation powers my Bike <span className="text-[#E25D28]">MS</span> ride for the National MS Society
+              I Ride to End <span className="text-[#E25D28]">MS</span>. Your Donation Fuels the Mission.
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
               Every dollar fuels research, care, and hope for people living with MS.
@@ -83,7 +83,7 @@ export default function DonatePage() {
       </section>
 
       {/* Mission Section - Why It Matters */}
-      <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+      <section className="pt-12 pb-4 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Why It Matters</h2>
