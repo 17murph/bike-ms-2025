@@ -255,10 +255,10 @@ export default function BikeMS() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$2,270</span>
+                    <span className="text-xs text-gray-500">$2,370</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "18.9%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "19.75%" }}></div>
                   </div>
                 </div>
 
@@ -288,11 +288,11 @@ export default function BikeMS() {
                 {/* Team Total */}
                 <div>
                   <div className="flex items-baseline justify-between text-gray-800">
-                    <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                    <span className="text-xs text-gray-500">$15,207 / $48,000</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "31.7%" }}></div>
+                <span className="font-semibold text-sm text-gray-700">Team Total</span>
+                  <span className="text-xs text-gray-500">$15,307 / $48,000</span>
+                </div>
+                <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                  <div className="bg-primary rounded-full h-full" style={{ width: "31.9%" }}></div>
                   </div>
                   <div className="text-right text-xs text-gray-500 mt-1">31.7%</div>
                 </div>
