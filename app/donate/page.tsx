@@ -110,10 +110,10 @@ export default function DonatePage() {
             The Other Side of MS is proud to ride and fundraise for the National MS Society through Bike MS events nationwide. Your gift directly supports this mission.
           </p>
 
-          <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+          <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 shadow-sm overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-4xl mx-auto">
               {/* Thank You Donors - Stock Ticker Style */}
-              <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
+              <div className="bg-white shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
                 <div className="bg-blue-600 text-white p-3 text-center">
                   <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
                 </div>
@@ -121,7 +121,7 @@ export default function DonatePage() {
                   <p className="text-center text-gray-700 italic mb-4 text-sm">
                     "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
                   </p>
-                  <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-lg py-3">
+                  <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 py-3">
                     <div className="donor-ticker">
                       {donors.map((donor, index) => (
                         <div key={`a-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
@@ -158,7 +158,7 @@ export default function DonatePage() {
               </div>
 
               {/* What $100 Donation Supports */}
-              <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px]">
+              <div className="bg-white shadow-sm flex flex-col h-auto md:h-[320px]">
                 <div className="bg-blue-600 text-white p-3 text-center">
                   <h2 className="text-xl font-semibold">What $100 Donation Supports</h2>
                 </div>
@@ -169,7 +169,7 @@ export default function DonatePage() {
                       <li>Support and guidance so people living with MS do not have to face it alone</li>
                     </ul>
                     <div className="flex flex-col items-center mt-4">
-                      <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
+                      <div className="relative w-64 h-28 overflow-hidden shadow-sm mx-auto">
                         <ReliableImage
                           src="/images/100bill.jpeg"
                           alt="100 Dollar Bill"
@@ -179,41 +179,6 @@ export default function DonatePage() {
                         />
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bike MS 2026 Rides Preview - Hidden on mobile, shown on desktop */}
-              <div className="hidden md:flex bg-white rounded-lg shadow-sm flex-col h-auto md:h-[320px]">
-                <div className="bg-blue-600 text-white p-3 text-center">
-                  <h2 className="text-xl font-semibold">Bike MS 2026 Rides</h2>
-                </div>
-                <div className="p-4 flex flex-col justify-between flex-grow overflow-y-auto">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-medium text-gray-700">Cape Cod Getaway</span>
-                      <span className="text-gray-500">Jun 27/28</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-medium text-gray-700">Best Dam Bike Tour</span>
-                      <span className="text-gray-500">Aug 1/2</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm bg-orange-50 p-2 rounded-lg">
-                      <span className="font-medium text-orange-600">Jack and Back (Featured)</span>
-                      <span className="text-orange-500">Sep 12/13</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-medium text-gray-700">Cycle to the Shore</span>
-                      <span className="text-gray-500">Oct 3/4</span>
-                    </div>
-                  </div>
-                  <div className="mt-4 text-center">
-                    <Link
-                      href="/bike-ms"
-                      className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                    >
-                      View All Rides →
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -229,13 +194,13 @@ export default function DonatePage() {
             <div className="flex-1">
               <h3 className="text-sm font-semibold text-gray-900 mb-1">We&apos;re not just a podcast. We ride Bike MS to fund the fight against MS.</h3>
               <div className="flex items-baseline gap-1.5">
-                <span className="text-xl font-bold text-primary">$2,270</span>
+                <span className="text-xl font-bold text-primary">$2,370</span>
                 <span className="text-gray-500 text-sm">of $10,000</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                 <div 
                   className="bg-primary h-1.5 rounded-full transition-all duration-500" 
-                  style={{ width: '22.7%' }}
+                  style={{ width: '23.7%' }}
                 ></div>
               </div>
             </div>
