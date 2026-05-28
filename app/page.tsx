@@ -46,6 +46,10 @@ export default function Home() {
       text: "This is not a story about inspiration. It's about learning how to live inside something you didn't choose, together.",
       author: "Rachael Fenich - Season 4, Episode 6",
     },
+    {
+      text: "If you have ever wondered what it feels like to live beside MS instead of inside it, this conversation sits in that space.",
+      author: "Dr. Mary Hughes - Season 4, Episode 7",
+    },
   ]
 
   // Rotate quotes every 8 seconds
@@ -226,19 +230,19 @@ export default function Home() {
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                      <span className="text-sm text-gray-500 font-medium">Season 4, Episode 6 • May 14, 2026</span>
+                      <span className="text-sm text-gray-500 font-medium">Season 4, Episode 7 • May 28, 2026</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Inside Something You Didn&apos;t Choose</h3>
-                    <p className="text-lg text-primary font-medium mb-3">with Rachael Fenich</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Beside MS Instead of Inside It</h3>
+                    <p className="text-lg text-primary font-medium mb-3">with Dr. Mary Hughes</p>
                     <p className="text-gray-600 leading-relaxed mb-6">
-                      Rachael Fenich has seen multiple sclerosis from more than one angle. Her husband lives with it. So do other members of her family. In this conversation, Rachael talks about what MS actually looks like inside a marriage. The parts you don&apos;t see. The things that don&apos;t get said. This is not a story about inspiration. It&apos;s about learning how to live inside something you didn&apos;t choose, together.
+                      Dr. Mary Hughes has spent decades close to MS, not just in exam rooms but in her own family. This episode is not about her title or her career. It is about the personal story that shaped the way she sees this disease long before anyone called her an expert. If you have ever wondered what it feels like to live beside MS instead of inside it, this conversation sits in that space.
                     </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/41140130/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/41341640/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
