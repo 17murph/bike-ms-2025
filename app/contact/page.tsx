@@ -83,7 +83,7 @@ export default function ContactPage() {
                   <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">Casey Murphy</h2>
                   <div className="prose max-w-none text-gray-700">
                     <p className="mb-4 leading-relaxed">
-                      I'm a passionate cyclist and MS advocate. My journey with Bike MS began in 1995, and since then,
+                      I'm a passionate cyclist, MS advocate, and Official MS Ambassador. My journey with Bike MS began in 1995, and since then,
                       I've been dedicated to raising awareness and funds for multiple sclerosis research and support
                       services.
                     </p>
