@@ -80,10 +80,10 @@ export default function ContactPage() {
               {/* Content Column */}
               <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-between">
                 <div>
-                  <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">Casey Murphy</h2>
+                  <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">Casey Murphy: <span className="text-orange-500">MS</span> Ambassador</h2>
                   <div className="prose max-w-none text-gray-700">
                     <p className="mb-4 leading-relaxed">
-                      I'm a passionate cyclist and MS advocate. My journey with Bike MS began in 1995, and since then,
+                      I'm a passionate cyclist, MS advocate, and Official MS Ambassador. My journey with Bike MS began in 1995, and since then,
                       I've been dedicated to raising awareness and funds for multiple sclerosis research and support
                       services.
                     </p>
@@ -117,7 +117,11 @@ export default function ContactPage() {
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <p className="text-gray-700">Board of Trustees member, National MS Society (North Florida)</p>
+                      <p className="text-gray-700">Former Board of Trustees member, National MS Society (North Florida)</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <p className="text-gray-700"><span className="text-orange-500 font-semibold">MS</span> Ambassador</p>
                     </div>
                   </div>
                 </div>
