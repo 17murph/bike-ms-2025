@@ -47,9 +47,13 @@ export default function Home() {
       author: "Rachael Fenich - Season 4, Episode 6",
     },
     {
-      text: "If you have ever wondered what it feels like to live beside MS instead of inside it, this conversation sits in that space.",
-      author: "Dr. Mary Hughes - Season 4, Episode 7",
-    },
+  text: "If you have ever wondered what it feels like to live beside MS instead of inside it, this conversation sits in that space.",
+  author: "Dr. Mary Hughes - Season 4, Episode 7",
+  },
+  {
+  text: "This is one of the most honest conversations we've had about the distance between looking okay and feeling okay.",
+  author: "Bill Mooney - Season 4, Episode 8",
+  },
   ]
 
   // Rotate quotes every 8 seconds
@@ -230,19 +234,19 @@ export default function Home() {
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                      <span className="text-sm text-gray-500 font-medium">Season 4, Episode 7 • May 28, 2026</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Living Beside MS Instead of Inside It</h3>
-                    <p className="text-lg text-primary font-medium mb-3">with Dr. Mary Hughes</p>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      Dr. Mary Hughes has spent decades close to MS, not just in exam rooms but in her own family. This episode is not about her title or her career. It is about the personal story that shaped the way she sees this disease long before anyone called her an expert. If you have ever wondered what it feels like to live beside MS instead of inside it, this conversation sits in that space.
-                    </p>
+                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 8 • June 11, 2026</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">The Distance Between Looking Okay and Feeling Okay</h3>
+                <p className="text-lg text-primary font-medium mb-3">with Bill Mooney</p>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                People tell Bill Mooney he handles MS well. In this episode, we explore a different question: what happens when people celebrate the resilience but never see the fear, exhaustion, and uncertainty underneath it? Bill talks openly about the parts of multiple sclerosis that rarely make it into fundraising speeches, awareness campaigns, or everyday conversations. The emotional cost of carrying an invisible disease. The fear that never completely leaves. The things people miss when they only see someone who appears to be doing well. This is one of the most honest conversations we&apos;ve had about the distance between looking okay and feeling okay.
+                </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/41413610/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/41557770/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
@@ -361,6 +365,8 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "The Distance Between Looking Okay and Feeling Okay", guest: "Bill Mooney", episode: "S4 E8", link: "https://play.libsyn.com/embed/episode/id/41557770" },
+                      { title: "Living Beside MS Instead of Inside It", guest: "Dr. Mary Hughes", episode: "S4 E7", link: "https://play.libsyn.com/embed/episode/id/41413610" },
                       { title: "Living Inside Something You Didn't Choose", guest: "Rachael Fenich", episode: "S4 E6", link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z" },
                       { title: "We Will Win - Mark's Story", guest: "Mark Morabito", episode: "S4 E5", link: "https://open.spotify.com/episode/07CZRgLvTzKkt0WsgtgSXx" },
                       { title: "A Different Kind of Victory", guest: "Justin Yuhaze", episode: "S4 E4", link: "https://open.spotify.com/episode/1QIJLP3Yr7CEg1W2ECxSmR" },
