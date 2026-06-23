@@ -54,6 +54,10 @@ export default function Home() {
   text: "This is one of the most honest conversations we've had about the distance between looking okay and feeling okay.",
   author: "Bill Mooney - Season 4, Episode 8",
   },
+  {
+  text: "A conversation about trust, credibility, and the hidden psychological weight of living with a disease that many people never fully see.",
+  author: "Bridget Longnecker - Season 4, Episode 9",
+  },
   ]
 
   // Rotate quotes every 8 seconds
@@ -234,19 +238,19 @@ export default function Home() {
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 8 • June 11, 2026</span>
+                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 9 • June 25, 2026</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">The Distance Between Looking Okay and Feeling Okay</h3>
-                <p className="text-lg text-primary font-medium mb-3">with Bill Mooney</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">When Nobody Believes You</h3>
+                <p className="text-lg text-primary font-medium mb-3">with Bridget Longnecker</p>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                People tell Bill Mooney he handles MS well. In this episode, we explore a different question: what happens when people celebrate the resilience but never see the fear, exhaustion, and uncertainty underneath it? Bill talks openly about the parts of multiple sclerosis that rarely make it into fundraising speeches, awareness campaigns, or everyday conversations. The emotional cost of carrying an invisible disease. The fear that never completely leaves. The things people miss when they only see someone who appears to be doing well. This is one of the most honest conversations we&apos;ve had about the distance between looking okay and feeling okay.
+                For months, Bridget Longnecker was told her symptoms were anxiety, hormones, or postpartum depression. Meanwhile, she was losing vision, mobility, speech, and trust in herself. In this episode, Bridget shares the reality of searching for answers while being repeatedly dismissed by healthcare providers, the psychological toll of being told it&apos;s all in your head, and the moment she finally received the diagnosis that changed everything. The conversation explores fear, motherhood, invisible illness, self-doubt, and what happens when you begin questioning your own reality because nobody else seems willing to believe it. Bridget also opens up about the lasting emotional impact of MS, the uncertainty that still follows her today, and why stability doesn&apos;t always mean feeling safe inside your own body.
                 </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/41557770/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/41678225/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
@@ -365,6 +369,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "When Nobody Believes You", guest: "Bridget Longnecker", episode: "S4 E9", link: "https://play.libsyn.com/embed/episode/id/41678225" },
                       { title: "The Distance Between Looking Okay and Feeling Okay", guest: "Bill Mooney", episode: "S4 E8", link: "https://play.libsyn.com/embed/episode/id/41557770" },
                       { title: "Living Beside MS Instead of Inside It", guest: "Dr. Mary Hughes", episode: "S4 E7", link: "https://play.libsyn.com/embed/episode/id/41413610" },
                       { title: "Living Inside Something You Didn't Choose", guest: "Rachael Fenich", episode: "S4 E6", link: "https://open.spotify.com/episode/0UQDHcxcj9nuAd0ECs8V2Z" },
