@@ -18,7 +18,8 @@ export default function BikeMS() {
     { name: "Joseph Monticello", tags: ["Silver Donor"] },
     { name: "Elaine Wuerstlin", tags: ["Gold Donor"] },
     { name: "Genese Sweeney", tags: ["Gold Donor"] },
-    { name: "Dennis Cook", tags: ["Gold Donor"] }
+    { name: "Dennis Cook", tags: ["Gold Donor"] },
+  { name: "Dan Murphy", tags: ["Gold Donor"] }
   ], [])
 
   const donorCarouselRef = useRef<HTMLDivElement>(null)
@@ -199,13 +200,13 @@ export default function BikeMS() {
                 <h2 className="text-xl font-semibold">Fundraising Totals</h2>
               </div>
               <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
-                {/* Curt Sauser */}
+                {/* John Wallace */}
                 <div className="mb-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
+                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
                       <a
-                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
+                        href="https://events.nationalmssociety.org/participants/815695"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
@@ -213,10 +214,10 @@ export default function BikeMS() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$6,607</span>
+                    <span className="text-xs text-gray-500">$15,291</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "55.1%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "100%" }}></div>
                   </div>
                 </div>
 
@@ -234,10 +235,31 @@ export default function BikeMS() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$5,827.53</span>
+                    <span className="text-xs text-gray-500">$9,577</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "48.6%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "79.8%" }}></div>
+                  </div>
+                </div>
+
+                {/* Curt Sauser */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$8,535</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "71.1%" }}></div>
                   </div>
                 </div>
 
@@ -255,31 +277,10 @@ export default function BikeMS() {
                         Donate
                       </a>
                     </div>
-                    <span className="text-xs text-gray-500">$2,370</span>
+                    <span className="text-xs text-gray-500">$3,916</span>
                   </div>
                   <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "19.75%" }}></div>
-                  </div>
-                </div>
-
-                {/* John Wallace */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/815695"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$350</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "2.9%" }}></div>
+                    <div className="bg-primary rounded-full h-full" style={{ width: "32.6%" }}></div>
                   </div>
                 </div>
 
@@ -289,12 +290,12 @@ export default function BikeMS() {
                 <div>
                   <div className="flex items-baseline justify-between text-gray-800">
                 <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                  <span className="text-xs text-gray-500">$15,307 / $48,000</span>
+                  <span className="text-xs text-gray-500">$37,319 / $48,000</span>
                 </div>
                 <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                  <div className="bg-primary rounded-full h-full" style={{ width: "31.9%" }}></div>
+                  <div className="bg-primary rounded-full h-full" style={{ width: "77.7%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-500 mt-1">31.7%</div>
+                  <div className="text-right text-xs text-gray-500 mt-1">77.7%</div>
                 </div>
               </div>
             </div>
@@ -444,7 +445,7 @@ export default function BikeMS() {
                 </div>
                 <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">June 27/28, 2026</p>
+                    <p className="font-semibold text-gray-800 text-sm">Complete: 150 miles cycled</p>
                   </div>
                 </div>
                 <div className="mt-3 text-center">

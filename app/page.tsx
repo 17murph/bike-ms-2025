@@ -165,13 +165,13 @@ export default function Home() {
               <div className="flex-1">
                 <h3 className="text-sm font-semibold text-gray-900 mb-1">We&apos;re not just a podcast. We ride Bike MS to fund the fight against MS.</h3>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl font-bold text-primary">$2,370</span>
+                  <span className="text-xl font-bold text-primary">$3,916</span>
                   <span className="text-gray-500 text-sm">of $10,000</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                   <div 
                     className="bg-primary h-1.5 rounded-full transition-all duration-500" 
-                    style={{ width: '23.7%' }}
+                    style={{ width: '39.2%' }}
                   ></div>
                 </div>
               </div>
