@@ -284,18 +284,39 @@ export default function BikeMS() {
                   </div>
                 </div>
 
+                {/* Marianne Davis */}
+                <div className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-gray-700">Marianne Davis</span>
+                      <a
+                        href="https://events.nationalmssociety.org/participants/MarianneDavis"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                      >
+                        Donate
+                      </a>
+                    </div>
+                    <span className="text-xs text-gray-500">$1,540</span>
+                  </div>
+                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
+                    <div className="bg-primary rounded-full h-full" style={{ width: "12.8%" }}></div>
+                  </div>
+                </div>
+
                 <div className="border-t border-gray-200 my-2"></div>
 
                 {/* Team Total */}
                 <div>
                   <div className="flex items-baseline justify-between text-gray-800">
                 <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                  <span className="text-xs text-gray-500">$37,319 / $48,000</span>
+                  <span className="text-xs text-gray-500">$38,859 / $48,000</span>
                 </div>
                 <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                  <div className="bg-primary rounded-full h-full" style={{ width: "77.7%" }}></div>
+                  <div className="bg-primary rounded-full h-full" style={{ width: "80.9%" }}></div>
                   </div>
-                  <div className="text-right text-xs text-gray-500 mt-1">77.7%</div>
+                  <div className="text-right text-xs text-gray-500 mt-1">80.9%</div>
                 </div>
               </div>
             </div>
