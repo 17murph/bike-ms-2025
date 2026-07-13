@@ -47,16 +47,6 @@ const riders: Rider[] = [
     donateUrl: "https://events.nationalmssociety.org/participants/815695",
   },
   {
-    id: "rob",
-    name: "Rob Farthing",
-    firstName: "Rob",
-    homeState: "Kentucky",
-    photo: "/images/rob-farthing-new.jpg",
-    bio: "Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.",
-    homeRide: "Bluegrass Bourbon, Bardstown, KY",
-    donateUrl: "https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en",
-  },
-  {
     id: "marianne",
     name: "Marianne Davis",
     firstName: "Marianne",
@@ -65,6 +55,16 @@ const riders: Rider[] = [
     bio: "Marianne has been involved with Bike MS: Cycle to the Shore for over 10 years as a former team captain for Team PGA TOUR, former Chairperson for the event, and finally as a rider with Team Spanish Beer. She currently serves on the Florida Chapter Board of Trustees for the National MS Society. New to cycling just over a year ago, she's hooked and can't turn back. She considers it a privilege to ride for those who can't and serves to honor close friends and colleagues who live with MS and those who care for them.",
     homeRide: "Cycle to the Shore, North Florida",
     donateUrl: "https://events.nationalmssociety.org/participants/MarianneDavis",
+  },
+  {
+    id: "rob",
+    name: "Rob Farthing",
+    firstName: "Rob",
+    homeState: "Kentucky",
+    photo: "/images/rob-farthing-new.jpg",
+    bio: "Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.",
+    homeRide: "Bluegrass Bourbon, Bardstown, KY",
+    donateUrl: "https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en",
   },
 ]
 
