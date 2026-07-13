@@ -47,21 +47,20 @@ export default function AboutBikeMS() {
                 Donate to Curt
               </Link>
               <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white border-2 border-orange-500 text-orange-600 rounded-full hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                <Bike className="w-5 h-5" />
-                <span>Find Your Ride</span>
-              </Link>
-              <Link
                 href="https://events.nationalmssociety.org/participants/815695"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
               >
                 Donate to John
+              </Link>
+              <Link
+                href="https://events.nationalmssociety.org/participants/MarianneDavis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
+              >
+                Donate to Marianne
               </Link>
               <Link
                 href="https://events.nationalmssociety.org/participants/764003?language=en&referrer=mf%3A764003%3Ayou-copy"
@@ -173,11 +172,13 @@ export default function AboutBikeMS() {
                           <span>Event Details</span>
                         </a>
                         <a
-                          href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
-                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md w-full sm:w-auto"
+                          href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border-2 border-orange-500 text-orange-600 rounded-md hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md w-full sm:w-auto"
                         >
-                          <Info className="w-5 h-5" />
-                          <span>For More Information</span>
+                          <Bike className="w-5 h-5" />
+                          <span>Find Your Ride</span>
                         </a>
                       </div>
                     </div>
