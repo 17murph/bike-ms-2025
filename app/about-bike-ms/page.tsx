@@ -127,27 +127,61 @@ export default function AboutBikeMS() {
 
             <section className="py-4">
               <div className="container mx-auto px-4">
-                {/* Join Our Team Link */}
-                <div className="text-center mt-4">
-                  <Link
-                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=register.start&eventID=2794&teamID=100303"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-orange-500 text-orange-600 rounded-md hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <Users className="w-5 h-5" />
-                    <span>Join Our Team</span>
-                  </Link>
-                </div>
+                {/* Featured Ride */}
+                <div className="max-w-2xl mx-auto">
+                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 text-center">Our Featured Ride</h2>
+                  <p className="text-gray-600 text-center mb-6 leading-relaxed">
+                    This year, the Jack and Back Bike MS Ride is our featured ride, though we gladly accept donations for
+                    any of our team&apos;s rides.
+                  </p>
 
-                <div className="mt-3">
-                  <a
-                    href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <Info className="w-5 h-5" />
-                    <span>For More Information</span>
-                  </a>
+                  <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
+                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4">
+                      <div className="flex items-center justify-center gap-2">
+                        <Bike className="w-5 h-5" />
+                        <h3 className="font-bold text-xl text-center">Jack and Back</h3>
+                      </div>
+                      <p className="text-center text-sm text-orange-50 mt-1">
+                        The Other Side of MS Featured Passport Ride
+                      </p>
+                    </div>
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="flex items-center gap-3 rounded-lg bg-gray-50 p-4">
+                          <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-medium uppercase tracking-wide text-gray-500">Location</p>
+                            <p className="font-semibold text-gray-800">Eagleville, TN</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 rounded-lg bg-gray-50 p-4">
+                          <Calendar className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-medium uppercase tracking-wide text-gray-500">Date</p>
+                            <p className="font-semibold text-gray-800">Sept 12/13, 2026</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <a
+                          href="https://events.nationalmssociety.org/2746"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md w-full sm:w-auto"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                          <span>Event Details</span>
+                        </a>
+                        <a
+                          href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md w-full sm:w-auto"
+                        >
+                          <Info className="w-5 h-5" />
+                          <span>For More Information</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
