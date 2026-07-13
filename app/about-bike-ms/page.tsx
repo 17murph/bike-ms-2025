@@ -9,6 +9,7 @@ import { Bike, Heart, Users, ExternalLink, MapPin, Info, DollarSign, Award, Cale
 import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
 import { SocialMediaLinks } from "@/components/social-media-links"
+import { NationalBikeMSTeam } from "@/components/national-bike-ms-team"
 
 export default function AboutBikeMS() {
   // Set metadata via useEffect to avoid server-side rendering issues
@@ -122,114 +123,10 @@ export default function AboutBikeMS() {
               </div>
             </section>
 
-            <section className="py-4 mt-8">
+            <NationalBikeMSTeam />
+
+            <section className="py-4">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-1">Meet the riders who make this mission real</h2>
-                <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
-                
-                {/* Team Members Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
-                  {/* Casey Murphy */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/casey-bike-ms-ky.jpg"
-                        alt="Casey Murphy - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Casey Murphy</h3>
-                      <p className="text-sm text-gray-600">Casey Murphy is the founder and host of The Other Side of MS podcast. He has ridden in Bike MS events since 1995, serves on the North Florida Board of Trustees for the National MS Society, and raised more than $10,000 in 2025. At his home ride, Bike MS: Cycle to the Shore, North Florida, he rides with Team Spanish Beer. He focuses on listening to people living with MS and turning those stories into action through fundraising and advocacy.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Cycle to the Shore, North Florida</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Casey
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Curt Sauser */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/curt-sauser.jpg"
-                        alt="Curt Sauser - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Curt Sauser</h3>
-                      <p className="text-sm text-gray-600">Curt was diagnosed with multiple sclerosis in 2008. After struggling to make sense of the news, he made a decision to stop feeling sorry for himself and started his Bike MS team in 2009 to be part of the effort to find a cure. As Captain of Team CCC (Curt&apos;s Conquest for a Cure) in Wisconsin, his team has surpassed $1,000,000 in lifetime fundraising. He raised over $10,000 personally in 2025.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Best Dam Bike Tour, Baraboo, WI</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Curt
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* John Wallace */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-64 md:h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/john-wallace.jpg"
-                        alt="John Wallace - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-[center_20%] md:object-center"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">John Wallace</h3>
-                      <p className="text-sm text-gray-600">John Wallace is a retired airline and military pilot from Tennessee who has spent more than ten years riding in the Jack and Back MS Ride and Bike MS in honor of family and friends living with multiple sclerosis. A dedicated cyclist, dog rescuer, and consistent fundraiser, John brings the same discipline and compassion to the road that guided him throughout his career. For him, every ride is an act of service and a way to support the people in his life who face MS each day.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Jack and Back, Eagleville, TN</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/815695"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to John
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Rob Farthing */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/rob-farthing-new.jpg"
-                        alt="Rob Farthing - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Rob Farthing</h3>
-                      <p className="text-sm text-gray-600">Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Bluegrass Bourbon, Bardstown, KY</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Rob
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Join Our Team Link */}
                 <div className="text-center mt-4">
                   <Link
