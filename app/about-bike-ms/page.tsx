@@ -9,6 +9,7 @@ import { Bike, Heart, Users, ExternalLink, MapPin, Info, DollarSign, Award, Cale
 import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
 import { SocialMediaLinks } from "@/components/social-media-links"
+import { NationalBikeMSTeam } from "@/components/national-bike-ms-team"
 
 export default function AboutBikeMS() {
   // Set metadata via useEffect to avoid server-side rendering issues
@@ -46,21 +47,20 @@ export default function AboutBikeMS() {
                 Donate to Curt
               </Link>
               <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white border-2 border-orange-500 text-orange-600 rounded-full hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                <Bike className="w-5 h-5" />
-                <span>Find Your Ride</span>
-              </Link>
-              <Link
                 href="https://events.nationalmssociety.org/participants/815695"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
               >
                 Donate to John
+              </Link>
+              <Link
+                href="https://events.nationalmssociety.org/participants/MarianneDavis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
+              >
+                Donate to Marianne
               </Link>
               <Link
                 href="https://events.nationalmssociety.org/participants/764003?language=en&referrer=mf%3A764003%3Ayou-copy"
@@ -122,135 +122,67 @@ export default function AboutBikeMS() {
               </div>
             </section>
 
-            <section className="py-4 mt-8">
+            <NationalBikeMSTeam />
+
+            <section className="py-4">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-1">Meet the riders who make this mission real</h2>
-                <p className="text-sm text-gray-600 mb-6">Click to donate to one of our team members</p>
-                
-                {/* Team Members Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
-                  {/* Casey Murphy */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/casey-bike-ms-ky.jpg"
-                        alt="Casey Murphy - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
+                {/* Featured Ride */}
+                <div className="max-w-2xl mx-auto">
+                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 text-center">Our Featured Ride</h2>
+                  <p className="text-gray-600 text-center mb-6 leading-relaxed">
+                    This year, the Jack and Back Bike MS Ride is our featured ride, though we gladly accept donations for
+                    any of our team&apos;s rides.
+                  </p>
+
+                  <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
+                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4">
+                      <div className="flex items-center justify-center gap-2">
+                        <Bike className="w-5 h-5" />
+                        <h3 className="font-bold text-xl text-center">Jack and Back</h3>
+                      </div>
+                      <p className="text-center text-sm text-orange-50 mt-1">
+                        The Other Side of MS Featured Passport Ride
+                      </p>
                     </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Casey Murphy</h3>
-                      <p className="text-sm text-gray-600">Casey Murphy is the founder and host of The Other Side of MS podcast. He has ridden in Bike MS events since 1995, serves on the North Florida Board of Trustees for the National MS Society, and raised more than $10,000 in 2025. At his home ride, Bike MS: Cycle to the Shore, North Florida, he rides with Team Spanish Beer. He focuses on listening to people living with MS and turning those stories into action through fundraising and advocacy.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Cycle to the Shore, North Florida</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Casey
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="flex items-center gap-3 rounded-lg bg-gray-50 p-4">
+                          <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-medium uppercase tracking-wide text-gray-500">Location</p>
+                            <p className="font-semibold text-gray-800">Eagleville, TN</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 rounded-lg bg-gray-50 p-4">
+                          <Calendar className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-medium uppercase tracking-wide text-gray-500">Date</p>
+                            <p className="font-semibold text-gray-800">Sept 12/13, 2026</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <a
+                          href="https://events.nationalmssociety.org/2746"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md w-full sm:w-auto"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                          <span>Event Details</span>
+                        </a>
+                        <a
+                          href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border-2 border-orange-500 text-orange-600 rounded-md hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md w-full sm:w-auto"
+                        >
+                          <Bike className="w-5 h-5" />
+                          <span>Find Your Ride</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Curt Sauser */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/curt-sauser.jpg"
-                        alt="Curt Sauser - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Curt Sauser</h3>
-                      <p className="text-sm text-gray-600">Curt was diagnosed with multiple sclerosis in 2008. After struggling to make sense of the news, he made a decision to stop feeling sorry for himself and started his Bike MS team in 2009 to be part of the effort to find a cure. As Captain of Team CCC (Curt&apos;s Conquest for a Cure) in Wisconsin, his team has surpassed $1,000,000 in lifetime fundraising. He raised over $10,000 personally in 2025.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Best Dam Bike Tour, Baraboo, WI</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Curt
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* John Wallace */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-64 md:h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/john-wallace.jpg"
-                        alt="John Wallace - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-[center_20%] md:object-center"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">John Wallace</h3>
-                      <p className="text-sm text-gray-600">John Wallace is a retired airline and military pilot from Tennessee who has spent more than ten years riding in the Jack and Back MS Ride and Bike MS in honor of family and friends living with multiple sclerosis. A dedicated cyclist, dog rescuer, and consistent fundraiser, John brings the same discipline and compassion to the road that guided him throughout his career. For him, every ride is an act of service and a way to support the people in his life who face MS each day.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Jack and Back, Eagleville, TN</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/815695"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to John
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Rob Farthing */}
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col h-full">
-                    <div className="h-48 overflow-hidden bg-gray-100 flex-shrink-0">
-                      <img
-                        src="/images/rob-farthing-new.jpg"
-                        alt="Rob Farthing - National Bike MS Cycling Team"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">Rob Farthing</h3>
-                      <p className="text-sm text-gray-600">Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.</p>
-                      <p className="text-sm text-gray-700 font-medium mt-2 flex-grow"><strong>Home Ride:</strong> Bluegrass Bourbon, Bardstown, KY</p>
-                      <Link
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4"
-                      >
-                        Donate to Rob
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Join Our Team Link */}
-                <div className="text-center mt-4">
-                  <Link
-                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=register.start&eventID=2794&teamID=100303"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-orange-500 text-orange-600 rounded-md hover:bg-orange-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <Users className="w-5 h-5" />
-                    <span>Join Our Team</span>
-                  </Link>
-                </div>
-
-                <div className="mt-3">
-                  <a
-                    href="mailto:cmurphy@sjmalaw.com?subject=Questions%20about%20National%20Bike%20MS%20Team"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <Info className="w-5 h-5" />
-                    <span>For More Information</span>
-                  </a>
                 </div>
               </div>
             </section>
