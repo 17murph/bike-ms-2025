@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { Home, Heart, Info, Menu, X, Share2, Mail, DollarSign } from 'lucide-react'
+import { Home, Heart, Info, Menu, X, Share2, Mail, DollarSign, Users } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "Bike MS", href: "/bike-ms", icon: Heart },
   { name: "National Bike MS Team", href: "/about-bike-ms", icon: Info },
+  { name: "Team Spanish Beer", href: "/team-spanish-beer", icon: Users },
   { name: "About / Contact", href: "/contact", icon: Mail },
   { name: "Donate to My Bike MS Fundraiser", href: "/donate", icon: DollarSign },
 ]
