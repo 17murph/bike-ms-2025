@@ -70,18 +70,6 @@ export default function TeamSpanishBeer() {
                   alt="Team Spanish Beer: Passport Cyclist jersey featuring The Other Side of MS branding"
                   className="w-full max-w-2xl object-contain"
                 />
-                <div className="mt-4 text-center font-medium">
-                  <span className="text-primary">Support the cause, wear the jersey</span>
-                  {" "}
-                  <a
-                    href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
-                  >
-                    Order Online
-                  </a>
-                </div>
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
                 Team Spanish Beer: Passport Cyclist jersey featuring "The Other Side of MS" podcast branding and the Bike MS Passport Program.
