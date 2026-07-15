@@ -21,7 +21,7 @@ const riders: Rider[] = [
     name: "Casey Murphy",
     firstName: "Casey",
     homeState: "Florida",
-    photo: "/images/casey-bike-ms-ky.jpg",
+    photo: "/images/casey-murphy-bw.jpg",
     bio: "Casey Murphy is the founder and host of The Other Side of MS podcast. He has ridden in Bike MS events since 1995, is a former Board of Trustee for the North Florida National MS Society and a current MS Ambassador, and raised more than $10,000 in 2025. At his home ride, Bike MS: Cycle to the Shore, North Florida, he rides with Team Spanish Beer. He focuses on listening to people living with MS and turning those stories into action through fundraising and advocacy.",
     homeRide: "Cycle to the Shore, North Florida",
     donateUrl: "https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS",
