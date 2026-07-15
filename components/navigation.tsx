@@ -21,6 +21,30 @@ export function Navigation() {
   const [isBikeMsDomain, setIsBikeMsDomain] = useState(false)
   const pathname = usePathname() || "/"
 
+  const handleShare = async () => {
+    const shareData = {
+      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
+      url: window.location.href,
+    }
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.share) {
+        await navigator.share(shareData)
+        return
+      }
+    } catch (error) {
+      // User canceled or sharing is blocked (e.g. inside an iframe). Fall back to clipboard.
+    }
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(shareData.url)
+      }
+    } catch (error) {
+      // Clipboard access can also be blocked; fail silently.
+    }
+  }
+
   // Check if we're on the bike-ms.com domain
   useEffect(() => {
     const hostname = window.location.hostname
@@ -125,14 +149,7 @@ export function Navigation() {
 
             <div className="ml-2 pl-2 border-l border-gray-200">
               <button
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
-                      url: window.location.href,
-                    })
-                  }
-                }}
+                onClick={handleShare}
                 className="flex items-center px-3 py-2 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
                 aria-label="Share"
               >
@@ -199,12 +216,7 @@ export function Navigation() {
 
               <button
                 onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
-                      url: window.location.href,
-                    })
-                  }
+                  handleShare()
                   setIsOpen(false)
                 }}
                 className="flex items-center px-4 py-4 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700 min-h-[48px]"
