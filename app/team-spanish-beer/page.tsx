@@ -74,6 +74,20 @@ export default function TeamSpanishBeer() {
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
                 Team Spanish Beer: Passport Cyclist jersey featuring "The Other Side of MS" podcast branding and the Bike MS Passport Program.
               </p>
+              <div className="flex flex-col items-center justify-center mt-6 px-4">
+                <p className="text-center text-lg font-medium text-gray-800 mb-4">
+                  Donate to a Cyclist below, support their mission to end MS.
+                </p>
+                <a
+                  href="https://events.nationalmssociety.org/teams/TeamSpanishBeer2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
+                >
+                  <Heart className="w-5 h-5" />
+                  <span>Donate to Team Spanish Beer</span>
+                </a>
+              </div>
             </section>
 
             {/* Our Mission Section */}
