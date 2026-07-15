@@ -27,16 +27,6 @@ const riders: Rider[] = [
     donateUrl: "https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS",
   },
   {
-    id: "marianne",
-    name: "Marianne Davis",
-    firstName: "Marianne",
-    homeState: "Florida",
-    photo: "/images/marianne-davis.jpg",
-    bio: "Marianne has been involved with Bike MS: Cycle to the Shore for over 10 years as a former team captain for Team PGA TOUR, former Chairperson for the event, and finally as a rider with Team Spanish Beer. She currently serves on the Florida Chapter Board of Trustees for the National MS Society. New to cycling just over a year ago, she's hooked and can't turn back. She considers it a privilege to ride for those who can't and serves to honor close friends and colleagues who live with MS and those who care for them.",
-    homeRide: "Cycle to the Shore, North Florida",
-    donateUrl: "https://events.nationalmssociety.org/participants/MarianneDavis",
-  },
-  {
     id: "erik",
     name: "Erik",
     firstName: "Erik",
@@ -45,6 +35,16 @@ const riders: Rider[] = [
     bio: "Erik is a Team Spanish Beer Passport rider who rides in support of the National MS Society and everyone affected by multiple sclerosis.",
     homeRide: "",
     donateUrl: "https://events.nationalmssociety.org/participants/818857",
+  },
+  {
+    id: "marianne",
+    name: "Marianne Davis",
+    firstName: "Marianne",
+    homeState: "Florida",
+    photo: "/images/marianne-davis.jpg",
+    bio: "Marianne has been involved with Bike MS: Cycle to the Shore for over 10 years as a former team captain for Team PGA TOUR, former Chairperson for the event, and finally as a rider with Team Spanish Beer. She currently serves on the Florida Chapter Board of Trustees for the National MS Society. New to cycling just over a year ago, she's hooked and can't turn back. She considers it a privilege to ride for those who can't and serves to honor close friends and colleagues who live with MS and those who care for them.",
+    homeRide: "Cycle to the Shore, North Florida",
+    donateUrl: "https://events.nationalmssociety.org/participants/MarianneDavis",
   },
   {
     id: "matt",

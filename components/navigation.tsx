@@ -147,15 +147,6 @@ export function Navigation() {
               )
             })}
 
-            <div className="ml-2 pl-2 border-l border-gray-200">
-              <button
-                onClick={handleShare}
-                className="flex items-center px-3 py-2 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
-                aria-label="Share"
-              >
-                <Share2 className="w-4 h-4" />
-              </button>
-            </div>
           </div>
         </div>
 
