@@ -27,24 +27,14 @@ const riders: Rider[] = [
     donateUrl: "https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS",
   },
   {
-    id: "curt",
-    name: "Curt Sauser",
-    firstName: "Curt",
-    homeState: "Wisconsin",
-    photo: "/images/curt-sauser.jpg",
-    bio: "Curt was diagnosed with multiple sclerosis in 2008. After struggling to make sense of the news, he made a decision to stop feeling sorry for himself and started his Bike MS team in 2009 to be part of the effort to find a cure. As Captain of Team CCC (Curt's Conquest for a Cure) in Wisconsin, his team has surpassed $1,000,000 in lifetime fundraising. He raised over $10,000 personally in 2025.",
-    homeRide: "Best Dam Bike Tour, Baraboo, WI",
-    donateUrl: "https://events.nationalmssociety.org/participants/CurtBike2026",
-  },
-  {
-    id: "john",
-    name: "John Wallace",
-    firstName: "John",
-    homeState: "Tennessee",
-    photo: "/images/john-wallace.jpg",
-    bio: "John Wallace is a retired airline and military pilot from Tennessee who has spent more than ten years riding in the Jack and Back MS Ride and Bike MS in honor of family and friends living with multiple sclerosis. A dedicated cyclist, dog rescuer, and consistent fundraiser, John brings the same discipline and compassion to the road that guided him throughout his career. For him, every ride is an act of service and a way to support the people in his life who face MS each day.",
-    homeRide: "Jack and Back, Eagleville, TN",
-    donateUrl: "https://events.nationalmssociety.org/participants/815695",
+    id: "erik",
+    name: "Erik",
+    firstName: "Erik",
+    homeState: "",
+    photo: "/placeholder.svg",
+    bio: "Erik is a Team Spanish Beer Passport rider who rides in support of the National MS Society and everyone affected by multiple sclerosis.",
+    homeRide: "",
+    donateUrl: "https://events.nationalmssociety.org/participants/818857",
   },
   {
     id: "marianne",
@@ -57,36 +47,36 @@ const riders: Rider[] = [
     donateUrl: "https://events.nationalmssociety.org/participants/MarianneDavis",
   },
   {
-    id: "rob",
-    name: "Rob Farthing",
-    firstName: "Rob",
-    homeState: "Kentucky",
-    photo: "/images/rob-farthing-new.jpg",
-    bio: "Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.",
-    homeRide: "Bluegrass Bourbon, Bardstown, KY",
-    donateUrl: "https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en",
+    id: "matt",
+    name: "Matt",
+    firstName: "Matt",
+    homeState: "",
+    photo: "/placeholder.svg",
+    bio: "Matt is a Team Spanish Beer Passport rider who rides in support of the National MS Society and everyone affected by multiple sclerosis.",
+    homeRide: "",
+    donateUrl: "https://events.nationalmssociety.org/participants/806524",
   },
 ]
 
-export function NationalBikeMSTeam() {
+export function TeamSpanishBeerPassport() {
   const [selectedId, setSelectedId] = useState(riders[0].id)
   const selected = riders.find((r) => r.id === selectedId) ?? riders[0]
 
   return (
     <section className="py-4 mt-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-primary mb-3">Meet the National Bike MS Team</h2>
+        <h2 className="text-3xl font-bold text-primary mb-3">Meet the Team Spanish Beer Passport Cyclist</h2>
         <p className="text-gray-700 mb-6 leading-relaxed">
           We bring together riders who each raise at least $5,000 every year for the National MS Society. These are
-          cyclists who already give everything they have, yet still feel the pull to do more. The National Team gives
+          cyclists who already give everything they have, yet still feel the pull to do more. The Passport Team gives
           them a place to belong and a larger story to be part of. Select a rider below to learn what drives them.
         </p>
 
         {/* Team identity banner */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
           {[
-            { stat: "5", label: "Passport Riders" },
-            { stat: "Growing", label: "National Team" },
+            { stat: "4", label: "Passport Riders" },
+            { stat: "Growing", label: "Passport Team" },
             { stat: "One", label: "Shared Mission" },
           ].map((item) => (
             <div
@@ -103,7 +93,7 @@ export function NationalBikeMSTeam() {
         <div
           className="flex gap-4 overflow-x-auto pb-2 sm:grid sm:grid-cols-3 lg:flex lg:justify-between lg:overflow-visible"
           role="tablist"
-          aria-label="Select a National Bike MS Team rider"
+          aria-label="Select a Team Spanish Beer: Passport Team rider"
         >
           {riders.map((rider) => {
             const isActive = rider.id === selectedId
@@ -126,7 +116,7 @@ export function NationalBikeMSTeam() {
                 >
                   <img
                     src={rider.photo || "/placeholder.svg"}
-                    alt={`${rider.name} - National Bike MS Cycling Team`}
+                    alt={`${rider.name} - Team Spanish Beer: Passport Team`}
                     className="h-full w-full object-cover object-top"
                   />
                 </div>
@@ -137,7 +127,7 @@ export function NationalBikeMSTeam() {
                 >
                   {rider.name}
                 </span>
-                <span className="text-xs text-gray-700">{rider.homeState}</span>
+                {rider.homeState && <span className="text-xs text-gray-700">{rider.homeState}</span>}
                 <span className="text-[11px] text-gray-400 mt-0.5">Bike MS Passport Rider</span>
               </button>
             )
@@ -156,7 +146,7 @@ export function NationalBikeMSTeam() {
           <div className="md:w-64 flex-shrink-0 h-64 md:h-auto bg-gray-100">
             <img
               src={selected.photo || "/placeholder.svg"}
-              alt={`${selected.name} - National Bike MS Cycling Team`}
+              alt={`${selected.name} - Team Spanish Beer: Passport Team`}
               className="w-full h-full object-cover object-top"
             />
           </div>
@@ -164,14 +154,20 @@ export function NationalBikeMSTeam() {
             <h3 className="text-2xl font-bold text-gray-900">{selected.name}</h3>
             <p className="flex items-center gap-1.5 text-sm text-gray-600 mt-1">
               <MapPin className="w-4 h-4 text-orange-500" />
-              {selected.homeState}
-              <span className="text-gray-300">|</span>
+              {selected.homeState && (
+                <>
+                  {selected.homeState}
+                  <span className="text-gray-300">|</span>
+                </>
+              )}
               <span className="text-gray-500">Bike MS Passport Rider</span>
             </p>
             <p className="text-gray-600 mt-4 leading-relaxed">{selected.bio}</p>
-            <p className="text-sm text-gray-700 font-medium mt-3">
-              <strong>Home Ride:</strong> {selected.homeRide}
-            </p>
+            {selected.homeRide && (
+              <p className="text-sm text-gray-700 font-medium mt-3">
+                <strong>Home Ride:</strong> {selected.homeRide}
+              </p>
+            )}
             <Link
               href={selected.donateUrl}
               target="_blank"

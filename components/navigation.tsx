@@ -3,15 +3,16 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { Home, Heart, Info, Menu, X, Share2, Mail, DollarSign } from 'lucide-react'
+import { Home, Heart, Info, Menu, X, Share2, Mail, DollarSign, Users } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "Bike MS", href: "/bike-ms", icon: Heart },
   { name: "National Bike MS Team", href: "/about-bike-ms", icon: Info },
+  { name: "Team Spanish Beer", href: "/team-spanish-beer", icon: Users },
   { name: "About / Contact", href: "/contact", icon: Mail },
-  { name: "Donate to My Bike MS Fundraiser", href: "/donate", icon: DollarSign },
+  { name: "Donate to Casey's Bike MS Fundraiser", href: "/donate", icon: DollarSign },
 ]
 
 export function Navigation() {
@@ -19,6 +20,30 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [isBikeMsDomain, setIsBikeMsDomain] = useState(false)
   const pathname = usePathname() || "/"
+
+  const handleShare = async () => {
+    const shareData = {
+      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
+      url: window.location.href,
+    }
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.share) {
+        await navigator.share(shareData)
+        return
+      }
+    } catch (error) {
+      // User canceled or sharing is blocked (e.g. inside an iframe). Fall back to clipboard.
+    }
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(shareData.url)
+      }
+    } catch (error) {
+      // Clipboard access can also be blocked; fail silently.
+    }
+  }
 
   // Check if we're on the bike-ms.com domain
   useEffect(() => {
@@ -122,32 +147,6 @@ export function Navigation() {
               )
             })}
 
-            <Link
-              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center px-3 py-2 ml-2 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors"
-            >
-              <Heart className="w-4 h-4 mr-2" />
-              <span>Donate to Bike MS</span>
-            </Link>
-
-            <div className="ml-2 pl-2 border-l border-gray-200">
-              <button
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
-                      url: window.location.href,
-                    })
-                  }
-                }}
-                className="flex items-center px-3 py-2 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700"
-                aria-label="Share"
-              >
-                <Share2 className="w-4 h-4" />
-              </button>
-            </div>
           </div>
         </div>
 
@@ -206,25 +205,9 @@ export function Navigation() {
                 )
               })}
 
-              <Link
-                href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center px-4 py-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition-colors min-h-[48px]"
-              >
-                <Heart className="w-6 h-6 mr-3" />
-                <span className="text-lg">Donate to Bike MS</span>
-              </Link>
-
               <button
                 onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: "Bike MS 2026 - Cycling to End Multiple Sclerosis",
-                      url: window.location.href,
-                    })
-                  }
+                  handleShare()
                   setIsOpen(false)
                 }}
                 className="flex items-center px-4 py-4 rounded-lg transition-colors hover:bg-primary/10 hover:text-primary text-gray-700 min-h-[48px]"

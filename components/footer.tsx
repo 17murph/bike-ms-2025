@@ -28,6 +28,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/team-spanish-beer" className="text-gray-300 hover:text-white transition-colors">
+                  Team Spanish Beer
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
                   About / Contact
                 </Link>
@@ -47,6 +52,11 @@ export function Footer() {
               <li>
                 <Link href="/about-bike-ms" className="text-gray-300 hover:text-white transition-colors">
                   National Cycling Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/team-spanish-beer" className="text-gray-300 hover:text-white transition-colors">
+                  Team Spanish Beer
                 </Link>
               </li>
               <li>
