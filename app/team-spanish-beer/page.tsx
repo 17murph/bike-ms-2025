@@ -14,7 +14,7 @@ import { TeamSpanishBeerPassport } from "@/components/team-spanish-beer-passport
 export default function TeamSpanishBeer() {
   // Set metadata via useEffect to avoid server-side rendering issues
   useEffect(() => {
-    document.title = "Team Spanish Beer: Passport Team | Bike MS"
+    document.title = "Team Spanish Beer: Passport Cyclist | Bike MS"
   }, [])
 
   return (
@@ -24,7 +24,7 @@ export default function TeamSpanishBeer() {
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-6">
           <section className="space-y-4">
-            <h1 className="text-4xl font-bold text-center">Team Spanish Beer: <span className="text-orange-500">Passport Team</span></h1>
+            <h1 className="text-4xl font-bold text-center">Team Spanish Beer: <span className="text-orange-500">Passport Cyclist</span></h1>
             <p className="text-sm text-gray-600 text-center">Click a name below to donate to one of our cyclists Bike MS Fundraiser, 100% of all donations go to the National MS Society.</p>
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 my-3">
@@ -67,7 +67,7 @@ export default function TeamSpanishBeer() {
               <div className="flex flex-col items-center justify-center px-4">
                 <img
                   src="/images/jersey-tsb-osms.jpeg"
-                  alt="Team Spanish Beer: Passport Team jersey featuring The Other Side of MS branding"
+                  alt="Team Spanish Beer: Passport Cyclist jersey featuring The Other Side of MS branding"
                   className="w-full max-w-2xl object-contain"
                 />
                 <div className="mt-4 text-center font-medium">
@@ -84,17 +84,17 @@ export default function TeamSpanishBeer() {
                 </div>
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
-                Team Spanish Beer: Passport Team jersey featuring "The Other Side of MS" podcast branding and the Bike MS Passport Program.
+                Team Spanish Beer: Passport Cyclist jersey featuring "The Other Side of MS" podcast branding and the Bike MS Passport Program.
               </p>
             </section>
 
             {/* Our Mission Section */}
             <section className="py-6 bg-gray-50 rounded-xl">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer Passport Team</h2>
+                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer: Passport Cyclist</h2>
                 <div className="prose max-w-none">
                   <p className="my-2">
-                    The Team Spanish Beer Passport Team, in partnership with The Other Side of MS, exists for one reason: to make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
+                    Team Spanish Beer: Passport Cyclist, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
                   </p>
                   <p className="my-2">
                     This team is made up of Team Spanish Beer cyclists who have reached Bike MS Passport status by raising at least $5,000 annually for the National MS Society. Passport status is not a finish line or a measure of importance. It reflects an ongoing commitment to the mission and creates opportunities to support Bike MS in new ways.
