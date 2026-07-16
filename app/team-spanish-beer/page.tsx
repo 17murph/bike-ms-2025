@@ -63,7 +63,7 @@ export default function TeamSpanishBeer() {
             </div>
 
             {/* 2026 Jersey Section */}
-            <section className="py-6 bg-gray-50 rounded-xl">
+            <section className="py-6">
               <div className="flex flex-col items-center justify-center px-4">
                 <img
                   src="/images/jersey-tsb-osms.jpeg"
