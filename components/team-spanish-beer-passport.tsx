@@ -19,7 +19,7 @@ type Rider = {
 const riders: Rider[] = [
   {
     id: "matt",
-    name: "Matt",
+    name: "Matt Thompson",
     firstName: "Matt",
     homeState: "",
     photo: "/images/matt-bw.jpg",
