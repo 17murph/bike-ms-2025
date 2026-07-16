@@ -98,7 +98,7 @@ export default function BikeMS() {
                 alt="2026 Team Jersey - The Other Side of MS Bike MS Cycling Team"
                 width={400}
                 height={400}
-                className="object-contain rounded-lg shadow-md"
+                className="object-contain"
               />
               <div className="mt-4 text-center text-sm flex flex-col font-medium">
                 <span className="text-primary">Support the cause, wear the jersey</span>

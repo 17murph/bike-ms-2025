@@ -63,12 +63,12 @@ export default function TeamSpanishBeer() {
             </div>
 
             {/* 2026 Jersey Section */}
-            <section className="py-6 bg-gray-50 rounded-xl">
+            <section className="py-6">
               <div className="flex flex-col items-center justify-center px-4">
                 <img
                   src="/images/jersey-tsb-osms.jpeg"
                   alt="Team Spanish Beer: Passport Cyclist jersey featuring The Other Side of MS branding"
-                  className="w-full max-w-2xl object-contain"
+                  className="w-full max-w-2xl object-contain mix-blend-multiply"
                 />
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
