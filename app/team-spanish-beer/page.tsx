@@ -123,11 +123,7 @@ export default function TeamSpanishBeer() {
               <div className="container mx-auto px-4">
                 {/* Featured Ride */}
                 <div className="max-w-2xl mx-auto">
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 text-center">Our Featured Ride</h2>
-                  <p className="text-gray-600 text-center mb-6 leading-relaxed">
-                    This year, Bike MS: Cycle to the Shore is our featured ride, though we gladly accept donations for
-                    any of our team&apos;s rides.
-                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Our Home Ride</h2>
 
                   <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
                     <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-4">
