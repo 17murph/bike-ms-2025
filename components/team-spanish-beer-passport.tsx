@@ -19,9 +19,9 @@ type Rider = {
 const riders: Rider[] = [
   {
     id: "matt",
-    name: "Matt",
+    name: "Matt Thompson",
     firstName: "Matt",
-    homeState: "",
+    homeState: "Florida",
     photo: "/images/matt-bw.jpg",
     title: "Team Spanish Beer Captain",
     bio: "Matt is the Team Captain of Team Spanish Beer, leading the team's riders in support of the National MS Society and everyone affected by multiple sclerosis.",

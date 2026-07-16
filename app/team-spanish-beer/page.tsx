@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
-import { Bike, Heart, Users, ExternalLink, MapPin, Calendar } from 'lucide-react'
+import { Bike, Heart, Users, ExternalLink, MapPin, Calendar, Info } from 'lucide-react'
 
 import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
@@ -218,6 +218,57 @@ export default function TeamSpanishBeer() {
                   <Users className="w-5 h-5" />
                   <span>Join Team Spanish Beer</span>
                 </a>
+              </div>
+
+              <h2 className="mt-4 mb-2">Unlock More Rides, More Impact – The Bike MS Passport Program</h2>
+              <p className="my-2">
+                The Bike MS Passport Program is an exclusive benefit for top fundraisers who raise $5,000 or more in a
+                calendar year. This program allows these dedicated cyclists to participate in any Bike MS event the
+                following year without meeting the fundraising minimum.
+              </p>
+              <p className="my-2">
+                <strong>How It Works:</strong> Once you raise $5,000 or more in a calendar year, you&apos;ll
+                automatically qualify for the Passport Program the following year. You&apos;ll receive a special Passport
+                designation that allows you to register for any Bike MS event nationwide without having to meet the
+                fundraising minimum for that event.
+              </p>
+              <p className="my-2">
+                <strong>Benefits Include:</strong>
+              </p>
+              <ul className="list-disc pl-6 space-y-0.5 mb-3">
+                <li>Registration in any Bike MS event without meeting the fundraising minimum</li>
+                <li>Special Passport designation on your rider number</li>
+                <li>Recognition at Bike MS events</li>
+                <li>Opportunity to experience different Bike MS events across the country</li>
+                <li>Ability to continue making an impact for the MS community nationwide</li>
+              </ul>
+
+              <div className="bg-blue-50 p-4 rounded-lg my-4">
+                <h3 className="flex items-center gap-2 text-xl font-bold mb-2">
+                  <MapPin className="text-primary" /> The Bike MS Passport Program
+                </h3>
+                <p className="mb-2">
+                  This year, Passport riders will roll through scenic coastlines, mountain passes, and historic towns,
+                  all united by one goal: a world free of MS.
+                </p>
+                <p className="mb-2">
+                  If you&apos;re aiming for $5,000 or more in fundraising, you could be part of this incredible program.
+                  Where will your Passport take you?
+                </p>
+                <p className="mb-2 font-medium text-primary">
+                  Join us, push past your limits, and ride toward a future without MS.
+                </p>
+                <div className="mt-3">
+                  <a
+                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=6788#accordion-tab-2-active"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Info className="w-5 h-5" />
+                    <span>Learn More about the Bike MS Passport Program</span>
+                  </a>
+                </div>
               </div>
             </div>
 
