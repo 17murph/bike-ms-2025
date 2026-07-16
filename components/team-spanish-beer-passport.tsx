@@ -10,6 +10,7 @@ type Rider = {
   firstName: string
   homeState: string
   photo: string
+  title: string
   bio: string
   homeRide: string
   donateUrl: string
@@ -17,11 +18,23 @@ type Rider = {
 
 const riders: Rider[] = [
   {
+    id: "matt",
+    name: "Matt",
+    firstName: "Matt",
+    homeState: "",
+    photo: "/images/matt-bw.jpg",
+    title: "Team Spanish Beer Captain",
+    bio: "Matt is the Team Captain of Team Spanish Beer, leading the team's riders in support of the National MS Society and everyone affected by multiple sclerosis.",
+    homeRide: "",
+    donateUrl: "https://events.nationalmssociety.org/participants/806524",
+  },
+  {
     id: "casey",
     name: "Casey Murphy",
     firstName: "Casey",
     homeState: "Florida",
     photo: "/images/casey-murphy-bw.jpg",
+    title: "Bike MS Passport Rider",
     bio: "Casey Murphy is the founder and host of The Other Side of MS, a podcast that creates space for honest conversations about life with multiple sclerosis. A Bike MS cyclist since 1995 and a current National MS Society MS Ambassador, Casey believes the stories people share can change how we understand MS, and every mile ridden is another opportunity to support the National MS Society. The podcast and Bike MS are two parts of the same mission: listening, learning, and turning those conversations into action.",
     homeRide: "Cycle to the Shore, North Florida",
     donateUrl: "https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS",
@@ -31,7 +44,8 @@ const riders: Rider[] = [
     name: "Erik Henderson",
     firstName: "Erik",
     homeState: "Florida",
-    photo: "/images/erik-henderson.jpg",
+    photo: "/images/erik-henderson-bw.jpg",
+    title: "Bike MS Passport Rider",
     bio: "Erik Henderson has been a dedicated member of Team Spanish Beer, combining his passion for cycling with a commitment to raising funds for the National MS Society. A Bike MS Passport Cyclist, Erik earned Passport status through his fundraising efforts, but for him the recognition represents more than access to rides across the country. \u201CPassport status is a great perk, but I\u2019m most proud of the fundraising it takes to get there. I truly hope that one day a dollar I\u2019ve raised helps fund a cure.\u201D Growing up in Holliston, Massachusetts, Erik always hoped to ride the Cape Cod Getaway. That opportunity became a reality when several of his Team Spanish Beer teammates planned the trip together. \u201CGrowing up in Eastern Mass, I had always heard about the ride and loved the idea of cycling the length of the Cape. When my team chose the ride, it made the decision easy. I\u2019m excited to see a place that means so much to me from the seat of a bicycle.\u201D One of Erik\u2019s favorite Bike MS memories came during the Cycle to the Shore ride when he unexpectedly spent the day riding alongside a NASCAR driver. \u201CWhat I didn\u2019t realize was that he was also a competitive triathlete. It turned into a pretty rigorous day on the bike.\u201D Whether riding close to home or traveling to new events, Erik values the friendships, shared experiences, and the opportunity to help create a future free of MS.",
     homeRide: "Bike MS: Cycle to the Shore, North Florida",
     donateUrl: "https://events.nationalmssociety.org/participants/818857",
@@ -41,20 +55,11 @@ const riders: Rider[] = [
     name: "Marianne Davis",
     firstName: "Marianne",
     homeState: "Florida",
-    photo: "/images/marianne-davis.jpg",
+    photo: "/images/marianne-davis-bw.jpg",
+    title: "Bike MS Passport Rider",
     bio: "Marianne has been involved with Bike MS: Cycle to the Shore for over 10 years as a former team captain for Team PGA TOUR, former Chairperson for the event, and finally as a rider with Team Spanish Beer. She currently serves on the Florida Chapter Board of Trustees for the National MS Society. New to cycling just over a year ago, she's hooked and can't turn back. She considers it a privilege to ride for those who can't and serves to honor close friends and colleagues who live with MS and those who care for them.",
     homeRide: "Cycle to the Shore, North Florida",
     donateUrl: "https://events.nationalmssociety.org/participants/MarianneDavis",
-  },
-  {
-    id: "matt",
-    name: "Matt",
-    firstName: "Matt",
-    homeState: "",
-    photo: "/images/matt.jpg",
-    bio: "Matt is the Team Captain of Team Spanish Beer, leading the team's riders in support of the National MS Society and everyone affected by multiple sclerosis.",
-    homeRide: "",
-    donateUrl: "https://events.nationalmssociety.org/participants/806524",
   },
 ]
 
@@ -128,14 +133,14 @@ export function TeamSpanishBeerPassport() {
                   {rider.name}
                 </span>
                 {rider.homeState && <span className="text-xs text-gray-700">{rider.homeState}</span>}
-                <span className="text-[11px] text-gray-400 mt-0.5">Bike MS Passport Rider</span>
+                <span className="text-[11px] text-gray-400 mt-0.5">{rider.title}</span>
               </button>
             )
           })}
         </div>
 
         <p className="text-center text-sm text-gray-600 mt-4">
-          Select a rider to learn their story and support their Bike MS fundraiser.
+          Select a rider to learn more and to donate to their Bike MS fundraiser, helping fuel the mission.
         </p>
 
         {/* Featured profile */}
@@ -160,7 +165,7 @@ export function TeamSpanishBeerPassport() {
                   <span className="text-gray-300">|</span>
                 </>
               )}
-              <span className="text-gray-500">Bike MS Passport Rider</span>
+              <span className="text-gray-500">{selected.title}</span>
             </p>
             <p className="text-gray-600 mt-4 leading-relaxed">{selected.bio}</p>
             {selected.homeRide && (
