@@ -68,7 +68,7 @@ export default function TeamSpanishBeer() {
                 <img
                   src="/images/jersey-tsb-osms.jpeg"
                   alt="Team Spanish Beer: Passport Cyclist jersey featuring The Other Side of MS branding"
-                  className="w-full max-w-2xl object-contain"
+                  className="w-full max-w-2xl object-contain mix-blend-multiply"
                 />
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
