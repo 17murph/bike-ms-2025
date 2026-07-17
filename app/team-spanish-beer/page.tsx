@@ -36,6 +36,10 @@ export default function TeamSpanishBeer() {
         .tsb-hero-image-fade {
           animation: tsbFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
         }
+        .tsb-hero-image {
+          -webkit-mask-image: radial-gradient(120% 120% at 50% 45%, #000 55%, transparent 92%);
+          mask-image: radial-gradient(120% 120% at 50% 45%, #000 55%, transparent 92%);
+        }
         @media (prefers-reduced-motion: reduce) {
           .tsb-hero-fade,
           .tsb-hero-image-fade {
@@ -69,15 +73,13 @@ export default function TeamSpanishBeer() {
               </p>
             </div>
 
-            {/* Focal image — floats over the boundary into the section below */}
-            <figure className="tsb-hero-image-fade relative mx-auto mt-12 w-full max-w-3xl -mb-12">
-              <div className="overflow-hidden rounded-2xl shadow-2xl shadow-black/60">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
-                  alt="Team Spanish Beer cyclists in their team jerseys"
-                  className="block w-full object-cover"
-                />
-              </div>
+            {/* Focal image — black background blends into the page via screen blend + edge fade */}
+            <figure className="tsb-hero-image-fade tsb-hero-image relative mx-auto mt-12 w-full max-w-3xl -mb-12">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
+                alt="Team Spanish Beer cyclists in their team jerseys"
+                className="block w-full object-cover mix-blend-screen"
+              />
             </figure>
           </div>
         </section>
