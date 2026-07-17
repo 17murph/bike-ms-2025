@@ -27,10 +27,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("https://www.theothersideofms.com"), 308)
   }
 
-  // If on bike-ms.com domain, redirect to /team-spanish-beer (except if already there)
-  if (isBikeMsDomain && !pathname.startsWith("/team-spanish-beer")) {
+  // If on bike-ms.com domain, load the main Bike MS landing page by default.
+  // Allow the gateway destinations (Bike MS landing, National Bike MS Team, and
+  // Team Spanish Beer) to render so visitors can choose which team to explore.
+  const allowedBikeMsPaths = ["/bike-ms", "/about-bike-ms", "/team-spanish-beer"]
+  const isAllowedBikeMsPath = allowedBikeMsPaths.some(
+    (allowedPath) => pathname === allowedPath || pathname.startsWith(`${allowedPath}/`),
+  )
+  if (isBikeMsDomain && !isAllowedBikeMsPath) {
     const url = request.nextUrl.clone()
-    url.pathname = "/team-spanish-beer"
+    url.pathname = "/bike-ms"
     return NextResponse.redirect(url, 308)
   }
 

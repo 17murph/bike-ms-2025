@@ -5,25 +5,11 @@ import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
-import { useRef, useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function BikeMS() {
-  const donors = useMemo(() => [
-    { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
-    { name: "Dan Sweeney", tags: ["Gold Donor"] },
-    { name: "Jami Stewart", tags: ["Gold Donor"] },
-    { name: "Joseph Monticello", tags: ["Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] },
-    { name: "Genese Sweeney", tags: ["Gold Donor"] },
-    { name: "Dennis Cook", tags: ["Gold Donor"] },
-  { name: "Dan Murphy", tags: ["Gold Donor"] }
-  ], [])
-
-  const donorCarouselRef = useRef<HTMLDivElement>(null)
-
   return (
     <div className="min-h-screen bg-white relative">
       <Navigation />
@@ -73,17 +59,89 @@ export default function BikeMS() {
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-lg sm:text-xl">🚴</span>
-              <span className="font-medium">Meet the Traveling Team</span>
+              <span className="font-medium">National Bike MS Team</span>
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/team-spanish-beer"
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
-              <span className="text-lg sm:text-xl">❤️</span>
-              <span className="font-medium">Donate to Support MS</span>
+              <span className="text-lg sm:text-xl">🍺</span>
+              <span className="font-medium">Team Spanish Beer</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Choose the Team You'd Like to Support */}
+      <section className="bg-gradient-to-b from-white to-blue-50 py-10 md:py-14">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-balance">
+              Choose the Team You&apos;d Like to Support
+            </h2>
+            <p className="mt-3 text-gray-600 leading-relaxed text-pretty">
+              Both teams support the same Bike MS mission. Choose the team you&apos;d like to learn more about or
+              support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Card 1: National Bike MS Team */}
+            <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="bg-blue-600 text-white p-4 text-center">
+                <h3 className="text-xl font-semibold">National Bike MS Team</h3>
+              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <p className="text-gray-700 leading-relaxed flex-grow">
+                  A community of Passport Cyclists from across the country riding together in support of the Bike MS
+                  mission.
+                </p>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/about-bike-ms"
+                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="/about-bike-ms#donate"
+                    className="inline-flex items-center justify-center gap-2 flex-1 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Heart className="w-4 h-4" />
+                    Donate
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Team Spanish Beer Passport Cyclists */}
+            <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="bg-blue-600 text-white p-4 text-center">
+                <h3 className="text-xl font-semibold">Team Spanish Beer</h3>
+              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <p className="text-gray-700 leading-relaxed flex-grow">
+                  Recognizing the Passport Cyclists of Team Spanish Beer, an elevated level within our local Bike MS
+                  team. This page highlights the Passport Cyclists of Team Spanish Beer who have earned this distinction
+                  by raising $5,000 or more annually.
+                </p>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/team-spanish-beer"
+                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="/team-spanish-beer#donate"
+                    className="inline-flex items-center justify-center gap-2 flex-1 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Heart className="w-4 h-4" />
+                    Donate
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -192,201 +250,68 @@ export default function BikeMS() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-3">
-        <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Fundraising Totals</h2>
-              </div>
-              <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
-                {/* John Wallace */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/815695"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
+          <div className="bg-blue-600 text-white p-4 text-center">
+            <h2 className="text-xl md:text-2xl font-semibold">What Your $100 Donation Supports</h2>
+          </div>
+          <div className="p-6 md:p-8">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              <div className="flex-1">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
                       >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$15,291</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "100%" }}></div>
-                  </div>
-                </div>
-
-                {/* Rob Farthing */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">
+                      Research advancing treatments and long-term solutions
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
                       >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$9,577</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "79.8%" }}></div>
-                  </div>
-                </div>
-
-                {/* Curt Sauser */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$8,535</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "71.1%" }}></div>
-                  </div>
-                </div>
-
-                {/* Casey Murphy */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$3,916</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "32.6%" }}></div>
-                  </div>
-                </div>
-
-                {/* Marianne Davis */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Marianne Davis</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/MarianneDavis"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$1,540</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "12.8%" }}></div>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 my-2"></div>
-
-                {/* Team Total */}
-                <div>
-                  <div className="flex items-baseline justify-between text-gray-800">
-                <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                  <span className="text-xs text-gray-500">$38,859 / $48,000</span>
-                </div>
-                <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                  <div className="bg-primary rounded-full h-full" style={{ width: "80.9%" }}></div>
-                  </div>
-                  <div className="text-right text-xs text-gray-500 mt-1">80.9%</div>
-                </div>
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">
+                      Support and guidance so people living with MS do not have to face it alone
+                    </span>
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            {/* Thank You Donors - Stock Ticker Style */}
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
-              </div>
-              <div className="p-6 flex-grow flex flex-col justify-center">
-                <p className="text-center text-gray-700 italic mb-4 text-sm">
-                  "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
-                </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-lg py-3">
-                  <div className="donor-ticker">
-                    {donors.map((donor, index) => (
-                      <div key={`a-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
-                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
-                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
-                            'bg-gray-100 text-gray-600'
-                          }`}>
-                            {donor.tags[0]}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                    {donors.map((donor, index) => (
-                      <div key={`b-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
-                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
-                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
-                            'bg-gray-100 text-gray-600'
-                          }`}>
-                            {donor.tags[0]}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-center text-xs text-gray-500 mt-3">Hover to pause</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px]">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">What $100 Donation Supports</h2>
-              </div>
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div className="text-center space-y-4">
-                  <ul className="text-left list-disc pl-8 text-black">
-                    <li>Research advancing treatments and long-term solutions</li>
-                    <li>Support and guidance so people living with MS do not have to face it alone</li>
-                  </ul>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
-                      <ReliableImage
-                        src="/images/100bill.jpeg"
-                        alt="100 Dollar Bill"
-                        width={256}
-                        height={112}
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
+              <div className="w-full md:w-auto flex justify-center">
+                <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm border border-gray-100">
+                  <ReliableImage
+                    src="/images/100bill.jpeg"
+                    alt="100 Dollar Bill"
+                    width={256}
+                    height={112}
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>

@@ -87,7 +87,7 @@ export default function TeamSpanishBeer() {
         <div className="container mx-auto px-4 pt-16 pb-6">
           <div className="max-w-4xl mx-auto space-y-6">
             {/* Cohesive hero caption + donation CTA group */}
-            <section className="flex flex-col items-center">
+            <section id="donate" className="flex flex-col items-center scroll-mt-28">
               <p className="mx-auto max-w-xl text-center text-sm leading-relaxed text-gray-500">
                 Team Spanish Beer riders in their team jerseys, supporting &ldquo;The Other Side of MS&rdquo; podcast
                 and the Bike MS Passport Program.
@@ -118,20 +118,20 @@ export default function TeamSpanishBeer() {
                   Donate to Casey
                 </Link>
                 <Link
-                  href="https://events.nationalmssociety.org/participants/MarianneDavis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                >
-                  Donate to Marianne
-                </Link>
-                <Link
                   href="https://events.nationalmssociety.org/participants/818857"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
                 >
                   Donate to Erik
+                </Link>
+                <Link
+                  href="https://events.nationalmssociety.org/participants/MarianneDavis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
+                >
+                  Donate to Marianne
                 </Link>
                 <Link
                   href="https://events.nationalmssociety.org/participants/806524"
