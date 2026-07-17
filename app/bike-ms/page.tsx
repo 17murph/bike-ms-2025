@@ -5,25 +5,11 @@ import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
-import { useRef, useMemo } from "react"
 import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
 export default function BikeMS() {
-  const donors = useMemo(() => [
-    { name: "Wendy Bertagnole", tags: ["Platinum Donor"] },
-    { name: "Dan Sweeney", tags: ["Gold Donor"] },
-    { name: "Jami Stewart", tags: ["Gold Donor"] },
-    { name: "Joseph Monticello", tags: ["Silver Donor"] },
-    { name: "Elaine Wuerstlin", tags: ["Gold Donor"] },
-    { name: "Genese Sweeney", tags: ["Gold Donor"] },
-    { name: "Dennis Cook", tags: ["Gold Donor"] },
-  { name: "Dan Murphy", tags: ["Gold Donor"] }
-  ], [])
-
-  const donorCarouselRef = useRef<HTMLDivElement>(null)
-
   return (
     <div className="min-h-screen bg-white relative">
       <Navigation />
@@ -266,201 +252,68 @@ export default function BikeMS() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-3">
-        <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-xl shadow-sm overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Fundraising Totals</h2>
-              </div>
-              <div className="p-3 flex flex-col justify-between flex-grow overflow-y-auto">
-                {/* John Wallace */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">John Wallace</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/815695"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
+          <div className="bg-blue-600 text-white p-4 text-center">
+            <h2 className="text-xl md:text-2xl font-semibold">What Your $100 Donation Supports</h2>
+          </div>
+          <div className="p-6 md:p-8">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              <div className="flex-1">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
                       >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$15,291</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "100%" }}></div>
-                  </div>
-                </div>
-
-                {/* Rob Farthing */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Rob Farthing</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">
+                      Research advancing treatments and long-term solutions
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
                       >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$9,577</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "79.8%" }}></div>
-                  </div>
-                </div>
-
-                {/* Curt Sauser */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Curt Sauser</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/CurtBike2026"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$8,535</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "71.1%" }}></div>
-                  </div>
-                </div>
-
-                {/* Casey Murphy */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Casey Murphy</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$3,916</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "32.6%" }}></div>
-                  </div>
-                </div>
-
-                {/* Marianne Davis */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-gray-700">Marianne Davis</span>
-                      <a
-                        href="https://events.nationalmssociety.org/participants/MarianneDavis"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                      >
-                        Donate
-                      </a>
-                    </div>
-                    <span className="text-xs text-gray-500">$1,540</span>
-                  </div>
-                  <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-primary rounded-full h-full" style={{ width: "12.8%" }}></div>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 my-2"></div>
-
-                {/* Team Total */}
-                <div>
-                  <div className="flex items-baseline justify-between text-gray-800">
-                <span className="font-semibold text-sm text-gray-700">Team Total</span>
-                  <span className="text-xs text-gray-500">$38,859 / $48,000</span>
-                </div>
-                <div className="relative w-full h-2 bg-gray-200 rounded-full mt-1 overflow-hidden">
-                  <div className="bg-primary rounded-full h-full" style={{ width: "80.9%" }}></div>
-                  </div>
-                  <div className="text-right text-xs text-gray-500 mt-1">80.9%</div>
-                </div>
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">
+                      Support and guidance so people living with MS do not have to face it alone
+                    </span>
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            {/* Thank You Donors - Stock Ticker Style */}
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px] overflow-hidden">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">Thank You to Our Donors</h2>
-              </div>
-              <div className="p-6 flex-grow flex flex-col justify-center">
-                <p className="text-center text-gray-700 italic mb-4 text-sm">
-                  "Every mile we ride, every dollar you give — brings us closer to a world free of MS."
-                </p>
-                <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-lg py-3">
-                  <div className="donor-ticker">
-                    {donors.map((donor, index) => (
-                      <div key={`a-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
-                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
-                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
-                            'bg-gray-100 text-gray-600'
-                          }`}>
-                            {donor.tags[0]}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                    {donors.map((donor, index) => (
-                      <div key={`b-${index}`} className="flex items-center shrink-0 px-6 border-r border-blue-200 last:border-r-0">
-                        <span className="font-bold text-gray-800 whitespace-nowrap">{donor.name}</span>
-                        {donor.tags.length > 0 && (
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-                            donor.tags[0].includes('Platinum') ? 'bg-gray-200 text-gray-700' :
-                            donor.tags[0].includes('Gold') ? 'bg-yellow-100 text-yellow-700' :
-                            'bg-gray-100 text-gray-600'
-                          }`}>
-                            {donor.tags[0]}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-center text-xs text-gray-500 mt-3">Hover to pause</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-sm flex flex-col h-auto md:h-[320px]">
-              <div className="bg-blue-600 text-white p-3 text-center">
-                <h2 className="text-xl font-semibold">What $100 Donation Supports</h2>
-              </div>
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div className="text-center space-y-4">
-                  <ul className="text-left list-disc pl-8 text-black">
-                    <li>Research advancing treatments and long-term solutions</li>
-                    <li>Support and guidance so people living with MS do not have to face it alone</li>
-                  </ul>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm mx-auto">
-                      <ReliableImage
-                        src="/images/100bill.jpeg"
-                        alt="100 Dollar Bill"
-                        width={256}
-                        height={112}
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
+              <div className="w-full md:w-auto flex justify-center">
+                <div className="relative w-64 h-28 overflow-hidden rounded-lg shadow-sm border border-gray-100">
+                  <ReliableImage
+                    src="/images/100bill.jpeg"
+                    alt="100 Dollar Bill"
+                    width={256}
+                    height={112}
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
