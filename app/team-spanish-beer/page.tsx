@@ -66,13 +66,13 @@ export default function TeamSpanishBeer() {
             <section className="py-6">
               <div className="flex flex-col items-center justify-center px-4">
                 <img
-                  src="/images/jersey-tsb-osms.jpeg"
-                  alt="Team Spanish Beer: Passport Cyclist jersey featuring The Other Side of MS branding"
-                  className="w-full max-w-2xl object-contain mix-blend-multiply"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
+                  alt="Team Spanish Beer cyclists in their team jerseys"
+                  className="w-full max-w-2xl object-contain"
                 />
               </div>
               <p className="text-center text-sm text-gray-600 mt-4 px-4">
-                Team Spanish Beer: Passport Cyclist jersey featuring "The Other Side of MS" podcast branding and the Bike MS Passport Program.
+                Team Spanish Beer riders in their team jerseys, supporting "The Other Side of MS" podcast and the Bike MS Passport Program.
               </p>
               <div className="flex flex-col items-center justify-center mt-6 px-4">
                 <p className="text-center text-lg font-medium text-gray-800 mb-4">
