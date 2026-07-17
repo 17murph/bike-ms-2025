@@ -27,10 +27,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("https://www.theothersideofms.com"), 308)
   }
 
-  // If on bike-ms.com domain, redirect to /about-bike-ms (except if already there)
-  if (isBikeMsDomain && !pathname.startsWith("/about-bike-ms")) {
+  // If on bike-ms.com domain, redirect to /team-spanish-beer (except if already there)
+  if (isBikeMsDomain && !pathname.startsWith("/team-spanish-beer")) {
     const url = request.nextUrl.clone()
-    url.pathname = "/about-bike-ms"
+    url.pathname = "/team-spanish-beer"
     return NextResponse.redirect(url, 308)
   }
 

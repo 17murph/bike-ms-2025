@@ -124,11 +124,11 @@ export function Navigation() {
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
-              // On bike-ms.com, link to theothersideofms.com for pages other than /about-bike-ms
-              const href = isBikeMsDomain && item.href !== "/about-bike-ms" 
+              // On bike-ms.com, link to theothersideofms.com for pages other than /team-spanish-beer
+              const href = isBikeMsDomain && item.href !== "/team-spanish-beer" 
                 ? `https://www.theothersideofms.com${item.href}` 
                 : item.href
-              const isExternal = isBikeMsDomain && item.href !== "/about-bike-ms"
+              const isExternal = isBikeMsDomain && item.href !== "/team-spanish-beer"
 
               return (
                 <Link
@@ -181,11 +181,11 @@ export function Navigation() {
 
               {navItems.map((item) => {
                 const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
-                // On bike-ms.com, link to theothersideofms.com for pages other than /about-bike-ms
-                const href = isBikeMsDomain && item.href !== "/about-bike-ms" 
+                // On bike-ms.com, link to theothersideofms.com for pages other than /team-spanish-beer
+                const href = isBikeMsDomain && item.href !== "/team-spanish-beer" 
                   ? `https://www.theothersideofms.com${item.href}` 
                   : item.href
-                const isExternal = isBikeMsDomain && item.href !== "/about-bike-ms"
+                const isExternal = isBikeMsDomain && item.href !== "/team-spanish-beer"
 
                 return (
                   <Link
