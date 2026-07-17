@@ -47,19 +47,19 @@ export default function TeamSpanishBeer() {
 
       <main>
         {/* Premium full-width hero */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
+        <section className="relative w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
           {/* soft ambient glow */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(249,115,22,0.14),transparent_70%)]"
           />
 
-          <div className="relative mx-auto max-w-5xl px-6 pt-20 pb-40 sm:pt-24 sm:pb-48 lg:pt-28">
+          <div className="relative mx-auto max-w-5xl px-6 pt-16 pb-24 sm:pt-20">
             <div className="tsb-hero-fade text-center">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-orange-400/90">
                 The Other Side of MS
               </span>
-              <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Team Spanish Beer
                 <span className="mt-2 block text-orange-500">Passport Cyclist</span>
               </h1>
@@ -70,77 +70,77 @@ export default function TeamSpanishBeer() {
             </div>
 
             {/* Focal image — floats over the boundary into the section below */}
-            <figure className="tsb-hero-image-fade relative mx-auto mt-14 w-full max-w-3xl -mb-32 sm:-mb-40">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
-                alt="Team Spanish Beer cyclists in their team jerseys"
-                className="w-full rounded-2xl object-contain shadow-2xl shadow-black/60 ring-1 ring-white/10"
-              />
+            <figure className="tsb-hero-image-fade relative mx-auto mt-12 w-full max-w-3xl -mb-24">
+              <div className="overflow-hidden rounded-2xl shadow-2xl shadow-black/60">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
+                  alt="Team Spanish Beer cyclists in their team jerseys"
+                  className="block w-full object-cover"
+                />
+              </div>
             </figure>
           </div>
         </section>
 
-        <div className="container mx-auto px-4 pt-40 pb-6 sm:pt-48">
+        <div className="container mx-auto px-4 pt-24 pb-6">
           <div className="max-w-4xl mx-auto space-y-6">
-            <section className="space-y-4">
+            {/* Cohesive hero caption + donation CTA group */}
+            <section className="flex flex-col items-center">
               <p className="mx-auto max-w-xl text-center text-sm leading-relaxed text-gray-500">
                 Team Spanish Beer riders in their team jerseys, supporting &ldquo;The Other Side of MS&rdquo; podcast
                 and the Bike MS Passport Program.
               </p>
 
               {/* Primary team CTA */}
-              <div className="flex flex-col items-center justify-center pt-4">
-                <a
-                  href="https://events.nationalmssociety.org/teams/TeamSpanishBeer2026"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-lg text-lg"
-                >
-                  <Heart className="w-5 h-5" />
-                  <span>Donate to Team Spanish Beer</span>
-                </a>
-              </div>
+              <a
+                href="https://events.nationalmssociety.org/teams/TeamSpanishBeer2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 px-7 py-3.5 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-lg text-lg"
+              >
+                <Heart className="w-5 h-5" />
+                <span>Donate to Team Spanish Beer</span>
+              </a>
 
               {/* Individual cyclist donations */}
-              <div className="pt-8">
-                <p className="text-center text-sm text-gray-500 mb-4">
-                  Or support one of our cyclists directly — 100% goes to the National MS Society.
-                </p>
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3">
-                  <Link
-                    href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                  >
-                    Donate to Casey
-                  </Link>
-                  <Link
-                    href="https://events.nationalmssociety.org/participants/MarianneDavis"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                  >
-                    Donate to Marianne
-                  </Link>
-                  <Link
-                    href="https://events.nationalmssociety.org/participants/818857"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                  >
-                    Donate to Erik
-                  </Link>
-                  <Link
-                    href="https://events.nationalmssociety.org/participants/806524"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                  >
-                    Donate to Matt
-                  </Link>
-                </div>
+              <p className="mt-6 text-center text-sm text-gray-500">
+                Or support one of our cyclists directly — 100% goes to the National MS Society.
+              </p>
+              <div className="mt-4 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2">
+                <Link
+                  href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
+                >
+                  Donate to Casey
+                </Link>
+                <Link
+                  href="https://events.nationalmssociety.org/participants/MarianneDavis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
+                >
+                  Donate to Marianne
+                </Link>
+                <Link
+                  href="https://events.nationalmssociety.org/participants/818857"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
+                >
+                  Donate to Erik
+                </Link>
+                <Link
+                  href="https://events.nationalmssociety.org/participants/806524"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
+                >
+                  Donate to Matt
+                </Link>
               </div>
+            </section>
 
             {/* Our Mission Section */}
             <section className="py-6 bg-gray-50 rounded-xl">
@@ -326,7 +326,6 @@ export default function TeamSpanishBeer() {
 
             {/* Add Social Media Links */}
             <SocialMediaLinks />
-          </section>
           </div>
         </div>
       </main>
