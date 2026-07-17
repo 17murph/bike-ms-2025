@@ -70,7 +70,7 @@ export default function TeamSpanishBeer() {
             </div>
 
             {/* Focal image — floats over the boundary into the section below */}
-            <figure className="tsb-hero-image-fade relative mx-auto mt-12 w-full max-w-3xl -mb-24">
+            <figure className="tsb-hero-image-fade relative mx-auto mt-12 w-full max-w-3xl -mb-12">
               <div className="overflow-hidden rounded-2xl shadow-2xl shadow-black/60">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
@@ -82,7 +82,7 @@ export default function TeamSpanishBeer() {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 pt-24 pb-6">
+        <div className="container mx-auto px-4 pt-16 pb-6">
           <div className="max-w-4xl mx-auto space-y-6">
             {/* Cohesive hero caption + donation CTA group */}
             <section className="flex flex-col items-center">
@@ -143,7 +143,7 @@ export default function TeamSpanishBeer() {
             </section>
 
             {/* Our Mission Section */}
-            <section className="py-6 bg-gray-50 rounded-xl">
+            <section className="py-6">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer: Passport Cyclist</h2>
                 <div className="prose max-w-none">
