@@ -25,7 +25,7 @@ export default function AboutBikeMS() {
 
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-6">
-          <section className="space-y-4">
+          <section id="donate" className="space-y-4 scroll-mt-28">
             <h1 className="text-4xl font-bold text-center">National Bike <span className="text-orange-500">MS</span> Cycling Team</h1>
             <p className="text-sm text-gray-600 text-center">Click a name below to donate to one of our cyclists Bike MS Fundraiser, 100% of all donations go to the National MS Society.</p>
 

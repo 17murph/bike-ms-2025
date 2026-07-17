@@ -88,6 +88,80 @@ export default function BikeMS() {
         </div>
       </section>
 
+      {/* Choose the Team You'd Like to Support */}
+      <section className="bg-gradient-to-b from-white to-blue-50 py-10 md:py-14">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-balance">
+              Choose the Team You&apos;d Like to Support
+            </h2>
+            <p className="mt-3 text-gray-600 leading-relaxed text-pretty">
+              Both teams support the same Bike MS mission. Choose the team you&apos;d like to learn more about or
+              support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Card 1: National Bike MS Team */}
+            <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="bg-blue-600 text-white p-4 text-center">
+                <h3 className="text-xl font-semibold">National Bike MS Team</h3>
+              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <p className="text-gray-700 leading-relaxed flex-grow">
+                  A community of Passport Cyclists from across the country riding together in support of the Bike MS
+                  mission.
+                </p>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/about-bike-ms"
+                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="/about-bike-ms#donate"
+                    className="inline-flex items-center justify-center gap-2 flex-1 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Heart className="w-4 h-4" />
+                    Donate
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Team Spanish Beer Passport Cyclists */}
+            <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="bg-blue-600 text-white p-4 text-center">
+                <h3 className="text-xl font-semibold">Team Spanish Beer Passport Cyclists</h3>
+              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <p className="text-gray-700 leading-relaxed flex-grow">
+                  Recognizing the Passport Cyclists of Team Spanish Beer, an elevated level within our local Bike MS
+                  team. This page highlights the Passport Cyclists of Team Spanish Beer who have earned this distinction
+                  by raising $5,000 or more annually.
+                </p>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/team-spanish-beer"
+                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="/team-spanish-beer#donate"
+                    className="inline-flex items-center justify-center gap-2 flex-1 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Heart className="w-4 h-4" />
+                    Donate
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section with improved styling */}
       <section className="relative bg-gradient-to-b from-blue-100 to-white py-3">
         <div className="container mx-auto px-4">
