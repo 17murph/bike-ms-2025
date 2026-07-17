@@ -59,16 +59,14 @@ export default function BikeMS() {
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-lg sm:text-xl">🚴</span>
-              <span className="font-medium">Meet the Traveling Team</span>
+              <span className="font-medium">National Bike MS Team</span>
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/team-spanish-beer"
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
-              <span className="text-lg sm:text-xl">❤️</span>
-              <span className="font-medium">Donate to Support MS</span>
+              <span className="text-lg sm:text-xl">🍺</span>
+              <span className="font-medium">Team Spanish Beer</span>
             </Link>
           </div>
         </div>
@@ -119,7 +117,7 @@ export default function BikeMS() {
             {/* Card 2: Team Spanish Beer Passport Cyclists */}
             <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
               <div className="bg-blue-600 text-white p-4 text-center">
-                <h3 className="text-xl font-semibold">Team Spanish Beer Passport Cyclists</h3>
+                <h3 className="text-xl font-semibold">Team Spanish Beer</h3>
               </div>
               <div className="flex flex-col flex-grow p-6">
                 <p className="text-gray-700 leading-relaxed flex-grow">
