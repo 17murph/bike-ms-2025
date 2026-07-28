@@ -176,7 +176,7 @@ export default function Home() {
                 </div>
               </div>
               <a
-                href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-secondary text-white text-sm font-semibold rounded-full hover:bg-secondary/90 transition-all whitespace-nowrap"

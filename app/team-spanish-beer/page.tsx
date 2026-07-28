@@ -110,7 +110,7 @@ export default function TeamSpanishBeer() {
               </p>
               <div className="mt-4 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2">
                 <Link
-                  href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                  href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
