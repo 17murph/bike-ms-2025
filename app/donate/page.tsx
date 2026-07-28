@@ -194,13 +194,13 @@ export default function DonatePage() {
             <div className="flex-1">
               <h3 className="text-sm font-semibold text-gray-900 mb-1">We&apos;re not just a podcast. We ride Bike MS to fund the fight against MS.</h3>
               <div className="flex items-baseline gap-1.5">
-                <span className="text-xl font-bold text-primary">$4,721.00</span>
+                <span className="text-xl font-bold text-primary">$4,401.00</span>
                 <span className="text-gray-500 text-sm">of $10,000</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                 <div 
                   className="bg-primary h-1.5 rounded-full transition-all duration-500" 
-                  style={{ width: '47.21%' }}
+                  style={{ width: '44.01%' }}
                 ></div>
               </div>
             </div>
