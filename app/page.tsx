@@ -191,7 +191,7 @@ export default function Home() {
         </section>
 
         {/* Why These Stories Matter + Latest Episode Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="pt-16 pb-8 bg-gray-50">
           <div className="container mx-auto max-w-6xl px-4">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Left - Why These Stories Matter */}
@@ -203,7 +203,7 @@ export default function Home() {
                   <img
                     src="/images/2026-other-side-of-ms-logo.png"
                     alt="The Other Side of MS Podcast Logo"
-                    className="float-left w-32 h-32 md:w-44 md:h-44 object-contain mr-3 -ml-1 -mt-1"
+                    className="float-left w-44 h-44 md:w-60 md:h-60 object-contain mr-4 -ml-1 -mt-1"
                     onError={(e) => {
                       e.currentTarget.src = "/images/podcast-logo.png"
                     }}
@@ -265,7 +265,7 @@ export default function Home() {
         </section>
 
         {/* Start Listening Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="pt-8 pb-16 bg-gray-50">
           <div className="container mx-auto max-w-6xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Start Listening</h2>
             <p className="text-center text-gray-600 mb-10 max-w-xl mx-auto">
