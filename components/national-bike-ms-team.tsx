@@ -140,13 +140,13 @@ const carouselStyles = `
     margin: 0;
     transform: translate(-50%, -50%) rotate(-2.5deg);
     opacity: 0;
-    animation: tsb-fade 25s infinite;
+    animation: tsb-fade 12.5s infinite;
   }
   .tsb-card:nth-child(1) { animation-delay: 0s; }
-  .tsb-card:nth-child(2) { animation-delay: 5s; }
-  .tsb-card:nth-child(3) { animation-delay: 10s; }
-  .tsb-card:nth-child(4) { animation-delay: 15s; }
-  .tsb-card:nth-child(5) { animation-delay: 20s; }
+  .tsb-card:nth-child(2) { animation-delay: 2.5s; }
+  .tsb-card:nth-child(3) { animation-delay: 5s; }
+  .tsb-card:nth-child(4) { animation-delay: 7.5s; }
+  .tsb-card:nth-child(5) { animation-delay: 10s; }
 
   /* Pause rotation on hover */
   .tsb-carousel:hover .tsb-card {
