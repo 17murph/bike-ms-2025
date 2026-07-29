@@ -31,7 +31,7 @@ export default function AboutBikeMS() {
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 my-3">
               <Link
-                href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"

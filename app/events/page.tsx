@@ -39,7 +39,7 @@ export default function EventsPage() {
             {/* Team Members Links */}
             <div className="flex flex-wrap items-center justify-center gap-2 my-4 text-base">
               <Link
-                href="https://events.nationalmssociety.org/participants/Casey-Murphy_Bike-MS"
+                href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
