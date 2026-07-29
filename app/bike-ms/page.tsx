@@ -34,7 +34,7 @@ export default function BikeMS() {
               Bike <span className="text-[#E25D28]">MS</span> 2026
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight">
-              Where Miles Unite Us to End MS
+              Stories move people. Miles move the mission.
             </p>
             <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-4 md:p-6 rounded-lg">
               <p className="text-white text-base md:text-lg leading-normal">
@@ -93,8 +93,8 @@ export default function BikeMS() {
               </div>
               <div className="flex flex-col flex-grow p-6">
                 <p className="text-gray-700 leading-relaxed flex-grow">
-                  A community of Passport Cyclists from across the country riding together in support of the Bike MS
-                  mission.
+                  Ride alongside Passport Cyclists from across the country who share one mission: ending MS through
+                  fundraising, community, and storytelling.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <Link
@@ -121,9 +121,8 @@ export default function BikeMS() {
               </div>
               <div className="flex flex-col flex-grow p-6">
                 <p className="text-gray-700 leading-relaxed flex-grow">
-                  Recognizing the Passport Cyclists of Team Spanish Beer, an elevated level within our local Bike MS
-                  team. This page highlights the Passport Cyclists of Team Spanish Beer who have earned this distinction
-                  by raising $5,000 or more annually.
+                  Our North Florida home team, bringing together local cyclists who ride, fundraise, and support one
+                  another year after year.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <Link
