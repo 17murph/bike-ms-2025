@@ -93,8 +93,9 @@ export default function BikeMS() {
               </div>
               <div className="flex flex-col flex-grow p-6">
                 <p className="text-gray-700 leading-relaxed flex-grow">
-                  Ride alongside Passport Cyclists from across the country who share one mission: ending MS through
-                  fundraising, community, and storytelling.
+                  Support Passport Cyclists from across the country who have demonstrated an extraordinary commitment to
+                  the National MS Society. These riders come together across team and state lines, using fundraising,
+                  shared experiences, and storytelling to strengthen the MS community and support people affected by MS.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <Link
@@ -121,8 +122,9 @@ export default function BikeMS() {
               </div>
               <div className="flex flex-col flex-grow p-6">
                 <p className="text-gray-700 leading-relaxed flex-grow">
-                  Our North Florida home team, bringing together local cyclists who ride, fundraise, and support one
-                  another year after year.
+                  Support the riders from our North Florida home team who have demonstrated an extraordinary commitment
+                  to the National MS Society. Each cyclist has earned Bike MS Passport status by raising $5,000 or more
+                  in a cycling season, reflecting a shared commitment to changing the lives of people affected by MS.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <Link
