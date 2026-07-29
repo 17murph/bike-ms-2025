@@ -37,8 +37,16 @@ export default function TeamSpanishBeer() {
           animation: tsbFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
         }
         .tsb-hero-image {
-          -webkit-mask-image: radial-gradient(120% 120% at 50% 45%, #000 55%, transparent 92%);
-          mask-image: radial-gradient(120% 120% at 50% 45%, #000 55%, transparent 92%);
+          /* Intersect a radial feather with horizontal + vertical edge fades so every
+             edge (including the bright right column) melts into the dark section. */
+          -webkit-mask-image: radial-gradient(115% 125% at 50% 45%, #000 42%, transparent 86%),
+            linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+            linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+          -webkit-mask-composite: source-in;
+          mask-image: radial-gradient(115% 125% at 50% 45%, #000 42%, transparent 86%),
+            linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+            linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+          mask-composite: intersect;
         }
         @media (prefers-reduced-motion: reduce) {
           .tsb-hero-fade,
