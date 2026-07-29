@@ -1,8 +1,5 @@
-"use client"
-
-import { useState } from "react"
 import Link from "next/link"
-import { ExternalLink, MapPin } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
 type Rider = {
   id: string
@@ -15,6 +12,7 @@ type Rider = {
   donateUrl: string
 }
 
+// Alphabetical order: Casey, Curt, John, Rob
 const riders: Rider[] = [
   {
     id: "casey",
@@ -22,7 +20,7 @@ const riders: Rider[] = [
     firstName: "Casey",
     homeState: "Florida",
     photo: "/images/casey-murphy-bw.jpg",
-    bio: "Casey Murphy is the founder and host of The Other Side of MS, a podcast that creates space for honest conversations about life with multiple sclerosis. A Bike MS cyclist since 1995 and a current National MS Society MS Ambassador, Casey believes the stories people share can change how we understand MS, and every mile ridden is another opportunity to support the National MS Society. The podcast and Bike MS are two parts of the same mission: listening, learning, and turning those conversations into action.",
+    bio: "Founder and host of The Other Side of MS, a Bike MS cyclist since 1995 and a National MS Society Ambassador who turns honest conversations about MS into action.",
     homeRide: "Cycle to the Shore, North Florida",
     donateUrl: "https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en",
   },
@@ -32,7 +30,7 @@ const riders: Rider[] = [
     firstName: "Curt",
     homeState: "Wisconsin",
     photo: "/images/curt-sauser.jpg",
-    bio: "Curt was diagnosed with multiple sclerosis in 2008. After struggling to make sense of the news, he made a decision to stop feeling sorry for himself and started his Bike MS team in 2009 to be part of the effort to find a cure. As Captain of Team CCC (Curt's Conquest for a Cure) in Wisconsin, his team has surpassed $1,000,000 in lifetime fundraising. He raised over $10,000 personally in 2025.",
+    bio: "Diagnosed with MS in 2008, Curt captains Team CCC in Wisconsin, which has surpassed $1,000,000 in lifetime fundraising. He personally raised over $10,000 in 2025.",
     homeRide: "Best Dam Bike Tour, Baraboo, WI",
     donateUrl: "https://events.nationalmssociety.org/participants/CurtBike2026",
   },
@@ -42,19 +40,9 @@ const riders: Rider[] = [
     firstName: "John",
     homeState: "Tennessee",
     photo: "/images/john-wallace.jpg",
-    bio: "John Wallace is a retired airline and military pilot from Tennessee who has spent more than ten years riding in the Jack and Back MS Ride and Bike MS in honor of family and friends living with multiple sclerosis. A dedicated cyclist, dog rescuer, and consistent fundraiser, John brings the same discipline and compassion to the road that guided him throughout his career. For him, every ride is an act of service and a way to support the people in his life who face MS each day.",
+    bio: "A retired airline and military pilot who has ridden the Jack and Back MS Ride for over ten years in honor of family and friends living with MS. Every ride is an act of service.",
     homeRide: "Jack and Back, Eagleville, TN",
     donateUrl: "https://events.nationalmssociety.org/participants/815695",
-  },
-  {
-    id: "marianne",
-    name: "Marianne Davis",
-    firstName: "Marianne",
-    homeState: "Florida",
-    photo: "/images/marianne-davis.jpg",
-    bio: "Marianne has been involved with Bike MS: Cycle to the Shore for over 10 years as a former team captain for Team PGA TOUR, former Chairperson for the event, and finally as a rider with Team Spanish Beer. She currently serves on the Florida Chapter Board of Trustees for the National MS Society. New to cycling just over a year ago, she's hooked and can't turn back. She considers it a privilege to ride for those who can't and serves to honor close friends and colleagues who live with MS and those who care for them.",
-    homeRide: "Cycle to the Shore, North Florida",
-    donateUrl: "https://events.nationalmssociety.org/participants/MarianneDavis",
   },
   {
     id: "rob",
@@ -62,126 +50,177 @@ const riders: Rider[] = [
     firstName: "Rob",
     homeState: "Kentucky",
     photo: "/images/rob-farthing-new.jpg",
-    bio: "Rob is entering his nineteenth year with Bike MS and has completed twenty-seven events since first joining in 2008. He serves on the Kentucky planning committee, focusing on growing rider participation and supporting local bike shops. Rob rides for the many people in his life who live with MS and carries their names on his bib each year. He also created Mowing for MS, donating the proceeds from mowing fifteen yards each season and contributing more than $39,000 to the MS Society. His 2026 fundraising goal is $15,000.",
+    bio: "Entering his nineteenth year with Bike MS with twenty-seven events completed. His Mowing for MS effort has contributed more than $39,000, and his 2026 goal is $15,000.",
     homeRide: "Bluegrass Bourbon, Bardstown, KY",
     donateUrl: "https://events.nationalmssociety.org/participants/764003?referrer=mf%3A764003%3Ayou-copy&language=en",
   },
 ]
 
-export function NationalBikeMSTeam() {
-  const [selectedId, setSelectedId] = useState(riders[0].id)
-  const selected = riders.find((r) => r.id === selectedId) ?? riders[0]
+const carouselStyles = `
+.tsb-carousel {
+  /* Mobile-first: horizontal swipeable, scroll-snap track */
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 1.25rem 2.5rem;
+  scrollbar-width: none;
+}
+.tsb-carousel::-webkit-scrollbar {
+  display: none;
+}
 
+.tsb-card {
+  scroll-snap-align: center;
+  flex: 0 0 82%;
+  max-width: 340px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 0.75rem 0.75rem 1.25rem;
+  border-radius: 3px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  transform: rotate(-1deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Mobile scroll-driven lift when card is centered in the viewport */
+@supports (animation-timeline: view()) {
+  .tsb-card {
+    animation: tsb-rise linear both;
+    animation-timeline: view(inline);
+    animation-range: entry 10% cover 55%;
+  }
+}
+@keyframes tsb-rise {
+  from { transform: rotate(-1deg) translateY(14px); }
+  to   { transform: rotate(-1deg) translateY(-8px); }
+}
+
+.tsb-photo {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+  background: #f3f4f6;
+}
+
+.tsb-caption {
+  padding: 0.85rem 0.35rem 0;
+  text-align: center;
+}
+
+/* Desktop: single centered card, CSS auto-rotate with soft fade */
+@media (min-width: 768px) {
+  .tsb-carousel {
+    position: relative;
+    display: block;
+    overflow: visible;
+    height: 540px;
+    padding: 1.5rem 0;
+    scroll-snap-type: none;
+  }
+  .tsb-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 360px;
+    flex: none;
+    margin: 0;
+    transform: translate(-50%, -50%) rotate(-2.5deg);
+    opacity: 0;
+    animation: tsb-fade 20s infinite;
+  }
+  .tsb-card:nth-child(1) { animation-delay: 0s; }
+  .tsb-card:nth-child(2) { animation-delay: 5s; }
+  .tsb-card:nth-child(3) { animation-delay: 10s; }
+  .tsb-card:nth-child(4) { animation-delay: 15s; }
+
+  /* Pause rotation on hover */
+  .tsb-carousel:hover .tsb-card {
+    animation-play-state: paused;
+  }
+
+  /* Lift and straighten the hovered card */
+  .tsb-card:hover {
+    opacity: 1 !important;
+    z-index: 20 !important;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.04);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
+  }
+
+  .tsb-photo {
+    height: 300px;
+  }
+}
+
+@keyframes tsb-fade {
+  0%   { opacity: 0; z-index: 1; }
+  2%   { opacity: 1; z-index: 5; }
+  23%  { opacity: 1; z-index: 5; }
+  25%  { opacity: 0; z-index: 1; }
+  100% { opacity: 0; z-index: 1; }
+}
+
+/* Respect reduced motion: show the first card, disable auto-rotate */
+@media (prefers-reduced-motion: reduce) {
+  .tsb-card {
+    animation: none !important;
+  }
+  @media (min-width: 768px) {
+    .tsb-card { opacity: 0; }
+    .tsb-card:nth-child(1) { opacity: 1; z-index: 5; }
+  }
+}
+`
+
+export function NationalBikeMSTeam() {
   return (
     <section className="py-4 mt-8">
+      <style dangerouslySetInnerHTML={{ __html: carouselStyles }} />
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-primary mb-3">Meet the National Bike MS Team</h2>
-        <p className="text-gray-700 mb-6 leading-relaxed">
+        <p className="text-gray-700 mb-2 leading-relaxed">
           We bring together riders who each raise at least $5,000 every year for the National MS Society. These are
           cyclists who already give everything they have, yet still feel the pull to do more. The National Team gives
-          them a place to belong and a larger story to be part of. Select a rider below to learn what drives them.
+          them a place to belong and a larger story to be part of.
+        </p>
+        <p className="text-sm text-gray-500 mb-2">
+          <span className="hidden md:inline">Hover a card to pause and take a closer look. </span>
+          <span className="md:hidden">Swipe to meet each rider. </span>
+          Meet the team and support their Bike MS fundraisers.
         </p>
 
-        {/* Team identity banner */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-          {[
-            { stat: "5", label: "Passport Riders" },
-            { stat: "Growing", label: "National Team" },
-            { stat: "One", label: "Shared Mission" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="bg-gray-50 border border-gray-100 rounded-lg py-4 px-3 text-center"
-            >
-              <div className="text-2xl font-bold text-orange-500">{item.stat}</div>
-              <div className="text-sm font-medium text-gray-700">{item.label}</div>
-            </div>
+        <div className="tsb-carousel" aria-label="National Bike MS Team riders">
+          {riders.map((rider) => (
+            <article key={rider.id} className="tsb-card">
+              <img
+                src={rider.photo || "/placeholder.svg"}
+                alt={`${rider.name} - National Bike MS Cycling Team`}
+                className="tsb-photo"
+              />
+              <div className="tsb-caption">
+                <h3 className="text-xl font-bold text-gray-900">{rider.name}</h3>
+                <p className="text-xs font-medium uppercase tracking-wide text-orange-500 mt-0.5">
+                  {rider.homeState} &middot; Bike MS Passport Rider
+                </p>
+                <p className="text-sm text-gray-600 mt-3 leading-relaxed">{rider.bio}</p>
+                <p className="text-xs text-gray-700 mt-3">
+                  <strong>Home Ride:</strong> {rider.homeRide}
+                </p>
+                <Link
+                  href={rider.donateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 mt-4 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors font-medium text-sm shadow-sm hover:shadow-md"
+                >
+                  Donate to {rider.firstName}
+                  <ExternalLink className="w-4 h-4" />
+                </Link>
+              </div>
+            </article>
           ))}
-        </div>
-
-        {/* Rider selector */}
-        <div
-          className="flex gap-4 overflow-x-auto pb-2 sm:grid sm:grid-cols-3 lg:flex lg:justify-between lg:overflow-visible"
-          role="tablist"
-          aria-label="Select a National Bike MS Team rider"
-        >
-          {riders.map((rider) => {
-            const isActive = rider.id === selectedId
-            return (
-              <button
-                key={rider.id}
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => setSelectedId(rider.id)}
-                className={`flex flex-col items-center text-center flex-shrink-0 w-32 sm:w-auto lg:flex-1 rounded-xl p-3 transition-all duration-200 ${
-                  isActive
-                    ? "bg-orange-50 shadow-md -translate-y-1"
-                    : "bg-transparent hover:bg-gray-50"
-                }`}
-              >
-                <div
-                  className={`h-20 w-20 rounded-full overflow-hidden bg-gray-100 ring-4 transition-all duration-200 ${
-                    isActive ? "ring-orange-500" : "ring-transparent"
-                  }`}
-                >
-                  <img
-                    src={rider.photo || "/placeholder.svg"}
-                    alt={`${rider.name} - National Bike MS Cycling Team`}
-                    className="h-full w-full object-cover object-top"
-                  />
-                </div>
-                <span
-                  className={`mt-3 text-sm ${
-                    isActive ? "font-bold text-gray-900" : "font-medium text-gray-800"
-                  }`}
-                >
-                  {rider.name}
-                </span>
-                <span className="text-xs text-gray-700">{rider.homeState}</span>
-                <span className="text-[11px] text-gray-400 mt-0.5">Bike MS Passport Rider</span>
-              </button>
-            )
-          })}
-        </div>
-
-        <p className="text-center text-sm text-gray-600 mt-4">
-          Select a rider to learn their story and support their Bike MS fundraiser.
-        </p>
-
-        {/* Featured profile */}
-        <div
-          key={selected.id}
-          className="mt-8 bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden animate-in fade-in duration-300 flex flex-col md:flex-row"
-        >
-          <div className="md:w-64 flex-shrink-0 h-64 md:h-auto bg-gray-100">
-            <img
-              src={selected.photo || "/placeholder.svg"}
-              alt={`${selected.name} - National Bike MS Cycling Team`}
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-          <div className="p-6 flex flex-col">
-            <h3 className="text-2xl font-bold text-gray-900">{selected.name}</h3>
-            <p className="flex items-center gap-1.5 text-sm text-gray-600 mt-1">
-              <MapPin className="w-4 h-4 text-orange-500" />
-              {selected.homeState}
-              <span className="text-gray-300">|</span>
-              <span className="text-gray-500">Bike MS Passport Rider</span>
-            </p>
-            <p className="text-gray-600 mt-4 leading-relaxed">{selected.bio}</p>
-            <p className="text-sm text-gray-700 font-medium mt-3">
-              <strong>Home Ride:</strong> {selected.homeRide}
-            </p>
-            <Link
-              href={selected.donateUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors mt-4 self-start"
-            >
-              Donate to {selected.firstName}
-              <ExternalLink className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </div>
     </section>
