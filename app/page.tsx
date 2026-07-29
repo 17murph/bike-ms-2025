@@ -209,22 +209,22 @@ export default function Home() {
                     }}
                   />
                   <p className="mb-3">
-                    The Other Side of MS isn&apos;t here to inspire you. It&apos;s here to show you what it really means to live with multiple sclerosis (MS): The chaos behind the smiles, the invisible symptoms, the quiet grief, and the complex resilience.
+                    The Other Side of MS exists because too many people affected by multiple sclerosis spend their lives explaining themselves. Here, they do not have to.
                   </p>
                   <p className="mb-3">
-                    This podcast creates a space where people with MS can tell their stories without performing, without toxic positivity, and without being reduced to a diagnosis.
+                    People come on this podcast to talk about what MS has changed in their lives. Some of it is hard to say. Some of it has never been said out loud before.
                   </p>
                   <p className="mb-3">
-                    These aren&apos;t highlight reels or polished success stories. They&apos;re raw conversations, sometimes uncomfortable, always honest.
+                    They are not asked to make the story easier to hear. They are not pushed toward hope, inspiration, or a lesson.
                   </p>
                   <p className="mb-3">
-                    Here, we don&apos;t ask guests to be brave, we ask them to be real. MS isn&apos;t just a disease, it&apos;s a life that keeps unfolding in ways most people never see. We explore the parts most people avoid: the rage, the fear, the mourning of who you used to be, and the strength that doesn&apos;t come with a cape but with survival.
+                    You will hear from people living with MS, along with spouses, caregivers, clinicians, researchers, and others whose lives have been shaped by the disease.
                   </p>
                   <p className="mb-3">
-                    This podcast isn&apos;t about the host. It&apos;s about the people who live with MS, who deserve to be seen, heard, and understood, not as heroes or fighters but as complex humans trying to make it through another day.
+                    The conversations can be painful, funny, uncomfortable, quiet, or unfinished.
                   </p>
                   <p>
-                    Inspiration may happen, too. This podcast creates that space. If their honesty inspires you, let it.
+                    The goal is simple. Give people the time to speak, and listen closely enough for them to know they were heard.
                   </p>
                 </div>
               </div>
