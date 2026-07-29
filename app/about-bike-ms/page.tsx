@@ -96,17 +96,6 @@ export default function AboutBikeMS() {
                 <p className="mb-4">
                   Our why is connection. Our how is community. Our what is simple. A national team of riders and storytellers who use their miles and their voices to push the mission forward. Not for credit. Not for praise. For the people living with MS who deserve to be heard.
                 </p>
-                <p className="font-medium">
-                  <span className="text-primary">Support the cause, wear the jersey</span>{" "}
-                  <a
-                    href="https://jakroo.com/store-front?storeId=rkmPz7ORWl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
-                  >
-                    Order Online
-                  </a>
-                </p>
               </div>
               <div className="clear-both" />
             </section>

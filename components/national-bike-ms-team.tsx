@@ -188,22 +188,23 @@ const carouselStyles = `
 
 export function NationalBikeMSTeam() {
   return (
-    <section className="py-4 mt-8">
+    <section className="mt-8">
       <style dangerouslySetInnerHTML={{ __html: carouselStyles }} />
-      <div className="container mx-auto px-4">
+      <div className="w-full px-4 md:px-8">
         <h2 className="text-3xl font-bold text-primary mb-3">Meet the National Bike MS Team</h2>
         <p className="text-gray-700 mb-2 leading-relaxed">
           We bring together riders who each raise at least $5,000 every year for the National MS Society. These are
           cyclists who already give everything they have, yet still feel the pull to do more. The National Team gives
           them a place to belong and a larger story to be part of.
         </p>
-        <p className="text-sm text-gray-500 mb-2">
+        <p className="mb-6 text-center text-lg font-medium">
           <span className="hidden md:inline">Hover a card to pause and take a closer look. </span>
           <span className="md:hidden">Swipe to meet each rider. </span>
           Meet the team and support their Bike MS fundraisers.
         </p>
 
-        <div className="tsb-carousel" aria-label="National Bike MS Team riders">
+        <div className="relative w-full mx-auto">
+          <div className="tsb-carousel flex items-center justify-center" aria-label="National Bike MS Team riders">
           {riders.map((rider) => (
             <article key={rider.id} className="tsb-card">
               <img
@@ -232,6 +233,7 @@ export function NationalBikeMSTeam() {
               </div>
             </article>
           ))}
+          </div>
         </div>
       </div>
     </section>
