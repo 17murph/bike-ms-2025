@@ -121,7 +121,7 @@ const carouselStyles = `
     position: relative;
     display: block;
     overflow: visible;
-    height: 540px;
+    height: 680px;
     padding: 1.5rem 0;
     scroll-snap-type: none;
   }
@@ -197,7 +197,7 @@ export function TeamSpanishBeerPassport() {
         </p>
 
         {/* Two-column layout: stat boxes on the left, rotating cards on the right */}
-        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 mt-2">
           {/* Team identity banner — left column on desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-3 md:w-56 md:flex-none">
             {[
