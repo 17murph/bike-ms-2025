@@ -41,11 +41,11 @@ export default function TeamSpanishBeer() {
              edge (including the bright right column) melts into the dark section. */
           -webkit-mask-image: radial-gradient(115% 125% at 50% 45%, #000 42%, transparent 86%),
             linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
-            linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+            linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
           -webkit-mask-composite: source-in;
           mask-image: radial-gradient(115% 125% at 50% 45%, #000 42%, transparent 86%),
             linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
-            linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+            linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
           mask-composite: intersect;
         }
         @media (prefers-reduced-motion: reduce) {
