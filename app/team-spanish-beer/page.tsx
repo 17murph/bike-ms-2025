@@ -19,68 +19,76 @@ export default function TeamSpanishBeer() {
 
   return (
     <div className="min-h-screen bg-white relative">
+      <style jsx>{`
+        @keyframes tsbFadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(16px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .tsb-hero-fade {
+          animation: tsbFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .tsb-hero-image-fade {
+          animation: tsbFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+        }
+        .tsb-hero-image {
+          /* Intersect a radial feather with horizontal + vertical edge fades so every
+             edge (including the bright right column) melts into the dark section. */
+          -webkit-mask-image: radial-gradient(115% 125% at 50% 45%, #000 42%, transparent 86%),
+            linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+            linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+          -webkit-mask-composite: source-in;
+          mask-image: radial-gradient(115% 125% at 50% 45%, #000 42%, transparent 86%),
+            linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+            linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+          mask-composite: intersect;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .tsb-hero-fade,
+          .tsb-hero-image-fade {
+            animation: none;
+          }
+        }
+      `}</style>
       <Navigation />
 
       <main>
         {/* Premium full-width hero */}
-        <section className="relative w-full">
-          {/* Dark intro band — heading, accent line, subtitle */}
-          <div className="relative w-full bg-gradient-to-b from-neutral-950 to-neutral-900">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 top-0 h-2/3 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(249,115,22,0.12),transparent_70%)]"
-            />
-            <div className="relative mx-auto max-w-4xl px-6 pt-16 pb-14 text-center sm:pt-20">
-              <h1 className="text-balance text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <section className="relative w-full bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950">
+          {/* soft ambient glow */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(249,115,22,0.14),transparent_70%)]"
+          />
+
+          <div className="relative mx-auto max-w-5xl px-6 pt-16 pb-24 sm:pt-20">
+            <div className="tsb-hero-fade text-center">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-orange-400/90">
+                The Other Side of MS
+              </span>
+              <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Team Spanish Beer
+                <span className="mt-2 block text-orange-500">Passport Cyclist</span>
               </h1>
-              {/* thin horizontal blue accent line */}
-              <div aria-hidden="true" className="mx-auto mt-6 h-px w-24 bg-blue-500" />
-              <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-blue-400">
-                Riding together. Supporting people affected by <span className="text-orange-500">MS</span>.
+              <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-neutral-400 sm:text-lg">
+                Riding together across the country to end MS — 100% of every donation goes directly to the National
+                MS Society.
               </p>
             </div>
-          </div>
 
-          {/* Light stage — jerseys frame the team photo, backgrounds dropped via multiply */}
-          <div className="w-full bg-white">
-            <div className="mx-auto max-w-6xl px-6 py-14 sm:py-16">
-              <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-6">
-                {/* Blue Team Spanish Beer jersey (front) */}
-                <img
-                  src="/images/tsb-jersey-front.jpg"
-                  alt="Team Spanish Beer cycling jersey, front"
-                  className="order-2 w-1/2 max-w-[220px] object-contain mix-blend-multiply md:order-1 md:w-[15%] md:max-w-none md:flex-shrink-0"
-                />
-
-                {/* Existing black-and-white team photo — kept exactly as is */}
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
-                  alt="Team Spanish Beer cyclists in their team jerseys"
-                  className="order-1 w-full object-contain md:order-2 md:w-[70%]"
-                />
-
-                {/* Orange The Other Side of MS jersey (back) */}
-                <img
-                  src="/images/tsb-jersey-back.jpg"
-                  alt="The Other Side of MS cycling jersey, back"
-                  className="order-3 w-1/2 max-w-[220px] object-contain mix-blend-multiply md:w-[15%] md:max-w-none md:flex-shrink-0"
-                />
-              </div>
-
-              {/* Body copy */}
-              <div className="mx-auto mt-14 max-w-2xl space-y-6 text-center text-base leading-relaxed text-gray-600 sm:text-lg">
-                <p>
-                  We are the Passport Cyclists of Team Spanish Beer. Each rider has demonstrated an extraordinary
-                  commitment to the National Multiple Sclerosis Society through fundraising, earning Bike MS Passport
-                  status along the way.
-                </p>
-                <p>
-                  Together we travel beyond our home ride, building friendships, sharing experiences, and supporting the
-                  MS community wherever the road takes us.
-                </p>
-              </div>
-            </div>
+            {/* Focal image — black background blends into the page via screen blend + edge fade */}
+            <figure className="tsb-hero-image-fade tsb-hero-image relative mx-auto mt-12 w-full max-w-3xl -mb-12">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TSB-ObbAELza6xA9Fd1zUOtfe2INuszMBc.jpg"
+                alt="Team Spanish Beer cyclists in their team jerseys"
+                className="block w-full object-cover mix-blend-screen"
+              />
+            </figure>
           </div>
         </section>
 

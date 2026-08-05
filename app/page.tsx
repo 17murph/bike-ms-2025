@@ -238,19 +238,19 @@ export default function Home() {
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 9 • June 25, 2026</span>
+                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 11 • July 30, 2026</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">When Nobody Believes You</h3>
-                <p className="text-lg text-primary font-medium mb-3">with Bridget Longnecker</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">The 3 Day Rule</h3>
+                <p className="text-lg text-primary font-medium mb-3">with Karen Matingou</p>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                For months, Bridget Longnecker was told her symptoms were anxiety, hormones, or postpartum depression. Meanwhile, she was losing vision, mobility, speech, and trust in herself. In this episode, Bridget shares the reality of searching for answers while being repeatedly dismissed by healthcare providers, the psychological toll of being told it&apos;s all in your head, and the moment she finally received the diagnosis that changed everything. The conversation explores fear, motherhood, invisible illness, self-doubt, and what happens when you begin questioning your own reality because nobody else seems willing to believe it. Bridget also opens up about the lasting emotional impact of MS, the uncertainty that still follows her today, and why stability doesn&apos;t always mean feeling safe inside your own body.
+                Karen Matingou listened as strangers described what MS was doing to their bodies. The details sounded familiar. Too familiar. She spent the next month convincing herself she was imagining it. The first neurologist gave her an easier answer. He was wrong. When Karen finally received the diagnosis she feared, she told no one for two weeks. Not her husband. Not her son. Not her mother or sister. Today, she says MS will not beat her. But that determination comes with a private rule: three days to feel the fear, anger, and darkness she rarely allows others to see. What happens when the person who always cared for everyone else becomes the one who needs help?
                 </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/41678225/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/42244395/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
@@ -369,6 +369,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "The 3 Day Rule", guest: "Karen Matingou", episode: "S4 E11", link: "https://play.libsyn.com/embed/episode/id/42244395" },
                       { title: "When Nobody Believes You", guest: "Bridget Longnecker", episode: "S4 E9", link: "https://play.libsyn.com/embed/episode/id/41678225" },
                       { title: "The Distance Between Looking Okay and Feeling Okay", guest: "Bill Mooney", episode: "S4 E8", link: "https://play.libsyn.com/embed/episode/id/41557770" },
                       { title: "Living Beside MS Instead of Inside It", guest: "Dr. Mary Hughes", episode: "S4 E7", link: "https://play.libsyn.com/embed/episode/id/41413610" },
