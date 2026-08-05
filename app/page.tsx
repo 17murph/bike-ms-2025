@@ -370,6 +370,7 @@ export default function Home() {
                   <div className="p-5 space-y-4">
                     {[
                       { title: "The 3 Day Rule", guest: "Karen Matingou", episode: "S4 E11", link: "https://play.libsyn.com/embed/episode/id/42244395" },
+                      { title: "Don't Ask How I'm Doing If You're Not Prepared to Hear the Answer", guest: "Brandon Deen", episode: "S4 E10", link: "https://play.libsyn.com/embed/episode/id/42037985" },
                       { title: "When Nobody Believes You", guest: "Bridget Longnecker", episode: "S4 E9", link: "https://play.libsyn.com/embed/episode/id/41678225" },
                       { title: "The Distance Between Looking Okay and Feeling Okay", guest: "Bill Mooney", episode: "S4 E8", link: "https://play.libsyn.com/embed/episode/id/41557770" },
                       { title: "Living Beside MS Instead of Inside It", guest: "Dr. Mary Hughes", episode: "S4 E7", link: "https://play.libsyn.com/embed/episode/id/41413610" },
