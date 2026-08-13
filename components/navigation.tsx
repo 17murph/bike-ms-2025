@@ -103,7 +103,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-end items-center">
+        <div className="hidden md:flex justify-center items-center">
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
