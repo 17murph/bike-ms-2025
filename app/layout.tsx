@@ -5,7 +5,6 @@ import { Inter } from "next/font/google"
 
 import { GoogleAnalytics } from "./components/google-analytics"
 import { Analytics } from "@vercel/analytics/next"
-import { DonationBanner } from "@/components/donation-banner"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -52,7 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Suspense>
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <DonationBanner />
         <div className="flex-grow">{children}</div>
         <Analytics />
       </body>
