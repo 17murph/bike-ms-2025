@@ -97,7 +97,7 @@ export function Navigation() {
     <nav
       className={cn(
         "w-full transition-all duration-300 z-50",
-        "fixed top-10 left-0 right-0 md:sticky md:top-0",
+        "fixed top-0 left-0 right-0 md:sticky md:top-0",
         scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5 md:py-2",
       )}
     >
@@ -134,13 +134,16 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation Button */}
-        <div className="md:hidden flex justify-end items-center pt-2">
+        <div className="md:hidden flex justify-between items-center">
+          <span className="font-semibold text-primary text-base">The Other Side of MS</span>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-3 rounded-lg bg-primary/10 text-primary min-h-[48px] min-w-[48px] flex items-center justify-center"
-            aria-label="Toggle menu"
+            className="flex items-center gap-2 pl-4 pr-3 py-2 rounded-lg bg-primary text-white font-medium min-h-[48px]"
+            aria-label="Open navigation menu"
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <span className="text-sm">Menu</span>
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
