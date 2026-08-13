@@ -64,16 +64,6 @@ export function Footer() {
                   About MS
                 </Link>
               </li>
-              <li>
-                <Link href="/events" className="text-gray-300 hover:text-white transition-colors">
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link href="/sponsors" className="text-gray-300 hover:text-white transition-colors">
-                  Sponsors
-                </Link>
-              </li>
             </ul>
           </div>
 
