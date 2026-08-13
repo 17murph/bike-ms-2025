@@ -103,24 +103,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-between items-center">
-          {/* Bike MS Logo Section */}
-          <Link 
-            href={isBikeMsDomain ? "https://www.theothersideofms.com/bike-ms" : "/bike-ms"} 
-            {...(isBikeMsDomain ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="flex items-center gap-3 group hover:bg-primary/5 rounded-lg p-2 -ml-2 transition-colors"
-          >
-            <img 
-              src="/images/bike-ms-logo.jpeg" 
-              alt="Bike MS Logo" 
-              className="h-12 w-auto"
-            />
-            <div className="flex flex-col">
-              <span className="text-xs text-primary font-medium underline underline-offset-2 group-hover:text-primary/80 transition-colors">Learn about our Bike MS</span>
-              <span className="text-xs text-primary font-medium underline underline-offset-2 group-hover:text-primary/80 transition-colors">Rides and Fundraising →</span>
-            </div>
-          </Link>
-
+        <div className="hidden md:flex justify-end items-center">
           <div className="flex items-center space-x-1">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
