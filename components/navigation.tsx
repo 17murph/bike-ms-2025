@@ -12,7 +12,7 @@ const navItems = [
   { name: "National Bike MS Team", href: "/about-bike-ms", icon: Info },
   { name: "Team Spanish Beer", href: "/team-spanish-beer", icon: Users },
   { name: "About / Contact", href: "/contact", icon: Mail },
-  { name: "Donate to Casey's Bike MS Fundraiser", href: "/donate", icon: DollarSign },
+  { name: "Casey's Bike MS", href: "/donate", icon: DollarSign },
 ]
 
 export function Navigation() {
