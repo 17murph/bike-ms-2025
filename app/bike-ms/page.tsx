@@ -422,9 +422,9 @@ export default function BikeMS() {
                     <p className="text-sm text-gray-600 mb-2">📍 Baraboo, WI</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">August 1/2, 2026</p>
+                    <p className="font-semibold text-gray-900 text-sm">Complete: 101 miles cycled</p>
                   </div>
                 </div>
                 <div className="mt-3 text-center">

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
@@ -10,7 +10,6 @@ import Link from "next/link"
 
 export default function Home() {
   const [openSeason, setOpenSeason] = useState<number | null>(null)
-  const [activeQuote, setActiveQuote] = useState(0)
 
   const toggleSeason = (seasonNumber: number) => {
     if (openSeason === seasonNumber) {
@@ -19,54 +18,6 @@ export default function Home() {
       setOpenSeason(seasonNumber)
     }
   }
-
-  // Rotating quotes from listeners and guests
-  const impactfulQuotes = [
-    {
-      text: "It was almost like a death of my former self.",
-      author: "Selena - Season 4, Episode 1",
-    },
-    {
-      text: "If it don't align, I decline.",
-      author: "Tiffany - Season 4, Episode 2",
-    },
-    {
-      text: "People will abandon you. They will come up with whatever they need to justify it.",
-      author: "Tyler - Season 4, Episode 3",
-    },
-    {
-      text: "Some days are tougher than others.",
-      author: "Justin Yuhaze - Season 4, Episode 4",
-    },
-    {
-      text: "We will Win.",
-      author: "Mark Morabito - Season 4, Episode 5",
-    },
-    {
-      text: "This is not a story about inspiration. It's about learning how to live inside something you didn't choose, together.",
-      author: "Rachael Fenich - Season 4, Episode 6",
-    },
-    {
-  text: "If you have ever wondered what it feels like to live beside MS instead of inside it, this conversation sits in that space.",
-  author: "Dr. Mary Hughes - Season 4, Episode 7",
-  },
-  {
-  text: "This is one of the most honest conversations we've had about the distance between looking okay and feeling okay.",
-  author: "Bill Mooney - Season 4, Episode 8",
-  },
-  {
-  text: "A conversation about trust, credibility, and the hidden psychological weight of living with a disease that many people never fully see.",
-  author: "Bridget Longnecker - Season 4, Episode 9",
-  },
-  ]
-
-  // Rotate quotes every 8 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveQuote((prev) => (prev + 1) % impactfulQuotes.length)
-    }, 8000)
-    return () => clearInterval(interval)
-  }, [impactfulQuotes.length])
 
   // Start Listening episodes data (ordered by release date, left to right)
   const startListeningEpisodes = [
@@ -138,25 +89,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Rotating Quote Section - Blue */}
-        <section className="bg-primary text-white py-2 relative overflow-hidden">
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="relative h-[36px]">
-              {impactfulQuotes.map((quote, index) => (
-                <blockquote
-                  key={index}
-                  className={`absolute inset-0 transition-all duration-1000 flex items-center justify-center text-center ${
-                    index === activeQuote ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <p className="text-sm md:text-base font-light italic">
-                    "{quote.text}" <span className="opacity-75">— {quote.author}</span>
-                  </p>
-                </blockquote>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Solid Blue Divider */}
+        <section className="bg-primary h-[26px]" aria-hidden="true"></section>
 
         {/* Donation Progress Block */}
         <section className="py-4 bg-gray-100">
@@ -238,19 +172,16 @@ export default function Home() {
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 11 • July 30, 2026</span>
+                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 12 • August 13, 2026</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">The 3 Day Rule</h3>
-                <p className="text-lg text-primary font-medium mb-3">with Karen Matingou</p>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                Karen Matingou listened as strangers described what MS was doing to their bodies. The details sounded familiar. Too familiar. She spent the next month convincing herself she was imagining it. The first neurologist gave her an easier answer. He was wrong. When Karen finally received the diagnosis she feared, she told no one for two weeks. Not her husband. Not her son. Not her mother or sister. Today, she says MS will not beat her. But that determination comes with a private rule: three days to feel the fear, anger, and darkness she rarely allows others to see. What happens when the person who always cared for everyone else becomes the one who needs help?
-                </p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Strong Whitney</h3>
+                <p className="text-lg text-primary font-medium mb-3">with Whitney Wilson</p>
                     {/* Libsyn Embed Player */}
-                    <div className="w-full rounded-lg overflow-hidden">
+                    <div className="w-full rounded-lg overflow-hidden mt-3">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/42244395/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/42421470/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
