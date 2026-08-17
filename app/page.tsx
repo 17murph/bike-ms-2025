@@ -311,6 +311,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "Strong Whitney", guest: "Whitney Wilson", episode: "S4 E12", link: "https://play.libsyn.com/embed/episode/id/42421470" },
                       { title: "The 3 Day Rule", guest: "Karen Matingou", episode: "S4 E11", link: "https://play.libsyn.com/embed/episode/id/42244395" },
                       { title: "Don't Ask How I'm Doing If You're Not Prepared to Hear the Answer", guest: "Brandon Deen", episode: "S4 E10", link: "https://play.libsyn.com/embed/episode/id/42037985" },
                       { title: "When Nobody Believes You", guest: "Bridget Longnecker", episode: "S4 E9", link: "https://play.libsyn.com/embed/episode/id/41678225" },
