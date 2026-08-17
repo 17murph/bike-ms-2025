@@ -176,6 +176,17 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Strong Whitney</h3>
                 <p className="text-lg text-primary font-medium mb-3">with Whitney Wilson</p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  On her birthday, Whitney had to be carried into an MRI. The next day came a phone call with good news and bad news. What followed would leave a personal trainer unable to trust the body she had spent years teaching others to strengthen. Today, Whitney wants people to see the version of her that rides, hikes, speaks publicly, and refuses to let MS define what she can still do. She calls her Strong Whitney. But there is another Whitney she is far less willing to show. What happens when being seen as strong becomes almost as important as actually feeling strong?
+                </p>
+                <a
+                  href="https://events.nationalmssociety.org/participants/806581?referrer=mf%3A806581%3Ayou-copy&language=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-primary font-medium underline underline-offset-2 hover:text-primary/80 transition-colors mb-4"
+                >
+                  Donate to Whitney&apos;s I Ride with MS: Bike MS Fundraiser
+                </a>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden mt-3">
                       <iframe 
