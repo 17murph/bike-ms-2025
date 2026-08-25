@@ -62,44 +62,33 @@ const riders: Rider[] = [
 
 const carouselStyles = `
 .tsb-carousel {
-  /* Mobile-first: horizontal swipeable, scroll-snap track */
-  display: flex;
-  gap: 1.25rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 2rem 1.25rem 2.5rem;
-  scrollbar-width: none;
-}
-.tsb-carousel::-webkit-scrollbar {
-  display: none;
+  /* Mobile-first: single centered card, CSS auto-rotate with soft fade */
+  position: relative;
+  display: block;
+  height: 640px;
+  padding: 1.5rem 0;
 }
 
 .tsb-card {
-  scroll-snap-align: center;
-  flex: 0 0 82%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 88%;
   max-width: 340px;
-  margin: 0 auto;
   background: #ffffff;
   padding: 0.75rem 0.75rem 1.25rem;
   border-radius: 3px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
-  transform: rotate(-1deg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateX(-50%) rotate(-1deg);
+  opacity: 0;
+  animation: tsb-fade 20s infinite;
 }
 
-/* Mobile scroll-driven lift when card is centered in the viewport */
-@supports (animation-timeline: view()) {
-  .tsb-card {
-    animation: tsb-rise linear both;
-    animation-timeline: view(inline);
-    animation-range: entry 10% cover 55%;
-  }
-}
-@keyframes tsb-rise {
-  from { transform: rotate(-1deg) translateY(14px); }
-  to   { transform: rotate(-1deg) translateY(-8px); }
-}
+/* Start with Matt (1st), then rotate through all riders, repeating forever */
+.tsb-card:nth-child(1) { animation-delay: 0s; }
+.tsb-card:nth-child(2) { animation-delay: 5s; }
+.tsb-card:nth-child(3) { animation-delay: 10s; }
+.tsb-card:nth-child(4) { animation-delay: 15s; }
 
 .tsb-photo {
   display: block;
@@ -115,31 +104,17 @@ const carouselStyles = `
   text-align: center;
 }
 
-/* Desktop: single centered card, CSS auto-rotate with soft fade */
+/* Desktop: wider centered card, same auto-rotate with soft fade */
 @media (min-width: 768px) {
   .tsb-carousel {
-    position: relative;
-    display: block;
-    overflow: visible;
     height: 680px;
-    padding: 1.5rem 0;
-    scroll-snap-type: none;
   }
   .tsb-card {
-    position: absolute;
-    left: 50%;
     top: 50%;
     width: 360px;
-    flex: none;
-    margin: 0;
+    max-width: none;
     transform: translate(-50%, -50%) rotate(-2.5deg);
-    opacity: 0;
-    animation: tsb-fade 10s infinite;
   }
-  .tsb-card:nth-child(1) { animation-delay: 0s; }
-  .tsb-card:nth-child(2) { animation-delay: 2.5s; }
-  .tsb-card:nth-child(3) { animation-delay: 5s; }
-  .tsb-card:nth-child(4) { animation-delay: 7.5s; }
 
   /* Pause rotation on hover */
   .tsb-carousel:hover .tsb-card {
@@ -159,10 +134,11 @@ const carouselStyles = `
   }
 }
 
+/* One card visible per quarter of the cycle, with a short cross-fade */
 @keyframes tsb-fade {
   0%   { opacity: 0; z-index: 1; }
-  2%   { opacity: 1; z-index: 5; }
-  23%  { opacity: 1; z-index: 5; }
+  1%   { opacity: 1; z-index: 5; }
+  24%  { opacity: 1; z-index: 5; }
   25%  { opacity: 0; z-index: 1; }
   100% { opacity: 0; z-index: 1; }
 }
@@ -171,11 +147,9 @@ const carouselStyles = `
 @media (prefers-reduced-motion: reduce) {
   .tsb-card {
     animation: none !important;
+    opacity: 0;
   }
-  @media (min-width: 768px) {
-    .tsb-card { opacity: 0; }
-    .tsb-card:nth-child(1) { opacity: 1; z-index: 5; }
-  }
+  .tsb-card:nth-child(1) { opacity: 1; z-index: 5; }
 }
 `
 
@@ -192,7 +166,7 @@ export function TeamSpanishBeerPassport() {
         </p>
         <p className="mb-4 text-center text-lg font-medium">
           <span className="hidden md:inline">Hover a card to pause and take a closer look. </span>
-          <span className="md:hidden">Swipe to meet each rider. </span>
+          <span className="md:hidden">Riders rotate automatically. </span>
           Meet the team and support their Bike MS fundraisers.
         </p>
 
