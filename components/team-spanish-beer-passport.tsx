@@ -169,9 +169,13 @@ export function TeamSpanishBeerPassport() {
           gives them a place to belong and a larger story to be part of.
         </p>
         <p className="mb-4 text-center text-lg font-medium">
-          <span className="hidden md:inline">Hover a card to pause and take a closer look. </span>
-          <span className="md:hidden">Riders rotate automatically. </span>
-          Meet the team and support their Bike MS fundraisers.
+          <span className="hidden md:inline">
+            Hover over a cyclist card to pause, learn more about their story, and support their Bike MS fundraiser.
+          </span>
+          <span className="md:hidden">
+            Riders rotate automatically. Learn more about each cyclist&rsquo;s story and support their Bike MS
+            fundraiser.
+          </span>
         </p>
 
         {/* Two-column layout: stat boxes on the left, rotating cards on the right */}
