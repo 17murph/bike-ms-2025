@@ -179,7 +179,9 @@ export default function TeamSpanishBeer() {
               </div>
             </section>
 
-            <TeamSpanishBeerPassport />
+            <div className="-mt-8">
+              <TeamSpanishBeerPassport />
+            </div>
 
             <section className="py-4">
               <div className="container mx-auto px-4">
