@@ -155,19 +155,27 @@ const carouselStyles = `
 
 export function TeamSpanishBeerPassport() {
   return (
-    <section className="py-4 mt-8">
+    <section className="py-2">
       <style dangerouslySetInnerHTML={{ __html: carouselStyles }} />
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-primary mb-3">Meet the Team Spanish Beer Passport Cyclist</h2>
+        <h2 className="text-3xl font-bold text-primary mb-2">Meet the Team Spanish Beer Passport Cyclist</h2>
+        <p className="text-base italic text-orange-700 mb-3 leading-relaxed">
+          Team Spanish Beer is our home team. Our Passport riders take that team beyond North Florida, riding Bike MS
+          events around the country while representing the same mission.
+        </p>
         <p className="text-gray-700 mb-2 leading-relaxed">
           We bring together riders who each raise at least $5,000 every year for the National MS Society. These are
-          cyclists who already give everything they have, yet still feel the pull to do more. The Passport Team gives
-          them a place to belong and a larger story to be part of.
+          cyclists who already give everything they have, yet still feel the pull to do more. The Passport community
+          gives them a place to belong and a larger story to be part of.
         </p>
         <p className="mb-4 text-center text-lg font-medium">
-          <span className="hidden md:inline">Hover a card to pause and take a closer look. </span>
-          <span className="md:hidden">Riders rotate automatically. </span>
-          Meet the team and support their Bike MS fundraisers.
+          <span className="hidden md:inline">
+            Hover over a cyclist card to pause, learn more about their story, and support their Bike MS fundraiser.
+          </span>
+          <span className="md:hidden">
+            Riders rotate automatically. Learn more about each cyclist&rsquo;s story and support their Bike MS
+            fundraiser.
+          </span>
         </p>
 
         {/* Two-column layout: stat boxes on the left, rotating cards on the right */}

@@ -179,7 +179,9 @@ export default function TeamSpanishBeer() {
               </div>
             </section>
 
-            <TeamSpanishBeerPassport />
+            <div className="-mt-8">
+              <TeamSpanishBeerPassport />
+            </div>
 
             <section className="py-4">
               <div className="container mx-auto px-4">
@@ -236,7 +238,7 @@ export default function TeamSpanishBeer() {
             </section>
 
             <div className="prose prose-lg max-w-none">
-              <h2 className="mt-4 mb-2">What is Bike MS?</h2>
+              <h2 className="mt-4 mb-2">Why We Ride</h2>
 
               <div className="flex justify-start my-3">
                 <Link
@@ -250,11 +252,22 @@ export default function TeamSpanishBeer() {
                 </Link>
               </div>
 
-              <p className="my-3">
-                Bike MS is the largest fundraising cycling series in the world. Each year, nearly 75,000 cyclists and
-                more than 6,000 teams ride together to change the world for people affected by multiple sclerosis. Bike
-                MS participants have raised more than $2,025 to date, funding critical research and programs to improve
-                the lives of people living with MS.
+              <blockquote className="my-3 border-l-4 border-primary pl-4 italic">
+                &ldquo;Bike MS&reg; is the 7th largest peer-to-peer charity series in the country. Our community has
+                raised an incredible $1.4 billion to fuel the National Multiple Sclerosis Society&rsquo;s mission to
+                cure MS while empowering people affected by MS to live their best lives. While there are many rides, we
+                all have one destination: a world free of MS.&rdquo;
+              </blockquote>
+              <p className="my-3 text-sm text-gray-500 not-italic">
+                &mdash; Source:{" "}
+                <Link
+                  href="https://events.nationalmssociety.org/pages/1236?cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
+                >
+                  National MS Society
+                </Link>
               </p>
 
               <div className="bg-blue-50 p-4 rounded-lg my-4">
@@ -278,7 +291,7 @@ export default function TeamSpanishBeer() {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
                 >
                   <Users className="w-5 h-5" />
-                  <span>Join Team Spanish Beer</span>
+                  <span>Donate to Team Spanish Beer</span>
                 </a>
               </div>
 
