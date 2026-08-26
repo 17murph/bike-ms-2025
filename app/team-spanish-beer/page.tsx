@@ -289,7 +289,7 @@ export default function TeamSpanishBeer() {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
                 >
                   <Users className="w-5 h-5" />
-                  <span>Join Team Spanish Beer</span>
+                  <span>Donate to Team Spanish Beer</span>
                 </a>
               </div>
 
