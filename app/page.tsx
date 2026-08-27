@@ -170,27 +170,25 @@ export default function Home() {
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 12 • August 13, 2026</span>
+                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 13</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Strong Whitney</h3>
-                <p className="text-lg text-primary font-medium mb-3">with Whitney Wilson</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Yes, I Have MS</h3>
+                <p className="text-lg text-primary font-medium mb-3">with Lisa Graham</p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  On her birthday, Whitney had to be carried into an MRI. The next day came a phone call with good news and bad news. What followed would leave a personal trainer unable to trust the body she had spent years teaching others to strengthen. Today, Whitney wants people to see the version of her that rides, hikes, speaks publicly, and refuses to let MS define what she can still do. She calls her Strong Whitney. But there is another Whitney she is far less willing to show. What happens when being seen as strong becomes almost as important as actually feeling strong?
+                  Lisa has lived with multiple sclerosis for 33 years. She calls it an unwelcome houseguest. It is there. She knows it is there. But she refuses to give it control of the house. Lisa is a former soldier, national champion bodybuilder, retired professional athlete, and cyclist who still trains, lifts weights, and measures most of her year in normal days rather than bad ones. She knows her experience is unusual. Her own doctor has called her a unicorn. And Lisa does not apologize for that.
                 </p>
-                <a
-                  href="https://events.nationalmssociety.org/participants/806581?referrer=mf%3A806581%3Ayou-copy&language=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-primary font-medium underline underline-offset-2 hover:text-primary/80 transition-colors mb-4"
-                >
-                  Donate to Whitney&apos;s I Ride with MS: Bike MS Fundraiser
-                </a>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Her MS can still overrule her. Heat and humidity can leave her recovering for days. Her feet can stay numb. Cognitive symptoms exist. But those realities have never become the organizing principle of her life. That perspective has not always made her feel welcome in the MS community. It has led to disagreement, judgment, and one support group she entered on rollerblades and never returned to.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Lisa&apos;s message is not that everyone with MS should live the way she does. In fact, she says the opposite: &ldquo;I can help you understand my MS. I don&apos;t know about your MS.&rdquo; Sometimes the honest MS story is about loss, fear, and everything the disease has taken. And sometimes the honest story is simply this: MS is real. MS is unpredictable. And for Lisa, it still does not get to be the most important thing about Lisa.
+                </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden mt-3">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/42421470/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/42540960/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
@@ -309,6 +307,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "Yes, I Have MS", guest: "Lisa Graham", episode: "S4 E13", link: "https://play.libsyn.com/embed/episode/id/42540960" },
                       { title: "Strong Whitney", guest: "Whitney Wilson", episode: "S4 E12", link: "https://play.libsyn.com/embed/episode/id/42421470" },
                       { title: "The 3 Day Rule", guest: "Karen Matingou", episode: "S4 E11", link: "https://play.libsyn.com/embed/episode/id/42244395" },
                       { title: "Don't Ask How I'm Doing If You're Not Prepared to Hear the Answer", guest: "Brandon Deen", episode: "S4 E10", link: "https://play.libsyn.com/embed/episode/id/42037985" },
