@@ -175,7 +175,7 @@ export function TeamSpanishBeerPassport() {
               href={rider.donateUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium text-sm shadow-sm hover:shadow-md min-w-[150px]"
+              className="inline-flex items-center justify-center px-4 py-2 bg-white border border-orange-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium text-sm min-w-[150px] shadow-[0_0_8px_rgba(249,115,22,0.35)] hover:shadow-[0_0_14px_rgba(249,115,22,0.55)]"
             >
               Donate to {rider.firstName}
             </Link>
@@ -191,23 +191,9 @@ export function TeamSpanishBeerPassport() {
           </span>
         </p>
 
-        {/* Two-column layout: stat boxes on the left, rotating cards on the right */}
+        {/* Two-column layout: rotating cards on the left, stat boxes on the right */}
         <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 mt-2">
-          {/* Team identity banner — left column on desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-3 md:w-56 md:flex-none">
-            {[
-              { stat: "4", label: "Passport Riders" },
-              { stat: "Growing", label: "Passport Team" },
-              { stat: "One", label: "Shared Mission" },
-            ].map((item) => (
-              <div key={item.label} className="bg-gray-50 border border-gray-100 rounded-lg py-4 px-3 text-center">
-                <div className="text-2xl font-bold text-orange-500">{item.stat}</div>
-                <div className="text-sm font-medium text-gray-700">{item.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Rotating cards — right column */}
+          {/* Rotating cards — left column */}
           <div className="relative w-full mx-auto md:flex-1 md:min-w-0">
             <div
               className="tsb-carousel flex items-center justify-center"
@@ -246,6 +232,20 @@ export function TeamSpanishBeerPassport() {
                 </article>
               ))}
             </div>
+          </div>
+
+          {/* Team identity banner — right column on desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-3 md:w-56 md:flex-none">
+            {[
+              { stat: "4", label: "Passport Riders" },
+              { stat: "Growing", label: "Passport Team" },
+              { stat: "One", label: "Shared Mission" },
+            ].map((item) => (
+              <div key={item.label} className="bg-gray-50 border border-gray-100 rounded-lg py-4 px-3 text-center">
+                <div className="text-2xl font-bold text-orange-500">{item.stat}</div>
+                <div className="text-sm font-medium text-gray-700">{item.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
