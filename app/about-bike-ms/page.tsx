@@ -27,50 +27,6 @@ export default function AboutBikeMS() {
         <div className="max-w-4xl mx-auto space-y-6">
           <section id="donate" className="space-y-4 scroll-mt-28">
             <h1 className="text-4xl font-bold text-center">National Bike <span className="text-orange-500">MS</span> Cycling Team</h1>
-            <p className="text-sm text-gray-600 text-center">Click a name below to donate to one of our cyclists Bike MS Fundraiser, 100% of all donations go to the National MS Society.</p>
-
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 my-3">
-              <Link
-                href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                Donate to Casey
-              </Link>
-              <Link
-                href="https://events.nationalmssociety.org/participants/CurtBike2026"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                Donate to Curt
-              </Link>
-              <Link
-                href="https://events.nationalmssociety.org/participants/815695"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                Donate to John
-              </Link>
-              <Link
-                href="https://events.nationalmssociety.org/participants/MarianneDavis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                Donate to Marianne
-              </Link>
-              <Link
-                href="https://events.nationalmssociety.org/participants/764003?language=en&referrer=mf%3A764003%3Ayou-copy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[160px]"
-              >
-                Donate to Rob
-              </Link>
-            </div>
 
             {/* Our Mission - Editorial Layout */}
             <section>

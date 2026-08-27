@@ -14,7 +14,7 @@ import { TeamSpanishBeerPassport } from "@/components/team-spanish-beer-passport
 export default function TeamSpanishBeer() {
   // Set metadata via useEffect to avoid server-side rendering issues
   useEffect(() => {
-    document.title = "Team Spanish Beer: Passport Cyclist | Bike MS"
+    document.title = "Team Spanish Beer: Passport Cyclists | Bike MS"
   }, [])
 
   return (
@@ -73,7 +73,7 @@ export default function TeamSpanishBeer() {
               </span>
               <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Team Spanish Beer
-                <span className="mt-2 block text-orange-500">Passport Cyclist</span>
+                <span className="mt-2 block text-orange-500">Passport Cyclists</span>
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-neutral-400 sm:text-lg">
                 Riding together across the country to end MS — 100% of every donation goes directly to the National
@@ -94,83 +94,22 @@ export default function TeamSpanishBeer() {
 
         <div className="container mx-auto px-4 pt-16 pb-6">
           <div className="max-w-4xl mx-auto space-y-6">
-            {/* Cohesive hero caption + donation CTA group */}
-            <section id="donate" className="flex flex-col items-center scroll-mt-28">
-              <p className="mx-auto max-w-xl text-center text-sm leading-relaxed text-gray-500">
-                Team Spanish Beer riders in their team jerseys, supporting &ldquo;The Other Side of MS&rdquo; podcast
-                and the Bike MS Passport Program.
-              </p>
-
-              {/* Primary team CTA */}
-              <a
-                href="https://events.nationalmssociety.org/teams/TeamSpanishBeer2026"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-2 px-7 py-3.5 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all duration-300 font-medium shadow-sm hover:shadow-lg text-lg"
-              >
-                <Heart className="w-5 h-5" />
-                <span>Donate to Team Spanish Beer</span>
-              </a>
-
-              {/* Individual cyclist donations */}
-              <p className="mt-6 text-center text-sm text-gray-500">
-                Or support one of our cyclists directly — 100% goes to the National MS Society.
-              </p>
-              <div className="mt-4 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2">
-                <Link
-                  href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                >
-                  Donate to Casey
-                </Link>
-                <Link
-                  href="https://events.nationalmssociety.org/participants/818857"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                >
-                  Donate to Erik
-                </Link>
-                <Link
-                  href="https://events.nationalmssociety.org/participants/MarianneDavis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                >
-                  Donate to Marianne
-                </Link>
-                <Link
-                  href="https://events.nationalmssociety.org/participants/806524"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md min-w-[150px]"
-                >
-                  Donate to Matt
-                </Link>
-              </div>
-            </section>
-
             {/* Our Mission Section */}
             <section className="py-6">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer: Passport Cyclist</h2>
+                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer</h2>
                 <div className="prose max-w-none">
                   <p className="my-2">
-                    Team Spanish Beer: Passport Cyclist, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
+                    Team Spanish Beer, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
                   </p>
                   <p className="my-2">
-                    This team is made up of Team Spanish Beer cyclists who have reached Bike MS Passport status by raising at least $5,000 annually for the National MS Society. Passport status is not a finish line or a measure of importance. It reflects an ongoing commitment to the mission and creates opportunities to support Bike MS in new ways.
+                    Team Spanish Beer is a North Florida Bike MS team and a member of The Other Side of MS Passport Collection. Our Passport cyclists, known within the Collection as Imports, carry Team Spanish Beer beyond our home rides and into Bike MS events across the country.
                   </p>
                   <p className="my-2">
-                    Many Passport riders travel to events outside their home chapter. The Passport Team gives those riders a way to stay connected to Team Spanish Beer while representing our team in communities across the country. Together, we support local chapters, build relationships with fellow Passport riders, and help strengthen the Bike MS community wherever we ride.
+                    MS is often invisible. What someone sees from the outside does not always tell them what is happening on the other side. Our jersey carries the same idea. Team Spanish Beer is on the front, our visible identity and our home team. The Other Side of MS is on the back, representing the stories, symptoms, and realities people may never see unless someone chooses to share them.
                   </p>
                   <p className="my-2">
-                    Our jerseys represent Team Spanish Beer first, but they also represent something larger. They reflect our commitment to the Passport Program, our dedication to every chapter we visit, and our belief that the strongest teams are built by lifting others.
-                  </p>
-                  <p className="my-2">
-                    This is not about recognition. It is about responsibility. Riders who reach Passport status have demonstrated an extraordinary commitment to the National MS Society, and we believe that commitment can inspire others. By riding together, mentoring new cyclists, and sharing our experiences through The Other Side of MS podcast, we hope to encourage more riders to discover what is possible and to continue growing the Bike MS community.
+                    This is not about recognition. It is about responsibility, and we believe that sense of responsibility can inspire others. By riding together, mentoring new cyclists, and sharing our experiences through The Other Side of MS podcast, we hope to encourage more riders to discover what is possible and continue growing the Bike MS community.
                   </p>
                   <p className="my-2">
                     Our purpose is simple. Build community. Support local chapters. Tell honest stories. Raise more funds for the National MS Society. Above all, remind every person affected by MS that they are never riding alone.
@@ -179,7 +118,7 @@ export default function TeamSpanishBeer() {
               </div>
             </section>
 
-            <div className="-mt-8">
+            <div id="donate" className="-mt-8 scroll-mt-28">
               <TeamSpanishBeerPassport />
             </div>
 

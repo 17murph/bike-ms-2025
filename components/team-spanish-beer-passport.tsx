@@ -158,16 +158,29 @@ export function TeamSpanishBeerPassport() {
     <section className="py-2">
       <style dangerouslySetInnerHTML={{ __html: carouselStyles }} />
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-primary mb-2">Meet the Team Spanish Beer Passport Cyclist</h2>
+        <h2 className="text-3xl font-bold text-primary mb-2">Meet the Team Spanish Beer Passport Cyclists</h2>
         <p className="text-base italic text-orange-700 mb-3 leading-relaxed">
           Team Spanish Beer is our home team. Our Passport riders take that team beyond North Florida, riding Bike MS
           events around the country while representing the same mission.
         </p>
-        <p className="text-gray-700 mb-2 leading-relaxed">
+        <p className="text-gray-700 mb-4 leading-relaxed">
           We bring together riders who each raise at least $5,000 every year for the National MS Society. These are
           cyclists who already give everything they have, yet still feel the pull to do more. The Passport community
           gives them a place to belong and a larger story to be part of.
         </p>
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
+          {riders.map((rider) => (
+            <Link
+              key={rider.id}
+              href={rider.donateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium text-sm shadow-sm hover:shadow-md min-w-[150px]"
+            >
+              Donate to {rider.firstName}
+            </Link>
+          ))}
+        </div>
         <p className="mb-4 text-center text-lg font-medium">
           <span className="hidden md:inline">
             Hover over a cyclist card to pause, learn more about their story, and support their Bike MS fundraiser.
