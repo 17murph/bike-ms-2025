@@ -175,7 +175,7 @@ export function TeamSpanishBeerPassport() {
               href={rider.donateUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium text-sm shadow-sm hover:shadow-md min-w-[150px]"
+              className="inline-flex items-center justify-center px-4 py-2 bg-white border border-orange-200 text-gray-800 rounded-full hover:border-orange-400 hover:text-orange-600 transition-all duration-300 font-medium text-sm min-w-[150px] shadow-[0_0_8px_rgba(249,115,22,0.35)] hover:shadow-[0_0_14px_rgba(249,115,22,0.55)]"
             >
               Donate to {rider.firstName}
             </Link>
