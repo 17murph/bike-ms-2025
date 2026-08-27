@@ -125,9 +125,9 @@ export default function Home() {
         {/* Why These Stories Matter + Latest Episode Section */}
         <section className="pt-16 pb-8 bg-gray-50">
           <div className="container mx-auto max-w-6xl px-4">
-            <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex flex-col md:flex-row gap-12 items-start">
               {/* Left - Why These Stories Matter */}
-              <div className="lg:w-1/2">
+              <div className="md:w-1/2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
                 
                 {/* Text content with floated logo */}
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
 
               {/* Right - Latest Episode */}
-              <div className="lg:w-1/2">
+              <div className="md:w-1/2">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                   {/* Episode Details */}
                   <div className="p-6">
