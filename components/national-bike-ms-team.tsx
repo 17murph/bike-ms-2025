@@ -197,6 +197,20 @@ export function NationalBikeMSTeam() {
           cyclists who already give everything they have, yet still feel the pull to do more. The National Team gives
           them a place to belong and a larger story to be part of.
         </p>
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
+          {riders.map((rider) => (
+            <Link
+              key={rider.id}
+              href={rider.donateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors font-medium text-sm shadow-sm hover:shadow-md"
+            >
+              Donate to {rider.firstName}
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+          ))}
+        </div>
         <p className="mb-6 text-center text-lg font-medium">
           <span className="hidden md:inline">Hover a card to pause and take a closer look. </span>
           <span className="md:hidden">Swipe to meet each rider. </span>
