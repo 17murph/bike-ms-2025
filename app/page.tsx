@@ -125,9 +125,9 @@ export default function Home() {
         {/* Why These Stories Matter + Latest Episode Section */}
         <section className="pt-16 pb-8 bg-gray-50">
           <div className="container mx-auto max-w-6xl px-4">
-            <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex flex-col md:flex-row gap-12 items-start">
               {/* Left - Why These Stories Matter */}
-              <div className="lg:w-1/2">
+              <div className="md:w-1/2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
                 
                 {/* Text content with floated logo */}
@@ -162,35 +162,39 @@ export default function Home() {
               </div>
 
               {/* Right - Latest Episode */}
-              <div className="lg:w-1/2">
+              <div className="md:w-1/2">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  {/* Episode Photo */}
+                  <img
+                    src="/images/lisa-graham.jpg"
+                    alt="Lisa Graham on a wooded trail wearing a cycling helmet"
+                    className="w-full h-64 object-cover object-center"
+                  />
                   {/* Episode Details */}
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
                         Latest Episode
                       </span>
-                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 12 • August 13, 2026</span>
+                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 13</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Strong Whitney</h3>
-                <p className="text-lg text-primary font-medium mb-3">with Whitney Wilson</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Yes, I Have MS</h3>
+                <p className="text-lg text-primary font-medium mb-3">with Lisa Graham</p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  On her birthday, Whitney had to be carried into an MRI. The next day came a phone call with good news and bad news. What followed would leave a personal trainer unable to trust the body she had spent years teaching others to strengthen. Today, Whitney wants people to see the version of her that rides, hikes, speaks publicly, and refuses to let MS define what she can still do. She calls her Strong Whitney. But there is another Whitney she is far less willing to show. What happens when being seen as strong becomes almost as important as actually feeling strong?
+                  Lisa has lived with multiple sclerosis for 33 years. She calls it an unwelcome houseguest. It is there, but she refuses to let it control the house.
                 </p>
-                <a
-                  href="https://events.nationalmssociety.org/participants/806581?referrer=mf%3A806581%3Ayou-copy&language=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-primary font-medium underline underline-offset-2 hover:text-primary/80 transition-colors mb-4"
-                >
-                  Donate to Whitney&apos;s I Ride with MS: Bike MS Fundraiser
-                </a>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  A former soldier, national champion bodybuilder, retired professional athlete, and cyclist, Lisa still trains, lifts weights, and measures most of her year in normal days rather than bad ones.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Her story is not about telling others how to live with MS. It is about making room for another honest version of it. MS is unpredictable, but for Lisa, it still does not get to be the most important thing about Lisa.
+                </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden mt-3">
                       <iframe 
                         title="Embed Player" 
                         style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/42421470/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
+                        src="https://play.libsyn.com/embed/episode/id/42540960/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
                         height="192" 
                         width="100%" 
                         scrolling="no" 
@@ -309,6 +313,7 @@ export default function Home() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openSeason === 4 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-5 space-y-4">
                     {[
+                      { title: "Yes, I Have MS", guest: "Lisa Graham", episode: "S4 E13", link: "https://play.libsyn.com/embed/episode/id/42540960" },
                       { title: "Strong Whitney", guest: "Whitney Wilson", episode: "S4 E12", link: "https://play.libsyn.com/embed/episode/id/42421470" },
                       { title: "The 3 Day Rule", guest: "Karen Matingou", episode: "S4 E11", link: "https://play.libsyn.com/embed/episode/id/42244395" },
                       { title: "Don't Ask How I'm Doing If You're Not Prepared to Hear the Answer", guest: "Brandon Deen", episode: "S4 E10", link: "https://play.libsyn.com/embed/episode/id/42037985" },
