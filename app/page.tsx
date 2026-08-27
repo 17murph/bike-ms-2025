@@ -187,9 +187,6 @@ export default function Home() {
                   A former soldier, national champion bodybuilder, retired professional athlete, and cyclist, Lisa still trains, lifts weights, and measures most of her year in normal days rather than bad ones.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Her MS is real. Heat and humidity can knock her down for days. Her feet stay numb. Cognitive symptoms are part of the picture. But Lisa is clear about one thing: &ldquo;I can help you understand my MS. I don&apos;t know about your MS.&rdquo;
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-4">
                   Her story is not about telling others how to live with MS. It is about making room for another honest version of it. MS is unpredictable, but for Lisa, it still does not get to be the most important thing about Lisa.
                 </p>
                     {/* Libsyn Embed Player */}
