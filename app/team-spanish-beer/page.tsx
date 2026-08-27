@@ -97,22 +97,19 @@ export default function TeamSpanishBeer() {
             {/* Our Mission Section */}
             <section className="py-6">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer: Passport Cyclists</h2>
+                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer</h2>
                 <div className="prose max-w-none">
                   <p className="my-2">
-                    Team Spanish Beer: Passport Cyclists, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
+                    Team Spanish Beer, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
                   </p>
                   <p className="my-2">
-                    This team is made up of Team Spanish Beer cyclists who have reached Bike MS Passport status by raising at least $5,000 annually for the National MS Society. Passport status is not a finish line or a measure of importance. It reflects an ongoing commitment to the mission and creates opportunities to support Bike MS in new ways.
+                    Team Spanish Beer is a North Florida Bike MS team and a member of The Other Side of MS Passport Collection. Our Passport cyclists, known within the Collection as Imports, carry Team Spanish Beer beyond our home rides and into Bike MS events across the country.
                   </p>
                   <p className="my-2">
-                    Many Passport riders travel to events outside their home chapter. The Passport Team gives those riders a way to stay connected to Team Spanish Beer while representing our team in communities across the country. Together, we support local chapters, build relationships with fellow Passport riders, and help strengthen the Bike MS community wherever we ride.
+                    MS is often invisible. What someone sees from the outside does not always tell them what is happening on the other side. Our jersey carries the same idea. Team Spanish Beer is on the front, our visible identity and our home team. The Other Side of MS is on the back, representing the stories, symptoms, and realities people may never see unless someone chooses to share them.
                   </p>
                   <p className="my-2">
-                    Our jerseys represent Team Spanish Beer first, but they also represent something larger. They reflect our commitment to the Passport Program, our dedication to every chapter we visit, and our belief that the strongest teams are built by lifting others.
-                  </p>
-                  <p className="my-2">
-                    This is not about recognition. It is about responsibility. Riders who reach Passport status have demonstrated an extraordinary commitment to the National MS Society, and we believe that commitment can inspire others. By riding together, mentoring new cyclists, and sharing our experiences through The Other Side of MS podcast, we hope to encourage more riders to discover what is possible and to continue growing the Bike MS community.
+                    This is not about recognition. It is about responsibility, and we believe that sense of responsibility can inspire others. By riding together, mentoring new cyclists, and sharing our experiences through The Other Side of MS podcast, we hope to encourage more riders to discover what is possible and continue growing the Bike MS community.
                   </p>
                   <p className="my-2">
                     Our purpose is simple. Build community. Support local chapters. Tell honest stories. Raise more funds for the National MS Society. Above all, remind every person affected by MS that they are never riding alone.
