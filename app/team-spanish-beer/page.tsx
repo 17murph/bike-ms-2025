@@ -14,7 +14,7 @@ import { TeamSpanishBeerPassport } from "@/components/team-spanish-beer-passport
 export default function TeamSpanishBeer() {
   // Set metadata via useEffect to avoid server-side rendering issues
   useEffect(() => {
-    document.title = "Team Spanish Beer: Passport Cyclist | Bike MS"
+    document.title = "Team Spanish Beer: Passport Cyclists | Bike MS"
   }, [])
 
   return (
@@ -73,7 +73,7 @@ export default function TeamSpanishBeer() {
               </span>
               <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Team Spanish Beer
-                <span className="mt-2 block text-orange-500">Passport Cyclist</span>
+                <span className="mt-2 block text-orange-500">Passport Cyclists</span>
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-neutral-400 sm:text-lg">
                 Riding together across the country to end MS — 100% of every donation goes directly to the National
@@ -155,10 +155,10 @@ export default function TeamSpanishBeer() {
             {/* Our Mission Section */}
             <section className="py-6">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer: Passport Cyclist</h2>
+                <h2 className="text-3xl font-bold text-primary mb-4">Team Spanish Beer: Passport Cyclists</h2>
                 <div className="prose max-w-none">
                   <p className="my-2">
-                    Team Spanish Beer: Passport Cyclist, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
+                    Team Spanish Beer: Passport Cyclists, in partnership with The Other Side of MS, exists for one reason: To make sure no one living with MS feels invisible. Every mile we ride and every story we share comes back to that belief.
                   </p>
                   <p className="my-2">
                     This team is made up of Team Spanish Beer cyclists who have reached Bike MS Passport status by raising at least $5,000 annually for the National MS Society. Passport status is not a finish line or a measure of importance. It reflects an ongoing commitment to the mission and creates opportunities to support Bike MS in new ways.
