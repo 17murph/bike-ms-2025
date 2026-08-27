@@ -164,6 +164,12 @@ export default function Home() {
               {/* Right - Latest Episode */}
               <div className="md:w-1/2">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  {/* Episode Photo */}
+                  <img
+                    src="/images/lisa-graham.jpg"
+                    alt="Lisa Graham on a wooded trail wearing a cycling helmet"
+                    className="w-full h-64 object-cover object-center"
+                  />
                   {/* Episode Details */}
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-2">
@@ -175,13 +181,16 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Yes, I Have MS</h3>
                 <p className="text-lg text-primary font-medium mb-3">with Lisa Graham</p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Lisa has lived with multiple sclerosis for 33 years. She calls it an unwelcome houseguest. It is there. She knows it is there. But she refuses to give it control of the house. Lisa is a former soldier, national champion bodybuilder, retired professional athlete, and cyclist who still trains, lifts weights, and measures most of her year in normal days rather than bad ones. She knows her experience is unusual. Her own doctor has called her a unicorn. And Lisa does not apologize for that.
+                  Lisa has lived with multiple sclerosis for 33 years. She calls it an unwelcome houseguest. It is there, but she refuses to let it control the house.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Her MS can still overrule her. Heat and humidity can leave her recovering for days. Her feet can stay numb. Cognitive symptoms exist. But those realities have never become the organizing principle of her life. That perspective has not always made her feel welcome in the MS community. It has led to disagreement, judgment, and one support group she entered on rollerblades and never returned to.
+                  A former soldier, national champion bodybuilder, retired professional athlete, and cyclist, Lisa still trains, lifts weights, and measures most of her year in normal days rather than bad ones.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Lisa&apos;s message is not that everyone with MS should live the way she does. In fact, she says the opposite: &ldquo;I can help you understand my MS. I don&apos;t know about your MS.&rdquo; Sometimes the honest MS story is about loss, fear, and everything the disease has taken. And sometimes the honest story is simply this: MS is real. MS is unpredictable. And for Lisa, it still does not get to be the most important thing about Lisa.
+                  Her MS is real. Heat and humidity can knock her down for days. Her feet stay numb. Cognitive symptoms are part of the picture. But Lisa is clear about one thing: &ldquo;I can help you understand my MS. I don&apos;t know about your MS.&rdquo;
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Her story is not about telling others how to live with MS. It is about making room for another honest version of it. MS is unpredictable, but for Lisa, it still does not get to be the most important thing about Lisa.
                 </p>
                     {/* Libsyn Embed Player */}
                     <div className="w-full rounded-lg overflow-hidden mt-3">
