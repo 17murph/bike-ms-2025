@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileTextButton } from "@/components/mobile-text-button"
@@ -22,44 +23,59 @@ export default function ContactPage() {
       {/* Add padding to account for fixed banner and navigation */}
       <div className="pt-[56px] md:pt-[16px]"></div>
 
+      {/* Hero Section */}
+      <section className="relative">
+        <div className="relative w-full h-[500px] md:h-[550px] overflow-hidden">
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          <div className="absolute inset-0 z-0 flex items-center justify-center">
+            <Image
+              src="/images/Casey_BikeMS_cycling.png"
+              alt="Casey cycling in Bike MS jersey"
+              fill
+              className="object-contain opacity-25"
+              priority
+            />
+          </div>
+          <div className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
+            <Image
+              src="/images/bike-ms-logo.jpeg"
+              alt="Bike MS Logo"
+              width={180}
+              height={180}
+              className="object-contain"
+            />
+          </div>
+          <div className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-5 opacity-30">
+            <Image
+              src="/images/Passport.png"
+              alt="Bike MS Passport Program Seal"
+              width={180}
+              height={180}
+              className="object-contain"
+            />
+          </div>
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              I Ride to End <span className="text-[#E25D28]">MS</span>. Your Donation Fuels the Mission.
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
+              Every dollar fuels research, care, and hope for people living with MS.
+            </p>
+            <a
+              href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E25D28] text-white text-xl font-bold rounded-lg hover:bg-[#d14e1c] transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(226,93,40,0.5)] transform hover:scale-105"
+            >
+              <Heart className="w-6 h-6" />
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </section>
+
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-8">
-          <section className="space-y-4">
-            <h1 className="text-4xl font-bold text-center">About & Contact</h1>
-            <p className="text-lg text-center text-gray-700">Learn more about our mission and get in touch</p>
-
-            <div className="flex justify-center gap-4 my-6">
-              <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-              >
-                <Heart className="w-5 h-5" />
-                <span>Donate to Bike MS</span>
-              </Link>
-            </div>
-          </section>
-
-          {/* Full-width Medals Hero Image */}
-          <section className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden mb-8">
-            <div className="absolute inset-0 bg-black/40 z-10"></div>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Medals-ReTFucpnIp1aiNBsVWpyrZAkHX26fg.jpeg"
-              alt="Bike MS Medals Collection"
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.src = "/placeholder.svg?key=lbuyq"
-                e.currentTarget.onerror = null
-              }}
-            />
-            <div className="absolute inset-0 z-20 flex items-center justify-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center drop-shadow-md">
-                Why I Ride. Why I Listen. Why I Won't Stop.
-              </h2>
-            </div>
-          </section>
-
           {/* Redesigned About Me Section */}
           <section className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="md:flex">
