@@ -76,23 +76,6 @@ export default function ContactPage() {
 
       <main className="container mx-auto py-6 px-4">
         <div className="max-w-4xl mx-auto space-y-8">
-          <section className="space-y-4">
-            <h1 className="text-4xl font-bold text-center">About & Contact</h1>
-            <p className="text-lg text-center text-gray-700">Learn more about our mission and get in touch</p>
-
-            <div className="flex justify-center gap-4 my-6">
-              <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-              >
-                <Heart className="w-5 h-5" />
-                <span>Donate to Bike MS</span>
-              </Link>
-            </div>
-          </section>
-
           {/* Redesigned About Me Section */}
           <section className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="md:flex">
