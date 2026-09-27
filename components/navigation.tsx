@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { Home, Heart, Menu, X, Share2, Mail, Users } from 'lucide-react'
+import { Headphones, Heart, Menu, X, Share2, Mail, Users } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { name: "Home", href: "/", icon: Home },
+  { name: "Podcast", href: "/", icon: Headphones },
   { name: "Bike MS", href: "/bike-ms", icon: Heart },
   { name: "Team Spanish Beer", href: "/team-spanish-beer", icon: Users },
   { name: "About / Contact", href: "/contact", icon: Mail },
