@@ -576,12 +576,6 @@ export default function EventsPage() {
                 Support My Rides
               </Link>
               <Link
-                href="/about-bike-ms"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary transition-colors"
-              >
-                Learn About National Cycling Team
-              </Link>
-              <Link
                 href="https://events.nationalmssociety.org/index.cfm?fuseaction=register.start&eventID=2794&teamID=100303"
                 target="_blank"
                 rel="noopener noreferrer"

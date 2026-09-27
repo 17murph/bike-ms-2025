@@ -23,11 +23,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about-bike-ms" className="text-gray-300 hover:text-white transition-colors">
-                  National Bike MS Team
-                </Link>
-              </li>
-              <li>
                 <Link href="/team-spanish-beer" className="text-gray-300 hover:text-white transition-colors">
                   Team Spanish Beer
                 </Link>
@@ -49,11 +44,6 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Bike MS Resources</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/about-bike-ms" className="text-gray-300 hover:text-white transition-colors">
-                  National Cycling Team
-                </Link>
-              </li>
               <li>
                 <Link href="/team-spanish-beer" className="text-gray-300 hover:text-white transition-colors">
                   Team Spanish Beer
@@ -129,9 +119,6 @@ export function Footer() {
               </Link>
               <Link href="/bike-ms" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Bike MS
-              </Link>
-              <Link href="/about-bike-ms" className="text-gray-400 hover:text-white transition-colors text-sm">
-                National Bike MS Team
               </Link>
               <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                 About / Contact

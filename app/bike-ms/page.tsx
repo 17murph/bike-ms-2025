@@ -5,7 +5,6 @@ import Image from "next/image"
 import { ReliableImage } from "@/components/reliable-image"
 import { SpotifyBadge } from "@/components/spotify-badge"
 import { Navigation } from "@/components/navigation"
-import { Heart } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { BackToTopButton } from "@/components/back-to-top-button"
 
@@ -55,94 +54,12 @@ export default function BikeMS() {
               <span className="font-medium">Listen to our Podcast</span>
             </Link>
             <Link
-              href="/about-bike-ms"
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
-            >
-              <span className="text-lg sm:text-xl">🚴</span>
-              <span className="font-medium">National Bike MS Team</span>
-            </Link>
-            <Link
               href="/team-spanish-beer"
               className="flex items-center justify-center gap-2 px-3 py-2 bg-white/90 hover:bg-white text-gray-800 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
             >
               <span className="text-lg sm:text-xl">🍺</span>
               <span className="font-medium">Team Spanish Beer</span>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Choose the Team You'd Like to Support */}
-      <section className="bg-gradient-to-b from-white to-blue-50 py-10 md:py-14">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-8">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-balance">
-              Choose the Team You&apos;d Like to Support
-            </h2>
-            <p className="mt-3 text-gray-600 leading-relaxed text-pretty">
-              Both teams support the same Bike MS mission. Choose the team you&apos;d like to learn more about or
-              support.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Card 1: National Bike MS Team */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="bg-blue-600 text-white p-4 text-center">
-                <h3 className="text-xl font-semibold">National Bike MS Team</h3>
-              </div>
-              <div className="flex flex-col flex-grow p-6">
-                <p className="text-gray-700 leading-relaxed flex-grow">
-                  Support Passport Cyclists from across the country who have demonstrated an extraordinary commitment to
-                  the National MS Society. These riders come together across team and state lines, using fundraising,
-                  shared experiences, and storytelling to strengthen the MS community and support people affected by MS.
-                </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/about-bike-ms"
-                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    Learn More
-                  </Link>
-                  <Link
-                    href="/about-bike-ms#donate"
-                    className="inline-flex items-center justify-center gap-2 flex-1 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <Heart className="w-4 h-4" />
-                    Donate
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Team Spanish Beer Passport Cyclists */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="bg-blue-600 text-white p-4 text-center">
-                <h3 className="text-xl font-semibold">Team Spanish Beer</h3>
-              </div>
-              <div className="flex flex-col flex-grow p-6">
-                <p className="text-gray-700 leading-relaxed flex-grow">
-                  Support the riders from our North Florida home team who have demonstrated an extraordinary commitment
-                  to the National MS Society. Each cyclist has earned Bike MS Passport status by raising $5,000 or more
-                  in a cycling season, reflecting a shared commitment to changing the lives of people affected by MS.
-                </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/team-spanish-beer"
-                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    Learn More
-                  </Link>
-                  <Link
-                    href="/team-spanish-beer#donate"
-                    className="inline-flex items-center justify-center gap-2 flex-1 px-5 py-3 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                  >
-                    <Heart className="w-4 h-4" />
-                    Donate
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -455,9 +372,9 @@ export default function BikeMS() {
                     <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-center bg-gray-50 rounded-lg p-3 mt-auto">
+                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
                   <div className="text-center">
-                    <p className="font-semibold text-gray-800 text-sm">Sept 12/13, 2026</p>
+                    <p className="font-semibold text-gray-900 text-sm">Canceled</p>
                   </div>
                 </div>
                 <div className="mt-3 text-center">
@@ -568,9 +485,7 @@ export default function BikeMS() {
               About Bike MS
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/teams/TeamSpanishBeer2026"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/team-spanish-beer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-md hover:bg-secondary/90 text-lg font-medium transition-all hover:translate-x-1"
             >
               <svg
@@ -590,7 +505,7 @@ export default function BikeMS() {
                 <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
-              <span>Join Team Spanish Beer</span>
+              <span>Team Spanish Beer</span>
             </Link>
           </div>
         </section>

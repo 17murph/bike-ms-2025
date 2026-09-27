@@ -255,7 +255,7 @@ const PicturesPage = () => {
             </Link>
 
             <Link
-              href="/about-bike-ms"
+              href="/bike-ms"
               className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors"
             >
               <svg

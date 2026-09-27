@@ -272,7 +272,7 @@ export default function TeamSpanishBeer() {
                 <p className="mb-2 font-medium text-primary">
                   Join us, push past your limits, and ride toward a future without MS.
                 </p>
-                <div className="mt-3">
+                <div className="mt-3 flex flex-wrap gap-3">
                   <a
                     href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=6788#accordion-tab-2-active"
                     target="_blank"
@@ -282,6 +282,13 @@ export default function TeamSpanishBeer() {
                     <Info className="w-5 h-5" />
                     <span>Learn More about the Bike MS Passport Program</span>
                   </a>
+                  <Link
+                    href="/about-bike-ms"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md"
+                  >
+                    <Users className="w-5 h-5" />
+                    <span>Learn about our National Traveling Team</span>
+                  </Link>
                 </div>
               </div>
             </div>
