@@ -143,6 +143,55 @@ export default function TeamSpanishBeer() {
   </figcaption>
   </figure>
 
+                  <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    {[
+                      { id: "uZq6f4LOYKk", title: "Day 1 — Bike MS: Cycle to the Shore 2026" },
+                      { id: "u0XhZPCt8Nk", title: "Day 2 — Bike MS: Cycle to the Shore 2026" },
+                    ].map((video) => (
+                      <figure key={video.id} className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+                        <div className="aspect-video w-full bg-gray-900">
+                          <iframe
+                            src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0`}
+                            title={video.title}
+                            className="h-full w-full"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                          />
+                        </div>
+                        <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
+                          {video.title}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+
+                  <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+                      <img
+                        src="/images/casey-curt-day-2.jpg"
+                        alt="Casey in a Team Spanish Beer jersey and Curt in a Bike MS Passport Club jersey smiling on a beach boardwalk at sunrise"
+                        className="block aspect-[4/3] w-full object-cover"
+                        loading="lazy"
+                      />
+                      <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
+                        Casey and Curt before the start of Day 2
+                      </figcaption>
+                    </figure>
+                    <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+                      <img
+                        src="/images/selena-curt.jpg"
+                        alt="Selena in an I Ride with MS Team Spanish Beer jersey high-fiving Curt as they ride their bikes toward the finish"
+                        className="block aspect-[4/3] w-full object-cover object-top"
+                        loading="lazy"
+                      />
+                      <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
+                        {"Selena and Curt at the end of two days of cycling. Both ride with MS (\"I Ride with MS\"), and Curt is a Passport cyclist from Wisconsin who joined Team Spanish Beer for the Bike MS weekend."}
+                      </figcaption>
+                    </figure>
+                  </div>
+
 
                   <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
                     <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-4">
