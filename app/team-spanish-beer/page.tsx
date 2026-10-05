@@ -187,7 +187,7 @@ export default function TeamSpanishBeer() {
                         loading="lazy"
                       />
                       <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-                        {"Selena and Curt at the end of two days of cycling. Both ride with MS (\"I Ride with MS\"), and Curt is a Passport cyclist from Wisconsin who joined Team Spanish Beer for the Bike MS weekend."}
+                        {"Selena and Curt (both \"I Ride with MS\" cyclists) cross Day 1. Curt is also a Passport cyclist from Wisconsin."}
                       </figcaption>
                     </figure>
                   </div>
