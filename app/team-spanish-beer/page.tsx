@@ -187,11 +187,57 @@ export default function TeamSpanishBeer() {
                         loading="lazy"
                       />
                       <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-                        {"Selena and Curt at the end of two days of cycling. Both ride with MS (\"I Ride with MS\"), and Curt is a Passport cyclist from Wisconsin who joined Team Spanish Beer for the Bike MS weekend."}
+                        {"Selena and Curt (both \"I Ride with MS\" cyclists) cross Day 1. Curt is also a Passport cyclist from Wisconsin."}
                       </figcaption>
                     </figure>
                   </div>
 
+                  <figure className="mb-6 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+                    <img
+                      src="/images/tsb-finish-day-2.jpg"
+                      alt="Team Spanish Beer riders wearing finisher medals and cheering in front of the Bike MS finish arch"
+                      className="block aspect-[4/3] w-full object-cover"
+                      loading="lazy"
+                    />
+                    <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
+                      Team Spanish Beer at the Day 2 finish
+                    </figcaption>
+                  </figure>
+
+                  <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                    {[
+                      {
+                        src: "/images/tsb-finish-day-1.jpg",
+                        alt: "A young girl high-fives a Team Spanish Beer rider as the team rides along the beach boardwalk to the finish",
+                        caption: "Team Spanish Beer crossing the Day 1 finish",
+                      },
+                      {
+                        src: "/images/curt-selena-finish-day-1.jpg",
+                        alt: "Curt pumping his fist and Selena smiling on her orange bike as they ride away from the Bike MS arch",
+                        caption: "Curt and Selena crossing the Day 1 finish",
+                      },
+                      {
+                        src: "/images/andrew-selena-finish-day-1.jpg",
+                        alt: "Andrew in a yellow helmet leads Selena, who waves from her orange bike, along the beach boardwalk",
+                        caption: "Andrew and Selena crossing the Day 1 finish",
+                      },
+                    ].map((photo) => (
+                      <figure
+                        key={photo.src}
+                        className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200"
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="block aspect-[3/4] w-full object-cover object-bottom"
+                          loading="lazy"
+                        />
+                        <figcaption className="border-t border-gray-100 px-4 py-3 text-center text-sm text-gray-600">
+                          {photo.caption}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
 
                   <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
                     <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-4">
