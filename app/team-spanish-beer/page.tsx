@@ -128,9 +128,21 @@ export default function TeamSpanishBeer() {
                 <div className="max-w-2xl mx-auto">
                   <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 text-center">Our Home Ride</h2>
                   <p className="text-gray-600 text-center mb-6 leading-relaxed">
-                    Bike MS: Cycle to the Shore is our home ride, though we gladly accept donations for any of our
-                    team&apos;s rides.
-                  </p>
+  Bike MS: Cycle to the Shore is our home ride. Photos and videos from this year&apos;s ride, Oct. 3/4,
+  2026 - Daytona.
+  </p>
+
+  <figure className="mb-8 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+  <img
+  src="/images/tsb-lifeguards.png"
+  alt="Team Spanish Beer cyclists with their bikes alongside Flagler Beach Rescue lifeguards on a beach boardwalk"
+  className="block aspect-[1573/1000] w-full object-cover"
+  />
+  <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
+  Part of Team Spanish Beer with the Flagler Beach Rescue Lifeguards
+  </figcaption>
+  </figure>
+
 
                   <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg">
                     <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-4">
