@@ -192,17 +192,31 @@ export default function TeamSpanishBeer() {
                     </figure>
                   </div>
 
-                  <figure className="mb-6 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
-                    <img
-                      src="/images/tsb-finish-day-2.jpg"
+  <div className="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+  <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+  <img
+  src="/images/tsb-crosses-finish-day-1.jpg"
+  alt="Team Spanish Beer riders in blue jerseys cycling along the beach boardwalk toward the Day 1 finish"
+  className="block aspect-[4/3] w-full object-cover"
+  loading="lazy"
+  />
+  <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
+  Team Spanish Beer Crosses Finish Line Day 1
+  </figcaption>
+  </figure>
+  <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+  <img
+  src="/images/tsb-finish-day-2.jpg"
                       alt="Team Spanish Beer riders wearing finisher medals and cheering in front of the Bike MS finish arch"
                       className="block aspect-[4/3] w-full object-cover"
                       loading="lazy"
                     />
                     <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-                      Team Spanish Beer at the Day 2 finish
-                    </figcaption>
-                  </figure>
+  Team Spanish Beer at the Day 2 finish
+  </figcaption>
+  </figure>
+  </div>
+
 
                   <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
                     {[
