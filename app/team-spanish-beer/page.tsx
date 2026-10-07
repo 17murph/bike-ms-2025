@@ -134,7 +134,7 @@ export default function TeamSpanishBeer() {
   </p>
 
                   <TsbPhotoCard
-                    src="/images/tsb-lifeguards.jpg"
+                    src="/images/tsb-lifeguards-enhanced.jpg"
                     alt="Team Spanish Beer cyclists in blue jerseys with their bikes, posing alongside Flagler Beach Rescue lifeguards in red on a beach boardwalk"
                     caption="Part of Team Spanish Beer with the Flagler Beach Rescue Lifeguards"
                     label="Flagler Beach"
@@ -176,7 +176,7 @@ export default function TeamSpanishBeer() {
                       label="Day 2"
                     />
                     <TsbPhotoCard
-                      src="/images/selena-curt.jpg"
+                      src="/images/selena-curt-enhanced.jpg"
                       alt="Selena in an I Ride with MS Team Spanish Beer jersey high-fiving Curt as they ride their bikes toward the finish"
                       caption={"Selena and Curt (both \"I Ride with MS\" cyclists) cross Day 1. Curt is also a Passport cyclist from Wisconsin."}
                       label="Day 1"
@@ -186,7 +186,7 @@ export default function TeamSpanishBeer() {
 
                   <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <TsbPhotoCard
-                      src="/images/tsb-crosses-finish-day-1.jpg"
+                      src="/images/tsb-crosses-finish-day-1-enhanced.jpg"
                       alt="Team Spanish Beer riders in blue jerseys cycling along the beach boardwalk toward the Day 1 finish"
                       caption="Team Spanish Beer Crosses Finish Line Day 1"
                       label="Day 1"
