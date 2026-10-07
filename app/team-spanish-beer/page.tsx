@@ -10,6 +10,7 @@ import { useEffect } from "react"
 import { BackToTopButton } from "@/components/back-to-top-button"
 import { SocialMediaLinks } from "@/components/social-media-links"
 import { TeamSpanishBeerPassport } from "@/components/team-spanish-beer-passport"
+import { TsbPhotoCard } from "@/components/tsb-photo-card"
 
 export default function TeamSpanishBeer() {
   // Set metadata via useEffect to avoid server-side rendering issues
@@ -132,23 +133,22 @@ export default function TeamSpanishBeer() {
   2026 - Daytona.
   </p>
 
-  <figure className="mb-8 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
-  <img
-  src="/images/tsb-lifeguards.png"
-  alt="Team Spanish Beer cyclists with their bikes alongside Flagler Beach Rescue lifeguards on a beach boardwalk"
-  className="block aspect-[1573/1000] w-full object-cover"
-  />
-  <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-  Part of Team Spanish Beer with the Flagler Beach Rescue Lifeguards
-  </figcaption>
-  </figure>
+                  <TsbPhotoCard
+                    src="/images/tsb-lifeguards.jpg"
+                    alt="Team Spanish Beer cyclists in blue jerseys with their bikes, posing alongside Flagler Beach Rescue lifeguards in red on a beach boardwalk"
+                    caption="Part of Team Spanish Beer with the Flagler Beach Rescue Lifeguards"
+                    label="Flagler Beach"
+                    aspectClassName="aspect-[3/2]"
+                    eager
+                    className="mb-8"
+                  />
 
                   <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
                     {[
                       { id: "uZq6f4LOYKk", title: "Day 1 — Bike MS: Cycle to the Shore 2026" },
                       { id: "u0XhZPCt8Nk", title: "Day 2 — Bike MS: Cycle to the Shore 2026" },
                     ].map((video) => (
-                      <figure key={video.id} className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
+                      <figure key={video.id} className="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-gray-200/80 transition-shadow duration-300 hover:shadow-xl">
                         <div className="aspect-video w-full bg-gray-900">
                           <iframe
                             src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0`}
@@ -160,62 +160,44 @@ export default function TeamSpanishBeer() {
                             allowFullScreen
                           />
                         </div>
-                        <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-                          {video.title}
+                        <figcaption className="flex flex-col gap-1 border-t border-gray-100 px-5 py-4">
+                          <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-blue-600">Video</span>
+                          <span className="text-sm leading-relaxed text-gray-800">{video.title}</span>
                         </figcaption>
                       </figure>
                     ))}
                   </div>
 
                   <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
-                      <img
-                        src="/images/casey-curt-day-2.jpg"
-                        alt="Casey in a Team Spanish Beer jersey and Curt in a Bike MS Passport Club jersey smiling on a beach boardwalk at sunrise"
-                        className="block aspect-[4/3] w-full object-cover"
-                        loading="lazy"
-                      />
-                      <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-                        Casey and Curt before the start of Day 2
-                      </figcaption>
-                    </figure>
-                    <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
-                      <img
-                        src="/images/selena-curt.jpg"
-                        alt="Selena in an I Ride with MS Team Spanish Beer jersey high-fiving Curt as they ride their bikes toward the finish"
-                        className="block aspect-[4/3] w-full object-cover object-top"
-                        loading="lazy"
-                      />
-                      <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-                        {"Selena and Curt (both \"I Ride with MS\" cyclists) cross Day 1. Curt is also a Passport cyclist from Wisconsin."}
-                      </figcaption>
-                    </figure>
+                    <TsbPhotoCard
+                      src="/images/casey-curt-day-2.jpg"
+                      alt="Casey in a Team Spanish Beer jersey and Curt in a Bike MS Passport Club jersey smiling on a beach boardwalk at sunrise"
+                      caption="Casey and Curt before the start of Day 2"
+                      label="Day 2"
+                    />
+                    <TsbPhotoCard
+                      src="/images/selena-curt.jpg"
+                      alt="Selena in an I Ride with MS Team Spanish Beer jersey high-fiving Curt as they ride their bikes toward the finish"
+                      caption={"Selena and Curt (both \"I Ride with MS\" cyclists) cross Day 1. Curt is also a Passport cyclist from Wisconsin."}
+                      label="Day 1"
+                      positionClassName="object-[center_35%]"
+                    />
                   </div>
 
-  <div className="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-  <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
-  <img
-  src="/images/tsb-crosses-finish-day-1.jpg"
-  alt="Team Spanish Beer riders in blue jerseys cycling along the beach boardwalk toward the Day 1 finish"
-  className="block aspect-[4/3] w-full object-cover"
-  loading="lazy"
-  />
-  <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-  Team Spanish Beer Crosses Finish Line Day 1
-  </figcaption>
-  </figure>
-  <figure className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200">
-  <img
-  src="/images/tsb-finish-day-2.jpg"
-                      alt="Team Spanish Beer riders wearing finisher medals and cheering in front of the Bike MS finish arch"
-                      className="block aspect-[4/3] w-full object-cover"
-                      loading="lazy"
+                  <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <TsbPhotoCard
+                      src="/images/tsb-crosses-finish-day-1.jpg"
+                      alt="Team Spanish Beer riders in blue jerseys cycling along the beach boardwalk toward the Day 1 finish"
+                      caption="Team Spanish Beer Crosses Finish Line Day 1"
+                      label="Day 1"
                     />
-                    <figcaption className="border-t border-gray-100 px-5 py-3 text-center text-sm text-gray-600">
-  Team Spanish Beer at the Day 2 finish
-  </figcaption>
-  </figure>
-  </div>
+                    <TsbPhotoCard
+                      src="/images/tsb-finish-day-2.jpg"
+                      alt="Team Spanish Beer riders wearing finisher medals and cheering in front of the Bike MS finish arch"
+                      caption="Team Spanish Beer at the Day 2 finish"
+                      label="Day 2"
+                    />
+                  </div>
 
 
                   <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -236,20 +218,15 @@ export default function TeamSpanishBeer() {
                         caption: "Andrew and Selena crossing the Day 1 finish",
                       },
                     ].map((photo) => (
-                      <figure
+                      <TsbPhotoCard
                         key={photo.src}
-                        className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200"
-                      >
-                        <img
-                          src={photo.src}
-                          alt={photo.alt}
-                          className="block aspect-[3/4] w-full object-cover object-bottom"
-                          loading="lazy"
-                        />
-                        <figcaption className="border-t border-gray-100 px-4 py-3 text-center text-sm text-gray-600">
-                          {photo.caption}
-                        </figcaption>
-                      </figure>
+                        src={photo.src}
+                        alt={photo.alt}
+                        caption={photo.caption}
+                        label="Day 1"
+                        aspectClassName="aspect-[3/4]"
+                        positionClassName="object-[center_70%]"
+                      />
                     ))}
                   </div>
 
