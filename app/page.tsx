@@ -122,12 +122,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why These Stories Matter + Latest Episode Section */}
+        {/* Why These Stories Matter Section */}
         <section className="pt-16 pb-8 bg-gray-50">
           <div className="container mx-auto max-w-6xl px-4">
-            <div className="flex flex-col md:flex-row gap-12 items-start">
-              {/* Left - Why These Stories Matter */}
-              <div className="md:w-1/2">
+            <div className="flow-root">
+              <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why These Stories Matter</h2>
                 
                 {/* Text content with floated logo */}
@@ -158,50 +157,6 @@ export default function Home() {
                   <p>
                     The goal is simple. Give people the time to speak, and listen closely enough for them to know they were heard.
                   </p>
-                </div>
-              </div>
-
-              {/* Right - Latest Episode */}
-              <div className="md:w-1/2">
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                  {/* Episode Photo */}
-                  <img
-                    src="/images/lisa-graham.jpg"
-                    alt="Lisa Graham on a wooded trail wearing a cycling helmet"
-                    className="w-full h-64 object-cover object-center"
-                  />
-                  {/* Episode Details */}
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-orange-500 text-white text-sm font-bold px-4 py-1.5 rounded-full">
-                        Latest Episode
-                      </span>
-                <span className="text-sm text-gray-500 font-medium">Season 4, Episode 13</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Yes, I Have MS</h3>
-                <p className="text-lg text-primary font-medium mb-3">with Lisa Graham</p>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Lisa has lived with multiple sclerosis for 33 years. She calls it an unwelcome houseguest. It is there, but she refuses to let it control the house.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  A former soldier, national champion bodybuilder, retired professional athlete, and cyclist, Lisa still trains, lifts weights, and measures most of her year in normal days rather than bad ones.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Her story is not about telling others how to live with MS. It is about making room for another honest version of it. MS is unpredictable, but for Lisa, it still does not get to be the most important thing about Lisa.
-                </p>
-                    {/* Libsyn Embed Player */}
-                    <div className="w-full rounded-lg overflow-hidden mt-3">
-                      <iframe 
-                        title="Embed Player" 
-                        style={{ border: 'none' }} 
-                        src="https://play.libsyn.com/embed/episode/id/42540960/height/192/theme/modern/size/large/thumbnail/yes/custom-color/0c215f/time-start/00:00:00/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" 
-                        height="192" 
-                        width="100%" 
-                        scrolling="no" 
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
