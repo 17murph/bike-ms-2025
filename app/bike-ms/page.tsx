@@ -30,7 +30,7 @@ export default function BikeMS() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-              Bike <span className="text-[#E25D28]">MS</span> 2026
+              Bike <span className="text-[#E25D28]">MS</span> 2027
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight">
               Stories move people. Miles move the mission.
@@ -90,13 +90,13 @@ export default function BikeMS() {
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-6">
-                  <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                <div className="flex justify-center mb-3">
+                  <div className="text-center space-y-1 bg-white px-3 py-2 rounded-md shadow-sm border border-gray-100">
                     <a
                       href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-red-500 text-red-600 rounded hover:bg-red-500 hover:text-white transition-all duration-300 font-medium text-sm"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function BikeMS() {
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       </svg>
                     </a>
-                    <p className="text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3 mt-3">
+                    <p className="text-xs text-gray-600 leading-snug border-t border-gray-200 pt-1 mt-1">
                       Every single dollar you donate goes directly to the National Multiple Sclerosis Society, funding
                       research, delivering services, and providing support for those living with MS.
                     </p>
@@ -278,7 +278,7 @@ export default function BikeMS() {
       <section id="events-section" className="py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2027</h2>
             <p className="text-gray-700 text-lg mb-4 leading-relaxed">
               The 2026 season is complete, with rides in MA, WI, TN, and our home ride in FL. The 2027 season
               starts soon, with our first ride in Lakewood Ranch, FL on April 10, 2027. Other rides in 2027 will
