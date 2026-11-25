@@ -39,7 +39,7 @@ export default function EventsPage() {
             {/* Team Members Links */}
             <div className="flex flex-wrap items-center justify-center gap-2 my-4 text-base">
               <Link
-                href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
+                href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 font-medium transition-colors"
@@ -568,7 +568,7 @@ export default function EventsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors"

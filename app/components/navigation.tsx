@@ -27,7 +27,7 @@ export default function Navigation() {
             Sponsors
           </Link>
           <Link
-            href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+            href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -150,7 +150,7 @@ export default function Navigation() {
                     Sponsors
                   </a>
                   <a
-                    href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                    href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}

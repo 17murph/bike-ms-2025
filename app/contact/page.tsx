@@ -62,7 +62,7 @@ export default function ContactPage() {
               Every dollar fuels research, care, and hope for people living with MS.
             </p>
             <a
-              href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
+              href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#E25D28] text-white text-xl font-bold rounded-lg hover:bg-[#d14e1c] transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(226,93,40,0.5)] transform hover:scale-105"
@@ -205,7 +205,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-center mb-6">Quick Links</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link
-                href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-red-600 text-white p-4 rounded-lg text-center hover:bg-red-700 transition-colors"

@@ -30,7 +30,7 @@ export default function BikeMS() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pb-32 md:pb-24">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-              Bike <span className="text-[#E25D28]">MS</span> 2026
+              Bike <span className="text-[#E25D28]">MS</span> 2027
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 leading-tight">
               Stories move people. Miles move the mission.
@@ -90,13 +90,13 @@ export default function BikeMS() {
             </div>
             <div className="text-center mt-2 md:mt-0 max-w-2xl">
               <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-6">
-                  <div className="text-center space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                <div className="flex justify-center mb-3">
+                  <div className="text-center space-y-1 bg-white px-3 py-2 rounded-md shadow-sm border border-gray-100">
                     <a
-                      href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
+                      href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-4 bg-white border-2 border-red-500 text-red-600 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-md text-lg"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-red-500 text-red-600 rounded hover:bg-red-500 hover:text-white transition-all duration-300 font-medium text-sm"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function BikeMS() {
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       </svg>
                     </a>
-                    <p className="text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3 mt-3">
+                    <p className="text-xs text-gray-600 leading-snug border-t border-gray-200 pt-1 mt-1">
                       Every single dollar you donate goes directly to the National Multiple Sclerosis Society, funding
                       research, delivering services, and providing support for those living with MS.
                     </p>
@@ -278,10 +278,12 @@ export default function BikeMS() {
       <section id="events-section" className="py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2026</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Bike MS Rides 2027</h2>
             <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-              This year, we will call the Jack and Back Bike MS Ride, Sept 12/13, 2026, to be our "Featured
-              Ride," though we will accept donations for any of our rides.
+              The 2026 season is complete, with rides in MA, WI, TN, and our home ride in FL. The 2027 season
+              starts soon, with our first ride in Lakewood Ranch, FL on April 10, 2027. Other rides in 2027 will
+              also include WI, TN, NC, and again our home ride in North Florida. Look here for updates as the
+              rides open up for registration.
             </p>
             <a
               href="https://events.nationalmssociety.org/index.cfm?fuseaction=cms.page&id=1230&eventGroupID=5D8E661A-FD97-846A-4224AE4CFDCC4BAA&cmsContentSetID=24FE9BE9-DB92-A369-C8DB6AF2F89959A0"
@@ -293,135 +295,46 @@ export default function BikeMS() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Ride 1 - Cape Cod Getaway */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Cape Cod Getaway</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { name: "Suncoast Challenge", location: "Lakewood Ranch, FL", detail: "April 10, 2027", status: "Donate", team: "Team Spanish Beer - Passport Ride", featured: false },
+              { name: "Best Dam Bike Tour", location: "Baraboo, WI", detail: "", status: "Upcoming", team: "Team CCC Passport Ride", featured: false },
+              { name: "Jack and Back", location: "Eagleville, TN", detail: "", status: "Upcoming", team: "The Other Side of MS Passport Ride", featured: false },
+              { name: "Cycle to the Shore", location: "Daytona, FL", detail: "", status: "Upcoming", team: "Team Spanish Beer - Home Ride", featured: false },
+              { name: "Bike MS: New Bern", location: "New Bern, NC", detail: "Featured Ride", status: "Coming Soon", team: "The Other Side of MS Featured Passport Ride", featured: true },
+            ].map((ride) => (
+              <div
+                key={ride.name}
+                className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] lg:w-[calc(20%-0.8rem)] bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
+              >
+                <div
+                  className={`${ride.featured ? "from-orange-500 to-orange-600" : "from-blue-500 to-blue-600"} bg-gradient-to-r text-white h-12 px-2 flex items-center justify-center`}
+                >
+                  <h3 className="font-bold text-base text-center whitespace-nowrap">{ride.name}</h3>
+                </div>
+                <div className="p-4 flex-grow flex flex-col items-center text-center">
+                  <p className="text-sm text-gray-600">📍 {ride.location}</p>
+                  <p className={`text-sm h-5 mt-1 ${ride.featured ? "font-semibold text-orange-600" : "text-gray-600"}`}>
+                    {ride.detail}
+                  </p>
+                  {ride.status === "Donate" ? (
+                    <a
+                      href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center bg-yellow-300 hover:bg-yellow-400 transition-colors rounded-lg h-11 mt-3"
+                    >
+                      <span className="font-semibold text-gray-900 text-sm">Donate</span>
+                    </a>
+                  ) : (
+                    <div className="w-full flex items-center justify-center bg-yellow-300 rounded-lg h-11 mt-3">
+                      <p className="font-semibold text-gray-900 text-sm">{ride.status}</p>
+                    </div>
+                  )}
+                  <p className="text-xs text-gray-600 font-medium mt-3 min-h-8 flex items-center">{ride.team}</p>
                 </div>
               </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Quincy, MA</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-900 text-sm">Complete: 150 miles cycled</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Passport Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/pages/10304?eventID=2517"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 2 - Best Dam Bike Tour */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Best Dam Bike Tour</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Baraboo, WI</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-900 text-sm">Complete: 101 miles cycled</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team CCC Passport Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/pages/11402?eventID=2735"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 3 - Jack and Back (Featured Ride) */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Jack and Back</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-orange-600 mb-1">🏠 Featured Ride</p>
-                    <p className="text-sm text-gray-600">📍 Eagleville, TN</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-900 text-sm">Canceled</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">The Other Side of MS Featured Passport Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/2746"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 4 - Bike MS: Cycle to the Shore */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Bike MS: Cycle to the Shore</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
-                  </div>
-                </div>
-  <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-  <div className="text-center">
-  <p className="font-semibold text-gray-900 text-sm">Complete: 154 miles cycled</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Home Ride</p>
-                  <a
-                    href="https://events.nationalmssociety.org/2776"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium underline"
-                  >
-                    Event Details
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
