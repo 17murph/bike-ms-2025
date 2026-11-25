@@ -295,123 +295,46 @@ export default function BikeMS() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {/* Ride 1 - Suncoast Challenge */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Suncoast Challenge</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-1">📍 Lakewood Ranch, FL</p>
-                    <p className="text-sm text-gray-600">April 10, 2027</p>
-                  </div>
-                </div>
-                <a
-                  href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-yellow-300 hover:bg-yellow-400 transition-colors rounded-lg p-3 mt-auto"
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { name: "Suncoast Challenge", location: "Lakewood Ranch, FL", detail: "April 10, 2027", status: "Donate", team: "Team Spanish Beer - Passport Ride", featured: false },
+              { name: "Best Dam Bike Tour", location: "Baraboo, WI", detail: "", status: "Upcoming", team: "Team CCC Passport Ride", featured: false },
+              { name: "Jack and Back", location: "Eagleville, TN", detail: "", status: "Upcoming", team: "The Other Side of MS Passport Ride", featured: false },
+              { name: "Cycle to the Shore", location: "Daytona, FL", detail: "", status: "Upcoming", team: "Team Spanish Beer - Home Ride", featured: false },
+              { name: "Bike MS: New Bern", location: "New Bern, NC", detail: "Featured Ride", status: "Coming Soon", team: "The Other Side of MS Featured Passport Ride", featured: true },
+            ].map((ride) => (
+              <div
+                key={ride.name}
+                className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] lg:w-[calc(20%-0.8rem)] bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
+              >
+                <div
+                  className={`${ride.featured ? "from-orange-500 to-orange-600" : "from-blue-500 to-blue-600"} bg-gradient-to-r text-white h-12 px-2 flex items-center justify-center`}
                 >
-                  <span className="font-semibold text-gray-900 text-sm">Donate</span>
-                </a>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Passport Ride</p>
+                  <h3 className="font-bold text-base text-center whitespace-nowrap">{ride.name}</h3>
+                </div>
+                <div className="p-4 flex-grow flex flex-col items-center text-center">
+                  <p className="text-sm text-gray-600">📍 {ride.location}</p>
+                  <p className={`text-sm h-5 mt-1 ${ride.featured ? "font-semibold text-orange-600" : "text-gray-600"}`}>
+                    {ride.detail}
+                  </p>
+                  {ride.status === "Donate" ? (
+                    <a
+                      href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center bg-yellow-300 hover:bg-yellow-400 transition-colors rounded-lg h-11 mt-3"
+                    >
+                      <span className="font-semibold text-gray-900 text-sm">Donate</span>
+                    </a>
+                  ) : (
+                    <div className="w-full flex items-center justify-center bg-yellow-300 rounded-lg h-11 mt-3">
+                      <p className="font-semibold text-gray-900 text-sm">{ride.status}</p>
+                    </div>
+                  )}
+                  <p className="text-xs text-gray-600 font-medium mt-3 min-h-8 flex items-center">{ride.team}</p>
                 </div>
               </div>
-            </div>
-
-            {/* Ride 2 - Best Dam Bike Tour */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Best Dam Bike Tour</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Baraboo, WI</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <p className="font-semibold text-gray-900 text-sm">Upcoming</p>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team CCC Passport Ride</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 3 - Jack and Back */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Jack and Back</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Eagleville, TN</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <p className="font-semibold text-gray-900 text-sm">Upcoming</p>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">The Other Side of MS Passport Ride</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 4 - Bike MS: Cycle to the Shore */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Bike MS: Cycle to the Shore</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 mb-2">📍 Daytona, FL</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <p className="font-semibold text-gray-900 text-sm">Upcoming</p>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">Team Spanish Beer - Home Ride</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Ride 5 - Bike MS: New Bern (Featured Ride) */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg transform hover:translate-y-[-5px] flex flex-col">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3">
-                <div className="flex items-center justify-center">
-                  <h3 className="font-bold text-lg text-center">Bike MS: New Bern</h3>
-                </div>
-              </div>
-              <div className="p-4 flex-grow flex flex-col">
-                <div className="flex flex-col items-center mb-3 flex-grow">
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-orange-600 mb-1">Featured Ride</p>
-                    <p className="text-sm text-gray-600">📍 New Bern, NC</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center bg-yellow-300 rounded-lg p-3 mt-auto">
-                  <p className="font-semibold text-gray-900 text-sm">Coming Soon</p>
-                </div>
-                <div className="mt-3 text-center">
-                  <p className="text-xs text-gray-600 font-medium mb-1">The Other Side of MS Featured Passport Ride</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
