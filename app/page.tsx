@@ -97,18 +97,18 @@ export default function Home() {
               <div className="flex-1">
                 <h3 className="text-sm font-semibold text-gray-900 mb-1">We&apos;re not just a podcast. We ride Bike MS to fund the fight against MS.</h3>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl font-bold text-primary">$8,202.00</span>
+                  <span className="text-xl font-bold text-primary">$8,372</span>
                   <span className="text-gray-500 text-sm">of $9,000</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                   <div 
                     className="bg-primary h-1.5 rounded-full transition-all duration-500" 
-                    style={{ width: '91.13%' }}
+                    style={{ width: '93.02%' }}
                   ></div>
                 </div>
               </div>
               <a
-                href="https://events.nationalmssociety.org/participants/810407?referrer=mf%3A810407%3Ayou-copy&language=en"
+                href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-secondary text-white text-sm font-semibold rounded-full hover:bg-secondary/90 transition-all whitespace-nowrap"

@@ -63,7 +63,7 @@ export default function HomePage() {
               Learn More
             </Link>
             <Link
-              href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+              href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-white text-primary rounded-lg hover:bg-gray-100 transition-colors font-medium"
@@ -93,7 +93,7 @@ export default function HomePage() {
               </p>
               <div className="flex justify-center mt-4">
                 <Link
-                  href="https://events.nationalmssociety.org/index.cfm?fuseaction=donordrive.participant&participantID=632965"
+                  href="https://events.nationalmssociety.org/participants/919809?referrer=mf%3A919809%3Ayou-copy&language=en"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium"
